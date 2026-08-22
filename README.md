@@ -1,4 +1,4 @@
-# Log-Ratio Registration
+# Relative-Intensity Pattern Registration
 
 A Fiji/ImageJ time-series registration plugin that estimates movement by making the log-ratio between
 frames spatially uniform. Intensity gain is fitted separately, so bleaching or global brightness change
