@@ -12,6 +12,7 @@ tmp/
 AGENTS.md
 CLAUDE.md
 GEMINI.md
+docs/
 
 # IDE
 .idea/
