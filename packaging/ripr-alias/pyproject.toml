@@ -1,0 +1,40 @@
+# The "ripr" name on PyPI is a shortcut, not a second copy of the code.
+#
+# It installs nothing of its own: it depends on Relative-Intensity-Pattern-Registration, which is
+# where the code actually lives, and which provides the "ripr" import package. So "pip install ripr"
+# and "pip install Relative-Intensity-Pattern-Registration" both end with the same files on disk,
+# and there is only ever one implementation to keep correct.
+#
+# The dependency is pinned exactly, so the two names can never drift apart. That means a release is
+# two uploads: bump the real package, then bump this to match.
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ripr"
+version = "0.2.1"
+description = "Shortcut for Relative-Intensity-Pattern-Registration; installs that package"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "BSD-3-Clause"
+authors = [{ name = "Jamie Malcolm", email = "jamiemalcolm12@gmail.com" }]
+keywords = ["registration", "microscopy", "time-lapse", "image-alignment", "drift-correction"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = ["Relative-Intensity-Pattern-Registration==0.2.1"]
+
+[project.urls]
+Homepage = "https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration"
+Source = "https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration"
+Issues = "https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration/issues"
+
+[tool.hatch.build.targets.wheel]
+# Metadata only: this distribution deliberately ships no modules of its own.
+bypass-selection = true

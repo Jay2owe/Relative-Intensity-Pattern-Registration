@@ -1,0 +1,56 @@
+{
+  "movie": "06_knock_log_ratio_fit.mp4",
+  "display_only": true,
+  "made_by": "make_method_movie.py",
+  "input": {
+    "file": "library/06_knock/original.tif",
+    "sha256": "390a221249f0de7861ee5d8348523a4a1c70c89cf9e048d26f35b9d2c890401c",
+    "channel": 1,
+    "frames": 48,
+    "shape": [
+      512,
+      512
+    ]
+  },
+  "call": {
+    "estimator": "log_ratio_fit",
+    "norm": "tukey",
+    "support": "gradient",
+    "max_shift_px": 60.0,
+    "reference": "multilag",
+    "lags": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "levels": 4
+  },
+  "parity": {
+    "against": "library/06_knock/shifts.csv",
+    "worst_cumulative_difference_px": 0.0002929280673501511,
+    "pair_filmed_matches_recording": true,
+    "pair": [
+      45,
+      46
+    ]
+  },
+  "pair_fit": {
+    "dx": -35.104285710545554,
+    "dy": 0.35775133627922473,
+    "log2_gain": -0.028342253972716946,
+    "residual_before": 0.7038060898375988,
+    "residual_after": 0.3024427443658382,
+    "iterations": 3,
+    "status": "ok"
+  },
+  "encoding": {
+    "fps": 25,
+    "frames": 1663,
+    "seconds": 66.5,
+    "codec": "libx264",
+    "crf": 18,
+    "preset": "slow"
+  }
+}

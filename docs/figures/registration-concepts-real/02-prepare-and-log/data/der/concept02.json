@@ -1,0 +1,16 @@
+{
+ "preprocessing": "Median denoising (3 by 3)",
+ "epsilon": 1.0,
+ "band_floor_percentile": 25.0,
+ "band_floor_value": 5684.0,
+ "band_ceiling_percentile": 99.0,
+ "band_ceiling_value": 8761.0,
+ "raw_min": 2294.0,
+ "raw_max": 12295.0,
+ "raw_median": 6060.0,
+ "log_min": 11.185495376586914,
+ "log_max": 13.4271821975708,
+ "valid_default": 262144,
+ "valid_banded": 194083,
+ "pixels": 262144
+}

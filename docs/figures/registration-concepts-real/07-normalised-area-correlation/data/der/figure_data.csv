@@ -1,0 +1,66 @@
+element,key,value_number,value_text,note
+pair,from_frame,56.0,frame index,
+pair,to_frame,72.0,frame index,
+surface,span,6.0,pixels,half-width of the field
+surface,step,0.25,pixels,sampling of the field
+surface,peak_correlation,0.932785976968283,correlation,the hollow ring
+fit,dx,0.1875,pixels,the orange mark
+fit,dy,1.8125,pixels,the orange mark
+fit,iterations,4.0,count,Not Converged
+fit,residual_before,0.0713896057131933,log2,
+fit,residual_after,0.04770146229300949,log2,
+fit,valid_fraction,0.99609375,fraction,
+surface,correlation.finite_pixels,2401.0,49x49,every displacement tested
+surface,correlation.minimum,0.8163585537464544,49x49,every displacement tested
+surface,correlation.maximum,0.932785976968283,49x49,every displacement tested
+surface,correlation.mean,0.8574333866704117,49x49,every displacement tested
+surface,correlation.median,0.8527230552624889,49x49,every displacement tested
+slice,-6.00,0.8438984298156631,correlation,one line through the peak
+slice,-5.75,0.8465425002305101,correlation,one line through the peak
+slice,-5.50,0.8489666199488276,correlation,one line through the peak
+slice,-5.25,0.8499328155986808,correlation,one line through the peak
+slice,-5.00,0.8506965864217845,correlation,one line through the peak
+slice,-4.75,0.8532050805691395,correlation,one line through the peak
+slice,-4.50,0.855830384253479,correlation,one line through the peak
+slice,-4.25,0.8572503992566645,correlation,one line through the peak
+slice,-4.00,0.8577205294615193,correlation,one line through the peak
+slice,-3.75,0.8605039494390048,correlation,one line through the peak
+slice,-3.50,0.8630249020735716,correlation,one line through the peak
+slice,-3.25,0.8642253877607567,correlation,one line through the peak
+slice,-3.00,0.8655257241354118,correlation,one line through the peak
+slice,-2.75,0.8690360379323882,correlation,one line through the peak
+slice,-2.50,0.8733349230217047,correlation,one line through the peak
+slice,-2.25,0.8773299292965097,correlation,one line through the peak
+slice,-2.00,0.8809484128152982,correlation,one line through the peak
+slice,-1.75,0.8886999924299861,correlation,one line through the peak
+slice,-1.50,0.8969964533392724,correlation,one line through the peak
+slice,-1.25,0.9042128373868114,correlation,one line through the peak
+slice,-1.00,0.9112481186829527,correlation,one line through the peak
+slice,-0.75,0.9196932718039622,correlation,one line through the peak
+slice,-0.50,0.9271820594569342,correlation,one line through the peak
+slice,-0.25,0.9316275297525686,correlation,one line through the peak
+slice,+0.00,0.932536726411034,correlation,one line through the peak
+slice,+0.25,0.932785976968283,correlation,one line through the peak
+slice,+0.50,0.930092416347698,correlation,one line through the peak
+slice,+0.75,0.9239055424428887,correlation,one line through the peak
+slice,+1.00,0.9162360018472606,correlation,one line through the peak
+slice,+1.25,0.9075619256841083,correlation,one line through the peak
+slice,+1.50,0.9008517273880777,correlation,one line through the peak
+slice,+1.75,0.8933287547879051,correlation,one line through the peak
+slice,+2.00,0.8866000318986996,correlation,one line through the peak
+slice,+2.25,0.8824685718746162,correlation,one line through the peak
+slice,+2.50,0.8791347336074609,correlation,one line through the peak
+slice,+2.75,0.8751859228988925,correlation,one line through the peak
+slice,+3.00,0.8716927874137151,correlation,one line through the peak
+slice,+3.25,0.8670658487718494,correlation,one line through the peak
+slice,+3.50,0.8658363328332828,correlation,one line through the peak
+slice,+3.75,0.8636787711576897,correlation,one line through the peak
+slice,+4.00,0.8616399489192268,correlation,one line through the peak
+slice,+4.25,0.8610916522198702,correlation,one line through the peak
+slice,+4.50,0.8603584438098294,correlation,one line through the peak
+slice,+4.75,0.8582343769478792,correlation,one line through the peak
+slice,+5.00,0.8559438886175553,correlation,one line through the peak
+slice,+5.25,0.8517706709113743,correlation,one line through the peak
+slice,+5.50,0.8509354797121027,correlation,one line through the peak
+slice,+5.75,0.8489640964665884,correlation,one line through the peak
+slice,+6.00,0.8470117369738828,correlation,one line through the peak

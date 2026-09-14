@@ -1,0 +1,26 @@
+element,key,value_number,value_text,note
+bound,largest_measured,1.469480514187989,pixels,the teal circle; largest displacement the pilot pass found
+bound,suggested,30.0,pixels,the dashed red circle; the bound the engine kept
+bound,resolution,16.0,pixels,one coarse cell of the pilot pass
+bound,probe_pairs,1169.0,pairs,comparisons the pilot pass measured
+pyramid,levels,4.0,count,
+search,coarse_radius,4.0,cells,half-width of the cost surface drawn on the left
+pyramid_level,0,512.0,pixels,level 0 is 512 by 512
+pyramid_level,1,256.0,pixels,level 1 is 256 by 256
+pyramid_level,2,128.0,pixels,level 2 is 128 by 128
+pyramid_level,3,64.0,pixels,level 3 is 64 by 64
+refinement,level_3_dx,0.0,pixels,"position after this level, in full-resolution pixels"
+refinement,level_3_dx,0.14606400108083195,pixels,"position after this level, in full-resolution pixels"
+refinement,level_2_dx,0.11960924043534503,pixels,"position after this level, in full-resolution pixels"
+refinement,level_1_dx,0.11960924043534503,pixels,"position after this level, in full-resolution pixels"
+refinement,level_0_dx,0.09954785832626115,pixels,"position after this level, in full-resolution pixels"
+refinement,level_3_dy,0.0,pixels,"position after this level, in full-resolution pixels"
+refinement,level_3_dy,1.2106476696855466,pixels,"position after this level, in full-resolution pixels"
+refinement,level_2_dy,1.5924384135590997,pixels,"position after this level, in full-resolution pixels"
+refinement,level_1_dy,1.5924384135590997,pixels,"position after this level, in full-resolution pixels"
+refinement,level_0_dy,1.6534436201071414,pixels,"position after this level, in full-resolution pixels"
+surface,coarse_cost.finite_pixels,45.0,9x9,mean absolute profiled residual at each integer displacement
+surface,coarse_cost.minimum,0.015252089593559504,9x9,mean absolute profiled residual at each integer displacement
+surface,coarse_cost.maximum,0.07409895292228647,9x9,mean absolute profiled residual at each integer displacement
+surface,coarse_cost.mean,0.057498088724407655,9x9,mean absolute profiled residual at each integer displacement
+surface,coarse_cost.median,0.06085354902245624,9x9,mean absolute profiled residual at each integer displacement

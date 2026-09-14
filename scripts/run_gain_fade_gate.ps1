@@ -62,7 +62,7 @@ function Invoke-Build {
         '-Xmx8g', '-Dlogratio.onlyCondition=GAIN_FADE',
         "-Dlogratio.comparisonRoot=$comparisonRoot",
         '-Dlogratio.onlyMethod=01_log_ratio_tukey_standard_gradient',
-        '-cp', $classpath, 'logratio.BenchmarkV2ComparisonStacks', $project))
+        '-cp', $classpath, 'ripr.BenchmarkV2ComparisonStacks', $project))
 }
 
 function Invoke-Ours {
@@ -70,7 +70,7 @@ function Invoke-Ours {
     # arm 4 is the shipped default every ratio in the gate is taken against.
     Invoke-LoggedJava 'stage2_selector_arms' ($seriesOptions + @(
         '-Xmx8g', "-Dlogratio.comparisonRoot=$comparisonRoot", '-Dlogratio.noImages=true',
-        $rewriteOption, '-cp', $classpath, 'logratio.SelectorComparisonBenchmark', $project))
+        $rewriteOption, '-cp', $classpath, 'ripr.SelectorComparisonBenchmark', $project))
 }
 
 function Invoke-Estimators {
@@ -78,7 +78,7 @@ function Invoke-Estimators {
     # This is what separates the criterion from the image model.
     Invoke-LoggedJava 'stage3_pair_estimator_arms' ($seriesOptions + @(
         '-Xmx8g', "-Dlogratio.comparisonRoot=$comparisonRoot",
-        $rewriteOption, '-cp', $classpath, 'logratio.PairEstimatorComparisonBenchmark', $project))
+        $rewriteOption, '-cp', $classpath, 'ripr.PairEstimatorComparisonBenchmark', $project))
 }
 
 function Invoke-TurboReg {
@@ -89,7 +89,7 @@ function Invoke-TurboReg {
     # leaves whatever an earlier JDK 21 compile put in target/, and only the classes that happened to
     # change get rewritten. The symptom is UnsupportedClassVersionError naming an unrelated class.
     # Run `mvn clean test-compile` before this stage, not `mvn test-compile`.
-    $fijiRoot = 'C:\Users\Owner\UK Dementia Research Institute Dropbox\Brancaccio Lab\Jamie\Fiji.app'
+    $fijiRoot = if ($env:FIJI_APP) { $env:FIJI_APP } else { throw 'Set FIJI_APP to the Fiji installation folder.' }
     $fijiJava = Join-Path $fijiRoot 'java\win64\zulu11.88.17-ca-fx-jdk11.0.31-win_x64\bin\java.exe'
     $launcherJar = Join-Path $fijiRoot 'jars\imagej-launcher-6.0.2.jar'
     if (!(Test-Path -LiteralPath $fijiJava)) { throw "missing Fiji Java: $fijiJava" }
@@ -161,7 +161,7 @@ function Invoke-Summary {
     # the gate in docs/spline_estimator_stage0_gate.md is read from.
     Invoke-LoggedJava 'stage5_external_summary' @(
         '-Xmx4g', "-Dlogratio.comparisonRoot=$comparisonRoot",
-        '-cp', $classpath, 'logratio.ExternalComparisonSummary', $project)
+        '-cp', $classpath, 'ripr.ExternalComparisonSummary', $project)
 }
 
 switch ($Stage) {

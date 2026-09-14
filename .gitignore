@@ -1,7 +1,12 @@
 # Build output
 target/
+build/
+dist/
+*.egg-info/
 dependency-reduced-pom.xml
 *.class
+__pycache__/
+*.py[cod]
 
 # Scratch
 tmp/
@@ -23,3 +28,22 @@ docs/
 library/
 research/
 validation/
+
+# Registered stacks, comparison panels and review bundles produced by the benchmark scripts.
+# Same category as the corpus above: regenerable output, and gigabytes of TIFF per run.
+RIPR_Java_external_comparisons/
+RIPR_R17_large_comparisons_final/
+RIPR_R17_reproducible_bundles/
+RIPR_R20_Java_reviews/
+RIPR_R20_bundles/
+RIPR_R23_Java_reviews/
+RIPR_R23_registered/
+RIPR_after_speedup_bundles/
+RIPR_after_speedup_registered/
+RIPR_after_speedup_reviews/
+
+# Generated knowledge graph; rebuilt from the code by graphify.
+graphify-out/
+
+# Literature collected for reference, not authored here.
+papers/

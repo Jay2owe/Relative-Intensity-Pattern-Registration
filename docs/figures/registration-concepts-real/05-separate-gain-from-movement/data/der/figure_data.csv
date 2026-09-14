@@ -1,0 +1,36 @@
+element,key,value_number,value_text,note
+pair,from_frame,56.0,frame index,
+pair,to_frame,72.0,frame index,
+gain,log2_at_zero,-0.005860805511474609,log2,the offset removed between the two left maps
+gain,linear_at_zero,0.9959458395717439,ratio,
+gain,log2_at_fit,-0.00631528760654998,log2,profiled again at the fitted displacement
+gain,linear_at_fit,0.9956321431560229,ratio,
+residual,mean_abs_difference_zero,0.07158320590679068,log2,before the offset is removed
+residual,mean_abs_at_zero,0.0713896057131933,log2,"after the offset, before the displacement"
+residual,mean_abs_at_fit,0.04753089599953606,log2,after both
+fit,dx,0.09954785832626115,pixels,arrow drawn at 6x its own size
+fit,dy,1.6534436201071414,pixels,arrow drawn at 6x its own size
+fit,valid_fraction,0.99609375,fraction,
+fit,iterations,1.0,count,Ok
+fit,sampled_pixels,65280.0,count,
+fit,arrow_exaggeration,6.0,times,the only exaggerated element in this figure
+map,difference_zero.finite_pixels,65536.0,256x256,
+map,difference_zero.minimum,-0.8905191421508789,256x256,
+map,difference_zero.maximum,0.8571310043334961,256x256,
+map,difference_zero.mean,-0.004061201922013424,256x256,
+map,difference_zero.median,-0.005860805511474609,256x256,
+map,residual_zero.finite_pixels,65536.0,256x256,
+map,residual_zero.minimum,-0.8846583366394043,256x256,
+map,residual_zero.maximum,0.8629918098449707,256x256,
+map,residual_zero.mean,0.001799603589461185,256x256,
+map,residual_zero.median,0.0,256x256,
+map,difference_fit.finite_pixels,65280.0,256x256,
+map,difference_fit.minimum,-0.940921425819397,256x256,
+map,difference_fit.maximum,0.814476490020752,256x256,
+map,difference_fit.mean,-0.004111225548722523,256x256,
+map,difference_fit.median,-0.006315287668257952,256x256,
+map,residual_fit.finite_pixels,65280.0,256x256,
+map,residual_fit.minimum,-0.93460613489151,256x256,
+map,residual_fit.maximum,0.8207917809486389,256x256,
+map,residual_fit.mean,0.0022040620794487055,256x256,
+map,residual_fit.median,0.0,256x256,

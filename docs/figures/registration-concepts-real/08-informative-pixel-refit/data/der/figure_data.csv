@@ -1,0 +1,27 @@
+element,key,value_number,value_text,note
+pair,from_frame,56.0,frame index,
+pair,to_frame,72.0,frame index,
+selection,remove_percent,25.0,percent,"of the eligible pixels, lowest scoring first"
+selection,gradient_threshold,0.028536081314086914,log2 per pixel,half the median gradient magnitude
+selection,eligible,215438.0,pixels,of 262144; the grey bar
+selection,kept,208284.0,pixels,the teal bar
+selection,removed,53860.0,pixels,
+selection,eligible_fraction,0.8218307495117188,fraction,
+selection,kept_fraction,0.7945404052734375,fraction,
+pilot,dx,0.06247818810143757,pixels,displacement the mask was carried by
+pilot,dy,1.7800790399751136,pixels,
+map,information.finite_pixels,262144.0,512x512,smaller structure-tensor eigenvalue
+map,information.minimum,2.728209256019909e-05,512x512,smaller structure-tensor eigenvalue
+map,information.maximum,0.025679368525743484,512x512,smaller structure-tensor eigenvalue
+map,information.mean,0.0011937690846528307,512x512,smaller structure-tensor eigenvalue
+map,information.median,0.0008188195643015206,512x512,smaller structure-tensor eigenvalue
+map,gradient_magnitude.finite_pixels,262144.0,512x512,
+map,gradient_magnitude.minimum,0.0,512x512,
+map,gradient_magnitude.maximum,0.6877655982971191,512x512,
+map,gradient_magnitude.mean,0.06830178519521724,512x512,
+map,gradient_magnitude.median,0.05707216262817383,512x512,
+tile,frame.finite_pixels,262144.0,512x512,the plane the pilot aligned
+tile,frame.minimum,2276.0,512x512,the plane the pilot aligned
+tile,frame.maximum,12339.0,512x512,the plane the pilot aligned
+tile,frame.mean,6082.431823730469,512x512,the plane the pilot aligned
+tile,frame.median,6074.0,512x512,the plane the pilot aligned

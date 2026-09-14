@@ -13,7 +13,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-IMAGE_CLASSES = ["BRIGHTFIELD_DIC", "DENSE_FLUOR", "FIDUCIAL_STATIC", "PHASE", "SPARSE_LOWLIGHT"]
+ACTIVE_IMAGE_CLASSES = ["BRIGHTFIELD_DIC", "DENSE_FLUOR", "FIDUCIAL_STATIC", "PHASE"]
+# The immutable winner freeze predates the four-class scope decision.  Keep its
+# five-class shape for audit verification, then filter it before active analysis.
+FROZEN_IMAGE_CLASSES = ACTIVE_IMAGE_CLASSES + ["SPARSE_LOWLIGHT"]
 ENGINE_METHOD = {
     "turboreg": "21_real_stackreg_turboreg_translation_chain",
     "stabilizer": "24_real_image_stabilizer_lucas_kanade_rolling_template",
@@ -185,7 +188,7 @@ def freeze_winners(run_root: Path) -> tuple[list[dict], list[dict]]:
     development = run_root / "development"
     candidates = []
     winners = []
-    for image_class in IMAGE_CLASSES:
+    for image_class in FROZEN_IMAGE_CLASSES:
         for engine, configs in ENGINE_CONFIGS.items():
             scored = []
             representative = ENGINE_METHOD[engine]
@@ -274,14 +277,17 @@ def comparison_table(project: Path, run_root: Path, dataset: str, tuned: bool,
                      winners: list[dict]) -> list[dict]:
     dataset_root = "controlled_motion" if dataset == "development" else "locked_test"
     expected_by_class = 16 if dataset == "development" else 8
-    expected_all = 80 if dataset == "development" else 40
+    expected_all = expected_by_class * len(ACTIVE_IMAGE_CLASSES)
     own_id = "4_new_full_automatic_selector" if tuned else "6_base_without_automatic_changes"
-    own = internal_rows(project, dataset_root, own_id)
+    own = [row for row in internal_rows(project, dataset_root, own_id)
+           if row["image_series_class"] in ACTIVE_IMAGE_CLASSES]
     external = (external_tuned_rows(run_root, dataset, winners) if tuned else
                 read_csv(run_root / dataset / "all_defaults.csv"))
+    external = [row for row in external
+                if row["image_series_class"] in ACTIVE_IMAGE_CLASSES]
     comparison = "tuned_against_tuned" if tuned else "defaults_against_defaults"
     output = []
-    groups = IMAGE_CLASSES + ["ALL"]
+    groups = ACTIVE_IMAGE_CLASSES + ["ALL"]
     for group in groups:
         expected = expected_all if group == "ALL" else expected_by_class
         own_group = own if group == "ALL" else [r for r in own if r["image_series_class"] == group]
@@ -321,12 +327,15 @@ def correction_delta(project: Path, run_root: Path) -> list[dict]:
     old = read_csv(project / "library" / "benchmark" / "v2" / "benchmarks" / "controlled_motion" /
                    "summaries" / "external_comparison_v1" / "all_methods_by_recording.csv")
     new = read_csv(run_root / "development" / "all_defaults.csv")
+    old = [row for row in old if row["image_series_class"] in ACTIVE_IMAGE_CLASSES]
+    new = [row for row in new if row["image_series_class"] in ACTIVE_IMAGE_CLASSES]
     output = []
     for method_id in sorted({r["method_id"] for r in new}):
         old_rows = [r for r in old if r["method_id"] == method_id]
         new_rows = [r for r in new if r["method_id"] == method_id]
-        old_summary = summarize_rows(old_rows, 80)
-        new_summary = summarize_rows(new_rows, 80)
+        expected = 16 * len(ACTIVE_IMAGE_CLASSES)
+        old_summary = summarize_rows(old_rows, expected)
+        new_summary = summarize_rows(new_rows, expected)
         old_value = float(old_summary["median_of_recording_medians_px"])
         new_value = float(new_summary["median_of_recording_medians_px"])
         output.append({
@@ -365,9 +374,14 @@ def write_findings(run_root: Path, replay: list[dict], deltas: list[dict],
     conditional = [r for r in defaults + tuned
                    if r["lower_successful_median_than_reference"] == "true"
                    and r["beats_our_reference"] != "true"]
-    lines = ["# External parameter sweep findings", "",
+    lines = ["# External parameter sweep findings: four-class scope", "",
              "## Gates", "",
-             f"- Development configurations: 24/24 complete over 80 recordings each.",
+             "- Active scope: brightfield/differential interference contrast, dense fluorescence, "
+             "fiducial/static and phase contrast.",
+             "- Sparse/low-light is excluded from every active aggregate and class table by the "
+             "owner's 2026-08-21 scope decision; its raw files remain only as audit evidence.",
+             f"- Raw development configurations: 24/24 complete over 80 recordings each; active "
+             f"analysis uses {16 * len(ACTIVE_IMAGE_CLASSES)} recordings.",
              f"- Deterministic default rows failing exact replay: {len(deterministic_failures)}.",
              f"- Descriptor replay maximum metric delta: {descriptor_replay['max_absolute_metric_delta_px']} px; "
              "the installed optimizer remains object-order stochastic and is reported, not suppressed.",
@@ -376,6 +390,9 @@ def write_findings(run_root: Path, replay: list[dict], deltas: list[dict],
              "- `src/main` and both saved in-house comparison tables match their pre-run SHA-256 controls.",
              "- Protocol deviation D1: pre-existing locked summary/count metadata was inspected before "
              "freezing; no candidate was run or selected there, but the locked set is not described as blinded.",
+             "- Protocol deviation D3: the first finalizer invocation rewrote the unchanged frozen-winner "
+             "table after locked execution. The 19:22:15 BST freeze time was restored from the observed "
+             "pre-locked artifact timestamp, and final mode now requires its SHA-256 manifest.",
              "- No sealed-set path was opened by this workflow.", "",
              "## Stage 0 correction impact (development overall)", "",
              "| Method | Old median px | Corrected median px | Delta px | Corrected failures |",
@@ -414,7 +431,8 @@ def write_findings(run_root: Path, replay: list[dict], deltas: list[dict],
     else:
         lines.append("None.")
     lines += ["", "Full by-image-type results, including failures, are in "
-              "`defaults_against_defaults.csv` and `tuned_against_tuned.csv`."]
+              "`defaults_against_defaults.csv` and `tuned_against_tuned.csv`. Both contain only the "
+              "four active classes and their four-class aggregate."]
     (run_root / "FINDINGS.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -428,11 +446,30 @@ def main() -> None:
     verify_plugin_versions(project, run_root)
     validate_development(run_root)
     replay = default_replay(run_root)
-    _, winners = freeze_winners(run_root)
-    deltas = correction_delta(project, run_root)
+    # REGRESSION GUARD: final mode once recomputed and rewrote the pre-locked winner table.
+    # The fix: only freeze mode may select/write winners; final mode must hash-check and read them.
     if args.stage == "freeze":
+        _, winners = freeze_winners(run_root)
+        (run_root / "frozen_winners.sha256").write_text(
+            file_hash(run_root / "frozen_winners.csv") + "  frozen_winners.csv\n",
+            encoding="utf-8")
         print(f"Frozen {len(winners)} winners after validating 24 development configurations")
         return
+
+    frozen_path = run_root / "frozen_winners.csv"
+    frozen_hash_path = run_root / "frozen_winners.sha256"
+    winners = read_csv(frozen_path)
+    if len(winners) != 30:
+        raise RuntimeError(f"expected 30 frozen winners, found {len(winners)}")
+    expected_frozen_hash = frozen_hash_path.read_text(encoding="utf-8").split()[0]
+    observed_frozen_hash = file_hash(frozen_path)
+    if observed_frozen_hash != expected_frozen_hash:
+        raise RuntimeError("frozen_winners.csv changed after the development freeze")
+    winners = [row for row in winners
+               if row["image_series_class"] in ACTIVE_IMAGE_CLASSES]
+    if len(winners) != 6 * len(ACTIVE_IMAGE_CLASSES):
+        raise RuntimeError(f"expected 24 active frozen winners, found {len(winners)}")
+    deltas = correction_delta(project, run_root)
 
     defaults = []
     tuned = []
@@ -464,7 +501,7 @@ def main() -> None:
     if failed_controls:
         raise RuntimeError(f"in-house controls changed: {failed_controls}")
     write_findings(run_root, replay, deltas, defaults, tuned)
-    print("Published defaults-against-defaults and tuned-against-tuned tables")
+    print("Published four-class defaults-against-defaults and tuned-against-tuned tables")
 
 
 if __name__ == "__main__":

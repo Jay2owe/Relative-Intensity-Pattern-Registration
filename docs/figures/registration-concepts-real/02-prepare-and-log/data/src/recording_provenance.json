@@ -1,0 +1,19 @@
+{
+ "recording": "20260710_Tmem_Cry_BSL_leaktest_1713_Multichannel Time Lapse_20260721_1424.ome.tif",
+ "original_path": "C:\\Users\\Owner\\UK Dementia Research Institute Dropbox\\Brancaccio Lab\\Jamie\\Experiments\\Auto-Organotypic\\test set\\20260710_Tmem_Cry_BSL_leaktest_1713_Multichannel Time Lapse_20260721_1424.ome.tif",
+ "byte_size": 569737134,
+ "modification_time": "2026-08-11T09:36:11+00:00",
+ "sha256": "c4ab6179cf578e714e37b325cacaa02826d5c91cdc588024fbb329f7e42e82df",
+ "instrument": "Olympus LV200, Hamamatsu ImagEM X2 EMCCD, 40x LUCPLFLN",
+ "pixel_size_um": 2.0,
+ "frames": 240,
+ "cadence_minutes": 30.0,
+ "channels": [
+  "Bioluminescence",
+  "BF",
+  "RFP",
+  "GFP"
+ ],
+ "estimation_channel_one_based": 2,
+ "note": "Too large to copy into a figure bundle; identified here by hash instead. Position 1424 of the Auto-Organotypic demonstration set."
+}

@@ -1,0 +1,14 @@
+{
+ "pair": [
+  56,
+  72
+ ],
+ "remove_percent": 25.0,
+ "gradient_threshold": 0.028536081314086914,
+ "eligible": 215438,
+ "kept": 208284,
+ "removed": 53860,
+ "pixels": 262144,
+ "pilot_dx": 0.06247818810143757,
+ "pilot_dy": 1.7800790399751136
+}

@@ -1,0 +1,1655 @@
+element,key,value_number,value_text,note
+recording,frames,240.0,count,
+recording,usable_pairs,1169.0,count,of 1169 planned
+residual,median,0.029111633881684935,pixels,the orange mark on the histogram
+residual,p95,0.07824302177406049,pixels,
+residual,maximum,0.22318200637102206,pixels,
+trajectory,frame_000_dx,0.0,pixels,the reconciled path
+trajectory,frame_001_dx,0.8156345141357958,pixels,the reconciled path
+trajectory,frame_002_dx,1.0700965459009883,pixels,the reconciled path
+trajectory,frame_003_dx,1.3818920719444705,pixels,the reconciled path
+trajectory,frame_004_dx,1.3327417642669637,pixels,the reconciled path
+trajectory,frame_005_dx,1.4380089302858767,pixels,the reconciled path
+trajectory,frame_006_dx,1.5342884842423608,pixels,the reconciled path
+trajectory,frame_007_dx,1.566880676988924,pixels,the reconciled path
+trajectory,frame_008_dx,1.4873336780290507,pixels,the reconciled path
+trajectory,frame_009_dx,1.6719702219684367,pixels,the reconciled path
+trajectory,frame_010_dx,1.720696861839412,pixels,the reconciled path
+trajectory,frame_011_dx,1.6142556806479493,pixels,the reconciled path
+trajectory,frame_012_dx,1.776118125645823,pixels,the reconciled path
+trajectory,frame_013_dx,1.7995807076738692,pixels,the reconciled path
+trajectory,frame_014_dx,1.6955455290953168,pixels,the reconciled path
+trajectory,frame_015_dx,1.7345043490205747,pixels,the reconciled path
+trajectory,frame_016_dx,1.7159467233671428,pixels,the reconciled path
+trajectory,frame_017_dx,1.8744195940380166,pixels,the reconciled path
+trajectory,frame_018_dx,1.6141180498481724,pixels,the reconciled path
+trajectory,frame_019_dx,1.8459875498611944,pixels,the reconciled path
+trajectory,frame_020_dx,1.8233321485334428,pixels,the reconciled path
+trajectory,frame_021_dx,1.6409091877998403,pixels,the reconciled path
+trajectory,frame_022_dx,1.9507088148104517,pixels,the reconciled path
+trajectory,frame_023_dx,1.9711549965913369,pixels,the reconciled path
+trajectory,frame_024_dx,2.0808544422015047,pixels,the reconciled path
+trajectory,frame_025_dx,1.905503669060892,pixels,the reconciled path
+trajectory,frame_026_dx,1.8925863137730095,pixels,the reconciled path
+trajectory,frame_027_dx,2.0636829033368733,pixels,the reconciled path
+trajectory,frame_028_dx,1.9187977634707745,pixels,the reconciled path
+trajectory,frame_029_dx,1.9754060044417046,pixels,the reconciled path
+trajectory,frame_030_dx,1.9987805273968264,pixels,the reconciled path
+trajectory,frame_031_dx,2.060767541123794,pixels,the reconciled path
+trajectory,frame_032_dx,1.9145069285193963,pixels,the reconciled path
+trajectory,frame_033_dx,2.033732728948668,pixels,the reconciled path
+trajectory,frame_034_dx,1.8239782101825512,pixels,the reconciled path
+trajectory,frame_035_dx,1.9764875428578383,pixels,the reconciled path
+trajectory,frame_036_dx,2.0860995640812163,pixels,the reconciled path
+trajectory,frame_037_dx,2.1649726256090362,pixels,the reconciled path
+trajectory,frame_038_dx,2.166807044757456,pixels,the reconciled path
+trajectory,frame_039_dx,2.0705722285959833,pixels,the reconciled path
+trajectory,frame_040_dx,2.1651135302325915,pixels,the reconciled path
+trajectory,frame_041_dx,2.084495096592834,pixels,the reconciled path
+trajectory,frame_042_dx,2.2160589541185307,pixels,the reconciled path
+trajectory,frame_043_dx,2.369367650103322,pixels,the reconciled path
+trajectory,frame_044_dx,2.2201229188052176,pixels,the reconciled path
+trajectory,frame_045_dx,2.3461527973642156,pixels,the reconciled path
+trajectory,frame_046_dx,2.242205350766869,pixels,the reconciled path
+trajectory,frame_047_dx,2.288222861202701,pixels,the reconciled path
+trajectory,frame_048_dx,2.3738646923476034,pixels,the reconciled path
+trajectory,frame_049_dx,2.3142339303365627,pixels,the reconciled path
+trajectory,frame_050_dx,2.254251287054531,pixels,the reconciled path
+trajectory,frame_051_dx,2.5108921716327397,pixels,the reconciled path
+trajectory,frame_052_dx,2.4963171401051674,pixels,the reconciled path
+trajectory,frame_053_dx,2.4174669847041965,pixels,the reconciled path
+trajectory,frame_054_dx,2.4455288207769152,pixels,the reconciled path
+trajectory,frame_055_dx,2.4847238542965076,pixels,the reconciled path
+trajectory,frame_056_dx,2.5312966702938113,pixels,the reconciled path
+trajectory,frame_057_dx,2.433028538306432,pixels,the reconciled path
+trajectory,frame_058_dx,2.578141180046681,pixels,the reconciled path
+trajectory,frame_059_dx,2.476247932160959,pixels,the reconciled path
+trajectory,frame_060_dx,2.410040290175129,pixels,the reconciled path
+trajectory,frame_061_dx,2.452133441231051,pixels,the reconciled path
+trajectory,frame_062_dx,2.3635265051301264,pixels,the reconciled path
+trajectory,frame_063_dx,2.59686139375993,pixels,the reconciled path
+trajectory,frame_064_dx,2.4946527107858008,pixels,the reconciled path
+trajectory,frame_065_dx,2.5573398550693365,pixels,the reconciled path
+trajectory,frame_066_dx,2.6302741778522862,pixels,the reconciled path
+trajectory,frame_067_dx,2.7339759333002065,pixels,the reconciled path
+trajectory,frame_068_dx,2.5528676561711783,pixels,the reconciled path
+trajectory,frame_069_dx,2.7770724067813903,pixels,the reconciled path
+trajectory,frame_070_dx,2.8123757784581866,pixels,the reconciled path
+trajectory,frame_071_dx,2.645167831982451,pixels,the reconciled path
+trajectory,frame_072_dx,2.593774858395249,pixels,the reconciled path
+trajectory,frame_073_dx,2.7674569208324646,pixels,the reconciled path
+trajectory,frame_074_dx,2.605893561683998,pixels,the reconciled path
+trajectory,frame_075_dx,2.574773037851575,pixels,the reconciled path
+trajectory,frame_076_dx,2.665108802911401,pixels,the reconciled path
+trajectory,frame_077_dx,2.540061192809828,pixels,the reconciled path
+trajectory,frame_078_dx,2.778750224002201,pixels,the reconciled path
+trajectory,frame_079_dx,2.7722368156221764,pixels,the reconciled path
+trajectory,frame_080_dx,2.55690537945174,pixels,the reconciled path
+trajectory,frame_081_dx,2.7188648653469647,pixels,the reconciled path
+trajectory,frame_082_dx,2.5313051174574204,pixels,the reconciled path
+trajectory,frame_083_dx,2.410916322660515,pixels,the reconciled path
+trajectory,frame_084_dx,2.6044410228396337,pixels,the reconciled path
+trajectory,frame_085_dx,2.6151866435185287,pixels,the reconciled path
+trajectory,frame_086_dx,2.7023380664502508,pixels,the reconciled path
+trajectory,frame_087_dx,2.722891553020842,pixels,the reconciled path
+trajectory,frame_088_dx,2.672482604015804,pixels,the reconciled path
+trajectory,frame_089_dx,2.598400373466373,pixels,the reconciled path
+trajectory,frame_090_dx,2.893233189930112,pixels,the reconciled path
+trajectory,frame_091_dx,2.6870078529055355,pixels,the reconciled path
+trajectory,frame_092_dx,2.822571630765117,pixels,the reconciled path
+trajectory,frame_093_dx,2.850812687324849,pixels,the reconciled path
+trajectory,frame_094_dx,2.813681738696646,pixels,the reconciled path
+trajectory,frame_095_dx,2.7816284642493514,pixels,the reconciled path
+trajectory,frame_096_dx,2.760589754665248,pixels,the reconciled path
+trajectory,frame_097_dx,2.7434060795946076,pixels,the reconciled path
+trajectory,frame_098_dx,2.6630057726345995,pixels,the reconciled path
+trajectory,frame_099_dx,2.885265080806449,pixels,the reconciled path
+trajectory,frame_100_dx,2.760788929011942,pixels,the reconciled path
+trajectory,frame_101_dx,2.841799595643124,pixels,the reconciled path
+trajectory,frame_102_dx,2.8236507704814895,pixels,the reconciled path
+trajectory,frame_103_dx,2.9937390016884313,pixels,the reconciled path
+trajectory,frame_104_dx,3.088008843338982,pixels,the reconciled path
+trajectory,frame_105_dx,3.097435002795678,pixels,the reconciled path
+trajectory,frame_106_dx,3.055232897175557,pixels,the reconciled path
+trajectory,frame_107_dx,3.06366523544716,pixels,the reconciled path
+trajectory,frame_108_dx,2.9549727032348443,pixels,the reconciled path
+trajectory,frame_109_dx,3.154987314302879,pixels,the reconciled path
+trajectory,frame_110_dx,3.0382941385839795,pixels,the reconciled path
+trajectory,frame_111_dx,3.112136894422805,pixels,the reconciled path
+trajectory,frame_112_dx,2.980246239216645,pixels,the reconciled path
+trajectory,frame_113_dx,3.0316930723289093,pixels,the reconciled path
+trajectory,frame_114_dx,2.889185577256539,pixels,the reconciled path
+trajectory,frame_115_dx,3.072415483620284,pixels,the reconciled path
+trajectory,frame_116_dx,2.927369797703832,pixels,the reconciled path
+trajectory,frame_117_dx,3.221739846923726,pixels,the reconciled path
+trajectory,frame_118_dx,2.9664783995102826,pixels,the reconciled path
+trajectory,frame_119_dx,3.157174575499708,pixels,the reconciled path
+trajectory,frame_120_dx,3.030099642353464,pixels,the reconciled path
+trajectory,frame_121_dx,3.1777688104620525,pixels,the reconciled path
+trajectory,frame_122_dx,3.1469143409942704,pixels,the reconciled path
+trajectory,frame_123_dx,3.1760087687892447,pixels,the reconciled path
+trajectory,frame_124_dx,3.2408865629993513,pixels,the reconciled path
+trajectory,frame_125_dx,2.945454905908507,pixels,the reconciled path
+trajectory,frame_126_dx,3.0900775163175567,pixels,the reconciled path
+trajectory,frame_127_dx,3.29305895281237,pixels,the reconciled path
+trajectory,frame_128_dx,3.257118357734049,pixels,the reconciled path
+trajectory,frame_129_dx,2.9949899441960683,pixels,the reconciled path
+trajectory,frame_130_dx,3.068670043249967,pixels,the reconciled path
+trajectory,frame_131_dx,3.007014099395614,pixels,the reconciled path
+trajectory,frame_132_dx,3.192272164728316,pixels,the reconciled path
+trajectory,frame_133_dx,3.055894841570338,pixels,the reconciled path
+trajectory,frame_134_dx,3.1296018392716536,pixels,the reconciled path
+trajectory,frame_135_dx,3.396027098836899,pixels,the reconciled path
+trajectory,frame_136_dx,3.162787589573634,pixels,the reconciled path
+trajectory,frame_137_dx,3.2118240086410426,pixels,the reconciled path
+trajectory,frame_138_dx,3.230063950192416,pixels,the reconciled path
+trajectory,frame_139_dx,3.1935028709961646,pixels,the reconciled path
+trajectory,frame_140_dx,3.249282349307646,pixels,the reconciled path
+trajectory,frame_141_dx,3.2217903960529406,pixels,the reconciled path
+trajectory,frame_142_dx,3.2769805905583804,pixels,the reconciled path
+trajectory,frame_143_dx,3.4409981680345605,pixels,the reconciled path
+trajectory,frame_144_dx,3.4025800461255864,pixels,the reconciled path
+trajectory,frame_145_dx,3.3550941102979346,pixels,the reconciled path
+trajectory,frame_146_dx,3.493467605445347,pixels,the reconciled path
+trajectory,frame_147_dx,3.4806976538012857,pixels,the reconciled path
+trajectory,frame_148_dx,3.425709314792047,pixels,the reconciled path
+trajectory,frame_149_dx,3.6480632471145857,pixels,the reconciled path
+trajectory,frame_150_dx,3.555449138310164,pixels,the reconciled path
+trajectory,frame_151_dx,3.6312480344583986,pixels,the reconciled path
+trajectory,frame_152_dx,3.4189479541249166,pixels,the reconciled path
+trajectory,frame_153_dx,3.473610269182359,pixels,the reconciled path
+trajectory,frame_154_dx,3.378821293441626,pixels,the reconciled path
+trajectory,frame_155_dx,3.667766850522744,pixels,the reconciled path
+trajectory,frame_156_dx,3.5725277705592338,pixels,the reconciled path
+trajectory,frame_157_dx,3.495341809654094,pixels,the reconciled path
+trajectory,frame_158_dx,3.4293695146882985,pixels,the reconciled path
+trajectory,frame_159_dx,3.54863126846079,pixels,the reconciled path
+trajectory,frame_160_dx,3.6822191655354213,pixels,the reconciled path
+trajectory,frame_161_dx,3.6544260394472965,pixels,the reconciled path
+trajectory,frame_162_dx,3.4275438487528973,pixels,the reconciled path
+trajectory,frame_163_dx,3.573813342539116,pixels,the reconciled path
+trajectory,frame_164_dx,3.4612712421658736,pixels,the reconciled path
+trajectory,frame_165_dx,3.587811663793906,pixels,the reconciled path
+trajectory,frame_166_dx,3.561678009347982,pixels,the reconciled path
+trajectory,frame_167_dx,3.6806713618950626,pixels,the reconciled path
+trajectory,frame_168_dx,3.79718939618042,pixels,the reconciled path
+trajectory,frame_169_dx,3.609056369613442,pixels,the reconciled path
+trajectory,frame_170_dx,3.770276578373974,pixels,the reconciled path
+trajectory,frame_171_dx,3.6208604655549803,pixels,the reconciled path
+trajectory,frame_172_dx,3.6846010347108624,pixels,the reconciled path
+trajectory,frame_173_dx,3.76289064932753,pixels,the reconciled path
+trajectory,frame_174_dx,3.4944262498602043,pixels,the reconciled path
+trajectory,frame_175_dx,3.6357644985401554,pixels,the reconciled path
+trajectory,frame_176_dx,3.536355325663595,pixels,the reconciled path
+trajectory,frame_177_dx,3.510042442188106,pixels,the reconciled path
+trajectory,frame_178_dx,3.524425914541332,pixels,the reconciled path
+trajectory,frame_179_dx,3.6390706026699644,pixels,the reconciled path
+trajectory,frame_180_dx,3.511190186119523,pixels,the reconciled path
+trajectory,frame_181_dx,3.6100511986180135,pixels,the reconciled path
+trajectory,frame_182_dx,3.593556447314633,pixels,the reconciled path
+trajectory,frame_183_dx,3.6694260226580018,pixels,the reconciled path
+trajectory,frame_184_dx,3.35118397559336,pixels,the reconciled path
+trajectory,frame_185_dx,3.565250205303848,pixels,the reconciled path
+trajectory,frame_186_dx,3.6754151378121236,pixels,the reconciled path
+trajectory,frame_187_dx,3.581856041532579,pixels,the reconciled path
+trajectory,frame_188_dx,3.6721957440593465,pixels,the reconciled path
+trajectory,frame_189_dx,3.543090423698756,pixels,the reconciled path
+trajectory,frame_190_dx,3.4024378582111567,pixels,the reconciled path
+trajectory,frame_191_dx,3.6309576356992865,pixels,the reconciled path
+trajectory,frame_192_dx,3.5848240661049244,pixels,the reconciled path
+trajectory,frame_193_dx,3.6733279605909024,pixels,the reconciled path
+trajectory,frame_194_dx,3.647243456842093,pixels,the reconciled path
+trajectory,frame_195_dx,3.6232219450524745,pixels,the reconciled path
+trajectory,frame_196_dx,3.6276443334054584,pixels,the reconciled path
+trajectory,frame_197_dx,3.7753341257516113,pixels,the reconciled path
+trajectory,frame_198_dx,3.823740306419007,pixels,the reconciled path
+trajectory,frame_199_dx,3.8081726695173117,pixels,the reconciled path
+trajectory,frame_200_dx,3.7193022701867147,pixels,the reconciled path
+trajectory,frame_201_dx,3.5945644491813917,pixels,the reconciled path
+trajectory,frame_202_dx,3.9435396190207377,pixels,the reconciled path
+trajectory,frame_203_dx,3.8278138599537046,pixels,the reconciled path
+trajectory,frame_204_dx,3.8359007283005027,pixels,the reconciled path
+trajectory,frame_205_dx,3.9111762010316653,pixels,the reconciled path
+trajectory,frame_206_dx,3.742732046583946,pixels,the reconciled path
+trajectory,frame_207_dx,3.601952268957505,pixels,the reconciled path
+trajectory,frame_208_dx,3.696585188196624,pixels,the reconciled path
+trajectory,frame_209_dx,3.825370718198426,pixels,the reconciled path
+trajectory,frame_210_dx,3.6429269598672462,pixels,the reconciled path
+trajectory,frame_211_dx,3.818894741525706,pixels,the reconciled path
+trajectory,frame_212_dx,3.8764680207058637,pixels,the reconciled path
+trajectory,frame_213_dx,3.775079808663675,pixels,the reconciled path
+trajectory,frame_214_dx,3.7887322499708724,pixels,the reconciled path
+trajectory,frame_215_dx,3.9240613818556946,pixels,the reconciled path
+trajectory,frame_216_dx,3.7652111425758643,pixels,the reconciled path
+trajectory,frame_217_dx,3.8973299839471567,pixels,the reconciled path
+trajectory,frame_218_dx,3.9359956657371824,pixels,the reconciled path
+trajectory,frame_219_dx,3.727365103457209,pixels,the reconciled path
+trajectory,frame_220_dx,3.762190114380452,pixels,the reconciled path
+trajectory,frame_221_dx,3.775394471174311,pixels,the reconciled path
+trajectory,frame_222_dx,3.9404959831885744,pixels,the reconciled path
+trajectory,frame_223_dx,3.9716697763748647,pixels,the reconciled path
+trajectory,frame_224_dx,3.7892741728960853,pixels,the reconciled path
+trajectory,frame_225_dx,3.691808833059628,pixels,the reconciled path
+trajectory,frame_226_dx,3.8762624741653005,pixels,the reconciled path
+trajectory,frame_227_dx,3.7259366019628595,pixels,the reconciled path
+trajectory,frame_228_dx,3.777156745819975,pixels,the reconciled path
+trajectory,frame_229_dx,3.7504277288733165,pixels,the reconciled path
+trajectory,frame_230_dx,3.605235249496709,pixels,the reconciled path
+trajectory,frame_231_dx,3.7559898929800997,pixels,the reconciled path
+trajectory,frame_232_dx,3.8203947667926124,pixels,the reconciled path
+trajectory,frame_233_dx,3.8923236080407704,pixels,the reconciled path
+trajectory,frame_234_dx,3.975201371868765,pixels,the reconciled path
+trajectory,frame_235_dx,4.028807164462239,pixels,the reconciled path
+trajectory,frame_236_dx,3.990316271861335,pixels,the reconciled path
+trajectory,frame_237_dx,3.7942544334290584,pixels,the reconciled path
+trajectory,frame_238_dx,3.6834351541096417,pixels,the reconciled path
+trajectory,frame_239_dx,3.7745891306197197,pixels,the reconciled path
+trajectory,frame_000_dy,0.0,pixels,the reconciled path
+trajectory,frame_001_dy,-0.47031789569980015,pixels,the reconciled path
+trajectory,frame_002_dy,-0.3658500916200843,pixels,the reconciled path
+trajectory,frame_003_dy,-0.6082030252349838,pixels,the reconciled path
+trajectory,frame_004_dy,-0.3615800560146749,pixels,the reconciled path
+trajectory,frame_005_dy,-0.5795469377642785,pixels,the reconciled path
+trajectory,frame_006_dy,-0.318135850420162,pixels,the reconciled path
+trajectory,frame_007_dy,-0.20067178454693713,pixels,the reconciled path
+trajectory,frame_008_dy,-0.2414469755800261,pixels,the reconciled path
+trajectory,frame_009_dy,-0.15131294321255878,pixels,the reconciled path
+trajectory,frame_010_dy,-0.22329463482088735,pixels,the reconciled path
+trajectory,frame_011_dy,-0.1801855288114667,pixels,the reconciled path
+trajectory,frame_012_dy,-0.06365810783409079,pixels,the reconciled path
+trajectory,frame_013_dy,-0.3684911786846554,pixels,the reconciled path
+trajectory,frame_014_dy,0.2777305500852524,pixels,the reconciled path
+trajectory,frame_015_dy,-0.004078991098280229,pixels,the reconciled path
+trajectory,frame_016_dy,-0.05858786852637122,pixels,the reconciled path
+trajectory,frame_017_dy,0.05870499827867932,pixels,the reconciled path
+trajectory,frame_018_dy,0.10789162009199113,pixels,the reconciled path
+trajectory,frame_019_dy,0.14651821695728046,pixels,the reconciled path
+trajectory,frame_020_dy,0.17312778388420108,pixels,the reconciled path
+trajectory,frame_021_dy,0.39834462165507956,pixels,the reconciled path
+trajectory,frame_022_dy,0.22197203636058876,pixels,the reconciled path
+trajectory,frame_023_dy,0.10546536317518893,pixels,the reconciled path
+trajectory,frame_024_dy,0.19501073194331212,pixels,the reconciled path
+trajectory,frame_025_dy,0.361304346650393,pixels,the reconciled path
+trajectory,frame_026_dy,0.14112076684295122,pixels,the reconciled path
+trajectory,frame_027_dy,0.13614461183158605,pixels,the reconciled path
+trajectory,frame_028_dy,0.023077075681656248,pixels,the reconciled path
+trajectory,frame_029_dy,0.2922301185370114,pixels,the reconciled path
+trajectory,frame_030_dy,0.10329877765508029,pixels,the reconciled path
+trajectory,frame_031_dy,0.552888259521696,pixels,the reconciled path
+trajectory,frame_032_dy,0.34103750243216935,pixels,the reconciled path
+trajectory,frame_033_dy,0.20621968540608915,pixels,the reconciled path
+trajectory,frame_034_dy,0.04853227620274618,pixels,the reconciled path
+trajectory,frame_035_dy,-0.016865609515700014,pixels,the reconciled path
+trajectory,frame_036_dy,-0.16642900396009555,pixels,the reconciled path
+trajectory,frame_037_dy,-0.40844900947125135,pixels,the reconciled path
+trajectory,frame_038_dy,-0.1781006645554775,pixels,the reconciled path
+trajectory,frame_039_dy,-0.2253572758740874,pixels,the reconciled path
+trajectory,frame_040_dy,-0.5184040597203224,pixels,the reconciled path
+trajectory,frame_041_dy,-0.6436947251902598,pixels,the reconciled path
+trajectory,frame_042_dy,-0.5752156393624146,pixels,the reconciled path
+trajectory,frame_043_dy,-0.5081948917116308,pixels,the reconciled path
+trajectory,frame_044_dy,-0.48580875846931865,pixels,the reconciled path
+trajectory,frame_045_dy,-0.5636839145989309,pixels,the reconciled path
+trajectory,frame_046_dy,-0.6771513326830154,pixels,the reconciled path
+trajectory,frame_047_dy,-0.5186180276935008,pixels,the reconciled path
+trajectory,frame_048_dy,-0.4817152505419242,pixels,the reconciled path
+trajectory,frame_049_dy,-0.5063180381204958,pixels,the reconciled path
+trajectory,frame_050_dy,-0.7760550040046372,pixels,the reconciled path
+trajectory,frame_051_dy,-0.5650824499595207,pixels,the reconciled path
+trajectory,frame_052_dy,-0.5849084669360358,pixels,the reconciled path
+trajectory,frame_053_dy,-0.7297793516491909,pixels,the reconciled path
+trajectory,frame_054_dy,-0.39547084849517705,pixels,the reconciled path
+trajectory,frame_055_dy,-0.4437966327418742,pixels,the reconciled path
+trajectory,frame_056_dy,-0.6557230684649685,pixels,the reconciled path
+trajectory,frame_057_dy,-0.7410005293338736,pixels,the reconciled path
+trajectory,frame_058_dy,-0.7501617472231716,pixels,the reconciled path
+trajectory,frame_059_dy,-0.8892661328056897,pixels,the reconciled path
+trajectory,frame_060_dy,-0.7717857984954516,pixels,the reconciled path
+trajectory,frame_061_dy,-0.7550571341212494,pixels,the reconciled path
+trajectory,frame_062_dy,-0.44008715529488474,pixels,the reconciled path
+trajectory,frame_063_dy,-0.35315866751123653,pixels,the reconciled path
+trajectory,frame_064_dy,-0.09455287644943805,pixels,the reconciled path
+trajectory,frame_065_dy,0.06498448644147105,pixels,the reconciled path
+trajectory,frame_066_dy,0.5769941509523329,pixels,the reconciled path
+trajectory,frame_067_dy,0.26641794248980083,pixels,the reconciled path
+trajectory,frame_068_dy,0.8250826872229156,pixels,the reconciled path
+trajectory,frame_069_dy,0.5698128288822354,pixels,the reconciled path
+trajectory,frame_070_dy,0.6589960747940704,pixels,the reconciled path
+trajectory,frame_071_dy,1.0705522735011126,pixels,the reconciled path
+trajectory,frame_072_dy,1.1243559715101452,pixels,the reconciled path
+trajectory,frame_073_dy,0.9073216579426415,pixels,the reconciled path
+trajectory,frame_074_dy,0.7291930971389806,pixels,the reconciled path
+trajectory,frame_075_dy,0.762358472545576,pixels,the reconciled path
+trajectory,frame_076_dy,0.7538090770558749,pixels,the reconciled path
+trajectory,frame_077_dy,0.7964537602176865,pixels,the reconciled path
+trajectory,frame_078_dy,0.8619018873147382,pixels,the reconciled path
+trajectory,frame_079_dy,0.7175081473359979,pixels,the reconciled path
+trajectory,frame_080_dy,0.961025121826057,pixels,the reconciled path
+trajectory,frame_081_dy,0.7052840721049253,pixels,the reconciled path
+trajectory,frame_082_dy,0.6174685238429982,pixels,the reconciled path
+trajectory,frame_083_dy,0.5519376024443253,pixels,the reconciled path
+trajectory,frame_084_dy,0.3553347487529489,pixels,the reconciled path
+trajectory,frame_085_dy,0.06075581345687814,pixels,the reconciled path
+trajectory,frame_086_dy,-0.02553080378625102,pixels,the reconciled path
+trajectory,frame_087_dy,0.16891687410660244,pixels,the reconciled path
+trajectory,frame_088_dy,-0.08815575366605931,pixels,the reconciled path
+trajectory,frame_089_dy,-0.30237934088793467,pixels,the reconciled path
+trajectory,frame_090_dy,-0.43610016860143164,pixels,the reconciled path
+trajectory,frame_091_dy,-0.3277425995786315,pixels,the reconciled path
+trajectory,frame_092_dy,0.09827585748918634,pixels,the reconciled path
+trajectory,frame_093_dy,-0.10177338171122725,pixels,the reconciled path
+trajectory,frame_094_dy,-0.025563813875415693,pixels,the reconciled path
+trajectory,frame_095_dy,0.04770117712861619,pixels,the reconciled path
+trajectory,frame_096_dy,-0.06251843356237974,pixels,the reconciled path
+trajectory,frame_097_dy,0.14335504572002133,pixels,the reconciled path
+trajectory,frame_098_dy,-0.5523566768928215,pixels,the reconciled path
+trajectory,frame_099_dy,-0.6423994632965265,pixels,the reconciled path
+trajectory,frame_100_dy,-0.46582364852601776,pixels,the reconciled path
+trajectory,frame_101_dy,-0.19261357515298888,pixels,the reconciled path
+trajectory,frame_102_dy,-0.1289567822105297,pixels,the reconciled path
+trajectory,frame_103_dy,-0.26630626837298516,pixels,the reconciled path
+trajectory,frame_104_dy,0.022870796765877135,pixels,the reconciled path
+trajectory,frame_105_dy,-0.03531718692828604,pixels,the reconciled path
+trajectory,frame_106_dy,0.17854558756438077,pixels,the reconciled path
+trajectory,frame_107_dy,0.1729873252841505,pixels,the reconciled path
+trajectory,frame_108_dy,0.36430081882047194,pixels,the reconciled path
+trajectory,frame_109_dy,0.11842973072322453,pixels,the reconciled path
+trajectory,frame_110_dy,0.14473178292187552,pixels,the reconciled path
+trajectory,frame_111_dy,0.30691287879007023,pixels,the reconciled path
+trajectory,frame_112_dy,0.3770387632698872,pixels,the reconciled path
+trajectory,frame_113_dy,0.2588575305205644,pixels,the reconciled path
+trajectory,frame_114_dy,0.622683320368213,pixels,the reconciled path
+trajectory,frame_115_dy,0.41910362783590815,pixels,the reconciled path
+trajectory,frame_116_dy,0.6626398670594431,pixels,the reconciled path
+trajectory,frame_117_dy,0.42229300050748086,pixels,the reconciled path
+trajectory,frame_118_dy,0.7196154420236921,pixels,the reconciled path
+trajectory,frame_119_dy,0.6421322169020993,pixels,the reconciled path
+trajectory,frame_120_dy,0.674614054890741,pixels,the reconciled path
+trajectory,frame_121_dy,0.3244256625066897,pixels,the reconciled path
+trajectory,frame_122_dy,0.48827432405620735,pixels,the reconciled path
+trajectory,frame_123_dy,0.5957778094160902,pixels,the reconciled path
+trajectory,frame_124_dy,0.6732170396171211,pixels,the reconciled path
+trajectory,frame_125_dy,0.9580293113863441,pixels,the reconciled path
+trajectory,frame_126_dy,0.8558185473083542,pixels,the reconciled path
+trajectory,frame_127_dy,1.1489231418079275,pixels,the reconciled path
+trajectory,frame_128_dy,0.7776943692968655,pixels,the reconciled path
+trajectory,frame_129_dy,0.3133184911043531,pixels,the reconciled path
+trajectory,frame_130_dy,0.1384178176004907,pixels,the reconciled path
+trajectory,frame_131_dy,0.2261207417856793,pixels,the reconciled path
+trajectory,frame_132_dy,0.042605361922869955,pixels,the reconciled path
+trajectory,frame_133_dy,-0.15145598101843558,pixels,the reconciled path
+trajectory,frame_134_dy,0.09192685597072145,pixels,the reconciled path
+trajectory,frame_135_dy,-0.46593189820489306,pixels,the reconciled path
+trajectory,frame_136_dy,-0.10293688222287381,pixels,the reconciled path
+trajectory,frame_137_dy,-0.11514044737976846,pixels,the reconciled path
+trajectory,frame_138_dy,-0.21561047106545014,pixels,the reconciled path
+trajectory,frame_139_dy,-0.2921557785289428,pixels,the reconciled path
+trajectory,frame_140_dy,-0.3344448647044469,pixels,the reconciled path
+trajectory,frame_141_dy,-0.021818190493659767,pixels,the reconciled path
+trajectory,frame_142_dy,-0.5917879242626295,pixels,the reconciled path
+trajectory,frame_143_dy,-0.2416610507750497,pixels,the reconciled path
+trajectory,frame_144_dy,-0.0037944802230534497,pixels,the reconciled path
+trajectory,frame_145_dy,-0.08688349254847008,pixels,the reconciled path
+trajectory,frame_146_dy,-0.4420543819208367,pixels,the reconciled path
+trajectory,frame_147_dy,-0.6443853683822616,pixels,the reconciled path
+trajectory,frame_148_dy,-0.3771067551964089,pixels,the reconciled path
+trajectory,frame_149_dy,-0.31595882721838975,pixels,the reconciled path
+trajectory,frame_150_dy,-0.24463269686098454,pixels,the reconciled path
+trajectory,frame_151_dy,-0.27806250982811476,pixels,the reconciled path
+trajectory,frame_152_dy,-0.0572021069724032,pixels,the reconciled path
+trajectory,frame_153_dy,-0.2511755509041517,pixels,the reconciled path
+trajectory,frame_154_dy,0.10179539330947443,pixels,the reconciled path
+trajectory,frame_155_dy,0.2509237325196896,pixels,the reconciled path
+trajectory,frame_156_dy,0.5080360860980339,pixels,the reconciled path
+trajectory,frame_157_dy,0.4298602707740898,pixels,the reconciled path
+trajectory,frame_158_dy,0.5538733126650781,pixels,the reconciled path
+trajectory,frame_159_dy,0.5888474400409461,pixels,the reconciled path
+trajectory,frame_160_dy,0.5921157862006466,pixels,the reconciled path
+trajectory,frame_161_dy,0.9799191238100989,pixels,the reconciled path
+trajectory,frame_162_dy,0.8763924180414355,pixels,the reconciled path
+trajectory,frame_163_dy,0.6226058675229396,pixels,the reconciled path
+trajectory,frame_164_dy,0.8415919055640826,pixels,the reconciled path
+trajectory,frame_165_dy,0.6013406509918912,pixels,the reconciled path
+trajectory,frame_166_dy,0.8804987409455217,pixels,the reconciled path
+trajectory,frame_167_dy,0.8508205724527574,pixels,the reconciled path
+trajectory,frame_168_dy,0.5900455131802467,pixels,the reconciled path
+trajectory,frame_169_dy,0.8013065250040945,pixels,the reconciled path
+trajectory,frame_170_dy,0.7900346315719271,pixels,the reconciled path
+trajectory,frame_171_dy,0.7297958311076416,pixels,the reconciled path
+trajectory,frame_172_dy,0.9030988748096168,pixels,the reconciled path
+trajectory,frame_173_dy,0.9009602298098084,pixels,the reconciled path
+trajectory,frame_174_dy,0.7868408886601772,pixels,the reconciled path
+trajectory,frame_175_dy,0.38144488884846367,pixels,the reconciled path
+trajectory,frame_176_dy,0.25848741043233653,pixels,the reconciled path
+trajectory,frame_177_dy,0.09576394430112621,pixels,the reconciled path
+trajectory,frame_178_dy,0.04835931203723666,pixels,the reconciled path
+trajectory,frame_179_dy,0.04223931274188596,pixels,the reconciled path
+trajectory,frame_180_dy,0.025016624059786975,pixels,the reconciled path
+trajectory,frame_181_dy,-0.1434367211593209,pixels,the reconciled path
+trajectory,frame_182_dy,-0.24499990917996137,pixels,the reconciled path
+trajectory,frame_183_dy,-0.2385577640426269,pixels,the reconciled path
+trajectory,frame_184_dy,-0.1857374210133771,pixels,the reconciled path
+trajectory,frame_185_dy,-0.42944169980059343,pixels,the reconciled path
+trajectory,frame_186_dy,-0.35003765800718256,pixels,the reconciled path
+trajectory,frame_187_dy,-0.34128500385810234,pixels,the reconciled path
+trajectory,frame_188_dy,-0.45600624217483654,pixels,the reconciled path
+trajectory,frame_189_dy,-0.21574534219533648,pixels,the reconciled path
+trajectory,frame_190_dy,-0.08696866268033449,pixels,the reconciled path
+trajectory,frame_191_dy,-0.20269007521814666,pixels,the reconciled path
+trajectory,frame_192_dy,-0.24447885706439113,pixels,the reconciled path
+trajectory,frame_193_dy,-0.4828857584267773,pixels,the reconciled path
+trajectory,frame_194_dy,-0.29953149400944745,pixels,the reconciled path
+trajectory,frame_195_dy,-0.24628607615212852,pixels,the reconciled path
+trajectory,frame_196_dy,-0.2798108953819972,pixels,the reconciled path
+trajectory,frame_197_dy,-0.1973390939157012,pixels,the reconciled path
+trajectory,frame_198_dy,-0.16803128453316732,pixels,the reconciled path
+trajectory,frame_199_dy,-0.003706405818676613,pixels,the reconciled path
+trajectory,frame_200_dy,0.19692888585625418,pixels,the reconciled path
+trajectory,frame_201_dy,0.1686037291856795,pixels,the reconciled path
+trajectory,frame_202_dy,0.24439031879879652,pixels,the reconciled path
+trajectory,frame_203_dy,0.2197386952421561,pixels,the reconciled path
+trajectory,frame_204_dy,0.4331915925696454,pixels,the reconciled path
+trajectory,frame_205_dy,0.5720950187502115,pixels,the reconciled path
+trajectory,frame_206_dy,0.7456924265663814,pixels,the reconciled path
+trajectory,frame_207_dy,1.1212361269709814,pixels,the reconciled path
+trajectory,frame_208_dy,1.0027543046618905,pixels,the reconciled path
+trajectory,frame_209_dy,1.0660455263565414,pixels,the reconciled path
+trajectory,frame_210_dy,1.309182665902198,pixels,the reconciled path
+trajectory,frame_211_dy,1.0662007282942731,pixels,the reconciled path
+trajectory,frame_212_dy,1.077449805152713,pixels,the reconciled path
+trajectory,frame_213_dy,0.9804980194525391,pixels,the reconciled path
+trajectory,frame_214_dy,0.9406580367469712,pixels,the reconciled path
+trajectory,frame_215_dy,1.1084495355017623,pixels,the reconciled path
+trajectory,frame_216_dy,0.9572633609997347,pixels,the reconciled path
+trajectory,frame_217_dy,0.9531498423855341,pixels,the reconciled path
+trajectory,frame_218_dy,0.7860300168607882,pixels,the reconciled path
+trajectory,frame_219_dy,1.0350672838247033,pixels,the reconciled path
+trajectory,frame_220_dy,0.8448314934698085,pixels,the reconciled path
+trajectory,frame_221_dy,0.7723599216091822,pixels,the reconciled path
+trajectory,frame_222_dy,0.7123242164521961,pixels,the reconciled path
+trajectory,frame_223_dy,0.7672361144759524,pixels,the reconciled path
+trajectory,frame_224_dy,0.8877620101665974,pixels,the reconciled path
+trajectory,frame_225_dy,0.8156664717896926,pixels,the reconciled path
+trajectory,frame_226_dy,0.7535024872657297,pixels,the reconciled path
+trajectory,frame_227_dy,0.9593927117264669,pixels,the reconciled path
+trajectory,frame_228_dy,1.1867702957854531,pixels,the reconciled path
+trajectory,frame_229_dy,0.7508067825754309,pixels,the reconciled path
+trajectory,frame_230_dy,0.8452734127085447,pixels,the reconciled path
+trajectory,frame_231_dy,0.6703320231745495,pixels,the reconciled path
+trajectory,frame_232_dy,0.44573963680495704,pixels,the reconciled path
+trajectory,frame_233_dy,0.2595068677127965,pixels,the reconciled path
+trajectory,frame_234_dy,0.08012514885143521,pixels,the reconciled path
+trajectory,frame_235_dy,0.35936892244194873,pixels,the reconciled path
+trajectory,frame_236_dy,0.32440466930044803,pixels,the reconciled path
+trajectory,frame_237_dy,0.1369411084285572,pixels,the reconciled path
+trajectory,frame_238_dy,0.2817089016879172,pixels,the reconciled path
+trajectory,frame_239_dy,0.1638998416000505,pixels,the reconciled path
+edge,0-1,0.7769434401611848,pixels,"dy -0.451985; lag 1; graph residual 0.038691, -0.018333"
+edge,0-2,1.1161485537353097,pixels,"dy -0.349925; lag 2; graph residual -0.046052, -0.015925"
+edge,0-4,1.3798124931758318,pixels,"dy -0.396602; lag 4; graph residual -0.047071, 0.035022"
+edge,0-8,1.5410460031307396,pixels,"dy -0.209940; lag 8; graph residual -0.053712, -0.031507"
+edge,0-16,1.6078096859903621,pixels,"dy -0.089331; lag 16; graph residual 0.108137, 0.030743"
+edge,1-2,0.3029342181706209,pixels,"dy 0.100264; lag 1; graph residual -0.048472, 0.004204"
+edge,1-3,0.5951478928876899,pixels,"dy -0.174299; lag 2; graph residual -0.028890, 0.036414"
+edge,1-5,0.653086743870495,pixels,"dy -0.148302; lag 4; graph residual -0.030712, 0.039073"
+edge,1-9,0.8219127815047531,pixels,"dy 0.381427; lag 8; graph residual 0.034423, -0.062422"
+edge,1-17,0.946442075088819,pixels,"dy 0.564625; lag 16; graph residual 0.112343, -0.035603"
+edge,2-3,0.3535744907761935,pixels,"dy -0.278122; lag 1; graph residual -0.041779, 0.035769"
+edge,2-4,0.32221514312072996,pixels,"dy 0.104769; lag 2; graph residual -0.059570, -0.100499"
+edge,2-6,0.4885463217553191,pixels,"dy 0.054416; lag 4; graph residual -0.024354, -0.006702"
+edge,2-10,0.6204231804135502,pixels,"dy 0.171267; lag 8; graph residual 0.030177, -0.028712"
+edge,2-18,0.5430195503646411,pixels,"dy 0.385319; lag 16; graph residual 0.001002, 0.088422"
+edge,3-4,-0.07330352869241218,pixels,"dy 0.243894; lag 1; graph residual 0.024153, 0.002729"
+edge,3-5,0.07717768748420915,pixels,"dy 0.037756; lag 2; graph residual -0.021061, -0.009100"
+edge,3-7,0.23818036311537033,pixels,"dy 0.420489; lag 4; graph residual -0.053192, -0.012957"
+edge,3-11,0.2941264077682668,pixels,"dy 0.457478; lag 8; graph residual -0.061763, -0.029461"
+edge,3-19,0.4229025989754994,pixels,"dy 0.633749; lag 16; graph residual 0.041193, 0.120972"
+edge,4-5,0.16124343548000913,pixels,"dy -0.243068; lag 1; graph residual -0.055976, 0.025101"
+edge,4-6,0.23941412561953054,pixels,"dy 0.092885; lag 2; graph residual -0.037867, -0.049441"
+edge,4-8,0.21022767390034353,pixels,"dy 0.140047; lag 4; graph residual -0.055636, -0.019914"
+edge,4-12,0.4127460089263141,pixels,"dy 0.341683; lag 8; graph residual 0.030630, -0.043762"
+edge,4-20,0.45422872111468793,pixels,"dy 0.509440; lag 16; graph residual 0.036362, 0.025268"
+edge,5-6,0.11046310987149652,pixels,"dy 0.281617; lag 1; graph residual -0.014184, -0.020206"
+edge,5-7,0.18024170744442075,pixels,"dy 0.406224; lag 2; graph residual -0.051370, -0.027349"
+edge,5-9,0.2525254911930369,pixels,"dy 0.375252; lag 4; graph residual -0.018564, 0.052982"
+edge,5-13,0.3656070288399364,pixels,"dy 0.219626; lag 8; graph residual -0.004035, -0.008571"
+edge,5-21,0.22249670218233777,pixels,"dy 0.919674; lag 16; graph residual -0.019596, 0.058217"
+edge,6-7,0.09578696614097423,pixels,"dy 0.162220; lag 1; graph residual -0.063195, -0.044755"
+edge,6-8,-0.10496271262845783,pixels,"dy 0.110179; lag 2; graph residual 0.058008, -0.033490"
+edge,6-10,0.21568061296001398,pixels,"dy 0.178073; lag 4; graph residual -0.029272, -0.083232"
+edge,6-14,0.19941604386089848,pixels,"dy 0.569994; lag 8; graph residual -0.038159, 0.025873"
+edge,6-22,0.42020755921404807,pixels,"dy 0.480851; lag 16; graph residual -0.003787, 0.059257"
+edge,7-8,-0.08805205431465023,pixels,"dy -0.114709; lag 1; graph residual 0.008505, 0.073933"
+edge,7-9,0.1862736137488692,pixels,"dy 0.086132; lag 2; graph residual -0.081184, -0.036773"
+edge,7-11,0.13840494820612045,pixels,"dy 0.118034; lag 4; graph residual -0.091030, -0.097548"
+edge,7-15,0.17713571689192542,pixels,"dy 0.236507; lag 8; graph residual -0.009512, -0.039914"
+edge,7-23,0.3988097936920447,pixels,"dy 0.290897; lag 16; graph residual 0.005465, 0.015241"
+edge,8-9,0.21690887436663842,pixels,"dy 0.056759; lag 1; graph residual -0.032272, 0.033375"
+edge,8-10,0.258998328740011,pixels,"dy -0.014986; lag 2; graph residual -0.025635, 0.033138"
+edge,8-12,0.29421035047932476,pixels,"dy 0.206437; lag 4; graph residual -0.005426, -0.028648"
+edge,8-16,0.29000265441076034,pixels,"dy 0.240512; lag 8; graph residual -0.061390, -0.057653"
+edge,8-24,0.5116328858317322,pixels,"dy 0.427649; lag 16; graph residual 0.081888, 0.008809"
+edge,9-10,0.0475010955107342,pixels,"dy -0.080196; lag 1; graph residual 0.001226, 0.008214"
+edge,9-11,-0.115559169917581,pixels,"dy -0.099290; lag 2; graph residual 0.057845, 0.070417"
+edge,9-13,0.16627076458357035,pixels,"dy -0.216135; lag 4; graph residual -0.038660, -0.001043"
+edge,9-17,0.2569908404178307,pixels,"dy 0.296993; lag 8; graph residual -0.054541, -0.086975"
+edge,9-25,0.2969995288816533,pixels,"dy 0.516069; lag 16; graph residual -0.063466, -0.003452"
+edge,10-11,-0.12686131303361167,pixels,"dy 0.021426; lag 1; graph residual 0.020420, 0.021683"
+edge,10-12,0.07336771789374993,pixels,"dy 0.161371; lag 2; graph residual -0.017946, -0.001735"
+edge,10-14,-0.018857498033612703,pixels,"dy 0.469291; lag 4; graph residual -0.006294, 0.031735"
+edge,10-18,-0.1345795046835668,pixels,"dy 0.396128; lag 8; graph residual 0.028001, -0.064942"
+edge,10-26,0.21957467128115146,pixels,"dy 0.421748; lag 16; graph residual -0.047685, -0.057333"
+edge,11-12,0.17196567104732866,pixels,"dy 0.141634; lag 1; graph residual -0.010103, -0.025107"
+edge,11-13,0.21466005364847385,pixels,"dy -0.237400; lag 2; graph residual -0.029335, 0.049095"
+edge,11-15,0.18095006550041562,pixels,"dy 0.183574; lag 4; graph residual -0.060701, -0.007468"
+edge,11-19,0.27358151425666133,pixels,"dy 0.350028; lag 8; graph residual -0.041850, -0.023324"
+edge,11-27,0.3819658952607844,pixels,"dy 0.344434; lag 16; graph residual 0.067461, -0.028104"
+edge,12-13,0.05152817134651456,pixels,"dy -0.327869; lag 1; graph residual -0.028066, 0.023036"
+edge,12-14,-0.07143022767774786,pixels,"dy 0.323774; lag 2; graph residual -0.009142, 0.017615"
+edge,12-16,-0.05467778103399204,pixels,"dy 0.079954; lag 4; graph residual -0.005494, -0.074884"
+edge,12-20,-0.05706933837525897,pixels,"dy 0.272724; lag 8; graph residual 0.104283, -0.035938"
+edge,12-28,0.20710663286112777,pixels,"dy 0.115816; lag 16; graph residual -0.064427, -0.029080"
+edge,13-14,-0.11982273442201948,pixels,"dy 0.605506; lag 1; graph residual 0.015788, 0.040716"
+edge,13-15,-0.05432779718683016,pixels,"dy 0.369770; lag 2; graph residual -0.010749, -0.005358"
+edge,13-17,0.12396199184389296,pixels,"dy 0.458648; lag 4; graph residual -0.049123, -0.031452"
+edge,13-21,-0.16814743065157695,pixels,"dy 0.714167; lag 8; graph residual 0.009476, 0.052669"
+edge,13-29,0.24131322514712453,pixels,"dy 0.654780; lag 16; graph residual -0.065488, 0.005942"
+edge,14-15,0.06543360124131996,pixels,"dy -0.286916; lag 1; graph residual -0.026475, 0.005106"
+edge,14-16,0.04045342714366981,pixels,"dy -0.318913; lag 2; graph residual -0.020052, -0.017406"
+edge,14-18,-0.12608420301855855,pixels,"dy -0.228438; lag 4; graph residual 0.044657, 0.058599"
+edge,14-22,0.29966403026866895,pixels,"dy -0.065842; lag 8; graph residual -0.044501, 0.010083"
+edge,14-30,0.29467159352812183,pixels,"dy -0.233987; lag 16; graph residual 0.008563, 0.059555"
+edge,15-16,0.04685152946939489,pixels,"dy -0.087405; lag 1; graph residual -0.065409, 0.032897"
+edge,15-17,0.16491973148079012,pixels,"dy 0.065718; lag 2; graph residual -0.025004, -0.002934"
+edge,15-19,0.16848609725912655,pixels,"dy 0.161507; lag 4; graph residual -0.057003, -0.010910"
+edge,15-23,0.23823960930995394,pixels,"dy 0.169858; lag 8; graph residual -0.001589, -0.060314"
+edge,15-31,0.28469446019856304,pixels,"dy 0.563339; lag 16; graph residual 0.041569, -0.006372"
+edge,16-17,0.17264878677002224,pixels,"dy 0.117839; lag 1; graph residual -0.014176, -0.000546"
+edge,16-18,-0.09860017529164006,pixels,"dy 0.215381; lag 2; graph residual -0.003228, -0.048902"
+edge,16-20,0.13788408097085594,pixels,"dy 0.231944; lag 4; graph residual -0.030499, -0.000229"
+edge,16-24,0.3359606090356106,pixels,"dy 0.270890; lag 8; graph residual 0.028947, -0.017291"
+edge,16-32,0.2238118090049901,pixels,"dy 0.418960; lag 16; graph residual -0.025252, -0.019335"
+edge,17-18,-0.23434231896889862,pixels,"dy 0.081536; lag 1; graph residual -0.025959, -0.032349"
+edge,17-19,-0.020849902831506156,pixels,"dy 0.117447; lag 2; graph residual -0.007582, -0.029634"
+edge,17-21,-0.2512448642877915,pixels,"dy 0.359026; lag 4; graph residual 0.017734, -0.019387"
+edge,17-25,0.05606944099760795,pixels,"dy 0.328512; lag 8; graph residual -0.024985, -0.025913"
+edge,17-33,0.14902281369920461,pixels,"dy 0.197741; lag 16; graph residual 0.010290, -0.050226"
+edge,18-19,0.23569492884485044,pixels,"dy 0.036800; lag 1; graph residual -0.003825, 0.001827"
+edge,18-20,0.2393791652489593,pixels,"dy 0.080204; lag 2; graph residual -0.030165, -0.014968"
+edge,18-22,0.3135119014632889,pixels,"dy 0.107894; lag 4; graph residual 0.023079, 0.006187"
+edge,18-26,0.2440940383787169,pixels,"dy 0.012633; lag 8; graph residual 0.034374, 0.020596"
+edge,18-34,0.18885109162973568,pixels,"dy -0.046545; lag 16; graph residual 0.021009, -0.012814"
+edge,19-20,-0.01602079800805596,pixels,"dy 0.038006; lag 1; graph residual -0.006635, -0.011396"
+edge,19-21,-0.24171345473141664,pixels,"dy 0.262361; lag 2; graph residual 0.036635, -0.010535"
+edge,19-23,0.14029925738992607,pixels,"dy -0.089326; lag 4; graph residual -0.015132, 0.048273"
+edge,19-27,0.24316946458147815,pixels,"dy -0.023399; lag 8; graph residual -0.025474, 0.013025"
+edge,19-35,0.18896177525964955,pixels,"dy -0.182948; lag 16; graph residual -0.058462, 0.019564"
+edge,20-21,-0.22410150678234123,pixels,"dy 0.246875; lag 1; graph residual 0.041679, -0.021658"
+edge,20-22,0.12100872656473341,pixels,"dy 0.066519; lag 2; graph residual 0.006368, -0.017675"
+edge,20-24,0.22485663725444152,pixels,"dy 0.044871; lag 4; graph residual 0.032666, -0.022988"
+edge,20-28,0.11852164214193531,pixels,"dy -0.183084; lag 8; graph residual -0.023056, 0.033033"
+edge,20-36,0.24707681399260692,pixels,"dy -0.331581; lag 16; graph residual 0.015691, -0.007975"
+edge,21-22,0.3156006893462784,pixels,"dy -0.207650; lag 1; graph residual -0.005801, 0.031278"
+edge,21-23,0.3165773402422749,pixels,"dy -0.279710; lag 2; graph residual 0.013668, -0.013170"
+edge,21-25,0.2767406074727371,pixels,"dy -0.058655; lag 4; graph residual -0.012146, 0.021615"
+edge,21-29,0.32381332446594446,pixels,"dy -0.163867; lag 8; graph residual 0.010683, 0.057752"
+edge,21-37,0.4445406310916453,pixels,"dy -0.768625; lag 16; graph residual 0.079523, -0.038169"
+edge,22-23,0.030703388929521104,pixels,"dy -0.135288; lag 1; graph residual -0.010257, 0.018781"
+edge,22-24,0.13381645047517793,pixels,"dy -0.025729; lag 2; graph residual -0.003671, -0.001232"
+edge,22-26,-0.10280195252207032,pixels,"dy -0.096890; lag 4; graph residual 0.044679, 0.016039"
+edge,22-30,0.10569317281669438,pixels,"dy -0.174353; lag 8; graph residual -0.057621, 0.055680"
+edge,22-38,0.21387040425058443,pixels,"dy -0.399934; lag 16; graph residual 0.002228, -0.000139"
+edge,23-24,0.12874863037794468,pixels,"dy 0.087439; lag 1; graph residual -0.019049, 0.002106"
+edge,23-25,-0.09164258902853448,pixels,"dy 0.248129; lag 2; graph residual 0.025991, 0.007710"
+edge,23-27,0.13859560486607314,pixels,"dy 0.091808; lag 4; graph residual -0.046068, -0.061129"
+edge,23-31,0.07278292642800736,pixels,"dy 0.441016; lag 8; graph residual 0.016830, 0.006407"
+edge,23-39,0.0849661945654532,pixels,"dy -0.384540; lag 16; graph residual 0.014451, 0.053717"
+edge,24-25,-0.20154539251662917,pixels,"dy 0.171551; lag 1; graph residual 0.026195, -0.005257"
+edge,24-26,-0.2152242776716992,pixels,"dy -0.091048; lag 2; graph residual 0.026956, 0.037158"
+edge,24-28,-0.20668753395411749,pixels,"dy -0.180734; lag 4; graph residual 0.044631, 0.008801"
+edge,24-32,-0.2092355686670488,pixels,"dy 0.181801; lag 8; graph residual 0.042888, -0.035774"
+edge,24-40,0.10414810984516752,pixels,"dy -0.677892; lag 16; graph residual -0.019889, -0.035523"
+edge,25-26,-0.013214647584695587,pixels,"dy -0.238320; lag 1; graph residual 0.000297, 0.018137"
+edge,25-27,0.15837550083103732,pixels,"dy -0.222563; lag 2; graph residual -0.000196, -0.002597"
+edge,25-29,0.08982233097745368,pixels,"dy -0.124052; lag 4; graph residual -0.019920, 0.054978"
+edge,25-33,0.13778559754497996,pixels,"dy -0.137388; lag 8; graph residual -0.009557, -0.017697"
+edge,25-41,0.1980275945207752,pixels,"dy -0.946881; lag 16; graph residual -0.019036, -0.058118"
+edge,26-27,0.15538099700849206,pixels,"dy -0.033132; lag 1; graph residual 0.015716, 0.028156"
+edge,26-28,0.015294362539376298,pixels,"dy -0.154840; lag 2; graph residual 0.010917, 0.036797"
+edge,26-30,0.10949179507017115,pixels,"dy -0.068164; lag 4; graph residual -0.003298, 0.030342"
+edge,26-34,-0.08298326470409079,pixels,"dy -0.060208; lag 8; graph residual 0.014375, -0.032381"
+edge,26-42,0.3025609820288538,pixels,"dy -0.688020; lag 16; graph residual 0.020912, -0.028316"
+edge,27-28,-0.14532944093152197,pixels,"dy -0.110126; lag 1; graph residual 0.000444, -0.002941"
+edge,27-29,-0.09657016585795972,pixels,"dy 0.200969; lag 2; graph residual 0.008293, -0.044884"
+edge,27-31,0.001966369354503467,pixels,"dy 0.428326; lag 4; graph residual -0.004882, -0.011583"
+edge,27-35,-0.10987327462403852,pixels,"dy -0.162936; lag 8; graph residual 0.022678, 0.009926"
+edge,27-43,0.3207796330253048,pixels,"dy -0.643173; lag 16; graph residual -0.015095, -0.001167"
+edge,28-29,0.052916844758060265,pixels,"dy 0.292277; lag 1; graph residual 0.003691, -0.023124"
+edge,28-30,0.08424119781042588,pixels,"dy 0.119594; lag 2; graph residual -0.004258, -0.039372"
+edge,28-32,-3.5410580493685606e-05,pixels,"dy 0.289922; lag 4; graph residual -0.004255, 0.028039"
+edge,28-36,0.19730976086183055,pixels,"dy -0.242479; lag 8; graph residual -0.030008, 0.052973"
+edge,28-44,0.2979854931038911,pixels,"dy -0.536979; lag 16; graph residual 0.003340, 0.028093"
+edge,29-30,0.04854603890103776,pixels,"dy -0.207331; lag 1; graph residual -0.025172, 0.018400"
+edge,29-31,0.10564266904823072,pixels,"dy 0.268969; lag 2; graph residual -0.020281, -0.008310"
+edge,29-33,0.07930969648170016,pixels,"dy -0.110322; lag 4; graph residual -0.020983, 0.024312"
+edge,29-37,0.19747374151365985,pixels,"dy -0.714961; lag 8; graph residual -0.007907, 0.014282"
+edge,29-45,0.3591438016308,pixels,"dy -0.857895; lag 16; graph residual 0.011603, 0.001981"
+edge,30-31,0.07930176290313846,pixels,"dy 0.432207; lag 1; graph residual -0.017315, 0.017382"
+edge,30-32,-0.08690858064337116,pixels,"dy 0.233716; lag 2; graph residual 0.002635, 0.004023"
+edge,30-34,-0.17851855322488613,pixels,"dy -0.097257; lag 4; graph residual 0.003716, 0.042490"
+edge,30-38,0.20051392632221304,pixels,"dy -0.352882; lag 8; graph residual -0.032487, 0.071483"
+edge,30-46,0.2817594502313101,pixels,"dy -0.769676; lag 16; graph residual -0.038335, -0.010774"
+edge,31-32,-0.14863023732697872,pixels,"dy -0.230396; lag 1; graph residual 0.002370, 0.018545"
+edge,31-33,-0.029056217076158457,pixels,"dy -0.352791; lag 2; graph residual 0.002021, 0.006123"
+edge,31-35,-0.10720365867197364,pixels,"dy -0.558280; lag 4; graph residual 0.022924, -0.011474"
+edge,31-39,0.01983924039414965,pixels,"dy -0.758237; lag 8; graph residual -0.010035, -0.020009"
+edge,31-47,0.22881470017117164,pixels,"dy -1.075846; lag 16; graph residual -0.001359, 0.004340"
+edge,32-33,0.12543112927956762,pixels,"dy -0.159114; lag 1; graph residual -0.006205, 0.024296"
+edge,32-34,-0.1066033238753071,pixels,"dy -0.316168; lag 2; graph residual 0.016075, 0.023663"
+edge,32-36,0.18488481409837565,pixels,"dy -0.511445; lag 4; graph residual -0.013292, 0.003979"
+edge,32-40,0.2715022723627606,pixels,"dy -0.820260; lag 8; graph residual -0.020896, -0.039182"
+edge,32-48,0.4166535393919354,pixels,"dy -0.805495; lag 16; graph residual 0.042704, -0.017258"
+edge,33-34,-0.21750318165432264,pixels,"dy -0.183200; lag 1; graph residual 0.007749, 0.025513"
+edge,33-35,-0.07676059092251417,pixels,"dy -0.240053; lag 2; graph residual 0.019515, 0.016967"
+edge,33-37,0.14398823195708474,pixels,"dy -0.608653; lag 4; graph residual -0.012748, -0.006015"
+edge,33-41,0.0931429275765398,pixels,"dy -0.814864; lag 8; graph residual -0.042381, -0.035051"
+edge,33-49,0.27706946639614816,pixels,"dy -0.697930; lag 16; graph residual 0.003432, -0.014608"
+edge,34-35,0.1707211643161146,pixels,"dy -0.088568; lag 1; graph residual -0.018212, 0.023170"
+edge,34-36,0.2648976208187184,pixels,"dy -0.238741; lag 2; graph residual -0.002776, 0.023780"
+edge,34-38,0.3330520776139931,pixels,"dy -0.254553; lag 4; graph residual 0.009777, 0.027921"
+edge,34-42,0.37315302710729875,pixels,"dy -0.613520; lag 8; graph residual 0.018928, -0.010227"
+edge,34-50,0.37506570004035944,pixels,"dy -0.806415; lag 16; graph residual 0.055207, -0.018172"
+edge,35-36,0.12742365599679867,pixels,"dy -0.169095; lag 1; graph residual -0.017812, 0.019532"
+edge,35-37,0.20397900683118564,pixels,"dy -0.403975; lag 2; graph residual -0.015494, 0.012392"
+edge,35-39,0.13157757106330692,pixels,"dy -0.248454; lag 4; graph residual -0.037493, 0.039962"
+edge,35-43,0.4065011642691901,pixels,"dy -0.498054; lag 8; graph residual -0.013621, 0.006725"
+edge,35-51,0.461541742800253,pixels,"dy -0.527760; lag 16; graph residual 0.072863, -0.020457"
+edge,36-37,0.09540445060876379,pixels,"dy -0.269180; lag 1; graph residual -0.016531, 0.027160"
+edge,36-38,0.11004969358124474,pixels,"dy -0.018692; lag 2; graph residual -0.029342, 0.007020"
+edge,36-40,0.09543359284303762,pixels,"dy -0.373692; lag 4; graph residual -0.016420, 0.021717"
+edge,36-44,0.15963789640464324,pixels,"dy -0.353705; lag 8; graph residual -0.025615, 0.034326"
+edge,36-52,0.3705072242284765,pixels,"dy -0.420545; lag 16; graph residual 0.039710, 0.002066"
+edge,37-38,-0.019356323118937993,pixels,"dy 0.237775; lag 1; graph residual 0.021191, -0.007426"
+edge,37-39,-0.10563672395756389,pixels,"dy 0.218339; lag 2; graph residual 0.011236, -0.035247"
+edge,37-41,-0.09130659138551837,pixels,"dy -0.254464; lag 4; graph residual 0.010829, 0.019218"
+edge,37-45,0.20460048419361565,pixels,"dy -0.183750; lag 8; graph residual -0.023420, 0.028515"
+edge,37-53,0.24548811919093955,pixels,"dy -0.325921; lag 16; graph residual 0.007006, 0.004591"
+edge,38-39,-0.11854096552219422,pixels,"dy -0.084870; lag 1; graph residual 0.022306, 0.037613"
+edge,38-40,-0.010772327957587088,pixels,"dy -0.364592; lag 2; graph residual 0.009079, 0.024289"
+edge,38-42,0.08270688604007159,pixels,"dy -0.404725; lag 4; graph residual -0.033455, 0.007610"
+edge,38-46,0.1429342779942242,pixels,"dy -0.474153; lag 8; graph residual -0.067536, -0.024898"
+edge,38-54,0.23775006593969128,pixels,"dy -0.271614; lag 16; graph residual 0.040972, 0.054244"
+edge,39-40,0.10438732654112243,pixels,"dy -0.310428; lag 1; graph residual -0.009846, 0.017381"
+edge,39-41,0.022998235663114763,pixels,"dy -0.413168; lag 2; graph residual -0.009075, -0.005170"
+edge,39-43,0.3058544392517047,pixels,"dy -0.302003; lag 4; graph residual -0.007059, 0.019165"
+edge,39-47,0.2179974417105156,pixels,"dy -0.293969; lag 8; graph residual -0.000347, 0.000708"
+edge,39-55,0.3873583105723695,pixels,"dy -0.262392; lag 16; graph residual 0.026793, 0.043952"
+edge,40-41,-0.08229368354506446,pixels,"dy -0.143627; lag 1; graph residual 0.001675, 0.018337"
+edge,40-42,0.09892980393653397,pixels,"dy -0.061611; lag 2; graph residual -0.047984, 0.004799"
+edge,40-44,0.07695761713068854,pixels,"dy 0.064631; lag 4; graph residual -0.021948, -0.032036"
+edge,40-48,0.22910316684753937,pixels,"dy 0.045625; lag 8; graph residual -0.020352, -0.008936"
+edge,40-56,0.33554528611767176,pixels,"dy -0.143836; lag 16; graph residual 0.030638, 0.006517"
+edge,41-42,0.15356055439793254,pixels,"dy 0.088756; lag 1; graph residual -0.021997, -0.020277"
+edge,41-43,0.3051691364801231,pixels,"dy 0.170524; lag 2; graph residual -0.020297, -0.035024"
+edge,41-45,0.27154888123042775,pixels,"dy 0.109589; lag 4; graph residual -0.009891, -0.029578"
+edge,41-49,0.22463002240958188,pixels,"dy 0.147551; lag 8; graph residual 0.005109, -0.010174"
+edge,41-57,0.35944555471186174,pixels,"dy -0.131575; lag 16; graph residual -0.010912, 0.034269"
+edge,42-43,0.16789918762082304,pixels,"dy 0.086352; lag 1; graph residual -0.014590, -0.019331"
+edge,42-44,0.035575040149347634,pixels,"dy 0.090409; lag 2; graph residual -0.031511, -0.001003"
+edge,42-46,0.02667269400845792,pixels,"dy -0.087283; lag 4; graph residual -0.000526, -0.014653"
+edge,42-50,0.1034999405626734,pixels,"dy -0.182734; lag 8; graph residual -0.065308, -0.018105"
+edge,42-58,0.3137434106670736,pixels,"dy -0.181626; lag 16; graph residual 0.048339, 0.006680"
+edge,43-44,-0.1806873161163831,pixels,"dy 0.044907; lag 1; graph residual 0.031443, -0.022521"
+edge,43-45,-0.042524205721352945,pixels,"dy -0.037198; lag 2; graph residual 0.019309, -0.018291"
+edge,43-47,-0.0782387957869919,pixels,"dy -0.026915; lag 4; graph residual -0.002906, 0.016492"
+edge,43-51,0.18565049226658836,pixels,"dy -0.076949; lag 8; graph residual -0.044126, 0.020061"
+edge,43-59,0.18126226851135724,pixels,"dy -0.355698; lag 16; graph residual -0.074382, -0.025373"
+edge,44-45,0.1303823665822884,pixels,"dy -0.083650; lag 1; graph residual -0.004352, 0.005775"
+edge,44-46,0.035307201076158944,pixels,"dy -0.196808; lag 2; graph residual -0.013225, 0.005465"
+edge,44-48,0.1948048191849763,pixels,"dy -0.003698; lag 4; graph residual -0.041063, 0.007792"
+edge,44-52,0.25078430068657803,pixels,"dy -0.099261; lag 8; graph residual 0.025410, 0.000161"
+edge,44-60,0.20097856618368173,pixels,"dy -0.273644; lag 16; graph residual -0.011061, -0.012333"
+edge,45-46,-0.1263051033412615,pixels,"dy -0.124466; lag 1; graph residual 0.022358, 0.010999"
+edge,45-47,-0.059640339952239246,pixels,"dy 0.052210; lag 2; graph residual 0.001710, -0.007144"
+edge,45-49,-0.05959495529350594,pixels,"dy 0.060718; lag 4; graph residual 0.027676, -0.003352"
+edge,45-53,0.07826953981197758,pixels,"dy -0.149565; lag 8; graph residual -0.006955, -0.016530"
+edge,45-61,0.15752105394016597,pixels,"dy -0.195802; lag 16; graph residual -0.051540, 0.004429"
+edge,46-47,0.07141779413094843,pixels,"dy 0.173311; lag 1; graph residual -0.025400, -0.014778"
+edge,46-48,0.1381658743552504,pixels,"dy 0.193456; lag 2; graph residual -0.006507, 0.001980"
+edge,46-50,0.05668132145181409,pixels,"dy -0.108315; lag 4; graph residual -0.044635, 0.009411"
+edge,46-54,0.21468265621084304,pixels,"dy 0.295700; lag 8; graph residual -0.011359, -0.014019"
+edge,46-62,0.1306837532181646,pixels,"dy 0.253519; lag 16; graph residual -0.009363, -0.016454"
+edge,47-48,0.08570557435308815,pixels,"dy 0.036315; lag 1; graph residual -0.000064, 0.000587"
+edge,47-49,0.08385922780207496,pixels,"dy -0.022028; lag 2; graph residual -0.057848, 0.034328"
+edge,47-51,0.19901545415110983,pixels,"dy -0.049092; lag 4; graph residual 0.023654, 0.002627"
+edge,47-55,0.20487123769281784,pixels,"dy 0.097514; lag 8; graph residual -0.008370, -0.022692"
+edge,47-63,0.2943122822383218,pixels,"dy 0.180692; lag 16; graph residual 0.014326, -0.015232"
+edge,48-49,-0.058447891870172505,pixels,"dy -0.032849; lag 1; graph residual -0.001183, 0.008246"
+edge,48-50,-0.1393321272279571,pixels,"dy -0.288555; lag 2; graph residual 0.019719, -0.005785"
+edge,48-52,0.1352997317985187,pixels,"dy -0.106013; lag 4; graph residual -0.012847, 0.002820"
+edge,48-56,0.18020121013035584,pixels,"dy -0.187642; lag 8; graph residual -0.022769, 0.013634"
+edge,48-64,0.12898843275615995,pixels,"dy 0.421913; lag 16; graph residual -0.008200, -0.034750"
+edge,49-50,-0.0750558921904364,pixels,"dy -0.280308; lag 1; graph residual 0.015073, 0.010571"
+edge,49-51,0.19816039478170808,pixels,"dy -0.067600; lag 2; graph residual -0.001502, 0.008836"
+edge,49-53,0.10550113602827665,pixels,"dy -0.231022; lag 4; graph residual -0.002268, 0.007561"
+edge,49-57,0.16437341531447563,pixels,"dy -0.221786; lag 8; graph residual -0.045579, -0.012896"
+edge,49-65,0.23164450277732423,pixels,"dy 0.570933; lag 16; graph residual 0.011461, 0.000369"
+edge,50-51,0.265438941195157,pixels,"dy 0.223007; lag 1; graph residual -0.008798, -0.012034"
+edge,50-52,0.2542668281362382,pixels,"dy 0.207906; lag 2; graph residual -0.012201, -0.016759"
+edge,50-54,0.1967527893524442,pixels,"dy 0.349971; lag 4; graph residual -0.005475, 0.030614"
+edge,50-58,0.3352116668538677,pixels,"dy 0.043741; lag 8; graph residual -0.011322, -0.017848"
+edge,50-66,0.35817045271445436,pixels,"dy 1.359102; lag 16; graph residual 0.017852, -0.006053"
+edge,51-52,0.016448217531231255,pixels,"dy -0.046761; lag 1; graph residual -0.031023, 0.026935"
+edge,51-53,-0.13930905437982014,pixels,"dy -0.198096; lag 2; graph residual 0.045884, 0.033399"
+edge,51-55,-0.028826633788592876,pixels,"dy 0.167637; lag 4; graph residual 0.002658, -0.046351"
+edge,51-59,-0.0599970844979057,pixels,"dy -0.286634; lag 8; graph residual 0.025353, -0.037549"
+edge,51-67,0.2238649556144055,pixels,"dy 0.808901; lag 16; graph residual -0.000781, 0.022600"
+edge,52-53,-0.1331314406898424,pixels,"dy -0.184785; lag 1; graph residual 0.054281, 0.039914"
+edge,52-54,-0.07511726234178236,pixels,"dy 0.217438; lag 2; graph residual 0.024329, -0.028000"
+edge,52-56,0.05538631823099093,pixels,"dy -0.088312; lag 4; graph residual -0.020407, 0.017497"
+edge,52-60,-0.06956910899116442,pixels,"dy -0.193534; lag 8; graph residual -0.016708, 0.006657"
+edge,52-68,0.0889974267958861,pixels,"dy 1.430837; lag 16; graph residual -0.032447, -0.020846"
+edge,53-54,0.07214932389840727,pixels,"dy 0.329551; lag 1; graph residual -0.044087, 0.004758"
+edge,53-55,0.14076690243609102,pixels,"dy 0.344192; lag 2; graph residual -0.073510, -0.058209"
+edge,53-57,-0.0870517589241669,pixels,"dy -0.054017; lag 4; graph residual 0.102613, 0.042796"
+edge,53-61,-0.09032868161703367,pixels,"dy -0.131154; lag 8; graph residual 0.124995, 0.105877"
+edge,53-69,0.3716683699681609,pixels,"dy 1.325879; lag 16; graph residual -0.012063, -0.026286"
+edge,54-55,-0.0008187382194570261,pixels,"dy -0.145483; lag 1; graph residual 0.040014, 0.097158"
+edge,54-56,0.12066530390807093,pixels,"dy -0.252590; lag 2; graph residual -0.034897, -0.007662"
+edge,54-58,0.17376379945736073,pixels,"dy -0.305547; lag 4; graph residual -0.041151, -0.049144"
+edge,54-62,-0.09309962539857965,pixels,"dy -0.137557; lag 8; graph residual 0.011097, 0.092941"
+edge,54-70,0.33753039728455264,pixels,"dy 1.140163; lag 16; graph residual 0.029317, -0.085696"
+edge,55-56,0.053479139644862464,pixels,"dy -0.257359; lag 1; graph residual -0.006906, 0.045432"
+edge,55-57,-0.05531369015655814,pixels,"dy -0.300448; lag 2; graph residual 0.003618, 0.003244"
+edge,55-59,-0.016963440886977373,pixels,"dy -0.440886; lag 4; graph residual 0.008488, -0.004584"
+edge,55-63,0.1266751918999928,pixels,"dy 0.134032; lag 8; graph residual -0.014538, -0.043394"
+edge,55-71,0.16352074438830366,pixels,"dy 1.501189; lag 16; graph residual -0.003077, 0.013160"
+edge,56-57,-0.10414220377903956,pixels,"dy -0.070012; lag 1; graph residual 0.005874, -0.015265"
+edge,56-58,0.06694575490335268,pixels,"dy -0.088947; lag 2; graph residual -0.020101, -0.005492"
+edge,56-60,-0.11895036522888805,pixels,"dy -0.105864; lag 4; graph residual -0.002306, -0.010199"
+edge,56-64,-0.035904898369043474,pixels,"dy 0.581431; lag 8; graph residual -0.000739, -0.020261"
+edge,56-72,0.09954785832626115,pixels,"dy 1.653444; lag 16; graph residual -0.037070, 0.126635"
+edge,57-58,0.15032107325385152,pixels,"dy -0.040861; lag 1; graph residual -0.005208, 0.031699"
+edge,57-59,0.048656216915526344,pixels,"dy -0.170004; lag 2; graph residual -0.005437, 0.021738"
+edge,57-61,-0.047767810384564686,pixels,"dy 0.066318; lag 4; graph residual 0.066873, -0.080375"
+edge,57-65,0.13702364933313507,pixels,"dy 0.784779; lag 8; graph residual -0.012712, 0.021206"
+edge,57-73,0.32232864679867784,pixels,"dy 1.590443; lag 16; graph residual 0.012100, 0.057879"
+edge,58-59,-0.1122865862378489,pixels,"dy -0.149444; lag 1; graph residual 0.010393, 0.010340"
+edge,58-60,-0.16917962952767324,pixels,"dy -0.017377; lag 2; graph residual 0.001079, -0.004247"
+edge,58-62,-0.21395638394672378,pixels,"dy 0.360304; lag 4; graph residual -0.000658, -0.050230"
+edge,58-66,0.08186749219867781,pixels,"dy 1.341226; lag 8; graph residual -0.029734, -0.014070"
+edge,58-74,0.038275724568435074,pixels,"dy 1.455252; lag 16; graph residual -0.010523, 0.024103"
+edge,59-60,-0.07093294980976486,pixels,"dy 0.131842; lag 1; graph residual 0.004725, -0.014361"
+edge,59-61,-0.034715315605729755,pixels,"dy 0.153734; lag 2; graph residual 0.010601, -0.019525"
+edge,59-63,0.14022906271833918,pixels,"dy 0.536587; lag 4; graph residual -0.019616, -0.000480"
+edge,59-67,0.25543047065822927,pixels,"dy 1.197843; lag 8; graph residual 0.002298, -0.042159"
+edge,59-75,0.13211825076514525,pixels,"dy 1.610529; lag 16; graph residual -0.033593, 0.041096"
+edge,60-61,0.0773585454790747,pixels,"dy 0.035485; lag 1; graph residual -0.035265, -0.018757"
+edge,60-62,-0.07641029042288985,pixels,"dy 0.366896; lag 2; graph residual 0.029897, -0.035198"
+edge,60-64,0.09798953720897223,pixels,"dy 0.652873; lag 4; graph residual -0.013377, 0.024360"
+edge,60-68,0.16280127704222933,pixels,"dy 1.606571; lag 8; graph residual -0.019974, -0.009702"
+edge,60-76,0.24061947568328745,pixels,"dy 1.520782; lag 16; graph residual 0.014449, 0.004813"
+edge,61-62,-0.1218595815572882,pixels,"dy 0.344091; lag 1; graph residual 0.033253, -0.029121"
+edge,61-63,0.1304099422660851,pixels,"dy 0.410386; lag 2; graph residual 0.014318, -0.008488"
+edge,61-65,0.087489805141873,pixels,"dy 0.795443; lag 4; graph residual 0.017717, 0.024599"
+edge,61-69,0.28853033388519334,pixels,"dy 1.344187; lag 8; graph residual 0.036409, -0.019317"
+edge,61-77,0.07396075209056463,pixels,"dy 1.527535; lag 16; graph residual 0.013967, 0.023976"
+edge,62-63,0.23532111624811178,pixels,"dy 0.090025; lag 1; graph residual -0.001986, -0.003096"
+edge,62-64,0.1469872859454297,pixels,"dy 0.354285; lag 2; graph residual -0.015861, -0.008751"
+edge,62-66,0.2853738578362861,pixels,"dy 1.021219; lag 4; graph residual -0.018626, -0.004137"
+edge,62-70,0.39671175459098407,pixels,"dy 1.111747; lag 8; graph residual 0.052138, -0.012664"
+edge,62-78,0.36666215075407754,pixels,"dy 1.311402; lag 16; graph residual 0.048562, -0.009413"
+edge,63-64,-0.11389919525728393,pixels,"dy 0.275989; lag 1; graph residual 0.011691, -0.017383"
+edge,63-65,-0.04090764904155948,pixels,"dy 0.433589; lag 2; graph residual 0.001386, -0.015446"
+edge,63-67,0.14224808160852093,pixels,"dy 0.628751; lag 4; graph residual -0.005134, -0.009174"
+edge,63-71,0.0741467206262004,pixels,"dy 1.433930; lag 8; graph residual -0.025840, -0.010219"
+edge,63-79,0.1649734152677082,pixels,"dy 1.089135; lag 16; graph residual 0.010402, -0.018469"
+edge,64-65,0.07132632338885592,pixels,"dy 0.196857; lag 1; graph residual -0.008639, -0.037320"
+edge,64-66,0.13667389557425413,pixels,"dy 0.656120; lag 2; graph residual -0.001052, 0.015427"
+edge,64-68,0.08853339899062769,pixels,"dy 0.925263; lag 4; graph residual -0.030318, -0.005627"
+edge,64-72,0.09109013960919407,pixels,"dy 1.241907; lag 8; graph residual 0.008032, -0.022998"
+edge,64-80,0.056761751158113584,pixels,"dy 1.061845; lag 16; graph residual 0.005491, -0.006267"
+edge,65-66,0.07064690927995512,pixels,"dy 0.496638; lag 1; graph residual 0.002287, 0.015372"
+edge,65-67,0.18242413373032695,pixels,"dy 0.236423; lag 2; graph residual -0.005788, -0.034990"
+edge,65-69,0.2228976513468651,pixels,"dy 0.519804; lag 4; graph residual -0.003165, -0.014975"
+edge,65-73,0.19423884821208176,pixels,"dy 0.826294; lag 8; graph residual 0.015878, 0.016043"
+edge,65-81,0.16152483190663153,pixels,"dy 0.628341; lag 16; graph residual 0.000000, 0.011958"
+edge,66-67,0.12056416453761093,pixels,"dy -0.297946; lag 1; graph residual -0.016862, -0.012631"
+edge,66-68,-0.06827386962771177,pixels,"dy 0.302190; lag 2; graph residual -0.009133, -0.054101"
+edge,66-70,0.19668666232803328,pixels,"dy 0.130022; lag 4; graph residual -0.014585, -0.048020"
+edge,66-74,-0.03095248092121467,pixels,"dy 0.210436; lag 8; graph residual 0.006572, -0.058237"
+edge,66-82,-0.10370408775392852,pixels,"dy -0.139053; lag 16; graph residual 0.004735, 0.179528"
+edge,67-68,-0.1689406246217575,pixels,"dy 0.569798; lag 1; graph residual -0.012168, -0.011133"
+edge,67-69,0.06717985217302057,pixels,"dy 0.353587; lag 2; graph residual -0.024083, -0.050192"
+edge,67-71,-0.09310930432690274,pixels,"dy 0.788742; lag 4; graph residual 0.004301, 0.015392"
+edge,67-75,-0.16576617186274722,pixels,"dy 0.487507; lag 8; graph residual 0.006563, 0.008433"
+edge,67-83,-0.3221785189799419,pixels,"dy 0.324373; lag 16; graph residual -0.000881, -0.038854"
+edge,68-69,0.21306097615346406,pixels,"dy -0.299926; lag 1; graph residual 0.011144, 0.044657"
+edge,68-70,0.24019564505937163,pixels,"dy -0.209077; lag 2; graph residual 0.019312, 0.042990"
+edge,68-72,0.07372767350968032,pixels,"dy 0.326577; lag 4; graph residual -0.032820, -0.027304"
+edge,68-76,0.1763107471363601,pixels,"dy 0.060183; lag 8; graph residual -0.064070, -0.131456"
+edge,68-84,0.08917910169322477,pixels,"dy -0.439451; lag 16; graph residual -0.037606, -0.030296"
+edge,69-70,0.05112399694102411,pixels,"dy 0.121250; lag 1; graph residual -0.015821, -0.032067"
+edge,69-71,-0.12998048903406148,pixels,"dy 0.511259; lag 2; graph residual -0.001924, -0.010520"
+edge,69-73,-0.03312832422488946,pixels,"dy 0.348705; lag 4; graph residual 0.023513, -0.011196"
+edge,69-77,-0.22563402161421567,pixels,"dy 0.260538; lag 8; graph residual -0.011377, -0.033897"
+edge,69-85,-0.17573583538603685,pixels,"dy -0.530623; lag 16; graph residual 0.013850, 0.021566"
+edge,70-71,-0.1570198747071806,pixels,"dy 0.437008; lag 1; graph residual -0.010188, -0.025452"
+edge,70-72,-0.2197581295122421,pixels,"dy 0.478653; lag 2; graph residual 0.001157, -0.013293"
+edge,70-74,-0.2299366125072068,pixels,"dy 0.101446; lag 4; graph residual 0.023454, -0.031249"
+edge,70-78,-0.04771849707032755,pixels,"dy 0.243702; lag 8; graph residual 0.014093, -0.040796"
+edge,70-86,-0.15188213280792326,pixels,"dy -0.659861; lag 16; graph residual 0.041844, -0.024666"
+edge,71-72,-0.07261975616432005,pixels,"dy 0.072482; lag 1; graph residual 0.021227, -0.018678"
+edge,71-73,0.12074747787809753,pixels,"dy -0.191043; lag 2; graph residual 0.001542, 0.027812"
+edge,71-75,-0.07534459063311467,pixels,"dy -0.338861; lag 4; graph residual 0.004950, 0.030667"
+edge,71-79,0.1587619133048096,pixels,"dy -0.345676; lag 8; graph residual -0.031693, -0.007368"
+edge,71-87,0.11047695923407264,pixels,"dy -0.851564; lag 16; graph residual -0.032753, -0.050072"
+edge,72-73,0.17182962039769628,pixels,"dy -0.251066; lag 1; graph residual 0.001852, 0.034032"
+edge,72-74,0.02139819910599553,pixels,"dy -0.381754; lag 2; graph residual -0.009279, -0.013409"
+edge,72-76,0.10158297498778854,pixels,"dy -0.363062; lag 4; graph residual -0.030249, -0.007485"
+edge,72-80,-0.015416448548715376,pixels,"dy -0.176267; lag 8; graph residual -0.021453, 0.012937"
+edge,72-88,0.05905274714100357,pixels,"dy -1.230800; lag 16; graph residual 0.019655, 0.018288"
+edge,73-74,-0.1650011517572784,pixels,"dy -0.194315; lag 1; graph residual 0.003438, 0.016186"
+edge,73-75,-0.1750507505611467,pixels,"dy -0.176404; lag 2; graph residual -0.017633, 0.031440"
+edge,73-77,-0.21702711886831041,pixels,"dy -0.149327; lag 4; graph residual -0.010369, 0.038459"
+edge,73-81,-0.09218046701274457,pixels,"dy -0.225819; lag 8; graph residual 0.043588, 0.023782"
+edge,73-89,-0.2049169563844562,pixels,"dy -1.224405; lag 16; graph residual 0.035860, 0.014704"
+edge,74-75,-0.03803703874762718,pixels,"dy 0.088865; lag 1; graph residual 0.006917, -0.055699"
+edge,74-76,0.08353978597794982,pixels,"dy 0.036292; lag 2; graph residual -0.024325, -0.011676"
+edge,74-78,0.18664216384044294,pixels,"dy 0.156079; lag 4; graph residual -0.013786, -0.023371"
+edge,74-82,-0.07377972406304863,pixels,"dy -0.116368; lag 8; graph residual -0.000809, 0.004644"
+edge,74-90,0.2416761369411715,pixels,"dy -1.188790; lag 16; graph residual 0.045663, 0.023496"
+edge,75-76,0.08292661415843389,pixels,"dy -0.046677; lag 1; graph residual 0.007409, 0.038128"
+edge,75-77,-0.01769896523636632,pixels,"dy 0.075985; lag 2; graph residual -0.017013, -0.041890"
+edge,75-79,0.2159453583786095,pixels,"dy -0.098836; lag 4; graph residual -0.018482, 0.053986"
+edge,75-83,-0.17933855889741754,pixels,"dy -0.244301; lag 8; graph residual 0.015482, 0.033880"
+edge,75-91,0.13242801377737323,pixels,"dy -1.061934; lag 16; graph residual -0.020193, -0.028167"
+edge,76-77,-0.10902938317563811,pixels,"dy 0.067514; lag 1; graph residual -0.016018, -0.024870"
+edge,76-78,0.14421957605818309,pixels,"dy 0.144852; lag 2; graph residual -0.030578, -0.036759"
+edge,76-80,-0.0969935755146347,pixels,"dy 0.230158; lag 4; graph residual -0.011210, -0.022942"
+edge,76-84,-0.06806895569879479,pixels,"dy -0.417712; lag 8; graph residual 0.007401, 0.019238"
+edge,76-92,0.20384273529085842,pixels,"dy -0.613189; lag 16; graph residual -0.046380, -0.042344"
+edge,77-78,0.2395872790754558,pixels,"dy 0.076927; lag 1; graph residual -0.000898, -0.011479"
+edge,77-79,0.2416784423448146,pixels,"dy -0.081615; lag 2; graph residual -0.009503, 0.002670"
+edge,77-81,0.19657293607560014,pixels,"dy -0.112080; lag 4; graph residual -0.017769, 0.020910"
+edge,77-85,0.09030915538734859,pixels,"dy -0.737962; lag 8; graph residual -0.015184, 0.002264"
+edge,77-93,0.3082073428423161,pixels,"dy -0.845641; lag 16; graph residual 0.002544, -0.052586"
+edge,78-79,-0.040414626052827245,pixels,"dy -0.130178; lag 1; graph residual 0.033901, -0.014215"
+edge,78-80,-0.21392248215573714,pixels,"dy 0.134395; lag 2; graph residual -0.007922, -0.035272"
+edge,78-82,-0.2510064987147651,pixels,"dy -0.253325; lag 4; graph residual 0.003561, 0.008892"
+edge,78-86,-0.10173306513848883,pixels,"dy -0.862570; lag 8; graph residual 0.025321, -0.024863"
+edge,78-94,0.0724000362446185,pixels,"dy -0.831106; lag 16; graph residual -0.037469, -0.056360"
+edge,79-80,-0.19003928360255,pixels,"dy 0.247963; lag 1; graph residual -0.025292, -0.004446"
+edge,79-81,-0.06027438389265432,pixels,"dy 0.052137; lag 2; graph residual 0.006902, -0.064362"
+edge,79-83,-0.3351412363695493,pixels,"dy -0.206719; lag 4; graph residual -0.026179, 0.041149"
+edge,79-87,-0.0366073531290619,pixels,"dy -0.572728; lag 8; graph residual -0.012738, 0.024137"
+edge,79-95,-0.0325411579106426,pixels,"dy -0.689933; lag 16; graph residual 0.041933, 0.020126"
+edge,80-81,0.17954573963961384,pixels,"dy -0.272465; lag 1; graph residual -0.017586, 0.016724"
+edge,80-82,-0.03306479797088309,pixels,"dy -0.337369; lag 2; graph residual 0.007465, -0.006187"
+edge,80-84,0.05908771506291185,pixels,"dy -0.609562; lag 4; graph residual -0.011552, 0.003871"
+edge,80-88,0.11176401361043554,pixels,"dy -1.061062; lag 8; graph residual 0.003813, 0.011881"
+edge,80-96,0.2462102475596498,pixels,"dy -0.941265; lag 16; graph residual -0.042526, -0.082279"
+edge,81-82,-0.2079558686024592,pixels,"dy -0.084252; lag 1; graph residual 0.020396, -0.003563"
+edge,81-83,-0.32216905895309117,pixels,"dy -0.180870; lag 2; graph residual 0.014221, 0.027523"
+edge,81-85,-0.12197342901304234,pixels,"dy -0.645903; lag 4; graph residual 0.018295, 0.001374"
+edge,81-89,-0.16526458320657297,pixels,"dy -1.019948; lag 8; graph residual 0.044800, 0.012285"
+edge,81-97,0.10711761696473598,pixels,"dy -0.533322; lag 16; graph residual -0.082576, -0.028607"
+edge,82-83,-0.1311166058697833,pixels,"dy -0.112850; lag 1; graph residual 0.010728, 0.047319"
+edge,82-84,0.09671571206777184,pixels,"dy -0.303537; lag 2; graph residual -0.023580, 0.041403"
+edge,82-86,0.1794166181184339,pixels,"dy -0.652097; lag 4; graph residual -0.008384, 0.009098"
+edge,82-90,0.3198780504255446,pixels,"dy -1.093407; lag 8; graph residual 0.042050, 0.039838"
+edge,82-98,0.11716663172168887,pixels,"dy -1.215479; lag 16; graph residual 0.014534, 0.045654"
+edge,83-84,0.20759521090136873,pixels,"dy -0.252175; lag 1; graph residual -0.014071, 0.055572"
+edge,83-85,0.21998511948327748,pixels,"dy -0.511725; lag 2; graph residual -0.015715, 0.020543"
+edge,83-87,0.3171588500469818,pixels,"dy -0.420703; lag 4; graph residual -0.005184, 0.037682"
+edge,83-91,0.2889394135069978,pixels,"dy -0.854850; lag 8; graph residual -0.012848, -0.024831"
+edge,83-99,0.41316209952159494,pixels,"dy -1.216389; lag 16; graph residual 0.061187, 0.022052"
+edge,84-85,0.019098231629036025,pixels,"dy -0.315434; lag 1; graph residual -0.008353, 0.020855"
+edge,84-86,0.11500208280204745,pixels,"dy -0.389610; lag 2; graph residual -0.017105, 0.008745"
+edge,84-88,0.08104320916657987,pixels,"dy -0.445327; lag 4; graph residual -0.013002, 0.001836"
+edge,84-92,0.20391550800946923,pixels,"dy -0.319180; lag 8; graph residual 0.014215, 0.062121"
+edge,84-100,0.21151065101363983,pixels,"dy -0.817389; lag 16; graph residual -0.055163, -0.003769"
+edge,85-86,0.10669390057641569,pixels,"dy -0.108424; lag 1; graph residual -0.019542, 0.022137"
+edge,85-87,0.12832425651721815,pixels,"dy 0.111883; lag 2; graph residual -0.020619, -0.003722"
+edge,85-89,-0.04364950917151849,pixels,"dy -0.369407; lag 4; graph residual 0.026863, 0.006272"
+edge,85-93,0.2176772266988996,pixels,"dy -0.177758; lag 8; graph residual 0.017949, 0.015229"
+edge,85-101,0.23836899310988083,pixels,"dy -0.280055; lag 16; graph residual -0.011756, 0.026686"
+edge,86-87,-0.027908676386571282,pixels,"dy 0.187066; lag 1; graph residual 0.048462, 0.007382"
+edge,86-88,-0.03887722391926539,pixels,"dy -0.091247; lag 2; graph residual 0.009022, 0.028622"
+edge,86-90,0.1960813066809157,pixels,"dy -0.427115; lag 4; graph residual -0.005186, 0.016545"
+edge,86-94,0.09302488713710913,pixels,"dy 0.114312; lag 8; graph residual 0.018319, -0.114345"
+edge,86-102,0.1697950615777599,pixels,"dy -0.155673; lag 16; graph residual -0.048482, 0.052247"
+edge,87-88,-0.039605931534240496,pixels,"dy -0.274298; lag 1; graph residual -0.010803, 0.017225"
+edge,87-89,-0.12611915964232326,pixels,"dy -0.464581; lag 2; graph residual 0.001628, -0.006715"
+edge,87-91,-0.07340684497110073,pixels,"dy -0.492531; lag 4; graph residual 0.037523, -0.004129"
+edge,87-95,0.10959228127754207,pixels,"dy -0.133703; lag 8; graph residual -0.050855, 0.012487"
+edge,87-103,0.2711721109242325,pixels,"dy -0.431761; lag 16; graph residual -0.000325, -0.003462"
+edge,88-89,-0.09695694310307103,pixels,"dy -0.228756; lag 1; graph residual 0.022875, 0.014533"
+edge,88-90,0.20940395347160337,pixels,"dy -0.351953; lag 2; graph residual 0.011347, 0.004009"
+edge,88-92,0.14480971182760513,pixels,"dy 0.178727; lag 4; graph residual 0.005279, 0.007705"
+edge,88-96,0.1644954380053086,pixels,"dy -0.027503; lag 8; graph residual -0.076388, 0.053140"
+edge,88-104,0.36995326034111287,pixels,"dy 0.112561; lag 16; graph residual 0.045573, -0.001534"
+edge,89-90,0.2846002308575603,pixels,"dy -0.175568; lag 1; graph residual 0.010233, 0.041847"
+edge,89-91,0.08587796146158531,pixels,"dy -0.059722; lag 2; graph residual 0.002730, 0.034359"
+edge,89-93,0.21542353513327597,pixels,"dy 0.207956; lag 4; graph residual 0.036989, -0.007350"
+edge,89-97,0.1384719316233342,pixels,"dy 0.444032; lag 8; graph residual 0.006534, 0.001703"
+edge,89-105,0.423492828673648,pixels,"dy 0.296541; lag 16; graph residual 0.075542, -0.029479"
+edge,90-91,-0.22539682658005594,pixels,"dy 0.105368; lag 1; graph residual 0.019171, 0.002990"
+edge,90-92,-0.10521900764808814,pixels,"dy 0.508102; lag 2; graph residual 0.034557, 0.026274"
+edge,90-94,-0.13003223390138893,pixels,"dy 0.381099; lag 4; graph residual 0.050481, 0.029438"
+edge,90-98,-0.24420522551415413,pixels,"dy -0.155561; lag 8; graph residual 0.013978, 0.039305"
+edge,90-106,0.1760806597283528,pixels,"dy 0.586916; lag 16; graph residual -0.014081, 0.027729"
+edge,91-92,0.14640940246656733,pixels,"dy 0.431709; lag 1; graph residual -0.010846, -0.005691"
+edge,91-93,0.1619571262917633,pixels,"dy 0.257415; lag 2; graph residual 0.001848, -0.031446"
+edge,91-95,0.1002034182191195,pixels,"dy 0.385048; lag 4; graph residual -0.005583, -0.009604"
+edge,91-99,0.21684324047896855,pixels,"dy -0.340898; lag 8; graph residual -0.018586, 0.026241"
+edge,91-107,0.3171075499761244,pixels,"dy 0.500008; lag 16; graph residual 0.059550, 0.000722"
+edge,92-93,0.038436016061315484,pixels,"dy -0.210302; lag 1; graph residual -0.010195, 0.010253"
+edge,92-94,-0.029948454539626867,pixels,"dy -0.163716; lag 2; graph residual 0.021059, 0.039877"
+edge,92-96,-0.08408950821721144,pixels,"dy -0.167214; lag 4; graph residual 0.022108, 0.006420"
+edge,92-100,-0.04650943280935983,pixels,"dy -0.543265; lag 8; graph residual -0.015273, -0.020835"
+edge,92-108,0.1532726797835926,pixels,"dy 0.253675; lag 16; graph residual -0.020872, 0.012350"
+edge,93-94,-0.05445640527068705,pixels,"dy 0.053805; lag 1; graph residual 0.017325, 0.022404"
+edge,93-95,-0.0887130758748388,pixels,"dy 0.157936; lag 2; graph residual 0.019529, -0.008462"
+edge,93-97,-0.105107667946354,pixels,"dy 0.280247; lag 4; graph residual -0.002299, -0.035118"
+edge,93-101,-0.02696687297765042,pixels,"dy -0.101930; lag 8; graph residual 0.017954, 0.011090"
+edge,93-109,0.30754925397237814,pixels,"dy 0.276018; lag 16; graph residual -0.003375, -0.055815"
+edge,94-95,-0.02652724292568732,pixels,"dy 0.113549; lag 1; graph residual -0.005526, -0.040284"
+edge,94-96,-0.07789339553875711,pixels,"dy -0.062903; lag 2; graph residual 0.024801, 0.025948"
+edge,94-98,-0.1266346126073743,pixels,"dy -0.500133; lag 4; graph residual -0.024041, -0.026660"
+edge,94-102,-0.07275340352475627,pixels,"dy -0.086254; lag 8; graph residual 0.082722, -0.017139"
+edge,94-110,0.2328537689215543,pixels,"dy 0.191148; lag 16; graph residual -0.008241, -0.020852"
+edge,95-96,-0.0344724301936345,pixels,"dy -0.115342; lag 1; graph residual 0.013434, 0.005123"
+edge,95-97,-0.049749389509501106,pixels,"dy 0.130371; lag 2; graph residual 0.011527, -0.034717"
+edge,95-99,0.13597603347044518,pixels,"dy -0.661398; lag 4; graph residual -0.032339, -0.028702"
+edge,95-103,0.22817071227454155,pixels,"dy -0.324078; lag 8; graph residual -0.016060, 0.010071"
+edge,95-111,0.3075720858448296,pixels,"dy 0.236723; lag 16; graph residual 0.022936, 0.022489"
+edge,96-97,-0.0056891723938391064,pixels,"dy 0.224424; lag 1; graph residual -0.011495, -0.018551"
+edge,96-98,-0.06739500346279247,pixels,"dy -0.499203; lag 2; graph residual -0.030189, 0.009365"
+edge,96-100,-0.008294751669114014,pixels,"dy -0.428311; lag 4; graph residual 0.008494, 0.025005"
+edge,96-104,0.33844320309993464,pixels,"dy 0.085317; lag 8; graph residual -0.011024, 0.000072"
+edge,96-112,0.23401418341660538,pixels,"dy 0.447096; lag 16; graph residual -0.014358, -0.007539"
+edge,97-98,-0.08123642493891076,pixels,"dy -0.683020; lag 1; graph residual 0.000836, -0.012692"
+edge,97-99,0.1627363517001376,pixels,"dy -0.759471; lag 2; graph residual -0.020877, -0.026283"
+edge,97-101,0.13541500407931353,pixels,"dy -0.348694; lag 4; graph residual -0.037021, 0.012726"
+edge,97-105,0.3489381313931772,pixels,"dy -0.189793; lag 8; graph residual 0.005091, 0.011120"
+edge,97-113,0.31462410304035504,pixels,"dy 0.215663; lag 16; graph residual -0.026337, -0.100161"
+edge,98-99,0.2397940677343371,pixels,"dy -0.095458; lag 1; graph residual -0.017535, 0.005415"
+edge,98-100,0.1331170326355919,pixels,"dy 0.085632; lag 2; graph residual -0.035334, 0.000901"
+edge,98-102,0.17027522018722874,pixels,"dy 0.429809; lag 4; graph residual -0.009630, -0.006409"
+edge,98-106,0.37039380116870757,pixels,"dy 0.691329; lag 8; graph residual 0.021833, 0.039573"
+edge,98-114,0.2103966262076531,pixels,"dy 1.159547; lag 16; graph residual 0.015783, 0.015493"
+edge,99-100,-0.12921294996905902,pixels,"dy 0.190736; lag 1; graph residual 0.004737, -0.014160"
+edge,99-101,-0.04229498248833786,pixels,"dy 0.470760; lag 2; graph residual -0.001171, -0.020975"
+edge,99-103,0.12897430660673342,pixels,"dy 0.385264; lag 4; graph residual -0.020500, -0.009171"
+edge,99-107,0.16397781404852851,pixels,"dy 0.785307; lag 8; graph residual 0.014422, 0.030080"
+edge,99-115,0.21278950593414242,pixels,"dy 1.048557; lag 16; graph residual -0.025639, 0.012947"
+edge,100-101,0.0839688037378825,pixels,"dy 0.310041; lag 1; graph residual -0.002958, -0.036831"
+edge,100-102,0.07925342835082619,pixels,"dy 0.351196; lag 2; graph residual -0.016392, -0.014329"
+edge,100-104,0.31397707777979467,pixels,"dy 0.495118; lag 4; graph residual 0.013243, -0.006424"
+edge,100-108,0.20304186167335353,pixels,"dy 0.791689; lag 8; graph residual -0.008858, 0.038436"
+edge,100-116,0.24415503270428626,pixels,"dy 1.122173; lag 16; graph residual -0.077574, 0.006291"
+edge,101-102,0.032518917948215126,pixels,"dy 0.073299; lag 1; graph residual -0.050668, -0.009642"
+edge,101-103,0.17201141431794828,pixels,"dy -0.096848; lag 2; graph residual -0.020072, 0.023155"
+edge,101-105,0.2609686412452161,pixels,"dy 0.193426; lag 4; graph residual -0.005333, -0.036130"
+edge,101-109,0.30210496470965764,pixels,"dy 0.323526; lag 8; graph residual 0.011083, -0.012483"
+edge,101-117,0.3499023795171478,pixels,"dy 0.587112; lag 16; graph residual 0.030038, 0.027795"
+edge,102-103,0.19241145596236445,pixels,"dy -0.143713; lag 1; graph residual -0.022323, 0.006364"
+edge,102-104,0.27558572631760186,pixels,"dy 0.184984; lag 2; graph residual -0.011228, -0.033157"
+edge,102-106,0.235382000102163,pixels,"dy 0.316159; lag 4; graph residual -0.003800, -0.008657"
+edge,102-110,0.21441528534935717,pixels,"dy 0.291304; lag 8; graph residual 0.000228, -0.017615"
+edge,102-118,0.14815440716359896,pixels,"dy 0.790780; lag 16; graph residual -0.005327, 0.057792"
+edge,103-104,0.10339277568680566,pixels,"dy 0.304236; lag 1; graph residual -0.009123, -0.015059"
+edge,103-105,0.12140619120316808,pixels,"dy 0.261756; lag 2; graph residual -0.017710, -0.030767"
+edge,103-107,0.054734536350374695,pixels,"dy 0.456306; lag 4; graph residual 0.015192, -0.017013"
+edge,103-111,0.1348153745800904,pixels,"dy 0.532518; lag 8; graph residual -0.016417, 0.040701"
+edge,103-119,0.2146570918632518,pixels,"dy 0.859344; lag 16; graph residual -0.051222, 0.049094"
+edge,104-105,0.022976093875912932,pixels,"dy -0.045310; lag 1; graph residual -0.013550, -0.012878"
+edge,104-106,-0.029882150345550886,pixels,"dy 0.176827; lag 2; graph residual -0.002894, -0.021152"
+edge,104-108,-0.12471150200739907,pixels,"dy 0.346040; lag 4; graph residual -0.008325, -0.004610"
+edge,104-112,-0.12645471642998984,pixels,"dy 0.393290; lag 8; graph residual 0.018692, -0.039122"
+edge,104-120,-0.09142660076206216,pixels,"dy 0.630082; lag 16; graph residual 0.033517, 0.021661"
+edge,105-106,-0.04552333350383656,pixels,"dy 0.220897; lag 1; graph residual 0.003321, -0.007035"
+edge,105-107,-0.05661174188605826,pixels,"dy 0.242860; lag 2; graph residual 0.022842, -0.034555"
+edge,105-109,0.05271424105844621,pixels,"dy 0.183981; lag 4; graph residual 0.004838, -0.030234"
+edge,105-113,-0.08055037193463159,pixels,"dy 0.311877; lag 8; graph residual 0.014808, -0.017702"
+edge,105-121,0.0821042579128721,pixels,"dy 0.368351; lag 16; graph residual -0.001770, -0.008609"
+edge,106-107,0.018687694953281833,pixels,"dy -0.045752; lag 1; graph residual -0.010255, 0.040194"
+edge,106-108,-0.10558547259837948,pixels,"dy 0.214202; lag 2; graph residual 0.005325, -0.028447"
+edge,106-110,-0.023479950397784836,pixels,"dy -0.091705; lag 4; graph residual 0.006541, 0.057891"
+edge,106-114,-0.14665672304973704,pixels,"dy 0.449219; lag 8; graph residual -0.019391, -0.005082"
+edge,106-122,0.0695220013608605,pixels,"dy 0.343827; lag 16; graph residual 0.022159, -0.034098"
+edge,107-108,-0.10523000045528132,pixels,"dy 0.176193; lag 1; graph residual -0.003463, 0.015121"
+edge,107-109,0.11875312771143769,pixels,"dy -0.101817; lag 2; graph residual -0.027431, 0.047259"
+edge,107-111,-0.02502403592822472,pixels,"dy 0.184635; lag 4; graph residual 0.073496, -0.050710"
+edge,107-115,-0.058793300286983805,pixels,"dy 0.225879; lag 8; graph residual 0.067544, 0.020237"
+edge,107-123,0.12073867776542857,pixels,"dy 0.435270; lag 16; graph residual -0.008395, -0.012480"
+edge,108-109,0.18695817824930375,pixels,"dy -0.250073; lag 1; graph residual 0.013056, 0.004202"
+edge,108-110,0.0931921161177503,pixels,"dy -0.233321; lag 2; graph residual -0.009871, 0.013752"
+edge,108-112,0.05906303416855256,pixels,"dy -0.089409; lag 4; graph residual -0.033789, 0.102147"
+edge,108-116,-0.02051189081614781,pixels,"dy 0.329171; lag 8; graph residual -0.007091, -0.030832"
+edge,108-124,0.2844106560284402,pixels,"dy 0.365336; lag 16; graph residual 0.001503, -0.056420"
+edge,109-110,-0.11896833062143354,pixels,"dy 0.046987; lag 1; graph residual 0.002275, -0.020685"
+edge,109-111,-0.034441889490571156,pixels,"dy 0.216308; lag 2; graph residual -0.008409, -0.027825"
+edge,109-113,-0.1235180465253042,pixels,"dy 0.157209; lag 4; graph residual 0.000224, -0.016781"
+edge,109-117,0.0802652397889417,pixels,"dy 0.321538; lag 8; graph residual -0.013513, -0.017675"
+edge,109-125,-0.2271262986630522,pixels,"dy 0.803705; lag 16; graph residual 0.017594, 0.035895"
+edge,110-111,0.08926945945902401,pixels,"dy 0.175549; lag 1; graph residual -0.015427, -0.013367"
+edge,110-112,-0.06713926725477799,pixels,"dy 0.272539; lag 2; graph residual 0.009091, -0.040232"
+edge,110-114,-0.14169279581390443,pixels,"dy 0.471379; lag 4; graph residual -0.007416, 0.006573"
+edge,110-118,-0.09469500740745353,pixels,"dy 0.539494; lag 8; graph residual 0.022879, 0.035390"
+edge,110-126,0.06997913550367764,pixels,"dy 0.686958; lag 16; graph residual -0.018196, 0.024128"
+edge,111-112,-0.13746557403349433,pixels,"dy 0.105989; lag 1; graph residual 0.005575, -0.035863"
+edge,111-113,-0.09103596918213233,pixels,"dy -0.053806; lag 2; graph residual 0.010592, 0.005750"
+edge,111-115,-0.05600595875892729,pixels,"dy 0.146615; lag 4; graph residual 0.016285, -0.034424"
+edge,111-119,0.05824812734924534,pixels,"dy 0.343891; lag 8; graph residual -0.013210, -0.008671"
+edge,111-127,0.1439838722329901,pixels,"dy 0.797514; lag 16; graph residual 0.036938, 0.044496"
+edge,112-113,0.06480154554962195,pixels,"dy -0.152267; lag 1; graph residual -0.013355, 0.034085"
+edge,112-114,-0.07857369832539922,pixels,"dy 0.261442; lag 2; graph residual -0.012487, -0.015798"
+edge,112-116,-0.09674897734164783,pixels,"dy 0.304081; lag 4; graph residual 0.043873, -0.018480"
+edge,112-120,0.09524108421030206,pixels,"dy 0.310013; lag 8; graph residual -0.045388, -0.012438"
+edge,112-128,0.26430406613852553,pixels,"dy 0.408635; lag 16; graph residual 0.012568, -0.007980"
+edge,113-114,-0.13764776382558233,pixels,"dy 0.381562; lag 1; graph residual -0.004860, -0.017736"
+edge,113-115,0.06275977415000195,pixels,"dy 0.198741; lag 2; graph residual -0.022037, -0.038495"
+edge,113-117,0.2130755144203045,pixels,"dy 0.204980; lag 4; graph residual -0.023029, -0.041545"
+edge,113-121,0.16758588214198128,pixels,"dy 0.084041; lag 8; graph residual -0.021510, -0.018472"
+edge,113-129,-0.09407170603050333,pixels,"dy 0.033021; lag 16; graph residual 0.057369, 0.021440"
+edge,114-115,0.18200146032490794,pixels,"dy -0.213874; lag 1; graph residual 0.001228, 0.010295"
+edge,114-116,0.027940473085565493,pixels,"dy 0.060679; lag 2; graph residual 0.010244, -0.020722"
+edge,114-118,0.11903956389269428,pixels,"dy 0.144715; lag 4; graph residual -0.041747, -0.047783"
+edge,114-122,0.24569030625109564,pixels,"dy -0.155503; lag 8; graph residual 0.012038, 0.021094"
+edge,114-130,0.18961822588890045,pixels,"dy -0.504832; lag 16; graph residual -0.010134, 0.020566"
+edge,115-116,-0.1476724032115331,pixels,"dy 0.253122; lag 1; graph residual 0.002627, -0.009585"
+edge,115-117,0.14292325823036564,pixels,"dy 0.054295; lag 2; graph residual 0.006401, -0.051106"
+edge,115-119,0.11454387988613798,pixels,"dy 0.212685; lag 4; graph residual -0.029785, 0.010344"
+edge,115-123,0.10947625161732621,pixels,"dy 0.210181; lag 8; graph residual -0.005883, -0.033507"
+edge,115-131,-0.12942142277941404,pixels,"dy -0.247397; lag 16; graph residual 0.064020, 0.054414"
+edge,116-117,0.2608596840268167,pixels,"dy -0.252904; lag 1; graph residual 0.033510, 0.012557"
+edge,116-118,0.09018741805242976,pixels,"dy 0.129433; lag 2; graph residual -0.051079, -0.072457"
+edge,116-120,0.14507314351596412,pixels,"dy -0.027066; lag 4; graph residual -0.042343, 0.039040"
+edge,116-124,0.28173996254831263,pixels,"dy 0.042344; lag 8; graph residual 0.031777, -0.031767"
+edge,116-132,0.26468956951853984,pixels,"dy -0.599333; lag 16; graph residual 0.000213, -0.020701"
+edge,117-118,-0.2528586178700944,pixels,"dy 0.303863; lag 1; graph residual -0.002403, -0.006541"
+edge,117-119,-0.07506531226742062,pixels,"dy 0.244230; lag 2; graph residual 0.010500, -0.024391"
+edge,117-121,-0.04302489058136977,pixels,"dy -0.090113; lag 4; graph residual -0.000946, -0.007754"
+edge,117-125,-0.27302767222406804,pixels,"dy 0.550690; lag 8; graph residual -0.003257, -0.014954"
+edge,117-133,-0.19535913520984782,pixels,"dy -0.557416; lag 16; graph residual 0.029514, -0.016333"
+edge,118-119,0.20122148938546813,pixels,"dy -0.096423; lag 1; graph residual -0.010525, 0.018940"
+edge,118-120,0.07514278403348673,pixels,"dy -0.055675; lag 2; graph residual -0.011522, 0.010673"
+edge,118-122,0.2207133622539552,pixels,"dy -0.228142; lag 4; graph residual -0.040277, -0.003199"
+edge,118-126,0.1260979820055068,pixels,"dy 0.182315; lag 8; graph residual -0.002499, -0.046112"
+edge,118-134,0.17597616747884923,pixels,"dy -0.613787; lag 16; graph residual -0.012853, -0.013902"
+edge,119-120,-0.12519583686137978,pixels,"dy 0.082036; lag 1; graph residual -0.001879, -0.049554"
+edge,119-121,0.0457699161350342,pixels,"dy -0.327057; lag 2; graph residual -0.025176, 0.009351"
+edge,119-123,0.08382347429363798,pixels,"dy -0.104664; lag 4; graph residual -0.064989, 0.058310"
+edge,119-127,0.14685842534932592,pixels,"dy 0.518991; lag 8; graph residual -0.010974, -0.012200"
+edge,119-135,0.23007641090376674,pixels,"dy -1.147474; lag 16; graph residual 0.008776, 0.039410"
+edge,120-121,0.16043825026382258,pixels,"dy -0.363527; lag 1; graph residual -0.012769, 0.013339"
+edge,120-122,0.13539650429455194,pixels,"dy -0.204769; lag 2; graph residual -0.018582, 0.018429"
+edge,120-124,0.20676690233844508,pixels,"dy -0.016177; lag 4; graph residual 0.004020, 0.014780"
+edge,120-128,0.23327227905679185,pixels,"dy 0.117261; lag 8; graph residual -0.006254, -0.014181"
+edge,120-136,0.16671770210252693,pixels,"dy -0.754567; lag 16; graph residual -0.034030, -0.022984"
+edge,121-122,-0.027624958350755385,pixels,"dy 0.199075; lag 1; graph residual -0.003230, -0.035227"
+edge,121-123,0.012620293477269912,pixels,"dy 0.301826; lag 2; graph residual -0.014380, -0.030474"
+edge,121-125,-0.21774986179447808,pixels,"dy 0.616372; lag 4; graph residual -0.014564, 0.017231"
+edge,121-129,-0.19884636433749167,pixels,"dy -0.041913; lag 8; graph residual 0.016067, 0.030806"
+edge,121-137,0.08012027966807772,pixels,"dy -0.445084; lag 16; graph residual -0.046065, 0.005518"
+edge,122-123,0.03533256231852503,pixels,"dy 0.131176; lag 1; graph residual -0.006238, -0.023672"
+edge,122-124,0.10960097058004598,pixels,"dy 0.212085; lag 2; graph residual -0.015629, -0.027143"
+edge,122-126,-0.05659704853814732,pixels,"dy 0.354647; lag 4; graph residual -0.000240, 0.012897"
+edge,122-130,-0.10147432266012768,pixels,"dy -0.391263; lag 8; graph residual 0.023230, 0.041406"
+edge,122-138,0.11216378175450845,pixels,"dy -0.667396; lag 16; graph residual -0.029014, -0.036489"
+edge,123-124,0.09053945072316284,pixels,"dy 0.104347; lag 1; graph residual -0.025662, -0.026908"
+edge,123-125,-0.21107851537580008,pixels,"dy 0.365152; lag 2; graph residual -0.019475, -0.002901"
+edge,123-127,0.15006120374852105,pixels,"dy 0.540745; lag 4; graph residual -0.033011, 0.012401"
+edge,123-131,-0.17838550902534744,pixels,"dy -0.404090; lag 8; graph residual 0.009391, 0.034433"
+edge,123-139,0.048622748642050566,pixels,"dy -0.829086; lag 16; graph residual -0.031129, -0.058848"
+edge,124-125,-0.2837919491828607,pixels,"dy 0.302143; lag 1; graph residual -0.011640, -0.017331"
+edge,124-126,-0.16146375218073472,pixels,"dy 0.223230; lag 2; graph residual 0.010655, -0.040629"
+edge,124-128,0.08130635768545841,pixels,"dy 0.122425; lag 4; graph residual -0.065075, -0.017947"
+edge,124-132,-0.04719487663736633,pixels,"dy -0.627066; lag 8; graph residual -0.001420, -0.003546"
+edge,124-140,-0.055092952023822424,pixels,"dy -0.959657; lag 16; graph residual 0.063489, -0.048005"
+edge,125-126,0.14223040432577275,pixels,"dy -0.139043; lag 1; graph residual 0.002392, 0.036832"
+edge,125-127,0.32611171355280016,pixels,"dy 0.212188; lag 2; graph residual 0.021492, -0.021294"
+edge,125-129,0.09829541677767835,pixels,"dy -0.646487; lag 4; graph residual -0.048760, 0.001776"
+edge,125-133,0.11109589796415532,pixels,"dy -1.135016; lag 8; graph residual -0.000656, 0.025530"
+edge,125-141,0.28214613672870265,pixels,"dy -0.954944; lag 16; graph residual -0.005811, -0.024903"
+edge,126-127,0.22794053898172442,pixels,"dy 0.328650; lag 1; graph residual -0.024959, -0.035545"
+edge,126-128,0.1986481228936009,pixels,"dy -0.117848; lag 2; graph residual -0.031607, 0.039723"
+edge,126-130,-0.023242998690413533,pixels,"dy -0.686954; lag 4; graph residual 0.001836, -0.030446"
+edge,126-134,-0.0153371576185112,pixels,"dy -0.757786; lag 8; graph residual 0.054861, -0.006106"
+edge,126-142,0.19492115383310268,pixels,"dy -1.467097; lag 16; graph residual -0.008018, 0.019491"
+edge,127-128,-0.07406118615522365,pixels,"dy -0.364089; lag 1; graph residual 0.038121, -0.007140"
+edge,127-129,-0.29391751104776537,pixels,"dy -0.824378; lag 2; graph residual -0.004151, -0.011227"
+edge,127-131,-0.2854630653795432,pixels,"dy -0.907536; lag 4; graph residual -0.000582, -0.015266"
+edge,127-135,0.10235731990666451,pixels,"dy -1.609178; lag 8; graph residual 0.000611, -0.005677"
+edge,127-143,0.19245096540732748,pixels,"dy -1.417752; lag 16; graph residual -0.044512, 0.027168"
+edge,128-129,-0.23393312884200032,pixels,"dy -0.496304; lag 1; graph residual -0.028195, 0.031928"
+edge,128-130,-0.1727901139695496,pixels,"dy -0.640616; lag 2; graph residual -0.015658, 0.001339"
+edge,128-132,-0.06501071496125985,pixels,"dy -0.740031; lag 4; graph residual 0.000165, 0.004942"
+edge,128-136,-0.1383935543251899,pixels,"dy -0.839817; lag 8; graph residual 0.044063, -0.040814"
+edge,128-144,0.19808224415523593,pixels,"dy -0.776569; lag 16; graph residual -0.052621, -0.004920"
+edge,129-130,0.08651574297546231,pixels,"dy -0.206976; lag 1; graph residual -0.012836, 0.032075"
+edge,129-131,0.017109201536938935,pixels,"dy -0.093778; lag 2; graph residual -0.005085, 0.006580"
+edge,129-133,0.07145477905667091,pixels,"dy -0.456474; lag 4; graph residual -0.010550, -0.008300"
+edge,129-137,0.21072264293960433,pixels,"dy -0.446661; lag 8; graph residual 0.006111, 0.018202"
+edge,129-145,0.3454160712157297,pixels,"dy -0.426367; lag 16; graph residual 0.014688, 0.026165"
+edge,130-131,-0.07956435063787556,pixels,"dy 0.124091; lag 1; graph residual 0.017908, -0.036388"
+edge,130-132,0.1406133315001506,pixels,"dy -0.125370; lag 2; graph residual -0.017011, 0.029557"
+edge,130-134,0.09298035785314157,pixels,"dy -0.078180; lag 4; graph residual -0.032049, 0.031689"
+edge,130-138,0.17392301638794117,pixels,"dy -0.374189; lag 8; graph residual -0.012529, 0.020161"
+edge,130-146,0.39467911151823076,pixels,"dy -0.600393; lag 16; graph residual 0.030118, 0.019921"
+edge,131-132,0.18570754902161798,pixels,"dy -0.216861; lag 1; graph residual -0.000449, 0.033346"
+edge,131-133,-0.0005451960877798956,pixels,"dy -0.415446; lag 2; graph residual 0.049426, 0.037870"
+edge,131-135,0.362523131215085,pixels,"dy -0.665558; lag 4; graph residual 0.026490, -0.026494"
+edge,131-139,0.2065622821531118,pixels,"dy -0.527678; lag 8; graph residual -0.020074, 0.009401"
+edge,131-147,0.443423886704534,pixels,"dy -0.860156; lag 16; graph residual 0.030260, -0.010350"
+edge,132-133,-0.152536780977226,pixels,"dy -0.209177; lag 1; graph residual 0.016159, 0.015116"
+edge,132-134,-0.07732773542533666,pixels,"dy 0.059844; lag 2; graph residual 0.014657, -0.010523"
+edge,132-136,-0.045022535228894975,pixels,"dy -0.177696; lag 4; graph residual 0.015538, 0.032154"
+edge,132-140,0.09617995424939335,pixels,"dy -0.369614; lag 8; graph residual -0.039170, -0.007437"
+edge,132-148,0.2591250729773253,pixels,"dy -0.434001; lag 16; graph residual -0.025688, 0.014289"
+edge,133-134,0.09096166620022537,pixels,"dy 0.258498; lag 1; graph residual -0.017255, -0.015115"
+edge,133-135,0.3204733083994682,pixels,"dy -0.330179; lag 2; graph residual 0.019659, 0.015703"
+edge,133-137,0.1516016065805338,pixels,"dy 0.019952; lag 4; graph residual 0.004328, 0.016363"
+edge,133-141,0.16761684074967056,pixels,"dy 0.114247; lag 8; graph residual -0.001721, 0.015391"
+edge,133-149,0.513285248351908,pixels,"dy -0.186043; lag 16; graph residual 0.078883, 0.021540"
+edge,134-135,0.24750920313373773,pixels,"dy -0.534147; lag 1; graph residual 0.018916, -0.023711"
+edge,134-136,0.041325739563512515,pixels,"dy -0.217834; lag 2; graph residual -0.008140, 0.022970"
+edge,134-138,0.11621925472203526,pixels,"dy -0.315073; lag 4; graph residual -0.015757, 0.007535"
+edge,134-142,0.19440853534737026,pixels,"dy -0.648699; lag 8; graph residual -0.047030, -0.035016"
+edge,134-150,0.366473475303502,pixels,"dy -0.350826; lag 16; graph residual 0.059374, 0.014266"
+edge,135-136,-0.21049955420325006,pixels,"dy 0.368793; lag 1; graph residual -0.022740, -0.005798"
+edge,135-137,-0.18512807551451374,pixels,"dy 0.343446; lag 2; graph residual 0.000925, 0.007345"
+edge,135-139,-0.19911792847764684,pixels,"dy 0.182802; lag 4; graph residual -0.003406, -0.009025"
+edge,135-143,-0.026366691136207907,pixels,"dy 0.210863; lag 8; graph residual 0.071338, 0.013408"
+edge,135-151,0.2068855816244944,pixels,"dy 0.194569; lag 16; graph residual 0.028335, -0.006700"
+edge,136-137,0.04117877271167088,pixels,"dy 0.035953; lag 1; graph residual 0.007858, -0.048156"
+edge,136-138,0.07261355876386685,pixels,"dy -0.128238; lag 2; graph residual -0.005337, 0.015564"
+edge,136-140,0.07031825142039186,pixels,"dy -0.255422; lag 4; graph residual 0.016177, 0.023914"
+edge,136-144,0.2481695547165951,pixels,"dy 0.105307; lag 8; graph residual -0.008377, -0.006164"
+edge,136-152,0.2717891450022517,pixels,"dy 0.045364; lag 16; graph residual -0.015629, 0.000371"
+edge,137-138,0.02686174817980599,pixels,"dy -0.090263; lag 1; graph residual -0.008622, -0.010207"
+edge,137-139,-0.032531668593220875,pixels,"dy -0.190687; lag 2; graph residual 0.014211, 0.013672"
+edge,137-141,-8.792963349144067e-05,pixels,"dy 0.116293; lag 4; graph residual 0.010054, -0.022971"
+edge,137-145,0.1797798856247172,pixels,"dy 0.046346; lag 8; graph residual -0.036510, -0.018089"
+edge,137-153,0.2677629544056944,pixels,"dy -0.172902; lag 16; graph residual -0.005977, 0.036867"
+edge,138-139,-0.0628271126923603,pixels,"dy -0.094549; lag 1; graph residual 0.026266, 0.018004"
+edge,138-140,0.0582773959212596,pixels,"dy -0.104624; lag 2; graph residual -0.039059, -0.014211"
+edge,138-142,0.07608351171438063,pixels,"dy -0.362832; lag 4; graph residual -0.029167, -0.013346"
+edge,138-146,0.26989847651801646,pixels,"dy -0.247216; lag 8; graph residual -0.006495, 0.020772"
+edge,138-154,0.1715620863721375,pixels,"dy 0.332060; lag 16; graph residual -0.022805, -0.014654"
+edge,139-140,0.07376270474214958,pixels,"dy -0.069835; lag 1; graph residual -0.017983, 0.027546"
+edge,139-141,0.04673525054386891,pixels,"dy 0.291480; lag 2; graph residual -0.018448, -0.021142"
+edge,139-143,0.2664440178183271,pixels,"dy 0.066857; lag 4; graph residual -0.018949, -0.016362"
+edge,139-147,0.29060252451053764,pixels,"dy -0.337914; lag 8; graph residual -0.003408, -0.014315"
+edge,139-155,0.4296084258563939,pixels,"dy 0.545603; lag 16; graph residual 0.044656, -0.002523"
+edge,140-141,-0.035311415411712316,pixels,"dy 0.323980; lag 1; graph residual 0.007819, -0.011353"
+edge,140-142,0.05345610045512735,pixels,"dy -0.262918; lag 2; graph residual -0.025758, 0.005575"
+edge,140-144,0.1638261573560538,pixels,"dy 0.341707; lag 4; graph residual -0.010528, -0.011056"
+edge,140-148,0.17210889049642314,pixels,"dy -0.029119; lag 8; graph residual 0.004318, -0.013543"
+edge,140-156,0.3156433531972003,pixels,"dy 0.830296; lag 16; graph residual 0.007602, 0.012185"
+edge,141-142,0.06626063156820847,pixels,"dy -0.532926; lag 1; graph residual -0.011070, -0.037044"
+edge,141-143,0.2272025056940827,pixels,"dy -0.220351; lag 2; graph residual -0.007995, 0.000508"
+edge,141-145,0.19415986827993395,pixels,"dy -0.097565; lag 4; graph residual -0.060856, 0.032500"
+edge,141-149,0.3690673989820482,pixels,"dy -0.265896; lag 8; graph residual 0.057205, -0.028245"
+edge,141-157,0.25894138855706994,pixels,"dy 0.484376; lag 16; graph residual 0.014610, -0.032698"
+edge,142-143,0.20118089387418217,pixels,"dy 0.360353; lag 1; graph residual -0.037163, -0.010227"
+edge,142-144,0.13997506393068568,pixels,"dy 0.562322; lag 2; graph residual -0.014376, 0.025671"
+edge,142-146,0.2305557006008957,pixels,"dy 0.177369; lag 4; graph residual -0.014069, -0.027636"
+edge,142-150,0.3005138858388671,pixels,"dy 0.383589; lag 8; graph residual -0.022045, -0.036434"
+edge,142-158,0.185778974847651,pixels,"dy 1.157377; lag 16; graph residual -0.033390, -0.011716"
+edge,143-144,-0.07610024215793137,pixels,"dy 0.246060; lag 1; graph residual 0.037682, -0.008193"
+edge,143-145,-0.10666826079897557,pixels,"dy 0.175556; lag 2; graph residual 0.020764, -0.020779"
+edge,143-147,0.0810518509839093,pixels,"dy -0.409039; lag 4; graph residual -0.041352, 0.006314"
+edge,143-151,0.17802577678063422,pixels,"dy -0.017947; lag 8; graph residual 0.012224, -0.018455"
+edge,143-159,0.17423187531588527,pixels,"dy 0.774901; lag 16; graph residual -0.066599, 0.055607"
+edge,144-145,-0.032872472857529464,pixels,"dy -0.083677; lag 1; graph residual -0.014613, 0.000588"
+edge,144-146,0.11296350830944378,pixels,"dy -0.428119; lag 2; graph residual -0.022076, -0.010141"
+edge,144-148,0.09218753671390974,pixels,"dy -0.355857; lag 4; graph residual -0.069058, -0.017455"
+edge,144-152,-0.05244298216241385,pixels,"dy -0.065189; lag 8; graph residual 0.068811, 0.011781"
+edge,144-160,0.29092189893098863,pixels,"dy 0.585347; lag 16; graph residual -0.011283, 0.010563"
+edge,145-146,0.13849831110034339,pixels,"dy -0.373651; lag 1; graph residual -0.000125, 0.018480"
+edge,145-147,0.14573595489117463,pixels,"dy -0.538722; lag 2; graph residual -0.020132, -0.018779"
+edge,145-149,0.31573867249093723,pixels,"dy -0.246398; lag 4; graph residual -0.022770, 0.017322"
+edge,145-153,0.14978425457758965,pixels,"dy -0.161722; lag 8; graph residual -0.031268, -0.002570"
+edge,145-161,0.3015641407147767,pixels,"dy 1.060871; lag 16; graph residual -0.002232, 0.005932"
+edge,146-147,4.083466185916986e-06,pixels,"dy -0.221073; lag 1; graph residual -0.012774, 0.018742"
+edge,146-148,-0.06945106674637062,pixels,"dy 0.084117; lag 2; graph residual 0.001693, -0.019169"
+edge,146-150,0.08699805040745526,pixels,"dy 0.220147; lag 4; graph residual -0.025017, -0.022725"
+edge,146-154,-0.13949809712753725,pixels,"dy 0.516600; lag 8; graph residual 0.024852, 0.027250"
+edge,146-162,-0.06452396098548069,pixels,"dy 1.301147; lag 16; graph residual -0.001400, 0.017300"
+edge,147-148,-0.06270298134484034,pixels,"dy 0.284327; lag 1; graph residual 0.007715, -0.017049"
+edge,147-149,0.1966096316847871,pixels,"dy 0.361190; lag 2; graph residual -0.029244, -0.032764"
+edge,147-151,0.165371764346209,pixels,"dy 0.379374; lag 4; graph residual -0.014821, -0.013051"
+edge,147-155,0.2110309714949627,pixels,"dy 0.867145; lag 8; graph residual -0.023962, 0.028164"
+edge,147-163,0.08020998598203231,pixels,"dy 1.250680; lag 16; graph residual 0.012906, 0.016312"
+edge,148-149,0.25733500582464786,pixels,"dy 0.098386; lag 1; graph residual -0.034981, -0.037239"
+edge,148-150,0.15373261533206112,pixels,"dy 0.149355; lag 2; graph residual -0.023993, -0.016881"
+edge,148-152,-0.035473833847815286,pixels,"dy 0.315899; lag 4; graph residual 0.028712, 0.004005"
+edge,148-156,0.18198660478649478,pixels,"dy 0.864839; lag 8; graph residual -0.035168, 0.020304"
+edge,148-164,0.05115305032345707,pixels,"dy 1.241816; lag 16; graph residual -0.015591, -0.023117"
+edge,149-150,-0.11619324454240684,pixels,"dy 0.049113; lag 1; graph residual 0.023579, 0.022213"
+edge,149-151,-0.020925456890243315,pixels,"dy 0.110667; lag 2; graph residual 0.004110, -0.072771"
+edge,149-153,-0.1818675875717302,pixels,"dy 0.092402; lag 4; graph residual 0.007415, -0.027619"
+edge,149-157,-0.1715098587403693,pixels,"dy 0.727140; lag 8; graph residual 0.018788, 0.018680"
+edge,149-165,-0.05545316976390619,pixels,"dy 0.917187; lag 16; graph residual -0.004798, 0.000113"
+edge,150-151,0.09956951813802835,pixels,"dy -0.032964; lag 1; graph residual -0.023771, -0.000466"
+edge,150-152,-0.1499205223825302,pixels,"dy 0.215457; lag 2; graph residual 0.013419, -0.028027"
+edge,150-154,-0.17974064503282647,pixels,"dy 0.375373; lag 4; graph residual 0.003113, -0.028945"
+edge,150-158,-0.13751947940677803,pixels,"dy 0.778643; lag 8; graph residual 0.011440, 0.019863"
+edge,150-166,-0.001468103541360986,pixels,"dy 1.127118; lag 16; graph residual 0.007697, -0.001987"
+edge,151-152,-0.19957599288059688,pixels,"dy 0.247228; lag 1; graph residual -0.012724, -0.026368"
+edge,151-153,-0.1544186810793281,pixels,"dy 0.073134; lag 2; graph residual -0.003219, -0.046247"
+edge,151-155,-0.004888057370793668,pixels,"dy 0.546489; lag 4; graph residual 0.041407, -0.017502"
+edge,151-159,-0.08088645262505223,pixels,"dy 0.869765; lag 8; graph residual -0.001730, -0.002855"
+edge,151-167,0.06707899820781851,pixels,"dy 1.147354; lag 16; graph residual -0.017656, -0.018471"
+edge,152-153,0.038274315314763246,pixels,"dy -0.190970; lag 1; graph residual 0.016388, -0.003003"
+edge,152-154,-0.05575629192316003,pixels,"dy 0.192484; lag 2; graph residual 0.015630, -0.033486"
+edge,152-156,0.15075503056541936,pixels,"dy 0.578824; lag 4; graph residual 0.002825, -0.013586"
+edge,152-160,0.2418878939781319,pixels,"dy 0.616579; lag 8; graph residual 0.021383, 0.032739"
+edge,152-168,0.351877309329374,pixels,"dy 0.668147; lag 16; graph residual 0.026364, -0.020900"
+edge,153-154,-0.09863317918903806,pixels,"dy 0.351799; lag 1; graph residual 0.003844, 0.001172"
+edge,153-155,0.21062926446134347,pixels,"dy 0.506137; lag 2; graph residual -0.016473, -0.004038"
+edge,153-157,-0.0004353542842402819,pixels,"dy 0.708604; lag 4; graph residual 0.022167, -0.027568"
+edge,153-161,0.20010535093935397,pixels,"dy 1.241375; lag 8; graph residual -0.019290, -0.010280"
+edge,153-169,0.14235616530439707,pixels,"dy 1.054339; lag 16; graph residual -0.006910, -0.001857"
+edge,154-155,0.2698556602138843,pixels,"dy 0.194277; lag 1; graph residual 0.019090, -0.045149"
+edge,154-156,0.18629038171905843,pixels,"dy 0.425129; lag 2; graph residual 0.007416, -0.018889"
+edge,154-158,0.04695488809020741,pixels,"dy 0.457074; lag 4; graph residual 0.003593, -0.004996"
+edge,154-162,0.08837718466773176,pixels,"dy 0.748682; lag 8; graph residual -0.039655, 0.025915"
+edge,154-170,0.3572662711623977,pixels,"dy 0.693784; lag 16; graph residual 0.034189, -0.005544"
+edge,155-156,-0.0970017197171051,pixels,"dy 0.266602; lag 1; graph residual 0.001763, -0.009490"
+edge,155-157,-0.18370227447917853,pixels,"dy 0.194302; lag 2; graph residual 0.011277, -0.015365"
+edge,155-159,-0.15414906552858657,pixels,"dy 0.345441; lag 4; graph residual 0.035013, -0.007518"
+edge,155-163,-0.10192104626293128,pixels,"dy 0.388141; lag 8; graph residual 0.007968, -0.016459"
+edge,155-171,-0.055603391738732556,pixels,"dy 0.471089; lag 16; graph residual 0.008697, 0.007783"
+edge,156-157,-0.06671772420344596,pixels,"dy -0.107429; lag 1; graph residual -0.010468, 0.029253"
+edge,156-158,-0.15141858046763987,pixels,"dy 0.064365; lag 2; graph residual 0.008260, -0.018528"
+edge,156-160,0.1156040563586282,pixels,"dy 0.091566; lag 4; graph residual -0.005913, -0.007486"
+edge,156-164,-0.11176727809682616,pixels,"dy 0.364514; lag 8; graph residual 0.000511, -0.030958"
+edge,156-172,0.12002596543829268,pixels,"dy 0.376819; lag 16; graph residual -0.007953, 0.018243"
+edge,157-158,-0.08933831542428187,pixels,"dy 0.130676; lag 1; graph residual 0.023366, -0.006663"
+edge,157-159,0.043323560083761245,pixels,"dy 0.172514; lag 2; graph residual 0.009966, -0.013527"
+edge,157-161,0.15047008921976054,pixels,"dy 0.532353; lag 4; graph residual 0.008614, 0.017706"
+edge,157-165,0.09392232739904198,pixels,"dy 0.222178; lag 8; graph residual -0.001452, -0.050697"
+edge,157-173,0.2516680540604921,pixels,"dy 0.445617; lag 16; graph residual 0.015881, 0.025483"
+edge,158-159,0.12379816229278053,pixels,"dy 0.048111; lag 1; graph residual -0.004536, -0.013137"
+edge,158-160,0.24694389545476733,pixels,"dy 0.038173; lag 2; graph residual 0.005906, 0.000070"
+edge,158-162,-0.02140945231077592,pixels,"dy 0.318831; lag 4; graph residual 0.019584, 0.003688"
+edge,158-166,0.13169616579846785,pixels,"dy 0.329251; lag 8; graph residual 0.000612, -0.002626"
+edge,158-174,0.07335268052590706,pixels,"dy 0.243002; lag 16; graph residual -0.008296, -0.010035"
+edge,159-160,0.1383373320692246,pixels,"dy -0.006876; lag 1; graph residual -0.004749, 0.010145"
+edge,159-161,0.12181355452358346,pixels,"dy 0.400506; lag 2; graph residual -0.016019, -0.009434"
+edge,159-163,0.044125368970543276,pixels,"dy 0.061149; lag 4; graph residual -0.018943, -0.027391"
+edge,159-167,0.12755922657304983,pixels,"dy 0.281554; lag 8; graph residual 0.004481, -0.019581"
+edge,159-175,0.07978866346965113,pixels,"dy -0.272234; lag 16; graph residual 0.007345, 0.064832"
+edge,160-161,-0.03928878909725255,pixels,"dy 0.398991; lag 1; graph residual 0.011496, -0.011187"
+edge,160-162,-0.24960456093879266,pixels,"dy 0.297318; lag 2; graph residual -0.005071, -0.013041"
+edge,160-164,-0.23336751073756465,pixels,"dy 0.287395; lag 4; graph residual 0.012420, -0.037918"
+edge,160-168,0.12323282696685944,pixels,"dy -0.085278; lag 8; graph residual -0.008263, 0.083208"
+edge,160-176,-0.14062617453081516,pixels,"dy -0.358598; lag 16; graph residual -0.005238, 0.024970"
+edge,161-162,-0.2120595162367351,pixels,"dy -0.117840; lag 1; graph residual -0.014823, 0.014313"
+edge,161-163,-0.08562442580912798,pixels,"dy -0.362851; lag 2; graph residual 0.005012, 0.005538"
+edge,161-165,-0.08628819456354347,pixels,"dy -0.354389; lag 4; graph residual 0.019674, -0.024189"
+edge,161-169,-0.04538649887773648,pixels,"dy -0.176374; lag 8; graph residual 0.000017, -0.002239"
+edge,161-177,-0.11707315834024086,pixels,"dy -0.883468; lag 16; graph residual -0.027310, -0.000687"
+edge,162-163,0.1515627585979132,pixels,"dy -0.276382; lag 1; graph residual -0.005293, 0.022595"
+edge,162-164,0.08469271626999268,pixels,"dy -0.054140; lag 2; graph residual -0.050965, 0.019339"
+edge,162-166,0.12377459699612658,pixels,"dy -0.020529; lag 4; graph residual 0.010360, 0.024635"
+edge,162-170,0.3248055514623933,pixels,"dy -0.096220; lag 8; graph residual 0.017927, 0.009863"
+edge,162-178,0.11027425540882463,pixels,"dy -0.799775; lag 16; graph residual -0.013392, -0.028258"
+edge,163-164,-0.15258387429054743,pixels,"dy 0.238285; lag 1; graph residual 0.040042, -0.019299"
+edge,163-165,0.026455989425753383,pixels,"dy -0.077129; lag 2; graph residual -0.012458, 0.055864"
+edge,163-167,0.11109902112062493,pixels,"dy 0.238627; lag 4; graph residual -0.004241, -0.010412"
+edge,163-171,0.05226678713419695,pixels,"dy 0.124987; lag 8; graph residual -0.005220, -0.017797"
+edge,163-179,0.08173225487623687,pixels,"dy -0.572606; lag 16; graph residual -0.016475, -0.007761"
+edge,164-165,0.1387049561898304,pixels,"dy -0.242512; lag 1; graph residual -0.012165, 0.002260"
+edge,164-166,0.13176398665546393,pixels,"dy 0.017843; lag 2; graph residual -0.031357, 0.021064"
+edge,164-168,0.3386169183962168,pixels,"dy -0.264709; lag 4; graph residual -0.002699, 0.013162"
+edge,164-172,0.24129462981735544,pixels,"dy 0.047170; lag 8; graph residual -0.017965, 0.014337"
+edge,164-180,-0.0006821107049087152,pixels,"dy -0.673797; lag 16; graph residual 0.050601, -0.142778"
+edge,165-166,-0.03433575678021582,pixels,"dy 0.280201; lag 1; graph residual 0.008202, -0.001043"
+edge,165-167,0.11382986983969919,pixels,"dy 0.231608; lag 2; graph residual -0.020970, 0.017872"
+edge,165-169,-0.008699871189292337,pixels,"dy 0.179744; lag 4; graph residual 0.029945, 0.020222"
+edge,165-173,0.17846999297707636,pixels,"dy 0.302318; lag 8; graph residual -0.003391, -0.002698"
+edge,165-181,0.047224270601393656,pixels,"dy -0.693775; lag 16; graph residual -0.024985, -0.051002"
+edge,166-167,0.13954661363721188,pixels,"dy -0.031982; lag 1; graph residual -0.020553, 0.002304"
+edge,166-168,0.23191139935141977,pixels,"dy -0.284212; lag 2; graph residual 0.003600, -0.006241"
+edge,166-170,0.22951766765303022,pixels,"dy -0.109917; lag 4; graph residual -0.020919, 0.019453"
+edge,166-174,-0.09596654114099178,pixels,"dy -0.085425; lag 8; graph residual 0.028715, -0.008233"
+edge,166-182,0.027207062716074783,pixels,"dy -1.158258; lag 16; graph residual 0.004671, 0.032760"
+edge,167-168,0.13453570576244628,pixels,"dy -0.258048; lag 1; graph residual -0.018018, -0.002727"
+edge,167-169,-0.05394460948540642,pixels,"dy -0.058267; lag 2; graph residual -0.017670, 0.008753"
+edge,167-171,-0.042303066867541414,pixels,"dy -0.130805; lag 4; graph residual -0.017508, 0.009780"
+edge,167-175,-0.050391520911577885,pixels,"dy -0.462411; lag 8; graph residual 0.005485, -0.006965"
+edge,167-183,-1.7362851847643003e-05,pixels,"dy -1.052250; lag 16; graph residual -0.011228, -0.037128"
+edge,168-169,-0.19077933998755706,pixels,"dy 0.211030; lag 1; graph residual 0.002646, 0.000231"
+edge,168-170,-0.02936085167049097,pixels,"dy 0.211116; lag 2; graph residual 0.002448, -0.011127"
+edge,168-172,-0.13517642900852786,pixels,"dy 0.314859; lag 4; graph residual 0.022588, -0.001806"
+edge,168-176,-0.2548989835491227,pixels,"dy -0.397561; lag 8; graph residual -0.005935, 0.066003"
+edge,168-184,-0.42524321782397917,pixels,"dy -0.788985; lag 16; graph residual -0.020762, 0.013202"
+edge,169-170,0.17662799060595966,pixels,"dy -0.006676; lag 1; graph residual -0.015408, -0.004596"
+edge,169-171,0.019559432576517752,pixels,"dy -0.083792; lag 2; graph residual -0.007755, 0.012282"
+edge,169-173,0.14482473422511222,pixels,"dy 0.125083; lag 4; graph residual 0.009010, -0.025430"
+edge,169-177,-0.12549643238421335,pixels,"dy -0.692055; lag 8; graph residual 0.026483, -0.013488"
+edge,169-185,-0.039504539375730834,pixels,"dy -1.287091; lag 16; graph residual -0.004302, 0.056343"
+edge,170-171,-0.1433651536159986,pixels,"dy -0.067359; lag 1; graph residual -0.006051, 0.007120"
+edge,170-172,-0.09078548834150994,pixels,"dy 0.133349; lag 2; graph residual 0.005110, -0.020285"
+edge,170-174,-0.2773560848280602,pixels,"dy 0.038000; lag 4; graph residual 0.001506, -0.041193"
+edge,170-178,-0.25528289008288857,pixels,"dy -0.727568; lag 8; graph residual 0.009432, -0.014107"
+edge,170-186,-0.10310185464570154,pixels,"dy -1.216586; lag 16; graph residual 0.008240, 0.076514"
+edge,171-172,0.06267511674755455,pixels,"dy 0.185647; lag 1; graph residual 0.001065, -0.012344"
+edge,171-173,0.1481763880941498,pixels,"dy 0.198947; lag 2; graph residual -0.006146, -0.027783"
+edge,171-175,0.048207517038052025,pixels,"dy -0.343675; lag 4; graph residual -0.033303, -0.004676"
+edge,171-179,0.02011364581920077,pixels,"dy -0.656098; lag 8; graph residual -0.001904, -0.031459"
+edge,171-187,-0.05145542137994206,pixels,"dy -1.166510; lag 16; graph residual 0.012451, 0.095429"
+edge,172-173,0.08906670640408133,pixels,"dy 0.013640; lag 1; graph residual -0.010777, -0.015779"
+edge,172-174,-0.19646324810746757,pixels,"dy -0.099964; lag 2; graph residual 0.006288, -0.016294"
+edge,172-176,-0.16235293021350786,pixels,"dy -0.642068; lag 4; graph residual 0.014107, -0.002544"
+edge,172-180,-0.16450799342661732,pixels,"dy -0.863616; lag 8; graph residual -0.008903, -0.014466"
+edge,172-188,-0.014535515214520687,pixels,"dy -1.406334; lag 16; graph residual 0.002130, 0.047229"
+edge,173-174,-0.2662734690119649,pixels,"dy -0.101861; lag 1; graph residual -0.002191, -0.012259"
+edge,173-175,-0.1479263170782497,pixels,"dy -0.503346; lag 2; graph residual 0.020800, -0.016169"
+edge,173-177,-0.24767424626711843,pixels,"dy -0.792446; lag 4; graph residual -0.005174, -0.012751"
+edge,173-181,-0.1633931340921775,pixels,"dy -0.962643; lag 8; graph residual 0.010554, -0.081754"
+edge,173-189,-0.20038733156384406,pixels,"dy -1.193431; lag 16; graph residual -0.019413, 0.076726"
+edge,174-175,0.13145804516446113,pixels,"dy -0.430680; lag 1; graph residual 0.009880, 0.025284"
+edge,174-176,0.061909110258457044,pixels,"dy -0.548047; lag 2; graph residual -0.019980, 0.019693"
+edge,174-178,-0.00015666811122930078,pixels,"dy -0.697525; lag 4; graph residual 0.030156, -0.040957"
+edge,174-182,0.10980603467020782,pixels,"dy -0.956182; lag 8; graph residual -0.010676, -0.075659"
+edge,174-190,-0.10862988653786529,pixels,"dy -0.857434; lag 16; graph residual 0.016641, -0.016375"
+edge,175-176,-0.11069284929996755,pixels,"dy -0.164176; lag 1; graph residual 0.011284, 0.041219"
+edge,175-177,-0.12937271527845853,pixels,"dy -0.324994; lag 2; graph residual 0.003651, 0.039313"
+edge,175-179,-0.008364818687780882,pixels,"dy -0.404852; lag 4; graph residual 0.011671, 0.065647"
+edge,175-183,0.04566177020170975,pixels,"dy -0.614545; lag 8; graph residual -0.012000, -0.005457"
+edge,175-191,-0.00040799616774092736,pixels,"dy -0.505720; lag 16; graph residual -0.004399, -0.078415"
+edge,176-177,-0.031005340812873605,pixels,"dy -0.182113; lag 1; graph residual 0.004692, 0.019390"
+edge,176-178,-0.004033915081853678,pixels,"dy -0.271453; lag 2; graph residual -0.007895, 0.061325"
+edge,176-180,-0.05421370394155409,pixels,"dy -0.263034; lag 4; graph residual 0.029049, 0.029564"
+edge,176-184,-0.18961172942067986,pixels,"dy -0.464369; lag 8; graph residual 0.004440, 0.020144"
+edge,176-192,0.08451650014020616,pixels,"dy -0.521886; lag 16; graph residual -0.036048, 0.018919"
+edge,177-178,0.010461735515606873,pixels,"dy -0.106531; lag 1; graph residual 0.003922, 0.059126"
+edge,177-179,0.11754345952715914,pixels,"dy -0.093214; lag 2; graph residual 0.011485, 0.039690"
+edge,177-181,0.10180938034369157,pixels,"dy -0.234555; lag 4; graph residual -0.001801, -0.004645"
+edge,177-185,0.061089936776894276,pixels,"dy -0.520690; lag 8; graph residual -0.005882, -0.004516"
+edge,177-193,0.16866790292545913,pixels,"dy -0.520771; lag 16; graph residual -0.005382, -0.057879"
+edge,178-179,0.10351179985101332,pixels,"dy 0.002508; lag 1; graph residual 0.011133, -0.008628"
+edge,178-180,-0.02072173070686149,pixels,"dy -0.057788; lag 2; graph residual 0.007486, 0.034445"
+edge,178-182,0.06040254335943685,pixels,"dy -0.286474; lag 4; graph residual 0.008728, -0.006885"
+edge,178-186,0.1512587712275435,pixels,"dy -0.388986; lag 8; graph residual -0.000270, -0.009411"
+edge,178-194,0.12767222969741926,pixels,"dy -0.375499; lag 16; graph residual -0.004855, 0.027608"
+edge,179-180,-0.11154192466461141,pixels,"dy -0.050820; lag 1; graph residual -0.016338, 0.033597"
+edge,179-181,-0.023150061583872596,pixels,"dy -0.185566; lag 2; graph residual -0.005869, -0.000110"
+edge,179-183,-0.012821713722712704,pixels,"dy -0.289786; lag 4; graph residual 0.043177, 0.008989"
+edge,179-187,-0.059474347528922236,pixels,"dy -0.377233; lag 8; graph residual 0.002260, -0.006292"
+edge,179-195,-0.008529615992219788,pixels,"dy -0.309830; lag 16; graph residual -0.007319, 0.021304"
+edge,180-181,0.09061474556600174,pixels,"dy -0.153337; lag 1; graph residual 0.008246, -0.015116"
+edge,180-182,0.07761576674752103,pixels,"dy -0.251301; lag 2; graph residual 0.004750, -0.018716"
+edge,180-184,-0.19809203167287232,pixels,"dy -0.216593; lag 4; graph residual 0.038086, 0.005839"
+edge,180-188,0.15214970952219323,pixels,"dy -0.462151; lag 8; graph residual 0.008856, -0.018872"
+edge,180-196,0.11449826966530927,pixels,"dy -0.292055; lag 16; graph residual 0.001956, -0.012773"
+edge,181-182,-0.027525591828293214,pixels,"dy -0.104251; lag 1; graph residual 0.011031, 0.002688"
+edge,181-183,0.058618092948466004,pixels,"dy -0.100866; lag 2; graph residual 0.000757, 0.005745"
+edge,181-185,-0.05759240522971253,pixels,"dy -0.293879; lag 4; graph residual 0.012791, 0.007874"
+edge,181-189,-0.061622666069211164,pixels,"dy -0.124088; lag 8; graph residual -0.005338, 0.051780"
+edge,181-197,0.19837851841998821,pixels,"dy 0.166812; lag 16; graph residual -0.033096, -0.220714"
+edge,182-183,0.07397630892222952,pixels,"dy 0.010250; lag 1; graph residual 0.001893, -0.003808"
+edge,182-184,-0.24745786347042537,pixels,"dy 0.057201; lag 2; graph residual 0.005085, 0.002062"
+edge,182-186,0.08336046094139586,pixels,"dy -0.136988; lag 4; graph residual -0.001502, 0.031950"
+edge,182-190,-0.20766099214840886,pixels,"dy 0.165671; lag 8; graph residual 0.016542, -0.007639"
+edge,182-198,0.233698252376006,pixels,"dy 0.165345; lag 16; graph residual -0.003514, -0.088377"
+edge,183-184,-0.30751986452758934,pixels,"dy 0.063420; lag 1; graph residual -0.010722, -0.010600"
+edge,183-185,-0.11098455816338766,pixels,"dy -0.213896; lag 2; graph residual 0.006809, 0.023012"
+edge,183-187,-0.10041651072799068,pixels,"dy -0.133851; lag 4; graph residual 0.012847, 0.031124"
+edge,183-191,-0.08584743561697412,pixels,"dy 0.084786; lag 8; graph residual 0.047379, -0.048918"
+edge,183-199,0.17245983881884785,pixels,"dy 0.261129; lag 16; graph residual -0.033713, -0.026278"
+edge,184-185,0.22514154662255037,pixels,"dy -0.234539; lag 1; graph residual -0.011075, -0.009166"
+edge,184-186,0.30990671234634515,pixels,"dy -0.168612; lag 2; graph residual 0.014324, 0.004312"
+edge,184-188,0.3160863056094218,pixels,"dy -0.274445; lag 4; graph residual 0.004925, 0.004176"
+edge,184-192,0.25112538353626523,pixels,"dy -0.078308; lag 8; graph residual -0.017485, 0.019567"
+edge,184-200,0.3426803577267972,pixels,"dy 0.370909; lag 16; graph residual 0.025438, 0.011758"
+edge,185-186,0.09183934175816479,pixels,"dy 0.096054; lag 1; graph residual 0.018326, -0.016650"
+edge,185-187,-0.014940313978063544,pixels,"dy 0.093637; lag 2; graph residual 0.031546, -0.005481"
+edge,185-189,-0.025854626515343006,pixels,"dy 0.206919; lag 4; graph residual 0.003695, 0.006778"
+edge,185-193,0.08801026262238572,pixels,"dy -0.165089; lag 8; graph residual 0.020067, 0.111645"
+edge,185-201,0.1046072503894568,pixels,"dy 0.620791; lag 16; graph residual -0.075293, -0.022745"
+edge,186-187,-0.08559762712291558,pixels,"dy 0.078037; lag 1; graph residual -0.007961, -0.069285"
+edge,186-188,-0.027064858116825755,pixels,"dy -0.178614; lag 2; graph residual 0.023845, 0.072645"
+edge,186-190,-0.2523239440969177,pixels,"dy 0.258036; lag 4; graph residual -0.020653, 0.005033"
+edge,186-194,-0.04368752790607969,pixels,"dy 0.041760; lag 8; graph residual 0.015516, 0.008746"
+edge,186-202,0.23975181566471548,pixels,"dy 0.524853; lag 16; graph residual 0.028373, 0.069575"
+edge,187-188,0.08294006940571921,pixels,"dy -0.123896; lag 1; graph residual 0.007400, 0.009175"
+edge,187-189,-0.03876093152177808,pixels,"dy 0.139085; lag 2; graph residual -0.000005, -0.013546"
+edge,187-191,0.06206542743647926,pixels,"dy 0.144160; lag 4; graph residual -0.012964, -0.005565"
+edge,187-195,0.02633013444016262,pixels,"dy 0.092737; lag 8; graph residual 0.015036, 0.002262"
+edge,187-203,0.20428267167396513,pixels,"dy 0.507853; lag 16; graph residual 0.041675, 0.053171"
+edge,188-189,-0.1262390943628843,pixels,"dy 0.239948; lag 1; graph residual -0.002866, 0.000313"
+edge,188-190,-0.25674398583771546,pixels,"dy 0.346973; lag 2; graph residual -0.013014, 0.022064"
+edge,188-192,-0.09845395395767001,pixels,"dy 0.200402; lag 4; graph residual 0.011082, 0.011126"
+edge,188-196,-0.09661173647017413,pixels,"dy 0.159667; lag 8; graph residual 0.052060, 0.016528"
+edge,188-204,0.16381079088405395,pixels,"dy 0.824876; lag 16; graph residual -0.000106, 0.064321"
+edge,189-190,-0.14949881658213793,pixels,"dy 0.126395; lag 1; graph residual 0.008846, 0.002382"
+edge,189-191,0.12096347860533706,pixels,"dy -0.003803; lag 2; graph residual -0.033096, 0.016858"
+edge,189-193,0.15588482318189953,pixels,"dy -0.267624; lag 4; graph residual -0.025647, 0.000484"
+edge,189-197,0.24368292438578432,pixels,"dy -0.021410; lag 8; graph residual -0.011439, 0.039816"
+edge,189-205,0.33067628892853507,pixels,"dy 0.725330; lag 16; graph residual 0.037409, 0.062511"
+edge,190-191,0.2603793018674417,pixels,"dy -0.120654; lag 1; graph residual -0.031860, 0.004932"
+edge,190-192,0.2035697717128892,pixels,"dy -0.151215; lag 2; graph residual -0.021184, -0.006295"
+edge,190-194,0.24917390393246025,pixels,"dy -0.220193; lag 4; graph residual -0.004368, 0.007630"
+edge,190-198,0.36895446952949573,pixels,"dy -0.077384; lag 8; graph residual 0.052348, -0.003679"
+edge,190-206,0.32686782682449045,pixels,"dy 0.829784; lag 16; graph residual 0.013426, 0.002877"
+edge,191-192,-0.06254625188136617,pixels,"dy -0.025705; lag 1; graph residual 0.016413, -0.016084"
+edge,191-193,0.05141595062042888,pixels,"dy -0.258243; lag 2; graph residual -0.009046, -0.021953"
+edge,191-195,0.07356556560624401,pixels,"dy -0.002174; lag 4; graph residual -0.081301, -0.041422"
+edge,191-199,0.18690256233950522,pixels,"dy 0.217461; lag 8; graph residual -0.009688, -0.018477"
+edge,191-207,-0.07768768813298133,pixels,"dy 1.337098; lag 16; graph residual 0.048682, -0.013172"
+edge,192-193,0.08565220026111235,pixels,"dy -0.234197; lag 1; graph residual 0.002852, -0.004210"
+edge,192-194,0.066143139249066,pixels,"dy -0.066479; lag 2; graph residual -0.003724, 0.011427"
+edge,192-196,0.08924383536353495,pixels,"dy -0.051717; lag 4; graph residual -0.046424, 0.016385"
+edge,192-200,0.1585794492737898,pixels,"dy 0.430621; lag 8; graph residual -0.024101, 0.010787"
+edge,192-208,0.08758587780882009,pixels,"dy 1.254389; lag 16; graph residual 0.024175, -0.007156"
+edge,193-194,-0.031826922665664156,pixels,"dy 0.206332; lag 1; graph residual 0.005742, -0.022978"
+edge,193-195,-0.07170620083021649,pixels,"dy 0.247292; lag 2; graph residual 0.021600, -0.010692"
+edge,193-197,0.10577877985576281,pixels,"dy 0.270601; lag 4; graph residual -0.003773, 0.014946"
+edge,193-201,-0.07506440187607738,pixels,"dy 0.629931; lag 8; graph residual -0.003699, 0.021559"
+edge,193-209,0.18906971138215375,pixels,"dy 1.523678; lag 16; graph residual -0.037027, 0.025253"
+edge,194-195,-0.02856382653307913,pixels,"dy 0.071523; lag 1; graph residual 0.004542, -0.018277"
+edge,194-196,-0.0632190701639543,pixels,"dy 0.006441; lag 2; graph residual 0.043620, 0.013279"
+edge,194-198,0.178334584611131,pixels,"dy 0.142816; lag 4; graph residual -0.001838, -0.011316"
+edge,194-202,0.29038053062016234,pixels,"dy 0.555212; lag 8; graph residual 0.005916, -0.011290"
+edge,194-210,0.039612100774777226,pixels,"dy 1.548678; lag 16; graph residual -0.043929, 0.060036"
+edge,195-196,0.07101134672957987,pixels,"dy 0.034228; lag 1; graph residual -0.066589, -0.067753"
+edge,195-197,0.13912379574973427,pixels,"dy 0.015407; lag 2; graph residual 0.012988, 0.033540"
+edge,195-199,0.20473851205384627,pixels,"dy 0.256698; lag 4; graph residual -0.019788, -0.014118"
+edge,195-203,0.19260550649897473,pixels,"dy 0.457811; lag 8; graph residual 0.011986, 0.008214"
+edge,195-211,0.18171283725452436,pixels,"dy 1.319194; lag 16; graph residual 0.013960, -0.006707"
+edge,196-197,0.1333454217815498,pixels,"dy 0.088518; lag 1; graph residual 0.014344, -0.006046"
+edge,196-198,0.20747277259454042,pixels,"dy 0.124562; lag 2; graph residual -0.011377, -0.012783"
+edge,196-200,0.1358127971141049,pixels,"dy 0.485884; lag 4; graph residual -0.044155, -0.009144"
+edge,196-204,0.20147355708411907,pixels,"dy 0.702993; lag 8; graph residual 0.006783, 0.010010"
+edge,196-212,0.2297955766261809,pixels,"dy 1.373630; lag 16; graph residual 0.019028, -0.016369"
+edge,197-198,0.08167139627714884,pixels,"dy 0.047621; lag 1; graph residual -0.033265, -0.018313"
+edge,197-199,-0.0096716955062583,pixels,"dy 0.252652; lag 2; graph residual 0.042510, -0.059019"
+edge,197-201,-0.17403013645245877,pixels,"dy 0.414256; lag 4; graph residual -0.006740, -0.048313"
+edge,197-205,0.16809642155761542,pixels,"dy 0.777437; lag 8; graph residual -0.032254, -0.008003"
+edge,197-213,-0.009028543873632104,pixels,"dy 1.182647; lag 16; graph residual 0.008774, -0.004810"
+edge,198-199,-0.04049986695331165,pixels,"dy 0.189873; lag 1; graph residual 0.024932, -0.025548"
+edge,198-200,-0.10236219865939428,pixels,"dy 0.416746; lag 2; graph residual -0.002076, -0.051786"
+edge,198-202,0.14625983001787543,pixels,"dy 0.445833; lag 4; graph residual -0.026461, -0.033412"
+edge,198-206,-0.0682820450595291,pixels,"dy 0.918647; lag 8; graph residual -0.012726, -0.004923"
+edge,198-214,-0.05369226866832695,pixels,"dy 1.127488; lag 16; graph residual 0.018684, -0.018799"
+edge,199-200,-0.06753436840878364,pixels,"dy 0.238881; lag 1; graph residual -0.021336, -0.038246"
+edge,199-201,-0.22493202467716222,pixels,"dy 0.224596; lag 2; graph residual 0.011324, -0.052286"
+edge,199-203,0.01283396981915368,pixels,"dy 0.241733; lag 4; graph residual 0.006807, -0.018288"
+edge,199-207,-0.19733299240371668,pixels,"dy 1.153672; lag 8; graph residual -0.008887, -0.028730"
+edge,199-215,0.09954229979190699,pixels,"dy 1.118047; lag 16; graph residual 0.016346, -0.005891"
+edge,200-201,-0.1368976114229844,pixels,"dy -0.028923; lag 1; graph residual 0.012160, 0.000597"
+edge,200-202,0.2268195734248793,pixels,"dy 0.080490; lag 2; graph residual -0.002582, -0.033029"
+edge,200-204,0.12578961643728565,pixels,"dy 0.273959; lag 4; graph residual -0.009191, -0.037697"
+edge,200-208,0.01882128805046064,pixels,"dy 0.782515; lag 8; graph residual -0.041538, 0.023310"
+edge,200-216,0.07098691069891243,pixels,"dy 0.790149; lag 16; graph residual -0.025078, -0.029815"
+edge,201-202,0.3470895919177367,pixels,"dy 0.113645; lag 1; graph residual 0.001886, -0.037858"
+edge,201-203,0.25796163648549564,pixels,"dy 0.071605; lag 2; graph residual -0.024712, -0.020470"
+edge,201-205,0.3430239794035646,pixels,"dy 0.430712; lag 4; graph residual -0.026412, -0.027221"
+edge,201-209,0.2658085249737933,pixels,"dy 0.911415; lag 8; graph residual -0.035002, -0.013973"
+edge,201-217,0.2807724297799781,pixels,"dy 0.786212; lag 16; graph residual 0.021993, -0.001666"
+edge,202-203,-0.1200424099449208,pixels,"dy -0.038133; lag 1; graph residual 0.004317, 0.013481"
+edge,202-204,-0.12215339574913209,pixels,"dy 0.225618; lag 2; graph residual 0.014515, -0.036816"
+edge,202-206,-0.16196436773333964,pixels,"dy 0.512560; lag 4; graph residual -0.038843, -0.011258"
+edge,202-210,-0.28299058811390887,pixels,"dy 1.081576; lag 8; graph residual -0.017622, -0.016784"
+edge,202-218,-0.05230924463168224,pixels,"dy 0.536276; lag 16; graph residual 0.044765, 0.005364"
+edge,203-204,-0.014790322297436764,pixels,"dy 0.226949; lag 1; graph residual 0.022877, -0.013496"
+edge,203-205,0.08988530174393365,pixels,"dy 0.386299; lag 2; graph residual -0.006523, -0.033943"
+edge,203-207,-0.21367453859756363,pixels,"dy 0.877326; lag 4; graph residual -0.012187, 0.024171"
+edge,203-211,-0.028251800629499207,pixels,"dy 0.822843; lag 8; graph residual 0.019333, 0.023619"
+edge,203-219,-0.11702213501196974,pixels,"dy 0.779573; lag 16; graph residual 0.016573, 0.035756"
+edge,204-205,0.0744245044542608,pixels,"dy 0.162461; lag 1; graph residual 0.000851, -0.023558"
+edge,204-206,-0.1021435001246316,pixels,"dy 0.338066; lag 2; graph residual 0.008975, -0.025565"
+edge,204-208,-0.14708881443657917,pixels,"dy 0.557239; lag 4; graph residual 0.007773, 0.012324"
+edge,204-212,0.04454333037341024,pixels,"dy 0.619517; lag 8; graph residual -0.003976, 0.024741"
+edge,204-220,-0.09496519683225876,pixels,"dy 0.413260; lag 16; graph residual 0.021255, -0.001620"
+edge,205-206,-0.15372828962643334,pixels,"dy 0.194796; lag 1; graph residual -0.014716, -0.021198"
+edge,205-207,-0.2923610215299025,pixels,"dy 0.528105; lag 2; graph residual -0.016863, 0.021037"
+edge,205-209,-0.09086826533354699,pixels,"dy 0.491334; lag 4; graph residual 0.005063, 0.002617"
+edge,205-213,-0.14434108836576146,pixels,"dy 0.407391; lag 8; graph residual 0.008245, 0.001012"
+edge,205-221,-0.12712398708824174,pixels,"dy 0.233946; lag 16; graph residual -0.008658, -0.033681"
+edge,206-207,-0.15464967820256176,pixels,"dy 0.367198; lag 1; graph residual 0.013870, 0.008346"
+edge,206-208,-0.05862070978297151,pixels,"dy 0.278771; lag 2; graph residual 0.012474, -0.021710"
+edge,206-210,-0.11588748099330907,pixels,"dy 0.547065; lag 4; graph residual 0.016082, 0.016425"
+edge,206-214,0.14408244051486163,pixels,"dy 0.262215; lag 8; graph residual -0.098082, -0.067249"
+edge,206-222,0.1859919135342613,pixels,"dy -0.037488; lag 16; graph residual 0.011772, 0.004120"
+edge,207-208,0.1164110725893197,pixels,"dy -0.118715; lag 1; graph residual -0.021778, 0.000233"
+edge,207-209,0.22189502691029572,pixels,"dy -0.048434; lag 2; graph residual 0.001523, -0.006757"
+edge,207-211,0.21585787032860806,pixels,"dy -0.053086; lag 4; graph residual 0.001085, -0.001950"
+edge,207-215,0.31722719589852755,pixels,"dy -0.021521; lag 8; graph residual 0.004882, 0.008735"
+edge,207-223,0.3308144096082284,pixels,"dy -0.365390; lag 16; graph residual 0.038903, 0.011390"
+edge,208-209,0.13705374285962646,pixels,"dy 0.074548; lag 1; graph residual -0.008268, -0.011257"
+edge,208-210,-0.06951973364270314,pixels,"dy 0.340912; lag 2; graph residual 0.015862, -0.034483"
+edge,208-212,0.18957885258102253,pixels,"dy 0.069796; lag 4; graph residual -0.009696, 0.004899"
+edge,208-216,0.08991185602078261,pixels,"dy -0.042954; lag 8; graph residual -0.021286, -0.002537"
+edge,208-224,0.08819447273692088,pixels,"dy -0.165373; lag 16; graph residual 0.004495, 0.050381"
+edge,209-210,-0.17724719877538225,pixels,"dy 0.267640; lag 1; graph residual -0.005197, -0.024503"
+edge,209-211,0.04590250139729312,pixels,"dy 0.034576; lag 2; graph residual -0.052378, -0.034421"
+edge,209-213,-0.043953210638885576,pixels,"dy -0.113876; lag 4; graph residual -0.006338, 0.028329"
+edge,209-217,0.07232045130796347,pixels,"dy -0.118516; lag 8; graph residual -0.000361, 0.005620"
+edge,209-225,-0.12412462680281457,pixels,"dy -0.271236; lag 16; graph residual -0.009437, 0.020857"
+edge,210-211,0.17802123954862867,pixels,"dy -0.273881; lag 1; graph residual -0.002053, 0.030899"
+edge,210-212,0.2358607908339905,pixels,"dy -0.254319; lag 2; graph residual -0.002320, 0.022586"
+edge,210-214,0.14308480699664727,pixels,"dy -0.388406; lag 4; graph residual 0.002720, 0.019881"
+edge,210-218,0.28464572470498545,pixels,"dy -0.485548; lag 8; graph residual 0.008423, -0.037604"
+edge,210-226,0.27490908387905577,pixels,"dy -0.520610; lag 16; graph residual -0.041574, -0.035070"
+edge,211-212,0.07307396234580481,pixels,"dy 0.015969; lag 1; graph residual -0.015501, -0.004720"
+edge,211-213,-0.0383110166682326,pixels,"dy -0.083918; lag 2; graph residual -0.005504, -0.001785"
+edge,211-215,0.12584935708599437,pixels,"dy 0.043831; lag 4; graph residual -0.020683, -0.001582"
+edge,211-219,-0.09789062431972878,pixels,"dy -0.034887; lag 8; graph residual 0.006361, 0.003754"
+edge,211-227,-0.10822981440484838,pixels,"dy -0.122581; lag 16; graph residual 0.015272, 0.015773"
+edge,212-213,-0.11323349641276341,pixels,"dy -0.096991; lag 1; graph residual 0.011845, 0.000039"
+edge,212-214,-0.11751740086470043,pixels,"dy -0.165620; lag 2; graph residual 0.029782, 0.028828"
+edge,212-216,-0.08825292082611176,pixels,"dy -0.118483; lag 4; graph residual -0.023004, -0.001704"
+edge,212-220,-0.11500488309411853,pixels,"dy -0.245746; lag 8; graph residual 0.000727, 0.013128"
+edge,212-228,-0.067497018234319,pixels,"dy 0.118475; lag 16; graph residual -0.031814, -0.009155"
+edge,213-214,0.015239768771074432,pixels,"dy -0.073689; lag 1; graph residual -0.001587, 0.033849"
+edge,213-215,0.17084744515401684,pixels,"dy 0.124174; lag 2; graph residual -0.021866, 0.003777"
+edge,213-217,0.12841496396585045,pixels,"dy -0.015526; lag 4; graph residual -0.006165, -0.011822"
+edge,213-221,-0.022962922156836638,pixels,"dy -0.181469; lag 8; graph residual 0.023278, -0.026670"
+edge,213-229,-0.048015112145973,pixels,"dy -0.253342; lag 16; graph residual 0.023363, 0.023650"
+edge,214-215,0.17296380089005348,pixels,"dy 0.193719; lag 1; graph residual -0.037635, -0.025928"
+edge,214-216,-0.05999607038163272,pixels,"dy -0.059005; lag 2; graph residual 0.036475, 0.075610"
+edge,214-218,0.1702918707712439,pixels,"dy -0.109477; lag 4; graph residual -0.023028, -0.045151"
+edge,214-222,0.19697866404907186,pixels,"dy -0.192696; lag 8; graph residual -0.045215, -0.035638"
+edge,214-230,-0.20441689017788747,pixels,"dy -0.123002; lag 16; graph residual 0.020920, 0.027617"
+edge,215-216,-0.1313247591340632,pixels,"dy -0.150809; lag 1; graph residual -0.027525, -0.000377"
+edge,215-217,-0.016481307928681344,pixels,"dy -0.141951; lag 2; graph residual -0.010250, -0.013349"
+edge,215-219,-0.1759023485494238,pixels,"dy -0.060837; lag 4; graph residual -0.020794, -0.012545"
+edge,215-223,0.0735817027848584,pixels,"dy -0.332823; lag 8; graph residual -0.025973, -0.008390"
+edge,215-231,-0.1936594072436217,pixels,"dy -0.451890; lag 16; graph residual 0.025588, 0.013772"
+edge,216-217,0.1331778055650876,pixels,"dy -0.010892; lag 1; graph residual -0.001059, 0.006779"
+edge,216-218,0.16603403448165271,pixels,"dy -0.168620; lag 2; graph residual 0.004750, -0.002614"
+edge,216-220,-0.010513754433006487,pixels,"dy -0.138326; lag 4; graph residual 0.007493, 0.025894"
+edge,216-224,0.07957540503741306,pixels,"dy -0.081609; lag 8; graph residual -0.055512, 0.012107"
+edge,216-232,0.07127387788323306,pixels,"dy -0.510534; lag 16; graph residual -0.016090, -0.000989"
+edge,217-218,0.050017013760781485,pixels,"dy -0.155477; lag 1; graph residual -0.011351, -0.011643"
+edge,217-219,-0.16873702556651066,pixels,"dy 0.111864; lag 2; graph residual -0.001228, -0.029947"
+edge,217-221,-0.09859902433666616,pixels,"dy -0.176427; lag 4; graph residual -0.023336, -0.004363"
+edge,217-225,-0.19166725401119306,pixels,"dy -0.148023; lag 8; graph residual -0.013854, 0.010539"
+edge,217-233,-0.058934062727442345,pixels,"dy -0.714618; lag 16; graph residual 0.053928, 0.020975"
+edge,218-219,-0.19435837528872674,pixels,"dy 0.234296; lag 1; graph residual -0.014272, 0.014741"
+edge,218-220,-0.1608204900786663,pixels,"dy 0.089084; lag 2; graph residual -0.012985, -0.030283"
+edge,218-222,-0.0669827213267079,pixels,"dy -0.050884; lag 4; graph residual 0.071483, -0.022822"
+edge,218-226,-0.06317937725413224,pixels,"dy -0.040136; lag 8; graph residual 0.003446, 0.007609"
+edge,218-234,0.06331866968431862,pixels,"dy -0.645012; lag 16; graph residual -0.024113, -0.060893"
+edge,219-220,0.02008786844695556,pixels,"dy -0.189537; lag 1; graph residual 0.014737, -0.000699"
+edge,219-221,0.052984655792402614,pixels,"dy -0.227850; lag 2; graph residual -0.004955, -0.034857"
+edge,219-223,0.20272887102191378,pixels,"dy -0.266730; lag 4; graph residual 0.041576, -0.001101"
+edge,219-227,0.07322079828875343,pixels,"dy -0.131482; lag 8; graph residual -0.074649, 0.055808"
+edge,219-235,0.2915099881309965,pixels,"dy -0.668307; lag 16; graph residual 0.009932, -0.007392"
+edge,220-221,-0.007048478224419937,pixels,"dy -0.113998; lag 1; graph residual 0.020253, 0.041527"
+edge,220-222,0.19447367964778342,pixels,"dy -0.134609; lag 2; graph residual -0.016168, 0.002102"
+edge,220-224,0.018914912541964073,pixels,"dy 0.077517; lag 4; graph residual 0.008169, -0.034586"
+edge,220-228,-0.011079243341788532,pixels,"dy 0.386747; lag 8; graph residual 0.026046, -0.044808"
+edge,220-236,0.23519979857309872,pixels,"dy -0.562613; lag 16; graph residual -0.007074, 0.042186"
+edge,221-222,0.15585127090834794,pixels,"dy -0.066605; lag 1; graph residual 0.009250, 0.006569"
+edge,221-223,0.20094645486437704,pixels,"dy 0.048744; lag 2; graph residual -0.004671, -0.053868"
+edge,221-225,-0.1261036103283045,pixels,"dy 0.045036; lag 4; graph residual 0.042518, -0.001730"
+edge,221-229,-0.07490519792612162,pixels,"dy -0.060031; lag 8; graph residual 0.049938, 0.038478"
+edge,221-237,0.10931454427689127,pixels,"dy -0.587926; lag 16; graph residual -0.090455, -0.047493"
+edge,222-223,0.08054670266586154,pixels,"dy 0.105436; lag 1; graph residual -0.049373, -0.050524"
+edge,222-224,-0.1784265557345876,pixels,"dy 0.196318; lag 2; graph residual 0.027205, -0.020880"
+edge,222-226,-0.09082670431814165,pixels,"dy 0.050278; lag 4; graph residual 0.026593, -0.009100"
+edge,222-230,-0.34257327951820393,pixels,"dy 0.162194; lag 8; graph residual 0.007313, -0.029245"
+edge,222-238,-0.2764458517437227,pixels,"dy -0.494694; lag 16; graph residual 0.019385, 0.064079"
+edge,223-224,-0.17908135762584274,pixels,"dy 0.167072; lag 1; graph residual -0.003314, -0.046546"
+edge,223-225,-0.2621088122235884,pixels,"dy 0.099515; lag 2; graph residual -0.017752, -0.051084"
+edge,223-227,-0.24487322520296262,pixels,"dy 0.227969; lag 4; graph residual -0.000860, -0.035812"
+edge,223-231,-0.2379535682391356,pixels,"dy -0.103398; lag 8; graph residual 0.022274, 0.006494"
+edge,223-239,-0.19719485812967313,pixels,"dy -0.627792; lag 16; graph residual 0.000114, 0.024456"
+edge,224-225,-0.09829710118956567,pixels,"dy -0.075886; lag 1; graph residual 0.000832, 0.003790"
+edge,224-226,0.10142382800122603,pixels,"dy -0.145952; lag 2; graph residual -0.014436, 0.011692"
+edge,224-228,-0.011328212456745488,pixels,"dy 0.329688; lag 4; graph residual -0.000789, -0.030679"
+edge,224-232,0.03568579410105574,pixels,"dy -0.417695; lag 8; graph residual -0.004565, -0.024327"
+edge,225-226,0.18281579349415308,pixels,"dy -0.067427; lag 1; graph residual 0.001638, 0.005263"
+edge,225-227,0.033466491158457956,pixels,"dy 0.157434; lag 2; graph residual 0.000661, -0.013707"
+edge,225-229,0.060162436621616064,pixels,"dy -0.064498; lag 4; graph residual -0.001544, -0.000362"
+edge,225-233,0.19896387622912107,pixels,"dy -0.547338; lag 8; graph residual 0.001551, -0.008821"
+edge,226-227,-0.1500127014846938,pixels,"dy 0.220160; lag 1; graph residual -0.000313, -0.014270"
+edge,226-228,-0.09735335481761125,pixels,"dy 0.411859; lag 2; graph residual -0.001752, 0.021409"
+edge,226-230,-0.26598816353560273,pixels,"dy 0.122658; lag 4; graph residual -0.005039, -0.030887"
+edge,226-234,0.1161661222112396,pixels,"dy -0.677520; lag 8; graph residual -0.017227, 0.004142"
+edge,227-228,0.07724513742095349,pixels,"dy 0.228752; lag 1; graph residual -0.026025, -0.001374"
+edge,227-229,0.05085166487511313,pixels,"dy -0.199428; lag 2; graph residual -0.026361, -0.009158"
+edge,227-231,0.04584227109257906,pixels,"dy -0.290781; lag 4; graph residual -0.015789, 0.001720"
+edge,227-235,0.29458548164789505,pixels,"dy -0.616628; lag 8; graph residual 0.008285, 0.016605"
+edge,228-229,-0.01876152804945077,pixels,"dy -0.398514; lag 1; graph residual -0.007967, -0.037449"
+edge,228-230,-0.1848101981099794,pixels,"dy -0.345564; lag 2; graph residual 0.012889, 0.004067"
+edge,228-232,0.07210004829259127,pixels,"dy -0.736874; lag 4; graph residual -0.028862, -0.004157"
+edge,228-236,0.22355363832134248,pixels,"dy -0.835297; lag 8; graph residual -0.010394, -0.027069"
+edge,229-230,-0.1596720533382332,pixels,"dy 0.068244; lag 1; graph residual 0.014480, 0.026223"
+edge,229-231,0.021787694576649384,pixels,"dy -0.127778; lag 2; graph residual -0.016226, 0.047303"
+edge,229-233,0.14714500557620394,pixels,"dy -0.515325; lag 4; graph residual -0.005249, 0.024025"
+edge,229-237,-0.0005983352820321446,pixels,"dy -0.531474; lag 8; graph residual 0.044425, -0.082392"
+edge,230-231,0.1488278914610663,pixels,"dy -0.189141; lag 1; graph residual 0.001927, 0.014200"
+edge,230-232,0.20872990176952946,pixels,"dy -0.413410; lag 2; graph residual 0.006430, 0.013876"
+edge,230-234,0.3230945253300279,pixels,"dy -0.730933; lag 4; graph residual 0.046872, -0.034215"
+edge,230-238,0.08286618386570808,pixels,"dy -0.567479; lag 8; graph residual -0.004666, 0.003914"
+edge,231-232,0.07056097070837662,pixels,"dy -0.253336; lag 1; graph residual -0.006156, 0.028744"
+edge,231-233,0.14815580812537446,pixels,"dy -0.421990; lag 2; graph residual -0.011822, 0.011165"
+edge,231-235,0.26351633139941805,pixels,"dy -0.346881; lag 4; graph residual 0.009301, 0.035918"
+edge,231-239,-0.007851893591865715,pixels,"dy -0.514094; lag 8; graph residual 0.026451, 0.007662"
+edge,232-233,0.08435561900442688,pixels,"dy -0.197026; lag 1; graph residual -0.012427, 0.010794"
+edge,232-234,0.15494925840531829,pixels,"dy -0.368432; lag 2; graph residual -0.000143, 0.002817"
+edge,232-236,0.2065959992509358,pixels,"dy -0.120871; lag 4; graph residual -0.036674, -0.000464"
+edge,233-234,0.09554116619477264,pixels,"dy -0.217278; lag 1; graph residual -0.012663, 0.037896"
+edge,233-235,0.14838578791081095,pixels,"dy 0.126174; lag 2; graph residual -0.011902, -0.026312"
+edge,233-237,-0.14861543480612122,pixels,"dy -0.169119; lag 4; graph residual 0.050546, 0.046554"
+edge,234-235,0.08137770340411014,pixels,"dy 0.282807; lag 1; graph residual -0.027772, -0.003563"
+edge,234-236,-0.03846798994574653,pixels,"dy 0.256351; lag 2; graph residual 0.053583, -0.012071"
+edge,234-238,-0.2586806307209698,pixels,"dy 0.236201; lag 4; graph residual -0.033086, -0.034617"
+edge,235-236,-0.04701262323662945,pixels,"dy -0.054908; lag 1; graph residual 0.008522, 0.019944"
+edge,235-237,-0.22847066364315533,pixels,"dy -0.219125; lag 2; graph residual -0.006082, -0.003303"
+edge,235-239,-0.23962236143230992,pixels,"dy -0.194084; lag 4; graph residual -0.014596, -0.001385"
+edge,236-237,-0.20828351582514498,pixels,"dy -0.182460; lag 1; graph residual 0.012222, -0.005003"
+edge,236-238,-0.3026218523299536,pixels,"dy -0.070224; lag 2; graph residual -0.004259, 0.027529"
+edge,237-238,-0.12150929122311391,pixels,"dy 0.174654; lag 1; graph residual 0.010690, -0.029886"
+edge,237-239,-0.019631655956162102,pixels,"dy 0.088710; lag 2; graph residual -0.000034, -0.061751"
+edge,238-239,0.10309003769838579,pixels,"dy -0.148828; lag 1; graph residual -0.011936, 0.031019"

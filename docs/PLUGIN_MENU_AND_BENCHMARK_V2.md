@@ -33,7 +33,7 @@ The dialog has three sections. Only **Input and preset** is expanded initially.
 | Estimate movement from channel | **Best stable channel automatically** | Channel 1…N | Channels are ranked by localisability: how strongly a one-pixel movement changes the image. The chosen channel is reported. |
 | Estimate movement from Z | **Maximum-intensity projection** | Current slice; selected slice; mean projection | Only the estimation image changes. The resulting movement is still applied to every Z slice. |
 | Estimation region | **Whole image** | Current region of interest; current mask | Lets a user isolate stable tissue or fiducial beads while excluding moving cells. |
-| Movement model | **XY translation** | XY translation plus rotation, when implemented and benchmarked | Rotation remains unavailable until it has its own ground-truth benchmark. |
+| Movement model | **XY translation** | XY translation plus rotation | Rotation is fitted incrementally from the selected translation recipe and retained at the frozen 0.005 residual-gain threshold. |
 | Expected maximum movement | **Detect automatically** | Manual pixels per frame | Sets the search boundary. A result touching the boundary is flagged, never silently accepted. |
 | Time averaging | **1 frame** | 2; 3; 5; 10; custom | Averages adjacent frames only for estimating movement. Useful for sparse or photon-limited images. |
 
@@ -100,16 +100,15 @@ then Run, change settings, or cancel.
 ### Balanced, expandable composition
 
 The library is a warehouse; the headline cohort is an equally stocked display shelf. Download and retain
-every eligible independent series, but give each of these five image-series classes exactly one fifth of the
+every eligible independent series, but give each of these four image-series classes exactly one quarter of the
 headline result:
 
 | Image-series class | Headline share | Includes |
 |---|---:|---|
-| Phase contrast | 20% | Label-free phase-contrast time series |
-| Brightfield and differential interference contrast | 20% | Other transmitted-light time series |
-| Dense fluorescence | 20% | Fluorescent structure across much of the field, including suitable XY projections of three-dimensional stacks |
-| Sparse or low-light fluorescence | 20% | Dark-background fluorescence, bioluminescence and photon-limited series |
-| Fiducial or static reference | 20% | Beads, calibration slides and biologically static textured fields |
+| Phase contrast | 25% | Label-free phase-contrast time series |
+| Brightfield and differential interference contrast | 25% | Other transmitted-light time series |
+| Dense fluorescence | 25% | Fluorescent structure across much of the field, including suitable XY projections of three-dimensional stacks |
+| Fiducial or static reference | 25% | Beads, calibration slides and biologically static textured fields |
 
 Artefacts, focus loss, fading, noise level, dimensionality and moving biological content are test conditions,
 not image-series classes. They are distributed evenly within every class so an artefact-rich source cannot
@@ -216,7 +215,7 @@ The declared search space is in `library/benchmark/benchmark_v2_parameter_space.
 | Memory | Peak working memory |
 | Output fidelity | Exact-pixel preservation or the declared interpolation used; never mixed into transform accuracy |
 
-The headline value is the average of the five class-level results, so every class has exactly 20% influence.
+The headline value is the average of the four class-level results, so every class has exactly 25% influence.
 Within each class, experiments have equal influence. Confidence intervals are bootstrapped across independent
 experiments, not across correlated frames. The headline winner requires lower error without a materially
 higher failure rate in any one class. Speed is reported separately; it is not hidden inside one arbitrary

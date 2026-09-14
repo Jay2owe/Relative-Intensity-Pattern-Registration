@@ -1,5 +1,9 @@
 # Making the external comparison publishable — what those papers actually measured, and what we would have to run
 
+> Active scope changed 2026-08-21: the external comparison covers brightfield/differential
+> interference contrast, dense fluorescence, fiducial/static and phase contrast. Sparse/low-light is
+> excluded pending a new prospective test with valid inputs.
+
 Written 2026-08-20, after `library/benchmark/v2/benchmarks/*/summaries/external_comparison_v1/`
 raised the question its own caveats invite: our table says it is not a fair fight and not the numbers
 those plugins published. This document establishes what they did publish, whether anyone has done

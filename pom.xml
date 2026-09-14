@@ -13,12 +13,12 @@
 	</parent>
 
 	<groupId>io.github.jay2owe</groupId>
-	<artifactId>LogRatioRegistration</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<artifactId>RelativeIntensityPatternRegistration</artifactId>
+	<version>0.2.0</version>
 
-	<name>Log-Ratio Registration</name>
-	<description>Register a time-lapse by levelling the log-ratio field between its frames — gain-invariant, robust to genuine change, no features and no segmentation</description>
-	<url>https://github.com/Jay2owe/LogRatioRegistration</url>
+	<name>Relative-Intensity Pattern Registration</name>
+	<description>Register time-lapse images by matching relative spatial intensity patterns, with robust translation and rotation correction and no segmentation</description>
+	<url>https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration</url>
 	<inceptionYear>2026</inceptionYear>
 	<organization>
 		<name>UK Dementia Research Institute at Imperial College London</name>
@@ -67,22 +67,22 @@
 	</mailingLists>
 
 	<scm>
-		<connection>scm:git:https://github.com/Jay2owe/LogRatioRegistration</connection>
-		<developerConnection>scm:git:git@github.com:Jay2owe/LogRatioRegistration</developerConnection>
+		<connection>scm:git:https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration</connection>
+		<developerConnection>scm:git:git@github.com:Jay2owe/Relative-Intensity-Pattern-Registration</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://github.com/Jay2owe/LogRatioRegistration</url>
+		<url>https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration</url>
 	</scm>
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/Jay2owe/LogRatioRegistration/issues</url>
+		<url>https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration/issues</url>
 	</issueManagement>
 	<ciManagement>
 		<system>GitHub Actions</system>
-		<url>https://github.com/Jay2owe/LogRatioRegistration/actions</url>
+		<url>https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration/actions</url>
 	</ciManagement>
 
 	<properties>
-		<package-name>logratio</package-name>
+		<package-name>ripr</package-name>
 		<license.licenseName>bsd_3</license.licenseName>
 		<license.copyrightOwners>Jamie Malcolm</license.copyrightOwners>
 	</properties>

@@ -41,7 +41,7 @@ public final class GuiScreenshotter {
     }
 
     private static JDialog buildMain() {
-        JDialog dialog = new JDialog((Frame) null, "Log-Ratio Registration", false);
+        JDialog dialog = new JDialog((Frame) null, "Relative-Intensity Pattern Registration", false);
         JPanel body = new JPanel(new GridBagLayout());
         body.setBorder(new EmptyBorder(12, 14, 8, 14));
         row = 0;
@@ -79,7 +79,7 @@ public final class GuiScreenshotter {
     }
 
     private static JDialog buildAdvanced() {
-        JDialog dialog = new JDialog((Frame) null, "Log-Ratio Registration - Advanced Parameters", false);
+        JDialog dialog = new JDialog((Frame) null, "Relative-Intensity Pattern Registration - Advanced Parameters", false);
         JPanel body = new JPanel(new GridBagLayout());
         body.setBorder(new EmptyBorder(12, 14, 8, 14));
         row = 0;
@@ -137,7 +137,7 @@ public final class GuiScreenshotter {
     }
 
     private static JDialog buildBatch() {
-        JDialog dialog = new JDialog((Frame) null, "Log-Ratio Registration Batch", false);
+        JDialog dialog = new JDialog((Frame) null, "Relative-Intensity Pattern Registration Batch", false);
         JPanel body = new JPanel(new GridBagLayout());
         body.setBorder(new EmptyBorder(12, 14, 8, 14));
         row = 0;
@@ -175,7 +175,7 @@ public final class GuiScreenshotter {
     }
 
     private static JDialog buildBatchProgress() {
-        JDialog dialog = new JDialog((Frame) null, "Log-Ratio Registration Batch", false);
+        JDialog dialog = new JDialog((Frame) null, "Relative-Intensity Pattern Registration Batch", false);
         JPanel labels = new JPanel(new GridLayout(5, 1, 0, 5));
         labels.setBorder(new EmptyBorder(12, 12, 8, 12));
         labels.add(new JLabel("Current stack: experiment_07.ome.tif"));

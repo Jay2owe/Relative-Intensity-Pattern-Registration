@@ -1,0 +1,26 @@
+{
+ "shown_frames": [
+  0,
+  120,
+  239
+ ],
+ "channel_names": [
+  "Bioluminescence",
+  "BF",
+  "RFP",
+  "GFP"
+ ],
+ "margin": {
+  "top": 1,
+  "bottom": 1,
+  "left": 0,
+  "right": 4
+ },
+ "cropped_shape": [
+  510,
+  508
+ ],
+ "width": 512,
+ "height": 512,
+ "interpolation": "none"
+}

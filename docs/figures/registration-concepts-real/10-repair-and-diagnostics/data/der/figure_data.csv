@@ -1,0 +1,972 @@
+element,key,value_number,value_text,note
+recording,frames,240.0,count,
+outlier,mads,8.0,median absolute deviations,the dashed threshold on the bottom trace
+outlier,median_step,0.20178056616891243,pixels,
+outlier,threshold,1.083246128101516,pixels,
+outlier,flagged,0.0,frames,marked red on the bottom trace
+repair,repaired_frames,0.0,frames,red in the status strip
+repair,measured_fraction,1.0,fraction,the third token
+residual,median_before,0.033529093096149154,log2,
+residual,median_after,0.03073557889211585,log2,
+residual,removed_fraction,0.08331612775873565,fraction,the ring token
+gain,final_within_range,0.7896606431496375,fraction,the first token; where the trace ended between its own smallest and largest value
+gain,frame_000,1.0,ratio,"cumulative, reported not applied"
+gain,frame_001,0.9926580191496306,ratio,"cumulative, reported not applied"
+gain,frame_002,0.9923199110569374,ratio,"cumulative, reported not applied"
+gain,frame_003,0.991371884832302,ratio,"cumulative, reported not applied"
+gain,frame_004,0.9958164200546221,ratio,"cumulative, reported not applied"
+gain,frame_005,0.9898860945360571,ratio,"cumulative, reported not applied"
+gain,frame_006,0.9881485079872887,ratio,"cumulative, reported not applied"
+gain,frame_007,0.9885000211884706,ratio,"cumulative, reported not applied"
+gain,frame_008,0.9909015340857165,ratio,"cumulative, reported not applied"
+gain,frame_009,0.9941939171472385,ratio,"cumulative, reported not applied"
+gain,frame_010,0.9884409719116146,ratio,"cumulative, reported not applied"
+gain,frame_011,0.9907994988548547,ratio,"cumulative, reported not applied"
+gain,frame_012,0.9892719137746561,ratio,"cumulative, reported not applied"
+gain,frame_013,0.9885778735873041,ratio,"cumulative, reported not applied"
+gain,frame_014,0.9948506619547041,ratio,"cumulative, reported not applied"
+gain,frame_015,0.9899392536256125,ratio,"cumulative, reported not applied"
+gain,frame_016,0.9888182306850046,ratio,"cumulative, reported not applied"
+gain,frame_017,0.9896588815729955,ratio,"cumulative, reported not applied"
+gain,frame_018,0.9908809308041716,ratio,"cumulative, reported not applied"
+gain,frame_019,0.9926279809171761,ratio,"cumulative, reported not applied"
+gain,frame_020,0.990140573917781,ratio,"cumulative, reported not applied"
+gain,frame_021,0.9927594226848723,ratio,"cumulative, reported not applied"
+gain,frame_022,0.992423866118949,ratio,"cumulative, reported not applied"
+gain,frame_023,0.9902895097037996,ratio,"cumulative, reported not applied"
+gain,frame_024,0.9914479270717597,ratio,"cumulative, reported not applied"
+gain,frame_025,0.9899964497040469,ratio,"cumulative, reported not applied"
+gain,frame_026,0.9953459326828974,ratio,"cumulative, reported not applied"
+gain,frame_027,0.9910120449482053,ratio,"cumulative, reported not applied"
+gain,frame_028,0.9901583435647383,ratio,"cumulative, reported not applied"
+gain,frame_029,0.9905863028990637,ratio,"cumulative, reported not applied"
+gain,frame_030,0.9908646738508424,ratio,"cumulative, reported not applied"
+gain,frame_031,0.9907228195687556,ratio,"cumulative, reported not applied"
+gain,frame_032,0.9900013601226445,ratio,"cumulative, reported not applied"
+gain,frame_033,0.9916382065307635,ratio,"cumulative, reported not applied"
+gain,frame_034,0.9980722383764192,ratio,"cumulative, reported not applied"
+gain,frame_035,0.9929358497849403,ratio,"cumulative, reported not applied"
+gain,frame_036,0.992856163914833,ratio,"cumulative, reported not applied"
+gain,frame_037,0.9945551148549703,ratio,"cumulative, reported not applied"
+gain,frame_038,0.9958376046900775,ratio,"cumulative, reported not applied"
+gain,frame_039,0.9996534268402798,ratio,"cumulative, reported not applied"
+gain,frame_040,0.9967811258383971,ratio,"cumulative, reported not applied"
+gain,frame_041,0.9965038167889109,ratio,"cumulative, reported not applied"
+gain,frame_042,0.9963563797067985,ratio,"cumulative, reported not applied"
+gain,frame_043,0.9969244094685671,ratio,"cumulative, reported not applied"
+gain,frame_044,0.9983680863729896,ratio,"cumulative, reported not applied"
+gain,frame_045,0.9974032232308532,ratio,"cumulative, reported not applied"
+gain,frame_046,0.9990592106486845,ratio,"cumulative, reported not applied"
+gain,frame_047,0.9991644362599912,ratio,"cumulative, reported not applied"
+gain,frame_048,0.9987096587672972,ratio,"cumulative, reported not applied"
+gain,frame_049,0.9999616221100599,ratio,"cumulative, reported not applied"
+gain,frame_050,0.9988444481532802,ratio,"cumulative, reported not applied"
+gain,frame_051,1.000208525802288,ratio,"cumulative, reported not applied"
+gain,frame_052,0.9996027345219651,ratio,"cumulative, reported not applied"
+gain,frame_053,1.005420496449884,ratio,"cumulative, reported not applied"
+gain,frame_054,1.0059545822175777,ratio,"cumulative, reported not applied"
+gain,frame_055,0.9994596901495502,ratio,"cumulative, reported not applied"
+gain,frame_056,0.9997122182163459,ratio,"cumulative, reported not applied"
+gain,frame_057,0.9997786809518907,ratio,"cumulative, reported not applied"
+gain,frame_058,1.0007525368724302,ratio,"cumulative, reported not applied"
+gain,frame_059,0.9986021628846099,ratio,"cumulative, reported not applied"
+gain,frame_060,1.0000116165669317,ratio,"cumulative, reported not applied"
+gain,frame_061,0.9992227907543643,ratio,"cumulative, reported not applied"
+gain,frame_062,1.000687362211871,ratio,"cumulative, reported not applied"
+gain,frame_063,0.99880017139478,ratio,"cumulative, reported not applied"
+gain,frame_064,1.003600688977212,ratio,"cumulative, reported not applied"
+gain,frame_065,0.9970263902693045,ratio,"cumulative, reported not applied"
+gain,frame_066,1.0023201019733232,ratio,"cumulative, reported not applied"
+gain,frame_067,0.9960217908903736,ratio,"cumulative, reported not applied"
+gain,frame_068,0.9973981804428907,ratio,"cumulative, reported not applied"
+gain,frame_069,1.0012472248203694,ratio,"cumulative, reported not applied"
+gain,frame_070,1.002436878197202,ratio,"cumulative, reported not applied"
+gain,frame_071,0.9966682332870344,ratio,"cumulative, reported not applied"
+gain,frame_072,0.9963532180218522,ratio,"cumulative, reported not applied"
+gain,frame_073,1.00182066149573,ratio,"cumulative, reported not applied"
+gain,frame_074,0.9980825327337084,ratio,"cumulative, reported not applied"
+gain,frame_075,1.0034692244022654,ratio,"cumulative, reported not applied"
+gain,frame_076,0.999375118991611,ratio,"cumulative, reported not applied"
+gain,frame_077,0.99982812918282,ratio,"cumulative, reported not applied"
+gain,frame_078,0.998444927393102,ratio,"cumulative, reported not applied"
+gain,frame_079,0.9970100595177549,ratio,"cumulative, reported not applied"
+gain,frame_080,0.9990969750601462,ratio,"cumulative, reported not applied"
+gain,frame_081,0.9982532046139486,ratio,"cumulative, reported not applied"
+gain,frame_082,0.9997621735299408,ratio,"cumulative, reported not applied"
+gain,frame_083,0.9999254748712101,ratio,"cumulative, reported not applied"
+gain,frame_084,1.0043411640036253,ratio,"cumulative, reported not applied"
+gain,frame_085,0.999975539912812,ratio,"cumulative, reported not applied"
+gain,frame_086,1.000067926613213,ratio,"cumulative, reported not applied"
+gain,frame_087,1.0004333907443783,ratio,"cumulative, reported not applied"
+gain,frame_088,1.000243308427662,ratio,"cumulative, reported not applied"
+gain,frame_089,0.9997259450584901,ratio,"cumulative, reported not applied"
+gain,frame_090,1.0005084746804733,ratio,"cumulative, reported not applied"
+gain,frame_091,1.0060345810618072,ratio,"cumulative, reported not applied"
+gain,frame_092,1.001813069640292,ratio,"cumulative, reported not applied"
+gain,frame_093,1.001676126687675,ratio,"cumulative, reported not applied"
+gain,frame_094,1.0077008438073611,ratio,"cumulative, reported not applied"
+gain,frame_095,1.0017883197511552,ratio,"cumulative, reported not applied"
+gain,frame_096,1.0017058451881626,ratio,"cumulative, reported not applied"
+gain,frame_097,1.0032607269986946,ratio,"cumulative, reported not applied"
+gain,frame_098,1.0016863736409052,ratio,"cumulative, reported not applied"
+gain,frame_099,1.0032291949963923,ratio,"cumulative, reported not applied"
+gain,frame_100,1.0031982186355062,ratio,"cumulative, reported not applied"
+gain,frame_101,1.0017578911423148,ratio,"cumulative, reported not applied"
+gain,frame_102,1.0026501110647688,ratio,"cumulative, reported not applied"
+gain,frame_103,1.0029712968268938,ratio,"cumulative, reported not applied"
+gain,frame_104,1.000474558404241,ratio,"cumulative, reported not applied"
+gain,frame_105,1.0009674851288752,ratio,"cumulative, reported not applied"
+gain,frame_106,1.0016755838449733,ratio,"cumulative, reported not applied"
+gain,frame_107,1.002032062089289,ratio,"cumulative, reported not applied"
+gain,frame_108,1.0026774272409016,ratio,"cumulative, reported not applied"
+gain,frame_109,1.0073449835617625,ratio,"cumulative, reported not applied"
+gain,frame_110,1.0016893004011276,ratio,"cumulative, reported not applied"
+gain,frame_111,1.0010851347122394,ratio,"cumulative, reported not applied"
+gain,frame_112,1.0012314914265483,ratio,"cumulative, reported not applied"
+gain,frame_113,1.0087944110839828,ratio,"cumulative, reported not applied"
+gain,frame_114,1.002043619047737,ratio,"cumulative, reported not applied"
+gain,frame_115,1.003102488853918,ratio,"cumulative, reported not applied"
+gain,frame_116,1.0018792984053213,ratio,"cumulative, reported not applied"
+gain,frame_117,1.0014746453390686,ratio,"cumulative, reported not applied"
+gain,frame_118,1.0081318801700456,ratio,"cumulative, reported not applied"
+gain,frame_119,1.002778831608476,ratio,"cumulative, reported not applied"
+gain,frame_120,1.0028158644975034,ratio,"cumulative, reported not applied"
+gain,frame_121,1.0022831770901761,ratio,"cumulative, reported not applied"
+gain,frame_122,1.0035819497361929,ratio,"cumulative, reported not applied"
+gain,frame_123,1.0021755361731008,ratio,"cumulative, reported not applied"
+gain,frame_124,1.0019489903119148,ratio,"cumulative, reported not applied"
+gain,frame_125,1.0019910791991407,ratio,"cumulative, reported not applied"
+gain,frame_126,1.008090900926313,ratio,"cumulative, reported not applied"
+gain,frame_127,1.0068530823845467,ratio,"cumulative, reported not applied"
+gain,frame_128,0.9993275416276651,ratio,"cumulative, reported not applied"
+gain,frame_129,1.0054096902448386,ratio,"cumulative, reported not applied"
+gain,frame_130,1.0058082322529933,ratio,"cumulative, reported not applied"
+gain,frame_131,1.0114632477568821,ratio,"cumulative, reported not applied"
+gain,frame_132,1.0068679916576675,ratio,"cumulative, reported not applied"
+gain,frame_133,1.0076631958430058,ratio,"cumulative, reported not applied"
+gain,frame_134,1.0077339034693065,ratio,"cumulative, reported not applied"
+gain,frame_135,1.0074867637425888,ratio,"cumulative, reported not applied"
+gain,frame_136,1.0060418841769023,ratio,"cumulative, reported not applied"
+gain,frame_137,1.0085393376044127,ratio,"cumulative, reported not applied"
+gain,frame_138,1.007627130660736,ratio,"cumulative, reported not applied"
+gain,frame_139,1.010017716886602,ratio,"cumulative, reported not applied"
+gain,frame_140,1.007766557242415,ratio,"cumulative, reported not applied"
+gain,frame_141,1.010089440123621,ratio,"cumulative, reported not applied"
+gain,frame_142,1.0111192645299145,ratio,"cumulative, reported not applied"
+gain,frame_143,1.0110007002130512,ratio,"cumulative, reported not applied"
+gain,frame_144,1.0113366535669603,ratio,"cumulative, reported not applied"
+gain,frame_145,1.0101182335476064,ratio,"cumulative, reported not applied"
+gain,frame_146,1.0121300545410412,ratio,"cumulative, reported not applied"
+gain,frame_147,1.0111888535867515,ratio,"cumulative, reported not applied"
+gain,frame_148,1.0107522216940565,ratio,"cumulative, reported not applied"
+gain,frame_149,1.009960186344511,ratio,"cumulative, reported not applied"
+gain,frame_150,1.0112682885426099,ratio,"cumulative, reported not applied"
+gain,frame_151,1.0143454650848063,ratio,"cumulative, reported not applied"
+gain,frame_152,1.0097691324868125,ratio,"cumulative, reported not applied"
+gain,frame_153,1.007933507472752,ratio,"cumulative, reported not applied"
+gain,frame_154,1.010559646736567,ratio,"cumulative, reported not applied"
+gain,frame_155,1.0077984250385812,ratio,"cumulative, reported not applied"
+gain,frame_156,1.0153231780810084,ratio,"cumulative, reported not applied"
+gain,frame_157,1.008763392309208,ratio,"cumulative, reported not applied"
+gain,frame_158,1.0085085551134332,ratio,"cumulative, reported not applied"
+gain,frame_159,1.0092408165721685,ratio,"cumulative, reported not applied"
+gain,frame_160,1.0070330656924396,ratio,"cumulative, reported not applied"
+gain,frame_161,1.0081974385998411,ratio,"cumulative, reported not applied"
+gain,frame_162,1.0079361239037263,ratio,"cumulative, reported not applied"
+gain,frame_163,1.0086919010474604,ratio,"cumulative, reported not applied"
+gain,frame_164,1.007279894757138,ratio,"cumulative, reported not applied"
+gain,frame_165,1.0067522760763319,ratio,"cumulative, reported not applied"
+gain,frame_166,1.0085695705797355,ratio,"cumulative, reported not applied"
+gain,frame_167,1.0089888605108877,ratio,"cumulative, reported not applied"
+gain,frame_168,1.0066176306442955,ratio,"cumulative, reported not applied"
+gain,frame_169,1.0066992470088134,ratio,"cumulative, reported not applied"
+gain,frame_170,1.0088870836747699,ratio,"cumulative, reported not applied"
+gain,frame_171,1.0068064976833793,ratio,"cumulative, reported not applied"
+gain,frame_172,1.0087755340377877,ratio,"cumulative, reported not applied"
+gain,frame_173,1.0073302426110715,ratio,"cumulative, reported not applied"
+gain,frame_174,1.008486405542966,ratio,"cumulative, reported not applied"
+gain,frame_175,1.009964231631218,ratio,"cumulative, reported not applied"
+gain,frame_176,1.0154456423287765,ratio,"cumulative, reported not applied"
+gain,frame_177,1.0103247812682548,ratio,"cumulative, reported not applied"
+gain,frame_178,1.0166167149763106,ratio,"cumulative, reported not applied"
+gain,frame_179,1.0169793270080343,ratio,"cumulative, reported not applied"
+gain,frame_180,1.0120133595649248,ratio,"cumulative, reported not applied"
+gain,frame_181,1.0174606114366889,ratio,"cumulative, reported not applied"
+gain,frame_182,1.0128573655208832,ratio,"cumulative, reported not applied"
+gain,frame_183,1.0123001792707307,ratio,"cumulative, reported not applied"
+gain,frame_184,1.014130925607865,ratio,"cumulative, reported not applied"
+gain,frame_185,1.0142888320470538,ratio,"cumulative, reported not applied"
+gain,frame_186,1.0179064529476782,ratio,"cumulative, reported not applied"
+gain,frame_187,1.0128652813765087,ratio,"cumulative, reported not applied"
+gain,frame_188,1.0145676086775173,ratio,"cumulative, reported not applied"
+gain,frame_189,1.0153487546614817,ratio,"cumulative, reported not applied"
+gain,frame_190,1.0131379102883322,ratio,"cumulative, reported not applied"
+gain,frame_191,1.0146893765768876,ratio,"cumulative, reported not applied"
+gain,frame_192,1.0151177046261346,ratio,"cumulative, reported not applied"
+gain,frame_193,1.011405871505328,ratio,"cumulative, reported not applied"
+gain,frame_194,1.015774437423892,ratio,"cumulative, reported not applied"
+gain,frame_195,1.0151947664649388,ratio,"cumulative, reported not applied"
+gain,frame_196,1.0199600691985922,ratio,"cumulative, reported not applied"
+gain,frame_197,1.0149680010670228,ratio,"cumulative, reported not applied"
+gain,frame_198,1.0128098525974376,ratio,"cumulative, reported not applied"
+gain,frame_199,1.0131849183824233,ratio,"cumulative, reported not applied"
+gain,frame_200,1.0124190073450934,ratio,"cumulative, reported not applied"
+gain,frame_201,1.0143103773170827,ratio,"cumulative, reported not applied"
+gain,frame_202,1.0113461981470688,ratio,"cumulative, reported not applied"
+gain,frame_203,1.0117922201561977,ratio,"cumulative, reported not applied"
+gain,frame_204,1.0123235901903536,ratio,"cumulative, reported not applied"
+gain,frame_205,1.0130472769770305,ratio,"cumulative, reported not applied"
+gain,frame_206,1.012654747234088,ratio,"cumulative, reported not applied"
+gain,frame_207,1.012164628359238,ratio,"cumulative, reported not applied"
+gain,frame_208,1.0119749628271717,ratio,"cumulative, reported not applied"
+gain,frame_209,1.013789484200465,ratio,"cumulative, reported not applied"
+gain,frame_210,1.0178006268856594,ratio,"cumulative, reported not applied"
+gain,frame_211,1.0130876159940474,ratio,"cumulative, reported not applied"
+gain,frame_212,1.0150095958723426,ratio,"cumulative, reported not applied"
+gain,frame_213,1.0127189805538277,ratio,"cumulative, reported not applied"
+gain,frame_214,1.0193865798693802,ratio,"cumulative, reported not applied"
+gain,frame_215,1.012352589589016,ratio,"cumulative, reported not applied"
+gain,frame_216,1.0139121024403488,ratio,"cumulative, reported not applied"
+gain,frame_217,1.0121450468120556,ratio,"cumulative, reported not applied"
+gain,frame_218,1.0124807558937232,ratio,"cumulative, reported not applied"
+gain,frame_219,1.01476841038637,ratio,"cumulative, reported not applied"
+gain,frame_220,1.0195635834238839,ratio,"cumulative, reported not applied"
+gain,frame_221,1.0143644704555372,ratio,"cumulative, reported not applied"
+gain,frame_222,1.0136645237308564,ratio,"cumulative, reported not applied"
+gain,frame_223,1.0205350883394653,ratio,"cumulative, reported not applied"
+gain,frame_224,1.0127020526541446,ratio,"cumulative, reported not applied"
+gain,frame_225,1.0142206530708031,ratio,"cumulative, reported not applied"
+gain,frame_226,1.0136955892203068,ratio,"cumulative, reported not applied"
+gain,frame_227,1.013884479825917,ratio,"cumulative, reported not applied"
+gain,frame_228,1.0156689936782484,ratio,"cumulative, reported not applied"
+gain,frame_229,1.0145674867297083,ratio,"cumulative, reported not applied"
+gain,frame_230,1.015623604446393,ratio,"cumulative, reported not applied"
+gain,frame_231,1.0171467705248893,ratio,"cumulative, reported not applied"
+gain,frame_232,1.0164779900364163,ratio,"cumulative, reported not applied"
+gain,frame_233,1.022525303057622,ratio,"cumulative, reported not applied"
+gain,frame_234,1.0142061922761128,ratio,"cumulative, reported not applied"
+gain,frame_235,1.0163943658115226,ratio,"cumulative, reported not applied"
+gain,frame_236,1.0159832905722392,ratio,"cumulative, reported not applied"
+gain,frame_237,1.017081822420835,ratio,"cumulative, reported not applied"
+gain,frame_238,1.0230606968558784,ratio,"cumulative, reported not applied"
+gain,frame_239,1.0157172895030209,ratio,"cumulative, reported not applied"
+residual_before,frame_000,nan,log2,
+residual_before,frame_001,0.05786928423913196,log2,
+residual_before,frame_002,0.04078091378323734,log2,
+residual_before,frame_003,0.04246362720732577,log2,
+residual_before,frame_004,0.039128783042542636,log2,
+residual_before,frame_005,0.03970395913347602,log2,
+residual_before,frame_006,0.03862134864903055,log2,
+residual_before,frame_007,0.0352230864809826,log2,
+residual_before,frame_008,0.034662737598409876,log2,
+residual_before,frame_009,0.03565612272359431,log2,
+residual_before,frame_010,0.036243423717678525,log2,
+residual_before,frame_011,0.03594685782445595,log2,
+residual_before,frame_012,0.036452948275837116,log2,
+residual_before,frame_013,0.03712013793119695,log2,
+residual_before,frame_014,0.04430334885546472,log2,
+residual_before,frame_015,0.03633160100434907,log2,
+residual_before,frame_016,0.034297357429750264,log2,
+residual_before,frame_017,0.03523430062341504,log2,
+residual_before,frame_018,0.03528368084516842,log2,
+residual_before,frame_019,0.03429519401106518,log2,
+residual_before,frame_020,0.03296326697454788,log2,
+residual_before,frame_021,0.036195918248267844,log2,
+residual_before,frame_022,0.037931973245576955,log2,
+residual_before,frame_023,0.03313430548587348,log2,
+residual_before,frame_024,0.03294609555450734,log2,
+residual_before,frame_025,0.03406184598861728,log2,
+residual_before,frame_026,0.03413864866888616,log2,
+residual_before,frame_027,0.033083301430451684,log2,
+residual_before,frame_028,0.03206582691927906,log2,
+residual_before,frame_029,0.03306787162728142,log2,
+residual_before,frame_030,0.03156959039915819,log2,
+residual_before,frame_031,0.03597915900172666,log2,
+residual_before,frame_032,0.03247523112804629,log2,
+residual_before,frame_033,0.032333296272554435,log2,
+residual_before,frame_034,0.035060744994552806,log2,
+residual_before,frame_035,0.034433987020747736,log2,
+residual_before,frame_036,0.032735616419813596,log2,
+residual_before,frame_037,0.03283900576934684,log2,
+residual_before,frame_038,0.03197919818921946,log2,
+residual_before,frame_039,0.03230242384597659,log2,
+residual_before,frame_040,0.035069021352683194,log2,
+residual_before,frame_041,0.030805723174125887,log2,
+residual_before,frame_042,0.03065272832463961,log2,
+residual_before,frame_043,0.031687705326476134,log2,
+residual_before,frame_044,0.031711575866211206,log2,
+residual_before,frame_045,0.03071145957801491,log2,
+residual_before,frame_046,0.030880480160703883,log2,
+residual_before,frame_047,0.030962520555476658,log2,
+residual_before,frame_048,0.030925511295208707,log2,
+residual_before,frame_049,0.03075151988014113,log2,
+residual_before,frame_050,0.032802912493934855,log2,
+residual_before,frame_051,0.03302280629577581,log2,
+residual_before,frame_052,0.03041309652326163,log2,
+residual_before,frame_053,0.03201027098111808,log2,
+residual_before,frame_054,0.03381284233182669,log2,
+residual_before,frame_055,0.03242591458547395,log2,
+residual_before,frame_056,0.0325374601961812,log2,
+residual_before,frame_057,0.031518204501480795,log2,
+residual_before,frame_058,0.03109148061776068,log2,
+residual_before,frame_059,0.03118871504557319,log2,
+residual_before,frame_060,0.031086902556126006,log2,
+residual_before,frame_061,0.030882109844242223,log2,
+residual_before,frame_062,0.03487376852717716,log2,
+residual_before,frame_063,0.03191962852724828,log2,
+residual_before,frame_064,0.03382608121319208,log2,
+residual_before,frame_065,0.03343841891910415,log2,
+residual_before,frame_066,0.03767293608689215,log2,
+residual_before,frame_067,0.03400970186339691,log2,
+residual_before,frame_068,0.0407344366540201,log2,
+residual_before,frame_069,0.03638673217210453,log2,
+residual_before,frame_070,0.03120104258414358,log2,
+residual_before,frame_071,0.03870886561344378,log2,
+residual_before,frame_072,0.03101176064228639,log2,
+residual_before,frame_073,0.03474843483127188,log2,
+residual_before,frame_074,0.032753325809608214,log2,
+residual_before,frame_075,0.03151612458168529,log2,
+residual_before,frame_076,0.032390256092185155,log2,
+residual_before,frame_077,0.03104768946650438,log2,
+residual_before,frame_078,0.033672830351861194,log2,
+residual_before,frame_079,0.03192793924245052,log2,
+residual_before,frame_080,0.03379711364686955,log2,
+residual_before,frame_081,0.03458126337500289,log2,
+residual_before,frame_082,0.03260226333804894,log2,
+residual_before,frame_083,0.03092871817352716,log2,
+residual_before,frame_084,0.03421985934255645,log2,
+residual_before,frame_085,0.03461206390056759,log2,
+residual_before,frame_086,0.0325292436464224,log2,
+residual_before,frame_087,0.03264589842001442,log2,
+residual_before,frame_088,0.03316580150567461,log2,
+residual_before,frame_089,0.032809852753416635,log2,
+residual_before,frame_090,0.03594403406896163,log2,
+residual_before,frame_091,0.03468688674911391,log2,
+residual_before,frame_092,0.03831339102180209,log2,
+residual_before,frame_093,0.03267890929419082,log2,
+residual_before,frame_094,0.0318470552447252,log2,
+residual_before,frame_095,0.03191256639547646,log2,
+residual_before,frame_096,0.030471990234218538,log2,
+residual_before,frame_097,0.03228425097768195,log2,
+residual_before,frame_098,0.04130657120549586,log2,
+residual_before,frame_099,0.032570120674790815,log2,
+residual_before,frame_100,0.032619174220599234,log2,
+residual_before,frame_101,0.0333193194528576,log2,
+residual_before,frame_102,0.03153189879958518,log2,
+residual_before,frame_103,0.03366814603214152,log2,
+residual_before,frame_104,0.0334475595591357,log2,
+residual_before,frame_105,0.03022850128763821,log2,
+residual_before,frame_106,0.03316432565043215,log2,
+residual_before,frame_107,0.031233610774506815,log2,
+residual_before,frame_108,0.031785809245775454,log2,
+residual_before,frame_109,0.03531417527119629,log2,
+residual_before,frame_110,0.03352054218703415,log2,
+residual_before,frame_111,0.03249217309348751,log2,
+residual_before,frame_112,0.03307615614903625,log2,
+residual_before,frame_113,0.03407120345218573,log2,
+residual_before,frame_114,0.03773967723827809,log2,
+residual_before,frame_115,0.033135458957985975,log2,
+residual_before,frame_116,0.033929563011042774,log2,
+residual_before,frame_117,0.03622480342164636,log2,
+residual_before,frame_118,0.03827756534155924,log2,
+residual_before,frame_119,0.033974409467191435,log2,
+residual_before,frame_120,0.03127112226502504,log2,
+residual_before,frame_121,0.03681678482098505,log2,
+residual_before,frame_122,0.03143365237338003,log2,
+residual_before,frame_123,0.03248906374210492,log2,
+residual_before,frame_124,0.03200557368109003,log2,
+residual_before,frame_125,0.037577587412670255,log2,
+residual_before,frame_126,0.03400079761922825,log2,
+residual_before,frame_127,0.03544875576335471,log2,
+residual_before,frame_128,0.036373319453559816,log2,
+residual_before,frame_129,0.038777847090386786,log2,
+residual_before,frame_130,0.0329074856126681,log2,
+residual_before,frame_131,0.03325910681451205,log2,
+residual_before,frame_132,0.03609446733025834,log2,
+residual_before,frame_133,0.032572448122664355,log2,
+residual_before,frame_134,0.03338247555075213,log2,
+residual_before,frame_135,0.04190280335023999,log2,
+residual_before,frame_136,0.037605979494401254,log2,
+residual_before,frame_137,0.03215289943909738,log2,
+residual_before,frame_138,0.03245231645996682,log2,
+residual_before,frame_139,0.03416918244329281,log2,
+residual_before,frame_140,0.033515465605887584,log2,
+residual_before,frame_141,0.03622739868296776,log2,
+residual_before,frame_142,0.03956889490655158,log2,
+residual_before,frame_143,0.036244518487364985,log2,
+residual_before,frame_144,0.03256042739667464,log2,
+residual_before,frame_145,0.03189642973302398,log2,
+residual_before,frame_146,0.03633485529280733,log2,
+residual_before,frame_147,0.033963763853535056,log2,
+residual_before,frame_148,0.03480909134668764,log2,
+residual_before,frame_149,0.03508048798539676,log2,
+residual_before,frame_150,0.03388277001795359,log2,
+residual_before,frame_151,0.033969054216868244,log2,
+residual_before,frame_152,0.036874288038234226,log2,
+residual_before,frame_153,0.03371098764182534,log2,
+residual_before,frame_154,0.03583681375312153,log2,
+residual_before,frame_155,0.03565503910067491,log2,
+residual_before,frame_156,0.035792605820461176,log2,
+residual_before,frame_157,0.03353500539378729,log2,
+residual_before,frame_158,0.032087295097881,log2,
+residual_before,frame_159,0.03360694885486737,log2,
+residual_before,frame_160,0.03430870026932098,log2,
+residual_before,frame_161,0.03624781254620757,log2,
+residual_before,frame_162,0.0337106965307612,log2,
+residual_before,frame_163,0.0346084885095479,log2,
+residual_before,frame_164,0.03303256450453773,log2,
+residual_before,frame_165,0.0337448341306299,log2,
+residual_before,frame_166,0.034061000478686765,log2,
+residual_before,frame_167,0.03160086096613668,log2,
+residual_before,frame_168,0.034207012387923896,log2,
+residual_before,frame_169,0.03492956209811382,log2,
+residual_before,frame_170,0.03329664605553262,log2,
+residual_before,frame_171,0.033893724816152826,log2,
+residual_before,frame_172,0.032498929591383785,log2,
+residual_before,frame_173,0.03301886437111534,log2,
+residual_before,frame_174,0.033868683356558904,log2,
+residual_before,frame_175,0.037335401808377355,log2,
+residual_before,frame_176,0.03287843268481083,log2,
+residual_before,frame_177,0.032903680694289505,log2,
+residual_before,frame_178,0.032937485884758644,log2,
+residual_before,frame_179,0.030886067950632423,log2,
+residual_before,frame_180,0.03330999503668863,log2,
+residual_before,frame_181,0.03325086156837642,log2,
+residual_before,frame_182,0.03168355466914363,log2,
+residual_before,frame_183,0.03110268959426321,log2,
+residual_before,frame_184,0.03578823404677678,log2,
+residual_before,frame_185,0.036216789405443706,log2,
+residual_before,frame_186,0.03332151137874462,log2,
+residual_before,frame_187,0.03276789135998115,log2,
+residual_before,frame_188,0.032604498526779935,log2,
+residual_before,frame_189,0.03549958104849793,log2,
+residual_before,frame_190,0.032754546075011604,log2,
+residual_before,frame_191,0.03416525300417561,log2,
+residual_before,frame_192,0.03208272441406734,log2,
+residual_before,frame_193,0.03349330942728557,log2,
+residual_before,frame_194,0.03293811711773742,log2,
+residual_before,frame_195,0.031978799524949864,log2,
+residual_before,frame_196,0.03354225387738552,log2,
+residual_before,frame_197,0.03534703799232375,log2,
+residual_before,frame_198,0.03113312005007174,log2,
+residual_before,frame_199,0.03296363299887162,log2,
+residual_before,frame_200,0.03559644953929819,log2,
+residual_before,frame_201,0.03445250492950436,log2,
+residual_before,frame_202,0.03713671726291068,log2,
+residual_before,frame_203,0.03401862092141528,log2,
+residual_before,frame_204,0.03391049776109867,log2,
+residual_before,frame_205,0.03297870206006337,log2,
+residual_before,frame_206,0.034361261044978164,log2,
+residual_before,frame_207,0.03620699068414979,log2,
+residual_before,frame_208,0.032205519994022325,log2,
+residual_before,frame_209,0.032169336584047414,log2,
+residual_before,frame_210,0.03566090566164348,log2,
+residual_before,frame_211,0.036069826572202146,log2,
+residual_before,frame_212,0.03254761993594002,log2,
+residual_before,frame_213,0.031024119292851537,log2,
+residual_before,frame_214,0.0317631395009812,log2,
+residual_before,frame_215,0.033914871761226095,log2,
+residual_before,frame_216,0.032573731790762395,log2,
+residual_before,frame_217,0.03337227110750973,log2,
+residual_before,frame_218,0.03279289818601683,log2,
+residual_before,frame_219,0.03408477014454547,log2,
+residual_before,frame_220,0.034962410645675845,log2,
+residual_before,frame_221,0.03384234405530151,log2,
+residual_before,frame_222,0.03274030213651713,log2,
+residual_before,frame_223,0.033167241665069014,log2,
+residual_before,frame_224,0.03661108868254814,log2,
+residual_before,frame_225,0.032242788627627306,log2,
+residual_before,frame_226,0.03288779225840699,log2,
+residual_before,frame_227,0.033529093096149154,log2,
+residual_before,frame_228,0.033492156624561176,log2,
+residual_before,frame_229,0.03545362359727733,log2,
+residual_before,frame_230,0.031954637859598733,log2,
+residual_before,frame_231,0.03380669800390024,log2,
+residual_before,frame_232,0.03402156222728081,log2,
+residual_before,frame_233,0.036128255393123254,log2,
+residual_before,frame_234,0.035359465939109214,log2,
+residual_before,frame_235,0.03501601873722393,log2,
+residual_before,frame_236,0.0332111150783021,log2,
+residual_before,frame_237,0.03451073469477706,log2,
+residual_before,frame_238,0.034218570464872755,log2,
+residual_before,frame_239,0.03408481867518276,log2,
+residual_after,frame_000,nan,log2,
+residual_after,frame_001,0.03926768245650229,log2,
+residual_after,frame_002,0.03691900264456199,log2,
+residual_after,frame_003,0.035396653682344584,log2,
+residual_after,frame_004,0.03662328710890181,log2,
+residual_after,frame_005,0.03659486516678267,log2,
+residual_after,frame_006,0.03528779650366126,log2,
+residual_after,frame_007,0.0331333336046539,log2,
+residual_after,frame_008,0.03282863245213316,log2,
+residual_after,frame_009,0.033504340748880625,log2,
+residual_after,frame_010,0.035268039076620156,log2,
+residual_after,frame_011,0.03448561857656165,log2,
+residual_after,frame_012,0.0340080721193464,log2,
+residual_after,frame_013,0.03294696692058492,log2,
+residual_after,frame_014,0.03406516860764777,log2,
+residual_after,frame_015,0.032823819461115164,log2,
+residual_after,frame_016,0.03344497641595918,log2,
+residual_after,frame_017,0.03296039094147745,log2,
+residual_after,frame_018,0.03192755228001695,log2,
+residual_after,frame_019,0.03169465059080048,log2,
+residual_after,frame_020,0.03233264118022311,log2,
+residual_after,frame_021,0.03142466380113308,log2,
+residual_after,frame_022,0.03206804646016214,log2,
+residual_after,frame_023,0.032003899600136346,log2,
+residual_after,frame_024,0.031193909697622278,log2,
+residual_after,frame_025,0.030427737118877404,log2,
+residual_after,frame_026,0.03143765832372644,log2,
+residual_after,frame_027,0.03141553744312909,log2,
+residual_after,frame_028,0.029811135416852114,log2,
+residual_after,frame_029,0.029601711843536632,log2,
+residual_after,frame_030,0.029178277037235408,log2,
+residual_after,frame_031,0.029877806379842706,log2,
+residual_after,frame_032,0.02915742025441244,log2,
+residual_after,frame_033,0.02960921500535346,log2,
+residual_after,frame_034,0.03164364966122929,log2,
+residual_after,frame_035,0.032306557523202675,log2,
+residual_after,frame_036,0.029823528666742448,log2,
+residual_after,frame_037,0.029262258341198083,log2,
+residual_after,frame_038,0.02914026816652547,log2,
+residual_after,frame_039,0.03052226651911753,log2,
+residual_after,frame_040,0.030862795058847335,log2,
+residual_after,frame_041,0.02884225511528104,log2,
+residual_after,frame_042,0.02873984347311873,log2,
+residual_after,frame_043,0.029549688418022902,log2,
+residual_after,frame_044,0.02941259326238854,log2,
+residual_after,frame_045,0.028663461971156858,log2,
+residual_after,frame_046,0.028746337821648135,log2,
+residual_after,frame_047,0.028889960809256612,log2,
+residual_after,frame_048,0.02994271327513661,log2,
+residual_after,frame_049,0.02970080912380603,log2,
+residual_after,frame_050,0.02911911170216154,log2,
+residual_after,frame_051,0.028917759331419223,log2,
+residual_after,frame_052,0.029880837824927196,log2,
+residual_after,frame_053,0.029568533911316,log2,
+residual_after,frame_054,0.029758211052467554,log2,
+residual_after,frame_055,0.031809218625950424,log2,
+residual_after,frame_056,0.029574850497947835,log2,
+residual_after,frame_057,0.02985620250293016,log2,
+residual_after,frame_058,0.02921678727515074,log2,
+residual_after,frame_059,0.0289696034138001,log2,
+residual_after,frame_060,0.029165188518309394,log2,
+residual_after,frame_061,0.02992063764149906,log2,
+residual_after,frame_062,0.029395164622181946,log2,
+residual_after,frame_063,0.02886232472115693,log2,
+residual_after,frame_064,0.02989936324852375,log2,
+residual_after,frame_065,0.031297583020315836,log2,
+residual_after,frame_066,0.030085721867688733,log2,
+residual_after,frame_067,0.02965780965991827,log2,
+residual_after,frame_068,0.029581553211165686,log2,
+residual_after,frame_069,0.030963924799446325,log2,
+residual_after,frame_070,0.029900027130166353,log2,
+residual_after,frame_071,0.03132817483802349,log2,
+residual_after,frame_072,0.029646606802090244,log2,
+residual_after,frame_073,0.03061726849744384,log2,
+residual_after,frame_074,0.029906763970876844,log2,
+residual_after,frame_075,0.03069463657308717,log2,
+residual_after,frame_076,0.0313059037921763,log2,
+residual_after,frame_077,0.029256914802094056,log2,
+residual_after,frame_078,0.030744265379410628,log2,
+residual_after,frame_079,0.03024504540474385,log2,
+residual_after,frame_080,0.029392436196605257,log2,
+residual_after,frame_081,0.03000158588424936,log2,
+residual_after,frame_082,0.029863046391906074,log2,
+residual_after,frame_083,0.028819893323971366,log2,
+residual_after,frame_084,0.029629888031761104,log2,
+residual_after,frame_085,0.03062043529099755,log2,
+residual_after,frame_086,0.030839750101126426,log2,
+residual_after,frame_087,0.030429422622572224,log2,
+residual_after,frame_088,0.02974277786758811,log2,
+residual_after,frame_089,0.029828288754924298,log2,
+residual_after,frame_090,0.030997154253412148,log2,
+residual_after,frame_091,0.03125219500512423,log2,
+residual_after,frame_092,0.03204555438120152,log2,
+residual_after,frame_093,0.030257397474217032,log2,
+residual_after,frame_094,0.030819175896497016,log2,
+residual_after,frame_095,0.030542719315552507,log2,
+residual_after,frame_096,0.029025011657256385,log2,
+residual_after,frame_097,0.02968101166013185,log2,
+residual_after,frame_098,0.02862700646632919,log2,
+residual_after,frame_099,0.029097698995977247,log2,
+residual_after,frame_100,0.029711782623843382,log2,
+residual_after,frame_101,0.029472787612414904,log2,
+residual_after,frame_102,0.0307175025263347,log2,
+residual_after,frame_103,0.03042817177312137,log2,
+residual_after,frame_104,0.02963930534714461,log2,
+residual_after,frame_105,0.029567519879982313,log2,
+residual_after,frame_106,0.030498343691766405,log2,
+residual_after,frame_107,0.03082675494243427,log2,
+residual_after,frame_108,0.029251698576685716,log2,
+residual_after,frame_109,0.031119167652664547,log2,
+residual_after,frame_110,0.03190031659608361,log2,
+residual_after,frame_111,0.0302859026481541,log2,
+residual_after,frame_112,0.030631503482558484,log2,
+residual_after,frame_113,0.03221123951235249,log2,
+residual_after,frame_114,0.03182591246801383,log2,
+residual_after,frame_115,0.029290646671041063,log2,
+residual_after,frame_116,0.02983249662857323,log2,
+residual_after,frame_117,0.03073557889211585,log2,
+residual_after,frame_118,0.03197572813973333,log2,
+residual_after,frame_119,0.031366649871135556,log2,
+residual_after,frame_120,0.02916100869614575,log2,
+residual_after,frame_121,0.0307930645892419,log2,
+residual_after,frame_122,0.02899811887498312,log2,
+residual_after,frame_123,0.031100456531018797,log2,
+residual_after,frame_124,0.03052747576756102,log2,
+residual_after,frame_125,0.03067056487693098,log2,
+residual_after,frame_126,0.03143540956884733,log2,
+residual_after,frame_127,0.030918321247268524,log2,
+residual_after,frame_128,0.031523075313321304,log2,
+residual_after,frame_129,0.03079668406491148,log2,
+residual_after,frame_130,0.030326637909627724,log2,
+residual_after,frame_131,0.03156536719952254,log2,
+residual_after,frame_132,0.03230659493582479,log2,
+residual_after,frame_133,0.02947216558773725,log2,
+residual_after,frame_134,0.03029626087522489,log2,
+residual_after,frame_135,0.031114601109608276,log2,
+residual_after,frame_136,0.030575641281437287,log2,
+residual_after,frame_137,0.03156622033994962,log2,
+residual_after,frame_138,0.031399200045555645,log2,
+residual_after,frame_139,0.03258724693812933,log2,
+residual_after,frame_140,0.03243991501596311,log2,
+residual_after,frame_141,0.03219095308201304,log2,
+residual_after,frame_142,0.03072181031792852,log2,
+residual_after,frame_143,0.031072256010004396,log2,
+residual_after,frame_144,0.02911597208239626,log2,
+residual_after,frame_145,0.03071630300291235,log2,
+residual_after,frame_146,0.03050178333128266,log2,
+residual_after,frame_147,0.031681964084707304,log2,
+residual_after,frame_148,0.030976454033814004,log2,
+residual_after,frame_149,0.03176584369605728,log2,
+residual_after,frame_150,0.032148700869523816,log2,
+residual_after,frame_151,0.03276811447425291,log2,
+residual_after,frame_152,0.03234507814750194,log2,
+residual_after,frame_153,0.03144380043758524,log2,
+residual_after,frame_154,0.03060450562426494,log2,
+residual_after,frame_155,0.031647087858966916,log2,
+residual_after,frame_156,0.032055808436099884,log2,
+residual_after,frame_157,0.03204757692152046,log2,
+residual_after,frame_158,0.030001504118134535,log2,
+residual_after,frame_159,0.032150945117556735,log2,
+residual_after,frame_160,0.032758016130391934,log2,
+residual_after,frame_161,0.030194052246451934,log2,
+residual_after,frame_162,0.030657201677912832,log2,
+residual_after,frame_163,0.030304329897361548,log2,
+residual_after,frame_164,0.02894287092377214,log2,
+residual_after,frame_165,0.029900553661653697,log2,
+residual_after,frame_166,0.03065174260958613,log2,
+residual_after,frame_167,0.03000868503402264,log2,
+residual_after,frame_168,0.03066615708947755,log2,
+residual_after,frame_169,0.030953649589819828,log2,
+residual_after,frame_170,0.03139427282498408,log2,
+residual_after,frame_171,0.0318883263196778,log2,
+residual_after,frame_172,0.03044756174721098,log2,
+residual_after,frame_173,0.03210779763804825,log2,
+residual_after,frame_174,0.030051047265135317,log2,
+residual_after,frame_175,0.030195132961198218,log2,
+residual_after,frame_176,0.03060175636591565,log2,
+residual_after,frame_177,0.03080617174485715,log2,
+residual_after,frame_178,0.031846541434204116,log2,
+residual_after,frame_179,0.029887780221997555,log2,
+residual_after,frame_180,0.03175772457918471,log2,
+residual_after,frame_181,0.031073067074777787,log2,
+residual_after,frame_182,0.03028484947725126,log2,
+residual_after,frame_183,0.0302907071588915,log2,
+residual_after,frame_184,0.03090335092073626,log2,
+residual_after,frame_185,0.031445510237614514,log2,
+residual_after,frame_186,0.03188994896657578,log2,
+residual_after,frame_187,0.031500531072900684,log2,
+residual_after,frame_188,0.03078735270082217,log2,
+residual_after,frame_189,0.03167216297663409,log2,
+residual_after,frame_190,0.02992848552164993,log2,
+residual_after,frame_191,0.030195668108465325,log2,
+residual_after,frame_192,0.031052056567968167,log2,
+residual_after,frame_193,0.030405354462044024,log2,
+residual_after,frame_194,0.030701079280676294,log2,
+residual_after,frame_195,0.030877873814913335,log2,
+residual_after,frame_196,0.03306578151729574,log2,
+residual_after,frame_197,0.03374541465755979,log2,
+residual_after,frame_198,0.030046484083044174,log2,
+residual_after,frame_199,0.03064975690557941,log2,
+residual_after,frame_200,0.032487585461209424,log2,
+residual_after,frame_201,0.03253178658141382,log2,
+residual_after,frame_202,0.03221240011293165,log2,
+residual_after,frame_203,0.03231269707480034,log2,
+residual_after,frame_204,0.03110997832821915,log2,
+residual_after,frame_205,0.03105176811551254,log2,
+residual_after,frame_206,0.0307508343716173,log2,
+residual_after,frame_207,0.02997442951389257,log2,
+residual_after,frame_208,0.030192907113807822,log2,
+residual_after,frame_209,0.030485662563848947,log2,
+residual_after,frame_210,0.03105831599242452,log2,
+residual_after,frame_211,0.03159831495524884,log2,
+residual_after,frame_212,0.03178412565406362,log2,
+residual_after,frame_213,0.029122950769057174,log2,
+residual_after,frame_214,0.030966732472599276,log2,
+residual_after,frame_215,0.031235779557201332,log2,
+residual_after,frame_216,0.030236634839446854,log2,
+residual_after,frame_217,0.031931221607826056,log2,
+residual_after,frame_218,0.030954715953550038,log2,
+residual_after,frame_219,0.029565533081522346,log2,
+residual_after,frame_220,0.03297941956627629,log2,
+residual_after,frame_221,0.032965497132710415,log2,
+residual_after,frame_222,0.030615097900648106,log2,
+residual_after,frame_223,0.03224106325029714,log2,
+residual_after,frame_224,0.03349485264510396,log2,
+residual_after,frame_225,0.030695655138965036,log2,
+residual_after,frame_226,0.03044136843204348,log2,
+residual_after,frame_227,0.029822374105788415,log2,
+residual_after,frame_228,0.030916359652527897,log2,
+residual_after,frame_229,0.030196139894798794,log2,
+residual_after,frame_230,0.029673838885872016,log2,
+residual_after,frame_231,0.030487359277844933,log2,
+residual_after,frame_232,0.030829994032845753,log2,
+residual_after,frame_233,0.03349344201193031,log2,
+residual_after,frame_234,0.03297057829089752,log2,
+residual_after,frame_235,0.03167212129510519,log2,
+residual_after,frame_236,0.03219830654798308,log2,
+residual_after,frame_237,0.031169647641772998,log2,
+residual_after,frame_238,0.03186735723810616,log2,
+residual_after,frame_239,0.032306944960380606,log2,
+step,frame_000,0.0,pixels,support 6; repair None
+step,frame_001,0.9415192954289486,pixels,support 6; repair None
+step,frame_002,0.27507171373899525,pixels,support 7; repair None
+step,frame_003,0.3949068174803768,pixels,support 7; repair None
+step,frame_004,0.25147294425411854,pixels,support 8; repair None
+step,frame_005,0.24205523704580129,pixels,support 8; repair None
+step,frame_006,0.2785776536201222,pixels,support 8; repair None
+step,frame_007,0.12190183673554082,pixels,support 8; repair None
+step,frame_008,0.08938870872379238,pixels,support 9; repair None
+step,frame_009,0.20546239838155414,pixels,support 9; repair None
+step,frame_010,0.08692323831929091,pixels,support 9; repair None
+step,frame_011,0.1148395405527437,pixels,support 9; repair None
+step,frame_012,0.19944445577736236,pixels,support 9; repair None
+step,frame_013,0.3057346788305314,pixels,support 9; repair None
+step,frame_014,0.6545424670074812,pixels,support 9; repair None
+step,frame_015,0.28448973118909204,pixels,support 9; repair None
+step,frame_016,0.057581274633022504,pixels,support 10; repair None
+step,frame_017,0.1971579755982872,pixels,support 10; repair None
+step,frame_018,0.2649079418836347,pixels,support 10; repair None
+step,frame_019,0.23506484003713185,pixels,support 10; repair None
+step,frame_020,0.03494762168388223,pixels,support 10; repair None
+step,frame_021,0.28982884711209767,pixels,support 10; repair None
+step,frame_022,0.35648716349873855,pixels,support 10; repair None
+step,frame_023,0.11828715587986115,pixels,support 10; repair None
+step,frame_024,0.1416062902381012,pixels,support 10; repair None
+step,frame_025,0.24166394007662317,pixels,support 10; repair None
+step,frame_026,0.2205621610441226,pixels,support 10; repair None
+step,frame_027,0.17116893724938068,pixels,support 10; repair None
+step,frame_028,0.1837824025445165,pixels,support 10; repair None
+step,frame_029,0.2750415485415241,pixels,support 10; repair None
+step,frame_030,0.19037179384253328,pixels,support 10; repair None
+step,frame_031,0.453842585128235,pixels,support 10; repair None
+step,frame_032,0.2574352541491148,pixels,support 10; repair None
+step,frame_033,0.1799739849969384,pixels,support 10; repair None
+step,frame_034,0.26241622885040444,pixels,support 10; repair None
+step,frame_035,0.16593968786732227,pixels,support 10; repair None
+step,frame_036,0.18542924298611616,pixels,support 10; repair None
+step,frame_037,0.2545479186762114,pixels,support 10; repair None
+step,frame_038,0.23035564915809728,pixels,support 10; repair None
+step,frame_039,0.1072115999085481,pixels,support 10; repair None
+step,frame_040,0.30791959216289916,pixels,support 10; repair None
+step,frame_041,0.1489868541060845,pixels,support 10; repair None
+step,frame_042,0.14831868999845965,pixels,support 10; repair None
+step,frame_043,0.1673180709912326,pixels,support 10; repair None
+step,frame_044,0.15091430940035436,pixels,support 10; repair None
+step,frame_045,0.1481488111049402,pixels,support 10; repair None
+step,frame_046,0.1538828340679253,pixels,support 10; repair None
+step,frame_047,0.1650770125051042,pixels,support 10; repair None
+step,frame_048,0.09325415917454258,pixels,support 10; repair None
+step,frame_049,0.06450678208261285,pixels,support 10; repair None
+step,frame_050,0.27632580092977554,pixels,support 10; repair None
+step,frame_051,0.33222576991769487,pixels,support 10; repair None
+step,frame_052,0.02460696025889407,pixels,support 10; repair None
+step,frame_053,0.16493914103186524,pixels,support 10; repair None
+step,frame_054,0.3354841902755619,pixels,support 10; repair None
+step,frame_055,0.062222440290142,pixels,support 10; repair None
+step,frame_056,0.21698350478368983,pixels,support 10; repair None
+step,frame_057,0.13011099529454315,pixels,support 10; repair None
+step,frame_058,0.14540153611997733,pixels,support 10; repair None
+step,frame_059,0.1724304614996755,pixels,support 10; repair None
+step,frame_060,0.1348520700878155,pixels,support 10; repair None
+step,frame_061,0.04529549180173853,pixels,support 10; repair None
+step,frame_062,0.3271960829335736,pixels,support 10; repair None
+step,frame_063,0.24900147035757592,pixels,support 10; repair None
+step,frame_064,0.278071160040024,pixels,support 10; repair None
+step,frame_065,0.17141134214692574,pixels,support 10; repair None
+step,frame_066,0.5171782207250541,pixels,support 10; repair None
+step,frame_067,0.327431878939639,pixels,support 10; repair None
+step,frame_068,0.5872874126459388,pixels,support 10; repair None
+step,frame_069,0.3397506008434103,pixels,support 10; repair None
+step,frame_070,0.09591652309753967,pixels,support 10; repair None
+step,frame_071,0.4442262960010616,pixels,support 10; repair None
+step,frame_072,0.07440480934443723,pixels,support 10; repair None
+step,frame_073,0.2779736535683956,pixels,support 10; repair None
+step,frame_074,0.2404838938334955,pixels,support 10; repair None
+step,frame_075,0.045479986031932734,pixels,support 10; repair None
+step,frame_076,0.09073942148913756,pixels,support 10; repair None
+step,frame_077,0.13211916512787375,pixels,support 10; repair None
+step,frame_078,0.24749931505372993,pixels,support 10; repair None
+step,frame_079,0.14454057089195763,pixels,support 10; repair None
+step,frame_080,0.3250663690202586,pixels,support 10; repair None
+step,frame_081,0.3027116773167364,pixels,support 10; repair None
+step,frame_082,0.20709956432820487,pixels,support 10; repair None
+step,frame_083,0.13706846308327247,pixels,support 10; repair None
+step,frame_084,0.2758704254881457,pixels,support 10; repair None
+step,frame_085,0.29477485897535655,pixels,support 10; repair None
+step,frame_086,0.12264073888511177,pixels,support 10; repair None
+step,frame_087,0.19553093169145996,pixels,support 10; repair None
+step,frame_088,0.26196831504923274,pixels,support 10; repair None
+step,frame_089,0.22667139697232966,pixels,support 10; repair None
+step,frame_090,0.32374009549069366,pixels,support 10; repair None
+step,frame_091,0.23295976561507586,pixels,support 10; repair None
+step,frame_092,0.4470674039001346,pixels,support 10; repair None
+step,frame_093,0.20203280768299559,pixels,support 10; repair None
+step,frame_094,0.08477384959851365,pixels,support 10; repair None
+step,frame_095,0.07996981499049788,pixels,support 10; repair None
+step,frame_096,0.1122095801696047,pixels,support 10; repair None
+step,frame_097,0.20658937088043658,pixels,support 10; repair None
+step,frame_098,0.7003420666647069,pixels,support 10; repair None
+step,frame_099,0.23980597042686916,pixels,support 10; repair None
+step,frame_100,0.21604011369983636,pixels,support 10; repair None
+step,frame_101,0.2849674934102561,pixels,support 10; repair None
+step,frame_102,0.06619340709214705,pixels,support 10; repair None
+step,frame_103,0.2186204193212442,pixels,support 10; repair None
+step,frame_104,0.3041548586610868,pixels,support 10; repair None
+step,frame_105,0.058946534490971175,pixels,support 10; repair None
+step,frame_106,0.21798693546282327,pixels,support 10; repair None
+step,frame_107,0.010099436038837345,pixels,support 10; repair None
+step,frame_108,0.2200339050414671,pixels,support 10; repair None
+step,frame_109,0.31695178908285343,pixels,support 10; repair None
+step,frame_110,0.11962063036626473,pixels,support 10; repair None
+step,frame_111,0.17820061853675198,pixels,support 10; repair None
+step,frame_112,0.149374645120204,pixels,support 10; repair None
+step,frame_113,0.12889367871013221,pixels,support 10; repair None
+step,frame_114,0.390739800263637,pixels,support 10; repair None
+step,frame_115,0.27389393895742675,pixels,support 10; repair None
+step,frame_116,0.2834574938471674,pixels,support 10; repair None
+step,frame_117,0.3800267650298722,pixels,support 10; repair None
+step,frame_118,0.39186610055574733,pixels,support 10; repair None
+step,frame_119,0.20583654124628423,pixels,support 10; repair None
+step,frame_120,0.13116062074129828,pixels,support 10; repair None
+step,frame_121,0.38005011955057827,pixels,support 10; repair None
+step,frame_122,0.16672846840808767,pixels,support 10; repair None
+step,frame_123,0.11137093468782377,pixels,support 10; repair None
+step,frame_124,0.10102456412030299,pixels,support 10; repair None
+step,frame_125,0.41036312475877734,pixels,support 10; repair None
+step,frame_126,0.17709528433850022,pixels,support 10; repair None
+step,frame_127,0.3565273718499848,pixels,support 10; repair None
+step,frame_128,0.3729645129427915,pixels,support 10; repair None
+step,frame_129,0.5332506553498135,pixels,support 10; repair None
+step,frame_130,0.18978672922176887,pixels,support 10; repair None
+step,frame_131,0.10720661510934908,pixels,support 10; repair None
+step,frame_132,0.2607651154142496,pixels,support 10; repair None
+step,frame_133,0.2371889101453069,pixels,support 10; repair None
+step,frame_134,0.2542988927444087,pixels,support 10; repair None
+step,frame_135,0.6182142092711692,pixels,support 10; repair None
+step,frame_136,0.4314696400781345,pixels,support 10; repair None
+step,frame_137,0.05053214222149174,pixels,support 10; repair None
+step,frame_138,0.10211229665030047,pixels,support 10; repair None
+step,frame_139,0.08482863081928889,pixels,support 10; repair None
+step,frame_140,0.06999797861553024,pixels,support 10; repair None
+step,frame_141,0.3138331482202869,pixels,support 10; repair None
+step,frame_142,0.5726355341595721,pixels,support 10; repair None
+step,frame_143,0.3866401340514748,pixels,support 10; repair None
+step,frame_144,0.24094907652278025,pixels,support 10; repair None
+step,frame_145,0.09570108709226402,pixels,support 10; repair None
+step,frame_146,0.38117395611042065,pixels,support 10; repair None
+step,frame_147,0.20273356837841378,pixels,support 10; repair None
+step,frame_148,0.27287648211882903,pixels,support 10; repair None
+step,frame_149,0.2306086301839139,pixels,support 10; repair None
+step,frame_150,0.11689649276774225,pixels,support 10; repair None
+step,frame_151,0.08284337663511883,pixels,support 10; repair None
+step,frame_152,0.30635052090569415,pixels,support 10; repair None
+step,frame_153,0.2015283246548293,pixels,support 10; repair None
+step,frame_154,0.3654769997975742,pixels,support 10; repair None
+step,frame_155,0.32515964773094874,pixels,support 10; repair None
+step,frame_156,0.27418469088352004,pixels,support 10; repair None
+step,frame_157,0.10985959522232551,pixels,support 10; repair None
+step,frame_158,0.1404691363328967,pixels,support 10; repair None
+step,frame_159,0.12428417235752026,pixels,support 10; repair None
+step,frame_160,0.13362787258443476,pixels,support 10; repair None
+step,frame_161,0.38879800220523414,pixels,support 10; repair None
+step,frame_162,0.24938586018778433,pixels,support 10; repair None
+step,frame_163,0.29292042953087755,pixels,support 10; repair None
+step,frame_164,0.2462125285467373,pixels,support 10; repair None
+step,frame_165,0.2715384754124397,pixels,support 10; repair None
+step,frame_166,0.2803786851407543,pixels,support 10; repair None
+step,frame_167,0.12263854057953685,pixels,support 10; repair None
+step,frame_168,0.285622274783157,pixels,support 10; repair None
+step,frame_169,0.2828873464863482,pixels,support 10; repair None
+step,frame_170,0.16161377198226548,pixels,support 10; repair None
+step,frame_171,0.16110210380784684,pixels,support 10; repair None
+step,frame_172,0.18465320228115334,pixels,support 10; repair None
+step,frame_173,0.07831881995575228,pixels,support 10; repair None
+step,frame_174,0.29171280020900303,pixels,support 10; repair None
+step,frame_175,0.42932786679093465,pixels,support 10; repair None
+step,frame_176,0.15811617611887221,pixels,support 10; repair None
+step,frame_177,0.16483717501385972,pixels,support 10; repair None
+step,frame_178,0.04953870645273867,pixels,support 10; repair None
+step,frame_179,0.1148079217976116,pixels,support 10; repair None
+step,frame_180,0.12903496403128464,pixels,support 10; repair None
+step,frame_181,0.19532032487105544,pixels,support 10; repair None
+step,frame_182,0.10289391615385403,pixels,support 10; repair None
+step,frame_183,0.07614258793049795,pixels,support 10; repair None
+step,frame_184,0.3225957054234002,pixels,support 10; repair None
+step,frame_185,0.3243703534567557,pixels,support 10; repair None
+step,frame_186,0.1357988004648151,pixels,support 10; repair None
+step,frame_187,0.09396761916372326,pixels,support 10; repair None
+step,frame_188,0.1460213147918816,pixels,support 10; repair None
+step,frame_189,0.2727516889120396,pixels,support 10; repair None
+step,frame_190,0.19070022906423817,pixels,support 10; repair None
+step,frame_191,0.25614982729443886,pixels,support 10; repair None
+step,frame_192,0.06224635356156103,pixels,support 10; repair None
+step,frame_193,0.2543045220919196,pixels,support 10; repair None
+step,frame_194,0.18520039853046144,pixels,support 10; repair None
+step,frame_195,0.05841324808174323,pixels,support 10; repair None
+step,frame_196,0.03381524838205364,pixels,support 10; repair None
+step,frame_197,0.16915635607433113,pixels,support 10; repair None
+step,frame_198,0.05658715417484334,pixels,support 10; repair None
+step,frame_199,0.16506064668246972,pixels,support 10; repair None
+step,frame_200,0.21943670646148591,pixels,support 10; repair None
+step,frame_201,0.12791340230628134,pixels,support 10; repair None
+step,frame_202,0.3571096138856911,pixels,support 10; repair None
+step,frame_203,0.11832224581886239,pixels,support 10; repair None
+step,frame_204,0.21360603179020515,pixels,support 10; repair None
+step,frame_205,0.15798910911705272,pixels,support 10; repair None
+step,frame_206,0.24188735636262723,pixels,support 10; repair None
+step,frame_207,0.40106360680337255,pixels,support 10; repair None
+step,frame_208,0.15163552229408708,pixels,support 10; repair None
+step,frame_209,0.14349735705387234,pixels,support 10; repair None
+step,frame_210,0.30397597533431814,pixels,support 10; repair None
+step,frame_211,0.300008136865487,pixels,support 10; repair None
+step,frame_212,0.05866194853329946,pixels,support 10; repair None
+step,frame_213,0.14028263717069292,pixels,support 10; repair None
+step,frame_214,0.04211428944700858,pixels,support 10; repair None
+step,frame_215,0.21556428505454853,pixels,support 10; repair None
+step,frame_216,0.2192958227596159,pixels,support 10; repair None
+step,frame_217,0.13218286303708998,pixels,support 10; repair None
+step,frame_218,0.17153446018718527,pixels,support 10; repair None
+step,frame_219,0.32487885719774723,pixels,support 10; repair None
+step,frame_220,0.1933970974905143,pixels,support 10; repair None
+step,frame_221,0.07366467108654896,pixels,support 10; repair None
+step,frame_222,0.1756781009775906,pixels,support 10; repair None
+step,frame_223,0.06314366101354127,pixels,support 10; repair None
+step,frame_224,0.21861987032385777,pixels,support 9; repair None
+step,frame_225,0.12123225281785314,pixels,support 9; repair None
+step,frame_226,0.19464713378068468,pixels,support 9; repair None
+step,frame_227,0.25492872019824947,pixels,support 9; repair None
+step,frame_228,0.23307524293507653,pixels,support 9; repair None
+step,frame_229,0.4367821255470054,pixels,support 9; repair None
+step,frame_230,0.17321893740648894,pixels,support 9; repair None
+step,frame_231,0.23093603509173108,pixels,support 9; repair None
+step,frame_232,0.2336444473682052,pixels,support 8; repair None
+step,frame_233,0.19964068344662791,pixels,support 8; repair None
+step,frame_234,0.19760193521012212,pixels,support 8; repair None
+step,frame_235,0.2843425154433374,pixels,support 8; repair None
+step,frame_236,0.052000459718710666,pixels,support 7; repair None
+step,frame_237,0.27126155485843056,pixels,support 7; repair None
+step,frame_238,0.1823146363681745,pixels,support 6; repair None
+step,frame_239,0.1489564435410111,pixels,support 5; repair None

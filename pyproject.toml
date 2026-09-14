@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+# The distribution name is the project name, capitalised as the project spells it. PyPI matches
+# names case-insensitively but displays what is declared here. The import package stays "ripr":
+# that is what every call site, the CLI command and the Java bridge already say.
+name = "Relative-Intensity-Pattern-Registration"
+version = "0.2.1"
+description = "Gain-invariant, robust registration of microscopy time series"
+readme = "README_PYTHON.md"
+requires-python = ">=3.10"
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+authors = [{ name = "Jamie Malcolm", email = "jamiemalcolm12@gmail.com" }]
+keywords = [
+  "registration",
+  "microscopy",
+  "time-lapse",
+  "image-alignment",
+  "drift-correction",
+  "live-imaging",
+  "ImageJ",
+  "Fiji",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  # Capped below 5.0 deliberately. The area-correlation estimator calls OpenCV's ECC fit, and the
+  # cross-language parity evidence for this release was measured against the 4.x implementation.
+  # A major-version bump may change that fit, and it must be re-measured before it is allowed in.
+  "opencv-python-headless>=4.8,<5",
+  "scikit-image>=0.21",
+  "tifffile>=2023.7.10",
+]
+
+[project.urls]
+Homepage = "https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration"
+Source = "https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration"
+Issues = "https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration/issues"
+
+[project.optional-dependencies]
+test = ["pytest>=8", "build>=1.2"]
+
+[project.scripts]
+ripr = "ripr.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ripr"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/pyproject.toml",
+  "/README_PYTHON.md",
+  "/LICENSE",
+  "/src/ripr",
+  "/tests_python",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests_python"]
+addopts = "-ra"

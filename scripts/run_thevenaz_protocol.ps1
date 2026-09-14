@@ -118,7 +118,7 @@ try {
             (Get-Content -LiteralPath $classpathFile -Raw).Trim()
         $java = Join-Path (Split-Path $javacForMaven) 'java.exe'
         & $java "-Dthevenaz.trials=$Trials" -cp $classpath `
-            logratio.ThevenazProtocolBenchmark $project $output $turboJar $paperPdf $paperPostscript
+            ripr.ThevenazProtocolBenchmark $project $output $turboJar $paperPdf $paperPostscript
         exit $LASTEXITCODE
     }
     finally {

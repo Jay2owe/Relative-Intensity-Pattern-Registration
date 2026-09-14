@@ -1,8 +1,18 @@
 # External parameter sweep plan — give every other engine the tuning we gave ourselves
 
+> Active scope changed 2026-08-21: publication tables now cover four image classes. Sparse/low-light
+> is excluded after an invalid locked-input channel was found. This file remains the historical
+> prospective plan; protocol deviation D4 records the post-result change.
+
 Written 2026-08-20. Serves item 3 of `docs/external_comparison_publication_plan.md`, which named this
 as the objection most likely to sink a benchmark paper: **we swept 128 recipes and fitted a
 per-image-type model, and every third-party engine ran once, as we happened to configure it.**
+
+> **Status: completed 2026-08-20.** See
+> [`external_parameter_sweep_findings.md`](external_parameter_sweep_findings.md) and the generated
+> [`FINDINGS.md`](../library/benchmark/v2/runs/external_parameter_sweep_v1/FINDINGS.md). All 24
+> development configurations and the frozen locked evaluation completed; both sealed sets remained
+> unopened.
 
 ## Outcome
 

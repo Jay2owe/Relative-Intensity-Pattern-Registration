@@ -1,0 +1,72 @@
+element,key,value_number,value_text,note
+crop,left,0.0,pixels,the orange rectangle
+crop,right,4.0,pixels,
+crop,top,1.0,pixels,
+crop,bottom,1.0,pixels,
+crop,output_width,508.0,pixels,from 512
+crop,output_height,510.0,pixels,from 512
+output,interpolation,,none,
+check,crop_size,64.0,pixels,"centred on (76, 92), the window scoring highest on texture times first-to-last stability"
+shown,column_0,0.0,frame index,one column of both grids
+shown,column_1,120.0,frame index,one column of both grids
+shown,column_2,239.0,frame index,one column of both grids
+warped,Bioluminescence_t0.finite_pixels,262144.0,512x512,after the transform
+warped,Bioluminescence_t0.minimum,1933.0,512x512,after the transform
+warped,Bioluminescence_t0.maximum,65535.0,512x512,after the transform
+warped,Bioluminescence_t0.mean,2479.759910583496,512x512,after the transform
+warped,Bioluminescence_t0.median,2391.0,512x512,after the transform
+warped,Bioluminescence_t120.finite_pixels,260099.0,512x512,after the transform
+warped,Bioluminescence_t120.minimum,1938.0,512x512,after the transform
+warped,Bioluminescence_t120.maximum,6579.0,512x512,after the transform
+warped,Bioluminescence_t120.mean,2405.45949426949,512x512,after the transform
+warped,Bioluminescence_t120.median,2313.0,512x512,after the transform
+warped,Bioluminescence_t239.finite_pixels,260096.0,512x512,after the transform
+warped,Bioluminescence_t239.minimum,1935.0,512x512,after the transform
+warped,Bioluminescence_t239.maximum,65535.0,512x512,after the transform
+warped,Bioluminescence_t239.mean,2408.0497470164864,512x512,after the transform
+warped,Bioluminescence_t239.median,2316.0,512x512,after the transform
+warped,BF_t0.finite_pixels,262144.0,512x512,after the transform
+warped,BF_t0.minimum,2294.0,512x512,after the transform
+warped,BF_t0.maximum,12295.0,512x512,after the transform
+warped,BF_t0.mean,6048.031665802002,512x512,after the transform
+warped,BF_t0.median,6060.0,512x512,after the transform
+warped,BF_t120.finite_pixels,260099.0,512x512,after the transform
+warped,BF_t120.minimum,2287.0,512x512,after the transform
+warped,BF_t120.maximum,12667.0,512x512,after the transform
+warped,BF_t120.mean,6108.255133622198,512x512,after the transform
+warped,BF_t120.median,6086.0,512x512,after the transform
+warped,BF_t239.finite_pixels,260096.0,512x512,after the transform
+warped,BF_t239.minimum,2296.0,512x512,after the transform
+warped,BF_t239.maximum,14415.0,512x512,after the transform
+warped,BF_t239.mean,6212.906757504921,512x512,after the transform
+warped,BF_t239.median,6166.0,512x512,after the transform
+warped,RFP_t0.finite_pixels,262144.0,512x512,after the transform
+warped,RFP_t0.minimum,2022.0,512x512,after the transform
+warped,RFP_t0.maximum,9471.0,512x512,after the transform
+warped,RFP_t0.mean,3558.565402984619,512x512,after the transform
+warped,RFP_t0.median,3013.0,512x512,after the transform
+warped,RFP_t120.finite_pixels,260099.0,512x512,after the transform
+warped,RFP_t120.minimum,1992.0,512x512,after the transform
+warped,RFP_t120.maximum,8138.0,512x512,after the transform
+warped,RFP_t120.mean,3247.053018273811,512x512,after the transform
+warped,RFP_t120.median,2865.0,512x512,after the transform
+warped,RFP_t239.finite_pixels,260096.0,512x512,after the transform
+warped,RFP_t239.minimum,2013.0,512x512,after the transform
+warped,RFP_t239.maximum,8974.0,512x512,after the transform
+warped,RFP_t239.mean,3409.109759473425,512x512,after the transform
+warped,RFP_t239.median,2908.0,512x512,after the transform
+warped,GFP_t0.finite_pixels,262144.0,512x512,after the transform
+warped,GFP_t0.minimum,2491.0,512x512,after the transform
+warped,GFP_t0.maximum,15002.0,512x512,after the transform
+warped,GFP_t0.mean,9354.913719177246,512x512,after the transform
+warped,GFP_t0.median,9453.0,512x512,after the transform
+warped,GFP_t120.finite_pixels,260099.0,512x512,after the transform
+warped,GFP_t120.minimum,2517.0,512x512,after the transform
+warped,GFP_t120.maximum,15491.0,512x512,after the transform
+warped,GFP_t120.mean,9608.533462258602,512x512,after the transform
+warped,GFP_t120.median,9646.0,512x512,after the transform
+warped,GFP_t239.finite_pixels,260096.0,512x512,after the transform
+warped,GFP_t239.minimum,2510.0,512x512,after the transform
+warped,GFP_t239.maximum,15893.0,512x512,after the transform
+warped,GFP_t239.mean,9786.056771345964,512x512,after the transform
+warped,GFP_t239.median,9756.0,512x512,after the transform

@@ -27,3 +27,36 @@ spread. The other eleven external rows remain subject to the exact-zero gate.
 
 Faking exactness by copying the baseline row, disabling the installed global optimizer, or silently
 rounding the difference was rejected because each would make the gate look stronger than the run.
+
+## D3: first finalization rewrote the unchanged freeze table
+
+The development winners were first frozen at 2026-08-20 19:22:15 BST, before the corrected locked
+default run began at 19:22:38 BST. The first invocation of the final summarizer later recomputed the
+same winner identities and settings and overwrote `frozen_winners.csv`, changing its timestamp and
+`frozen_utc` fields after locked execution. No winner changed, but this weakened the file-level audit
+trail.
+
+The observed original freeze time was restored to the winner rows, and a SHA-256 sidecar was added.
+Final mode now reads the frozen table without recomputing it and refuses to proceed unless it matches
+that sidecar. This deviation is reported in the generated findings.
+
+## D4: sparse/low-light removed after result review
+
+Status: owner-directed scope change on 2026-08-21, after the version 2 development and locked results
+had been reviewed.
+
+The locked sparse/low-light inputs were invalid. Their red-green-blue source contained signal in the
+green channel, while the version 2 generator selected the blue channel and produced all-zero stacks.
+Some methods failed explicitly; identity transforms from the in-house method were instead counted as
+successful. Those rows cannot support either a win or a loss.
+
+The owner removed the entire sparse/low-light class from the active comparison and publication scope.
+The canonical defaults-against-defaults and tuned-against-tuned tables now contain four classes and an
+aggregate calculated only from those classes. This decision was made after results were visible and is
+therefore disclosed rather than described as prospective. Valid version 2 sparse development data had
+also favoured Descriptor-based registration, so no claim is made that the in-house method wins this
+excluded class.
+
+Raw runs and the immutable five-class winner freeze are retained for audit. Reintroduction requires a
+new prospective protocol, correct channel selection and regenerated inputs; it must not reuse the
+invalid locked rows.

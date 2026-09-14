@@ -1,0 +1,38 @@
+{
+  "candidate": "../scripts/reproduce_registration_montage.py",
+  "grammar": "review-montage",
+  "language": "python",
+  "required_columns": [
+    "panel",
+    "row",
+    "column",
+    "method",
+    "display_label",
+    "series_id",
+    "n_frames",
+    "contrast_low",
+    "contrast_high"
+  ],
+  "parameters": ["bundle", "output"],
+  "evidence_bundles": [
+    "C:/ripr-bench/cry1-ch-20260902/bioluminescence/montage_bundles/20260721_1417",
+    "C:/ripr-bench/cry1-ch-20260902/bioluminescence/montage_bundles_v2/20260721_1417"
+  ],
+  "test": "../tests_python/check_registration_montage_recipe.py",
+  "proof": {
+    "required_meanings": [],
+    "independent_statistics_required": false,
+    "signing_key_path": null,
+    "signing_password_env": null,
+    "trust_policy_path": null,
+    "encrypt_sections": [],
+    "encryption_password_env": null,
+    "recipient_file": null,
+    "broker_policy_path": null
+  },
+  "publication_workbook": {
+    "enabled": false,
+    "profile": "master",
+    "output": "publication-data.xlsx"
+  }
+}

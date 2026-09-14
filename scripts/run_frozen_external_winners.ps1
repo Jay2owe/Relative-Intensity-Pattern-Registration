@@ -25,15 +25,17 @@ foreach ($oneDataset in $datasets) {
         # The all-defaults table already contains every row for an installed-default winner.
         # Reuse it so a winning default is not executed twice on the locked set.
         if ($winner.is_installed_default -eq 'true') { continue }
-        $arguments = @(
-            '-ProjectRoot', $project,
-            '-Dataset', $oneDataset,
-            '-Config', $winner.config_id,
-            '-OnlyImageClass', $winner.image_series_class,
-            '-FullEngineRows'
-        )
-        if ($Resume) { $arguments += '-Resume' }
-        if ($Rewrite) { $arguments += '-Rewrite' }
+        # REGRESSION GUARD: array-splatting '-Name', value pairs bound them positionally in a child script.
+        # The fix: hashtable splatting preserves the child script's named parameter binding.
+        $arguments = @{
+            ProjectRoot = $project
+            Dataset = $oneDataset
+            Config = $winner.config_id
+            OnlyImageClass = $winner.image_series_class
+            FullEngineRows = $true
+            Resume = [bool]$Resume
+            Rewrite = [bool]$Rewrite
+        }
         & $runner @arguments
         if (-not $?) { throw "Frozen run failed: $oneDataset $($winner.image_series_class) $($winner.config_id)" }
     }

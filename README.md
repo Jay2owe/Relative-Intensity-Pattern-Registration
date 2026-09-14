@@ -1,15 +1,47 @@
 # Relative-Intensity Pattern Registration
 
-A Fiji/ImageJ time-series registration plugin that estimates movement by making the log-ratio between
-frames spatially uniform. Intensity gain is fitted separately, so bleaching or global brightness change
-does not have to look like movement.
+A Fiji/ImageJ time-series registration plugin that estimates movement by matching relative spatial
+intensity patterns between frames. Global brightness change is handled separately, so bleaching or
+illumination changes do not have to look like movement.
+
+The repository also contains **Relative-Intensity Pattern Registration (RIPR)**, a native, installable
+Python package with the same registration engine, recommendations, hyperstack behavior, TIFF support and folder batches. See
+[README_PYTHON.md](README_PYTHON.md) for installation and examples; it does not require ImageJ or Java.
 
 Image type and motion type load evidence-based parameter recommendations. Every recommended value can
 be replaced in the advanced controls.
 
+The plugin has three rotation choices: **Off**, **Search continuously**, and **Known remount frames**.
+Continuous mode estimates bounded in-plane rotation for every compared pair. Set **Maximum rotation**
+in degrees; transforms store `theta` in radians internally and in the Java/Python result objects. Both
+log-ratio and area-correlation estimators implement the continuous rigid (translation plus rotation)
+search. Automatic mode first resolves the same estimator, filter,
+brightness exclusions, strong-area support and pixel mask it would use for translation. It then tests
+rotation from that exact translation result and retains it only when the full-frame residual improves
+by at least 0.005. A declined rotation leaves the selected translation numerically unchanged. The run
+log and batch report state how many pairwise proposals were accepted and declined. Incremental rotation
+does not support a rolling reference template. `NONE` interpolation uses nearest-neighbour sampling
+when rotation is non-zero, so choose
+bilinear, bicubic or Fourier interpolation for smoother intensity images; pure integer translations
+retain their bit-exact block-copy path. `FOURIER` applies padded Fourier shifts and represents rotation
+as three Fourier shears; it is sharp but can ring near hard edges.
+
+**Known remount frames is an experimental, opt-in mode.** Enter the one-based first frame after each
+remount, such as `25,51`. Around each boundary it runs the accepted log-ratio rigid fit over every
+available before/after pair in the selected window, requires at least three usable fits, and forms one
+robust angular jump. The cumulative angle is held exactly constant until the next event. Ordinary
+registration then fits translation with those relative angles fixed, protects declared remount steps
+from generic outlier repair, and applies the composed transform to the untouched input once. A large
+cross-pair spread is reported as a warning; insufficient evidence stops the run. Rolling references and
+area-correlation event angles are not supported. This mode has synthetic and Java/Python regression
+coverage but awaits independent real remount recordings before promotion; it is not an automatic or
+global default.
+
 **Two estimators, and the default is the log-ratio fit.** A second estimator — plain normalised
-cross-correlation on a pyramid, the classical area method — is selectable, and the automatic selector
-chooses it for brightfield/DIC and fiducial/static, where it measures better. It is not better
+cross-correlation on a pyramid, the classical area method — is manually selectable and measured better
+for brightfield/DIC and fiducial/static in the estimator benchmark. The finalized automatic selector did
+not promote those overrides because they failed later crop and runtime safety gates. A subsequent explicit
+user decision accepted those isolated trade-offs and enabled the measured fixed image-type policy. It is not better
 everywhere; see [Which estimator, and where each one wins](#which-estimator-and-where-each-one-wins)
 for the numbers, losses included. Since 2026-08-19 the area method locates its sub-pixel peak with a
 Gauss–Newton step read off the correlation surface's own derivatives rather than a shrinking grid
@@ -20,10 +52,10 @@ see `docs/newton_refinement_stage4_third_set_findings.md`.
 
 ## Interactive use
 
-Open a time series and choose **Plugins > Registration > Log-Ratio Registration...**.
+Open a time series and choose **Plugins > Registration > Relative-Intensity Pattern Registration...**.
 
 1. Select the closest image type and motion type.
-2. Leave **Settings source** on **Automatic full selection**, the default.
+2. Leave **Settings source** on **Automatic fixed recipe**, the default.
 3. Select **Review and edit all settings before running** when you want to inspect or change values
    before any work starts, then press **Register**.
 
@@ -31,18 +63,29 @@ Open a time series and choose **Plugins > Registration > Log-Ratio Registration.
 
 The **pairwise estimator** decides how one frame pair is measured. Everything above it — the pair
 plan, the reconciliation, the repair, the warp — is the same either way, so this is a genuine choice
-between two methods rather than two pipelines.
+between estimators rather than separate pipelines.
 
 | Estimator | What it does | Where it wins |
 |---|---|---|
 | **Log-ratio fit** (default) | Levels the log-ratio field between two frames, fitting the intensity gain separately and rejecting genuine change with a robust norm | Phase contrast, dense fluorescence, sparse low-light |
 | **Area correlation** | Normalised cross-correlation on a pyramid with sub-pixel peak refinement, on an interpolating cubic B-spline image model | Brightfield/DIC, fiducial/static |
+| **Enhanced Correlation Coefficient** | Iteratively aligns the whole image while allowing its brightness to change | Real dense and low-light fluorescence time-lapses |
+
+Enhanced Correlation Coefficient is an existing optimizer from Evangelidis and Psarakis
+([2008, DOI 10.1109/TPAMI.2008.113](https://doi.org/10.1109/TPAMI.2008.113)); RIPR does not claim to
+have invented it. The RIPR method claim is the complete registration system: its log-ratio route,
+fixed image-type recipes, same-channel longitudinal references, motion guards, reconciliation and
+validated routing. Enhanced Correlation Coefficient is one clearly named optimizer inside that system.
+
+Automatic uses the frozen declared-type policy. Dense fluorescence uses median-filtered Enhanced
+Correlation Coefficient against the previous image; sparse/low-light fluorescence or bioluminescence
+uses its tuned log-ratio image-and-motion recipe. Only the selected channel is read.
 
 Measured on 40 sealed recordings that took no part in choosing anything — ten sources, two per image
-type, none of them used elsewhere in this project. Lower is better; the automatic selector chooses the
-estimator per image type, so the last column is what a user actually gets:
+type, none of them used elsewhere in this project. Lower is better; the last column shows the best tested
+estimator in that historical estimator-only comparison:
 
-| Image type | Log-ratio fit | Area correlation | Automatic selection |
+| Image type | Log-ratio fit | Area correlation | Best tested estimator |
 |---|---|---|---|
 | BRIGHTFIELD_DIC | 0.029190 px | **0.023358 px** | area correlation |
 | FIDUCIAL_STATIC | 0.017760 px | **0.014802 px** | area correlation |
@@ -66,24 +109,36 @@ comparison against TurboReg's own estimator inside our reconciler, is in
 
 | Choice | What it does |
 |---|---|
-| Automatic full selection (default) | Measures this recording, then resolves the pairwise estimator, pixel support, brightness limits, estimation filter and pixel mask. Always shows what it chose in the editable settings window before running. |
-| Recommended | Loads the measured recipe for the chosen image and motion type and changes nothing else. |
+| Automatic fixed recipe (default) | Applies the installed validated fixed recipe for the chosen image and motion types. It does not inspect the recording. |
+| Longitudinal maximum accuracy | Adds whole-recording bright/dim or tissue-landmark references and protects isolated stage jumps and light pulses. |
+| Image-and-motion preset | Loads the older measured recipe for the chosen image and motion types. |
 | Manual | Uses exactly the values in the settings window. |
 
-Automatic selection does not replace the image-type and motion-type base model; it starts from it and may
-override five things on top of it, the estimator included. It first performs a neutral provisional fit — every pixel, no
-brightness limit, no filter, no mask — then measures 17 image features and 10 movement features and scores
-its candidate recipes against them.
+Non-fluorescence keeps `recording_adaptive_selector_v1_user_approved_fixed_policy_v1`. Fluorescence
+uses `single_channel_emission_max_accuracy_r04_a208` for fluorescence and bioluminescence. Both choose the recipe without inspecting
+the recording. A chosen recipe may still contain more than one fitting pass; those passes execute the
+already chosen recipe and do not select a new one.
 
-It can only differ from **Recommended** for the image types where an override was measured as both safe
-and better, presently brightfield/DIC and fiducial/static. For phase contrast, dense fluorescence and
-sparse low-light it holds no candidate, skips the provisional fit entirely, and returns the recommended
-recipe at no extra cost. On the two types it does serve it registers the stack twice, so allow roughly
-double the time.
+### Longitudinal maximum accuracy
 
-Whatever it resolves arrives in the settings window as ordinary editable values. Editing any of them
-re-labels the run as manual, and the run log always states the complete recipe rather than the word
-"automatic". See `docs/full_automatic_selector_sweep_results.md` for the evidence behind the default.
+Use **Longitudinal maximum accuracy** for long Incucyte or LV200 recordings dominated by slow drift,
+gentle shake, isolated stage movements and large light changes. It first runs the unchanged Automatic
+fixed recipe, then uses the complete selected channel as a second source of position evidence:
+
+- fluorescence and bioluminescence use bright and dim same-channel references;
+- phase contrast and brightfield/DIC use tissue edges and locally dark landmarks;
+- brief returning movements coupled to a light pulse are removed;
+- persistent jumps, near-dark final jumps and rare rigid remounts are retained only with independent
+  agreement checks.
+
+It does not inspect another channel. The resulting timepoint transform is still applied to every
+channel and Z slice. Keep **Automatic fixed recipe** for repeated oscillation or continuous rotation;
+the artificial-motion benchmark showed that the longitudinal prior is not universal.
+
+Automatic resolves to visible settings; editing them re-labels the run as Manual. Longitudinal
+maximum accuracy stays a separate fixed choice and records that exact mode in the run log. See
+`docs/recording-adaptive-selector/09_final_validation_findings.md` for the sealed decision
+and `docs/recording-adaptive-selector/10_user_approved_fixed_policy_override.md` for the explicit override.
 
 ### Parameter sweep on one stack
 
@@ -144,18 +199,19 @@ fit or the corrected image.
 
 For a multi-channel hyperstack, **Channel used to estimate movement** chooses the signal that drives
 registration. One transform is estimated per timepoint and then applied identically to every channel
-and every Z slice. Channel count, Z count, time count, calibration and hyperstack layout are preserved.
+and every Z slice. A new dialog ranks the channels by localisable movement evidence and recommends the
+best one; choosing a poor channel deliberately produces a warning before registration starts. Channel
+count, Z count, time count, calibration and hyperstack layout are preserved.
 
 ## Folder batches
 
-Choose **Plugins > Registration > Log-Ratio Registration Batch...** to apply one setup to a folder of
+Choose **Plugins > Registration > Relative-Intensity Pattern Registration Batch...** to apply one setup to a folder of
 TIFF or OME-TIFF stacks. Select the input and output folders, whether to include subfolders, and the
 shared image type, movement type, channel, Z slice and registration settings.
 
-**Settings source** defaults to **Automatic full selection**, which resolves a complete recipe separately
-for each stack from that stack's own pixels and provisional movement, and records the chosen recipe for
-every stack in the batch report. Choose **Manual** to replay one explicit recipe over the whole folder, or
-**Recommended** to use the measured recipe for the declared image and motion type unchanged.
+**Settings source** defaults to **Automatic fixed recipe**, which applies the installed fixed recipe
+for the declared image and motion types and records it for every stack. Choose **Manual** to replay one explicit
+recipe, or **Image-and-motion preset** to use the older recipe for both declared types.
 
 The batch holds one stack in memory at a time. A modeless progress window shows the current file,
 completed stacks, pair progress, elapsed time, estimated time remaining and estimated finish time. The
@@ -166,8 +222,16 @@ Output stacks are named `<source>_registered.tif` and retain the input subfolder
 stacks are skipped unless **Overwrite existing corrected stacks** is selected. A damaged or incompatible
 file is recorded as an error and the remaining files continue. Every run writes
 `log_ratio_batch_report.csv` with the input, output, status, elapsed time, before/after residual and error
-for each file. It also records the automatic recipe and its evidence scores when automatic selection is
-enabled.
+for each file. It also records the automatic recipe, model provenance, fallback and any available evidence
+scores when automatic selection is enabled. The existing columns are preserved, with rotation mode, one-based event frames, event window
+and compact event diagnostics appended at the end.
+
+## Reusable method benchmark
+
+Run `scripts/run-registration-benchmark.cmd` with any TIFF folder and any listed subset of RIPR or
+installed Fiji methods. It saves full registered TIFFs, scrolling montage stacks, transforms, times and
+the frame-to-image-1 alignment guide. See `docs/reusable_registration_benchmark.md` for the one-command
+example and `-ListMethods` for accepted method names.
 
 ## Recommendations
 
@@ -176,39 +240,27 @@ series per type and the same four known motion paths. Each recommendation is the
 log-ratio configuration for that image-type and motion-type pair. The benchmark and full output stacks
 are in `library/benchmark/v2/`.
 
-The automatic add-on selector was tested with all four movement versions of each source held out
-together. Across the 20 held-out source groups it reproduced 74 of 80 complete recipes (92.5%), made
-20 useful additions and made no unsupported additions. After freezing the decision thresholds, the
-production run over all 80 controlled recordings chose 79 of 80 declared recipes, improved 22
-recordings, worsened one, introduced no failures, and reduced mean median error from 0.3688 to 0.0256
-pixels. Mean time was 1.62 seconds per 48-frame stack. This establishes controlled-library behaviour;
-natural-motion and external-source validation remain separate tests.
+The recording-adaptive selector study froze 128 estimator/support/band/filter/mask recipes, 48 truth-free
+recording features, source-grouped splits and every gate before outcomes were opened. Development used
+275 recordings from 19 independent groups. The source-balanced oracle ceiling improved the category
+policy by 0.00402 px (71.5%), below the required absolute 0.005 px, so recording-level model fitting
+stopped and a fixed image-type policy alone advanced to reserved validation.
 
-The full automatic selector that ships as the default goes further: it chooses the pairwise estimator,
-base pixel support and brightness exclusions as well as filter and mask, from **112 candidates on two
-axes** — 96 log-ratio recipes over support, band, filter and mask, plus 16 area-correlation candidates
-over band and filter. It is trained with all four movement versions of each source held out together,
-then tested once against source series that had never been used for anything, with every pass/fail limit
-written down beforehand.
-
-It has been through that once-only test twice, on two separate sealed sets, because the candidate space
-changed between them.
-
-| | 96-recipe model | Two-axis model (ships now) |
-|---|---|---|
-| Sealed set | 10 series, 40 recordings | a second 10 series, 40 recordings |
-| Paired median error | 0.0286 to 0.0223 px | 0.0313 to 0.0240 px |
-| Fiducial/static | 0.0296 to 0.0180 px | 0.0435 to 0.0148 px |
-| Brightfield/DIC | 0.0319 to 0.0239 px | 0.0314 to 0.0234 px |
-| Other three image types | unchanged by construction | unchanged by construction |
-| Failures | 0 | 0 |
-| Mean per 48-frame stack | 1.11 s | 1.38 s |
-
-The second set is independent of the first: the first was spent, and reusing it would have made it a
-development set. Both sets pass every declared gate. Improvement stays concentrated where candidates
-are retained, which is now brightfield/DIC and fiducial/static only — on both of those the retained
-candidate is area correlation, which is what the second axis bought. Full record in
-`docs/full_automatic_selector_sweep_results.md` and `docs/pairwise_estimator_axis_findings.md`.
+That fixed policy improved reserved-validation median error by 0.01120 px but failed the retained-crop
+gate. On the once-opened final set of 110 recordings from 10 untouched sources, it again improved median
+error, from 0.01081 to 0.00544 px, but failed both retained-crop and runtime gates. The candidate selector
+also failed its frozen accuracy and safety gates. The mechanically promoted production result is therefore
+`recording_adaptive_selector_v1_final_category_recommendation`. That sealed result remains unchanged.
+A subsequent user-approved production decision accepted the isolated crop/runtime misses and installed
+`recording_adaptive_selector_v1_user_approved_fixed_policy_v1`. It uses one deterministic recipe per image
+type, no provisional selector pass, and complete Java/Python provenance. The later fluorescence-only
+route `single_channel_emission_max_accuracy_r04_a208` adds the fixed fluorescence and bioluminescence policies
+described above. Historical selector and
+estimator-only studies remain in `docs/full_automatic_selector_sweep_results.md` and
+`docs/pairwise_estimator_axis_findings.md`; the controlling result is
+`docs/recording-adaptive-selector/09_final_validation_findings.md`; the later trade-off decision is in
+`docs/recording-adaptive-selector/10_user_approved_fixed_policy_override.md`; and the fluorescence
+rescue result is in `docs/single_channel_fluorescence_rescue_r03.md`.
 
 Full-resolution movement estimation remains the recommended default. In the balanced scale benchmark,
 75% estimation was 1.71 times faster but 12.8% less accurate overall; 50% was 2.67 times faster but
@@ -235,17 +287,16 @@ from 0.75 to 2.39 seconds per benchmark stack.
 Resolve a complete recipe automatically for phase contrast with subpixel random movement:
 
 ```ijm
-run("Log-Ratio Registration...",
+run("Relative-Intensity Pattern Registration...",
     "image_type=PHASE_CONTRAST motion_type=SUBPIXEL_RANDOM_WALK selection_mode=automatic");
 ```
 
-`estimator` takes `log_ratio_fit` (the default), `area_correlation_newton` (what the automatic
-selector chooses where it chooses an area method) or `area_correlation` (the same correlation with the
-older grid refinement), and is accepted in every mode
-because it is a choice about which fit runs rather than one of the settings a mode resolves. It is
-recorded in every options string a run produces, so a macro replays the estimator that actually ran.
+`estimator` takes `log_ratio_fit` (the default), `area_correlation_ecc`, `area_correlation_newton` or `area_correlation` (the
+same correlation with the older grid refinement). Supply it in **Manual** mode. Automatic and Image-and-motion preset
+resolve the estimator as part of their complete recipe and reject an explicit contradictory value. A
+recorded run is emitted as Manual with the estimator that actually ran, so replay is stable.
 
-`selection_mode` takes `automatic`, `recommended` or `manual`. The older `recommended`,
+`selection_mode` takes `automatic`, `longitudinal_accuracy`, `recommended` or `manual`. The older `recommended`,
 `automatic_filters` and `manual` tokens still work and are rejected only when they contradict an explicit
 `selection_mode`, so existing macros keep their meaning. A macro with no mode token at all means `manual`.
 Automatic mode rejects an explicit support, brightness limit, filter, mask or compute budget rather than
@@ -254,8 +305,10 @@ silently discarding it.
 An explicit batch-safe run that never opens the dialog:
 
 ```ijm
-run("Log-Ratio Registration...",
+run("Relative-Intensity Pattern Registration...",
     "image_type=DENSE_FLUORESCENCE motion_type=STEADY_DIRECTIONAL_DRIFT manual " +
+    "fit_rotation max_rotation_degrees=10 incremental_rotation " +
+    "minimum_rotation_residual_gain=0.005 " +
     "channel=1 slice=0 reference=MULTILAG reference_frame=1 lags=1,2,4,8,16 " +
     "preprocessing=NONE " +
     "pixel_selection=NONE mask_preprocessing=NONE pixel_removal=25 " +
@@ -265,6 +318,18 @@ run("Log-Ratio Registration...",
     "threads=0 interpolation=NONE crop");
 ```
 
+An event-anchored run whose remounts begin at frames 25 and 51:
+
+```ijm
+run("Relative-Intensity Pattern Registration...",
+    "selection_mode=manual rotation_mode=known_events rotation_events=25,51 " +
+    "rotation_event_window=3 max_rotation_degrees=10 reference=MULTILAG " +
+    "estimator=log_ratio_fit interpolation=BILINEAR");
+```
+
+`fit_rotation` remains the backward-compatible spelling for continuous rotation. Do not combine it
+with `rotation_mode`; contradictory old and new controls are rejected.
+
 Interactive runs are recorded as complete `manual` option strings after automatic selection has been
 resolved. That freezes the exact chosen recipe, so replay does not classify the stack again or change
 when the model is improved in a later version.
@@ -272,22 +337,21 @@ when the model is improved in a later version.
 A folder batch can also run without dialogs. Brackets preserve folder paths containing spaces:
 
 ```ijm
-run("Log-Ratio Registration Batch...",
+run("Relative-Intensity Pattern Registration Batch...",
     "input=[D:/recordings/day 1] output=[D:/recordings/day 1 corrected] recursive no_overwrite " +
     "image_type=DENSE_FLUORESCENCE motion_type=STEADY_DIRECTIONAL_DRIFT selection_mode=automatic " +
     "channel=2 slice=0 interpolation=NONE crop");
 ```
 
-An automatic folder batch records `automatic_filters`, intentionally making a separate choice for each
-replayed stack. A batch with automatic selection cleared records the explicit shared settings. Batch-only
+An automatic folder batch records `selection_mode=automatic`, intentionally resolving the installed
+model for each replayed stack. A manual batch records the explicit shared settings. Batch-only
 options are `input`, `output`, `recursive` / `no_recursive`, and `overwrite` / `no_overwrite`.
 
 | Option | Default | Meaning |
 |---|---|---|
 | `image_type` | `PHASE_CONTRAST` | Image signal used for advice |
 | `motion_type` | `SUBPIXEL_RANDOM_WALK` | Movement pattern used for advice |
-| `recommended` / `manual` | `manual` | Load advice or use explicit fit settings |
-| `automatic_filters` / `no_automatic_filters` | off in macros | Choose a validated preprocessing and pixel-removal addition from each stack |
+| `selection_mode` | `manual` in macros | `automatic`, `longitudinal_accuracy`, `recommended` or `manual`; the dialog defaults to Automatic |
 | `channel` | `1` | One-based estimation channel |
 | `slice` | `0` | Z slice; zero uses a maximum-intensity projection |
 | `preprocessing` | `NONE` | `NONE`, Gaussian smoothing, `MEDIAN_3X3`, photon-noise stabilisation or mild sharpening |
@@ -303,28 +367,34 @@ options are `input`, `output`, `recursive` / `no_recursive`, and `overwrite` / `
 | `gradient` | `0.5` | Gradient threshold multiplier |
 | `floor`, `ceiling` | `off` | Per-frame intensity percentiles to exclude |
 | `auto_max_shift` | on | Measure the search bound from the recording |
-| `interpolation` | `NONE` | `NONE`, `BILINEAR` or `BICUBIC` |
+| `fit_rotation` / `no_fit_rotation` | off | Estimate bounded in-plane rotation as well as translation |
+| `rotation_mode` | `off` | `off`, `continuous`, or experimental `known_events`; legacy `fit_rotation` means `continuous` |
+| `rotation_events` | empty | Comma-separated one-based first frames after remounting; only for `known_events` |
+| `rotation_event_window` | `3` | Provisional number of frames drawn from each side of an event |
+| `max_rotation_degrees` | `10` | Symmetric rotation bound in degrees |
+| `incremental_rotation` / `no_incremental_rotation` | on | Fit translation first and retain rotation only when it improves the full-frame residual |
+| `minimum_rotation_residual_gain` | `0.005` | Fractional full-frame residual improvement required to retain rotation |
+| `interpolation` | `NONE` | `NONE`, `BILINEAR`, `BICUBIC` or `FOURIER` |
 | `crop` | on | Keep only the common real field |
 
 `recommended` cannot be combined with `preprocessing`, `pixel_selection`, `mask_preprocessing`,
 `pixel_removal`, `norm`, `support`, `gradient`, `floor` or `ceiling`. Use `manual` when supplying those
 settings explicitly.
 
-`automatic_filters` can be combined with the recommended base model or a manually specified base
-model, but not with explicit `preprocessing`, `pixel_selection`, `mask_preprocessing` or
-`pixel_removal` values.
+Legacy `automatic_filters` remains accepted as an Automatic-mode alias. Like explicit
+`selection_mode=automatic`, it cannot be combined with a manually supplied estimator or recipe setting.
 
 ## Groovy or Jython without dialogs
 
 ```groovy
-import logratio.api.*
+import ripr.api.*
 
-def parameters = LogRatioParameters.builder()
+def parameters = RelativeIntensityPatternParameters.builder()
     .recommendation(ImageType.DENSE_FLUORESCENCE, MotionType.STEADY_DIRECTIONAL_DRIFT)
-    .automaticFilterSelection(true)
+    .selectionMode(SelectionMode.AUTOMATIC)
     .channel(1)
     .build()
-def result = LogRatioRegistration.register(imp, parameters)
+def result = RelativeIntensityPatternRegistration.register(imp, parameters)
 result.correctedImage().show()
 ```
 
@@ -334,10 +404,10 @@ The public API neither shows a dialog nor modifies the input. The caller owns th
 Folder batches also have a no-dialog Java application programming interface:
 
 ```groovy
-import logratio.api.*
-import logratio.core.PairScheduler
+import ripr.api.*
+import ripr.core.PairScheduler
 
-def batch = LogRatioBatchParameters.builder(
+def batch = RelativeIntensityPatternBatchParameters.builder(
     new File("D:/recordings"),
     new File("D:/recordings_corrected"),
     parameters)
@@ -345,9 +415,9 @@ def batch = LogRatioBatchParameters.builder(
     .overwrite(false)
     .build()
 
-def summary = LogRatioBatch.run(batch, { status ->
+def summary = RelativeIntensityPatternBatch.run(batch, { status ->
     println "${status.completedFiles}/${status.totalFiles}: ${status.currentFile}"
-} as LogRatioBatch.ProgressListener, { false } as PairScheduler.Cancellation)
+} as RelativeIntensityPatternBatch.ProgressListener, { false } as PairScheduler.Cancellation)
 println summary.reportFile
 ```
 

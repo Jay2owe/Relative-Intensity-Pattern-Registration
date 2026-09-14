@@ -1,0 +1,25 @@
+{
+ "pair": [
+  56,
+  72
+ ],
+ "stride": 2,
+ "grid_columns": 256,
+ "grid_rows": 256,
+ "gain_log2_at_zero": -0.005860805511474609,
+ "gain_at_zero": 0.9959458395717439,
+ "gain_log2_at_fit": -0.00631528760654998,
+ "gain_at_fit": 0.9956321431560229,
+ "mean_abs_residual_zero": 0.0713896057131933,
+ "mean_abs_residual_fit": 0.04753089599953606,
+ "mean_abs_difference_zero": 0.07158320590679068,
+ "dx": 0.09954785832626115,
+ "dy": 1.6534436201071414,
+ "residual_before": 0.0713896057131933,
+ "residual_after": 0.047530895999536055,
+ "log_gain": -0.006315285258285286,
+ "valid_fraction": 0.99609375,
+ "iterations": 1,
+ "status": "Ok",
+ "sampled_pixels": 65280
+}

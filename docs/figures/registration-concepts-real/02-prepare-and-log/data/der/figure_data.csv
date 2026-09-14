@@ -1,0 +1,252 @@
+element,key,value_number,value_text,note
+setting,preprocessing,,Median denoising (3 by 3),the resolved recipe for this recording
+setting,log_offset,1.0,epsilon,added before the base-2 logarithm
+band,floor_percentile,25.0,percent,intensity 5684.0
+band,ceiling_percentile,99.0,percent,intensity 8761.0
+band,valid_pixels,194083.0,count,of 262144; the filled part of the final bar
+band,kept_fraction,0.7403678894042969,fraction,drawn as the filled bar
+raw,median,6060.0,counts,
+raw,minimum,2294.0,counts,
+raw,maximum,12295.0,counts,
+log,minimum,11.185495376586914,log2 counts,
+log,maximum,13.4271821975708,log2 counts,
+tile,raw.finite_pixels,262144.0,512x512,"estimation copy, as measured"
+tile,raw.minimum,2294.0,512x512,"estimation copy, as measured"
+tile,raw.maximum,12295.0,512x512,"estimation copy, as measured"
+tile,raw.mean,6048.031665802002,512x512,"estimation copy, as measured"
+tile,raw.median,6060.0,512x512,"estimation copy, as measured"
+tile,prepared.finite_pixels,262144.0,512x512,after the median filter
+tile,prepared.minimum,2328.0,512x512,after the median filter
+tile,prepared.maximum,11014.0,512x512,after the median filter
+tile,prepared.mean,6039.292549133301,512x512,after the median filter
+tile,prepared.median,6051.0,512x512,after the median filter
+tile,log.finite_pixels,262144.0,512x512,log2(intensity + 1)
+tile,log.minimum,11.185495376586914,512x512,log2(intensity + 1)
+tile,log.maximum,13.4271821975708,512x512,log2(intensity + 1)
+tile,log.mean,12.537949077825033,512x512,log2(intensity + 1)
+tile,log.median,12.563196182250977,512x512,log2(intensity + 1)
+map,removed_by_median.finite_pixels,262144.0,512x512,"raw minus prepared, the difference map drawn beneath the chain"
+map,removed_by_median.minimum,-1207.0,512x512,"raw minus prepared, the difference map drawn beneath the chain"
+map,removed_by_median.maximum,1859.0,512x512,"raw minus prepared, the difference map drawn beneath the chain"
+map,removed_by_median.mean,8.739116668701172,512x512,"raw minus prepared, the difference map drawn beneath the chain"
+map,removed_by_median.median,0.0,512x512,"raw minus prepared, the difference map drawn beneath the chain"
+histogram_raw,bin_000,110.0,pixels,2294.000000 to 2384.918182
+histogram_raw,bin_001,288.0,pixels,2384.918182 to 2475.836364
+histogram_raw,bin_002,244.0,pixels,2475.836364 to 2566.754545
+histogram_raw,bin_003,194.0,pixels,2566.754545 to 2657.672727
+histogram_raw,bin_004,218.0,pixels,2657.672727 to 2748.590909
+histogram_raw,bin_005,308.0,pixels,2748.590909 to 2839.509091
+histogram_raw,bin_006,333.0,pixels,2839.509091 to 2930.427273
+histogram_raw,bin_007,412.0,pixels,2930.427273 to 3021.345455
+histogram_raw,bin_008,622.0,pixels,3021.345455 to 3112.263636
+histogram_raw,bin_009,768.0,pixels,3112.263636 to 3203.181818
+histogram_raw,bin_010,800.0,pixels,3203.181818 to 3294.100000
+histogram_raw,bin_011,1000.0,pixels,3294.100000 to 3385.018182
+histogram_raw,bin_012,1206.0,pixels,3385.018182 to 3475.936364
+histogram_raw,bin_013,1303.0,pixels,3475.936364 to 3566.854545
+histogram_raw,bin_014,1314.0,pixels,3566.854545 to 3657.772727
+histogram_raw,bin_015,1385.0,pixels,3657.772727 to 3748.690909
+histogram_raw,bin_016,1324.0,pixels,3748.690909 to 3839.609091
+histogram_raw,bin_017,1224.0,pixels,3839.609091 to 3930.527273
+histogram_raw,bin_018,1136.0,pixels,3930.527273 to 4021.445455
+histogram_raw,bin_019,1207.0,pixels,4021.445455 to 4112.363636
+histogram_raw,bin_020,1168.0,pixels,4112.363636 to 4203.281818
+histogram_raw,bin_021,1148.0,pixels,4203.281818 to 4294.200000
+histogram_raw,bin_022,1160.0,pixels,4294.200000 to 4385.118182
+histogram_raw,bin_023,1243.0,pixels,4385.118182 to 4476.036364
+histogram_raw,bin_024,1301.0,pixels,4476.036364 to 4566.954545
+histogram_raw,bin_025,1280.0,pixels,4566.954545 to 4657.872727
+histogram_raw,bin_026,1358.0,pixels,4657.872727 to 4748.790909
+histogram_raw,bin_027,1406.0,pixels,4748.790909 to 4839.709091
+histogram_raw,bin_028,1585.0,pixels,4839.709091 to 4930.627273
+histogram_raw,bin_029,1786.0,pixels,4930.627273 to 5021.545455
+histogram_raw,bin_030,2080.0,pixels,5021.545455 to 5112.463636
+histogram_raw,bin_031,2538.0,pixels,5112.463636 to 5203.381818
+histogram_raw,bin_032,3178.0,pixels,5203.381818 to 5294.300000
+histogram_raw,bin_033,4249.0,pixels,5294.300000 to 5385.218182
+histogram_raw,bin_034,5963.0,pixels,5385.218182 to 5476.136364
+histogram_raw,bin_035,8259.0,pixels,5476.136364 to 5567.054545
+histogram_raw,bin_036,10620.0,pixels,5567.054545 to 5657.972727
+histogram_raw,bin_037,13141.0,pixels,5657.972727 to 5748.890909
+histogram_raw,bin_038,14925.0,pixels,5748.890909 to 5839.809091
+histogram_raw,bin_039,15557.0,pixels,5839.809091 to 5930.727273
+histogram_raw,bin_040,15421.0,pixels,5930.727273 to 6021.645455
+histogram_raw,bin_041,14804.0,pixels,6021.645455 to 6112.563636
+histogram_raw,bin_042,14038.0,pixels,6112.563636 to 6203.481818
+histogram_raw,bin_043,12779.0,pixels,6203.481818 to 6294.400000
+histogram_raw,bin_044,11925.0,pixels,6294.400000 to 6385.318182
+histogram_raw,bin_045,10469.0,pixels,6385.318182 to 6476.236364
+histogram_raw,bin_046,9531.0,pixels,6476.236364 to 6567.154545
+histogram_raw,bin_047,8349.0,pixels,6567.154545 to 6658.072727
+histogram_raw,bin_048,7149.0,pixels,6658.072727 to 6748.990909
+histogram_raw,bin_049,6276.0,pixels,6748.990909 to 6839.909091
+histogram_raw,bin_050,5474.0,pixels,6839.909091 to 6930.827273
+histogram_raw,bin_051,4878.0,pixels,6930.827273 to 7021.745455
+histogram_raw,bin_052,4065.0,pixels,7021.745455 to 7112.663636
+histogram_raw,bin_053,3432.0,pixels,7112.663636 to 7203.581818
+histogram_raw,bin_054,2957.0,pixels,7203.581818 to 7294.500000
+histogram_raw,bin_055,2570.0,pixels,7294.500000 to 7385.418182
+histogram_raw,bin_056,2147.0,pixels,7385.418182 to 7476.336364
+histogram_raw,bin_057,1882.0,pixels,7476.336364 to 7567.254545
+histogram_raw,bin_058,1684.0,pixels,7567.254545 to 7658.172727
+histogram_raw,bin_059,1413.0,pixels,7658.172727 to 7749.090909
+histogram_raw,bin_060,1227.0,pixels,7749.090909 to 7840.009091
+histogram_raw,bin_061,1000.0,pixels,7840.009091 to 7930.927273
+histogram_raw,bin_062,963.0,pixels,7930.927273 to 8021.845455
+histogram_raw,bin_063,854.0,pixels,8021.845455 to 8112.763636
+histogram_raw,bin_064,728.0,pixels,8112.763636 to 8203.681818
+histogram_raw,bin_065,657.0,pixels,8203.681818 to 8294.600000
+histogram_raw,bin_066,665.0,pixels,8294.600000 to 8385.518182
+histogram_raw,bin_067,622.0,pixels,8385.518182 to 8476.436364
+histogram_raw,bin_068,587.0,pixels,8476.436364 to 8567.354545
+histogram_raw,bin_069,552.0,pixels,8567.354545 to 8658.272727
+histogram_raw,bin_070,514.0,pixels,8658.272727 to 8749.190909
+histogram_raw,bin_071,445.0,pixels,8749.190909 to 8840.109091
+histogram_raw,bin_072,401.0,pixels,8840.109091 to 8931.027273
+histogram_raw,bin_073,352.0,pixels,8931.027273 to 9021.945455
+histogram_raw,bin_074,304.0,pixels,9021.945455 to 9112.863636
+histogram_raw,bin_075,286.0,pixels,9112.863636 to 9203.781818
+histogram_raw,bin_076,237.0,pixels,9203.781818 to 9294.700000
+histogram_raw,bin_077,181.0,pixels,9294.700000 to 9385.618182
+histogram_raw,bin_078,177.0,pixels,9385.618182 to 9476.536364
+histogram_raw,bin_079,130.0,pixels,9476.536364 to 9567.454545
+histogram_raw,bin_080,125.0,pixels,9567.454545 to 9658.372727
+histogram_raw,bin_081,100.0,pixels,9658.372727 to 9749.290909
+histogram_raw,bin_082,73.0,pixels,9749.290909 to 9840.209091
+histogram_raw,bin_083,75.0,pixels,9840.209091 to 9931.127273
+histogram_raw,bin_084,49.0,pixels,9931.127273 to 10022.045455
+histogram_raw,bin_085,48.0,pixels,10022.045455 to 10112.963636
+histogram_raw,bin_086,32.0,pixels,10112.963636 to 10203.881818
+histogram_raw,bin_087,30.0,pixels,10203.881818 to 10294.800000
+histogram_raw,bin_088,33.0,pixels,10294.800000 to 10385.718182
+histogram_raw,bin_089,23.0,pixels,10385.718182 to 10476.636364
+histogram_raw,bin_090,20.0,pixels,10476.636364 to 10567.554545
+histogram_raw,bin_091,8.0,pixels,10567.554545 to 10658.472727
+histogram_raw,bin_092,10.0,pixels,10658.472727 to 10749.390909
+histogram_raw,bin_093,13.0,pixels,10749.390909 to 10840.309091
+histogram_raw,bin_094,3.0,pixels,10840.309091 to 10931.227273
+histogram_raw,bin_095,9.0,pixels,10931.227273 to 11022.145455
+histogram_raw,bin_096,8.0,pixels,11022.145455 to 11113.063636
+histogram_raw,bin_097,8.0,pixels,11113.063636 to 11203.981818
+histogram_raw,bin_098,4.0,pixels,11203.981818 to 11294.900000
+histogram_raw,bin_099,3.0,pixels,11294.900000 to 11385.818182
+histogram_raw,bin_100,1.0,pixels,11385.818182 to 11476.736364
+histogram_raw,bin_101,1.0,pixels,11476.736364 to 11567.654545
+histogram_raw,bin_102,0.0,pixels,11567.654545 to 11658.572727
+histogram_raw,bin_103,0.0,pixels,11658.572727 to 11749.490909
+histogram_raw,bin_104,1.0,pixels,11749.490909 to 11840.409091
+histogram_raw,bin_105,0.0,pixels,11840.409091 to 11931.327273
+histogram_raw,bin_106,0.0,pixels,11931.327273 to 12022.245455
+histogram_raw,bin_107,0.0,pixels,12022.245455 to 12113.163636
+histogram_raw,bin_108,0.0,pixels,12113.163636 to 12204.081818
+histogram_raw,bin_109,1.0,pixels,12204.081818 to 12295.000000
+histogram_log,bin_000,56.0,pixels,11.185495 to 11.205874
+histogram_log,bin_001,81.0,pixels,11.205874 to 11.226253
+histogram_log,bin_002,102.0,pixels,11.226253 to 11.246632
+histogram_log,bin_003,117.0,pixels,11.246632 to 11.267011
+histogram_log,bin_004,117.0,pixels,11.267011 to 11.287390
+histogram_log,bin_005,99.0,pixels,11.287390 to 11.307769
+histogram_log,bin_006,80.0,pixels,11.307769 to 11.328148
+histogram_log,bin_007,90.0,pixels,11.328148 to 11.348527
+histogram_log,bin_008,53.0,pixels,11.348527 to 11.368906
+histogram_log,bin_009,77.0,pixels,11.368906 to 11.389285
+histogram_log,bin_010,85.0,pixels,11.389285 to 11.409664
+histogram_log,bin_011,126.0,pixels,11.409664 to 11.430043
+histogram_log,bin_012,107.0,pixels,11.430043 to 11.450422
+histogram_log,bin_013,161.0,pixels,11.450422 to 11.470801
+histogram_log,bin_014,141.0,pixels,11.470801 to 11.491180
+histogram_log,bin_015,148.0,pixels,11.491180 to 11.511559
+histogram_log,bin_016,138.0,pixels,11.511559 to 11.531938
+histogram_log,bin_017,189.0,pixels,11.531938 to 11.552317
+histogram_log,bin_018,242.0,pixels,11.552317 to 11.572696
+histogram_log,bin_019,295.0,pixels,11.572696 to 11.593075
+histogram_log,bin_020,343.0,pixels,11.593075 to 11.613454
+histogram_log,bin_021,386.0,pixels,11.613454 to 11.633833
+histogram_log,bin_022,418.0,pixels,11.633833 to 11.654212
+histogram_log,bin_023,405.0,pixels,11.654212 to 11.674591
+histogram_log,bin_024,377.0,pixels,11.674591 to 11.694970
+histogram_log,bin_025,480.0,pixels,11.694970 to 11.715349
+histogram_log,bin_026,651.0,pixels,11.715349 to 11.735728
+histogram_log,bin_027,687.0,pixels,11.735728 to 11.756107
+histogram_log,bin_028,684.0,pixels,11.756107 to 11.776486
+histogram_log,bin_029,704.0,pixels,11.776486 to 11.796865
+histogram_log,bin_030,668.0,pixels,11.796865 to 11.817243
+histogram_log,bin_031,742.0,pixels,11.817243 to 11.837622
+histogram_log,bin_032,905.0,pixels,11.837622 to 11.858001
+histogram_log,bin_033,759.0,pixels,11.858001 to 11.878380
+histogram_log,bin_034,796.0,pixels,11.878380 to 11.898759
+histogram_log,bin_035,719.0,pixels,11.898759 to 11.919138
+histogram_log,bin_036,718.0,pixels,11.919138 to 11.939517
+histogram_log,bin_037,681.0,pixels,11.939517 to 11.959896
+histogram_log,bin_038,692.0,pixels,11.959896 to 11.980275
+histogram_log,bin_039,805.0,pixels,11.980275 to 12.000654
+histogram_log,bin_040,789.0,pixels,12.000654 to 12.021033
+histogram_log,bin_041,763.0,pixels,12.021033 to 12.041412
+histogram_log,bin_042,655.0,pixels,12.041412 to 12.061791
+histogram_log,bin_043,811.0,pixels,12.061791 to 12.082170
+histogram_log,bin_044,760.0,pixels,12.082170 to 12.102549
+histogram_log,bin_045,878.0,pixels,12.102549 to 12.122928
+histogram_log,bin_046,860.0,pixels,12.122928 to 12.143307
+histogram_log,bin_047,943.0,pixels,12.143307 to 12.163686
+histogram_log,bin_048,918.0,pixels,12.163686 to 12.184065
+histogram_log,bin_049,970.0,pixels,12.184065 to 12.204444
+histogram_log,bin_050,952.0,pixels,12.204444 to 12.224823
+histogram_log,bin_051,932.0,pixels,12.224823 to 12.245202
+histogram_log,bin_052,1134.0,pixels,12.245202 to 12.265581
+histogram_log,bin_053,1207.0,pixels,12.265581 to 12.285960
+histogram_log,bin_054,1421.0,pixels,12.285960 to 12.306339
+histogram_log,bin_055,1578.0,pixels,12.306339 to 12.326718
+histogram_log,bin_056,1856.0,pixels,12.326718 to 12.347097
+histogram_log,bin_057,2122.0,pixels,12.347097 to 12.367476
+histogram_log,bin_058,2630.0,pixels,12.367476 to 12.387855
+histogram_log,bin_059,3563.0,pixels,12.387855 to 12.408234
+histogram_log,bin_060,4805.0,pixels,12.408234 to 12.428613
+histogram_log,bin_061,7384.0,pixels,12.428613 to 12.448992
+histogram_log,bin_062,10280.0,pixels,12.448992 to 12.469371
+histogram_log,bin_063,13103.0,pixels,12.469371 to 12.489750
+histogram_log,bin_064,15017.0,pixels,12.489750 to 12.510128
+histogram_log,bin_065,15274.0,pixels,12.510128 to 12.530507
+histogram_log,bin_066,15248.0,pixels,12.530507 to 12.550886
+histogram_log,bin_067,14520.0,pixels,12.550886 to 12.571265
+histogram_log,bin_068,13744.0,pixels,12.571265 to 12.591644
+histogram_log,bin_069,12312.0,pixels,12.591644 to 12.612023
+histogram_log,bin_070,11960.0,pixels,12.612023 to 12.632402
+histogram_log,bin_071,11032.0,pixels,12.632402 to 12.652781
+histogram_log,bin_072,10388.0,pixels,12.652781 to 12.673160
+histogram_log,bin_073,9215.0,pixels,12.673160 to 12.693539
+histogram_log,bin_074,8161.0,pixels,12.693539 to 12.713918
+histogram_log,bin_075,7112.0,pixels,12.713918 to 12.734297
+histogram_log,bin_076,6200.0,pixels,12.734297 to 12.754676
+histogram_log,bin_077,5501.0,pixels,12.754676 to 12.775055
+histogram_log,bin_078,4636.0,pixels,12.775055 to 12.795434
+histogram_log,bin_079,3811.0,pixels,12.795434 to 12.815813
+histogram_log,bin_080,3208.0,pixels,12.815813 to 12.836192
+histogram_log,bin_081,2646.0,pixels,12.836192 to 12.856571
+histogram_log,bin_082,2178.0,pixels,12.856571 to 12.876950
+histogram_log,bin_083,1852.0,pixels,12.876950 to 12.897329
+histogram_log,bin_084,1494.0,pixels,12.897329 to 12.917708
+histogram_log,bin_085,1218.0,pixels,12.917708 to 12.938087
+histogram_log,bin_086,1042.0,pixels,12.938087 to 12.958466
+histogram_log,bin_087,994.0,pixels,12.958466 to 12.978845
+histogram_log,bin_088,731.0,pixels,12.978845 to 12.999224
+histogram_log,bin_089,736.0,pixels,12.999224 to 13.019603
+histogram_log,bin_090,767.0,pixels,13.019603 to 13.039982
+histogram_log,bin_091,764.0,pixels,13.039982 to 13.060361
+histogram_log,bin_092,724.0,pixels,13.060361 to 13.080740
+histogram_log,bin_093,707.0,pixels,13.080740 to 13.101119
+histogram_log,bin_094,580.0,pixels,13.101119 to 13.121498
+histogram_log,bin_095,500.0,pixels,13.121498 to 13.141877
+histogram_log,bin_096,375.0,pixels,13.141877 to 13.162256
+histogram_log,bin_097,279.0,pixels,13.162256 to 13.182635
+histogram_log,bin_098,244.0,pixels,13.182635 to 13.203014
+histogram_log,bin_099,176.0,pixels,13.203014 to 13.223392
+histogram_log,bin_100,110.0,pixels,13.223392 to 13.243771
+histogram_log,bin_101,93.0,pixels,13.243771 to 13.264150
+histogram_log,bin_102,48.0,pixels,13.264150 to 13.284529
+histogram_log,bin_103,40.0,pixels,13.284529 to 13.304908
+histogram_log,bin_104,26.0,pixels,13.304908 to 13.325287
+histogram_log,bin_105,19.0,pixels,13.325287 to 13.345666
+histogram_log,bin_106,9.0,pixels,13.345666 to 13.366045
+histogram_log,bin_107,5.0,pixels,13.366045 to 13.386424
+histogram_log,bin_108,7.0,pixels,13.386424 to 13.406803
+histogram_log,bin_109,3.0,pixels,13.406803 to 13.427182

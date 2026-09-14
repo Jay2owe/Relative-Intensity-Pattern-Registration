@@ -1,0 +1,22 @@
+{
+ "pair": [
+  56,
+  72
+ ],
+ "stride": 2,
+ "grid_columns": 256,
+ "grid_rows": 256,
+ "frame_width": 512,
+ "frame_height": 512,
+ "norm": "Huber",
+ "huber_k": 1.345,
+ "robust_scale": 0.04132182264825341,
+ "weighted_below_one": 15966,
+ "sampled_pixels": 65280,
+ "dx": 0.09954785832626115,
+ "dy": 1.6534436201071414,
+ "iterations": 1,
+ "status": "Ok",
+ "residual_before": 0.0713896057131933,
+ "residual_after": 0.047530895999536055
+}

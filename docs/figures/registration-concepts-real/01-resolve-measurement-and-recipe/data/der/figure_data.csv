@@ -1,0 +1,46 @@
+element,key,value_number,value_text,note
+threshold,warn_below,0.05,,bar length at which a channel reaches the poor-localisability line
+channel,Bioluminescence,0.013147962222921047,localisability,frame correlation 0.050756
+channel,BF,0.019156266195657932,localisability,frame correlation 0.959925; drawn in the active colour
+channel,RFP,0.00029745076927083886,localisability,frame correlation 0.998655
+channel,GFP,0.00019209876265285678,localisability,frame correlation 0.998012
+recipe,Phase contrast | Curved / oscillating drift,,Least Squares,None | All | None | Log Ratio Fit
+recipe,Phase contrast | Steady directional drift,,Tukey,None | Mutual Noise Gradient | None | Log Ratio Fit
+recipe,Phase contrast | Subpixel random walk,,Huber,Gaussian smoothing (1.0 pixel) | All | None | Log Ratio Fit
+recipe,Phase contrast | Intermittent jumps,,Huber,Gaussian smoothing (0.7 pixel) | All | None | Log Ratio Fit
+recipe,Brightfield / differential interference contrast | Curved / oscillating drift,,Huber,None | All | None | Log Ratio Fit
+recipe,Brightfield / differential interference contrast | Steady directional drift,,Least Squares,None | All | None | Log Ratio Fit
+recipe,Brightfield / differential interference contrast | Subpixel random walk,,Huber,Median denoising (3 by 3) | All | None | Log Ratio Fit; the resolved cell
+recipe,Brightfield / differential interference contrast | Intermittent jumps,,Least Squares,None | All | None | Log Ratio Fit
+recipe,Dense fluorescence | Curved / oscillating drift,,Tukey,None | Gradient | None | Log Ratio Fit
+recipe,Dense fluorescence | Steady directional drift,,Huber,None | All | None | Log Ratio Fit
+recipe,Dense fluorescence | Subpixel random walk,,Tukey,None | Mutual Noise Gradient | None | Log Ratio Fit
+recipe,Dense fluorescence | Intermittent jumps,,Tukey,None | Mutual Noise Gradient | None | Log Ratio Fit
+recipe,Sparse / low-light fluorescence | Curved / oscillating drift,,Tukey,None | Gradient | Remove Least Informative | Log Ratio Fit
+recipe,Sparse / low-light fluorescence | Steady directional drift,,Tukey,Median denoising (3 by 3) | Gradient | Remove Least Informative | Log Ratio Fit
+recipe,Sparse / low-light fluorescence | Subpixel random walk,,Tukey,None | Gradient | None | Log Ratio Fit
+recipe,Sparse / low-light fluorescence | Intermittent jumps,,Tukey,None | Gradient | Remove Least Informative | Log Ratio Fit
+recipe,Fiducial / nominally static reference | Curved / oscillating drift,,Least Squares,None | All | None | Log Ratio Fit
+recipe,Fiducial / nominally static reference | Steady directional drift,,Tukey,None | Gradient | None | Log Ratio Fit
+recipe,Fiducial / nominally static reference | Subpixel random walk,,Huber,None | All | None | Log Ratio Fit
+recipe,Fiducial / nominally static reference | Intermittent jumps,,Least Squares,None | All | None | Log Ratio Fit
+tile,Bioluminescence.finite_pixels,262144.0,512x512,"channel thumbnail, timepoint 1"
+tile,Bioluminescence.minimum,1933.0,512x512,"channel thumbnail, timepoint 1"
+tile,Bioluminescence.maximum,65535.0,512x512,"channel thumbnail, timepoint 1"
+tile,Bioluminescence.mean,2479.759910583496,512x512,"channel thumbnail, timepoint 1"
+tile,Bioluminescence.median,2391.0,512x512,"channel thumbnail, timepoint 1"
+tile,BF.finite_pixels,262144.0,512x512,"channel thumbnail, timepoint 1"
+tile,BF.minimum,2294.0,512x512,"channel thumbnail, timepoint 1"
+tile,BF.maximum,12295.0,512x512,"channel thumbnail, timepoint 1"
+tile,BF.mean,6048.031665802002,512x512,"channel thumbnail, timepoint 1"
+tile,BF.median,6060.0,512x512,"channel thumbnail, timepoint 1"
+tile,RFP.finite_pixels,262144.0,512x512,"channel thumbnail, timepoint 1"
+tile,RFP.minimum,2022.0,512x512,"channel thumbnail, timepoint 1"
+tile,RFP.maximum,9471.0,512x512,"channel thumbnail, timepoint 1"
+tile,RFP.mean,3558.565402984619,512x512,"channel thumbnail, timepoint 1"
+tile,RFP.median,3013.0,512x512,"channel thumbnail, timepoint 1"
+tile,GFP.finite_pixels,262144.0,512x512,"channel thumbnail, timepoint 1"
+tile,GFP.minimum,2491.0,512x512,"channel thumbnail, timepoint 1"
+tile,GFP.maximum,15002.0,512x512,"channel thumbnail, timepoint 1"
+tile,GFP.mean,9354.913719177246,512x512,"channel thumbnail, timepoint 1"
+tile,GFP.median,9453.0,512x512,"channel thumbnail, timepoint 1"

@@ -42,62 +42,62 @@ function Get-SweepOptions {
 function Invoke-Manifest {
     Invoke-LoggedJava 'stage1_manifest' @(
         '-Xmx2g', '-Dlogratio.manifestOnly=true',
-        '-cp', $classpath, 'logratio.FullSelectorFactorialBenchmark', $project)
+        '-cp', $classpath, 'ripr.FullSelectorFactorialBenchmark', $project)
 }
 
 function Invoke-Sweep {
     Invoke-LoggedJava 'stage2_sweep' ((Get-SweepOptions) +
-        @('-cp', $classpath, 'logratio.FullSelectorFactorialBenchmark', $project))
+        @('-cp', $classpath, 'ripr.FullSelectorFactorialBenchmark', $project))
 }
 
 function Invoke-Summary {
     Invoke-LoggedJava 'stage3_summary' @(
-        '-Xmx4g', '-cp', $classpath, 'logratio.FullSelectorSweepSummary', $project)
+        '-Xmx4g', '-cp', $classpath, 'ripr.FullSelectorSweepSummary', $project)
 }
 
 function Invoke-Training {
     Invoke-LoggedJava 'stage4_training' @(
-        '-Xmx8g', '-cp', $classpath, 'logratio.FullSelectorTraining', $project)
+        '-Xmx8g', '-cp', $classpath, 'ripr.FullSelectorTraining', $project)
 }
 
 function Invoke-LockedTest {
     Invoke-LoggedJava 'stage5_locked_test_build' @(
-        '-Xmx8g', '-cp', $classpath, 'logratio.LockedTestSetBuilder', $project)
+        '-Xmx8g', '-cp', $classpath, 'ripr.LockedTestSetBuilder', $project)
     Invoke-LoggedJava 'stage5_locked_test_compare' @(
         '-Xmx8g', '-Dlogratio.comparisonRoot=library/benchmark/v2/benchmarks/locked_test',
-        '-cp', $classpath, 'logratio.SelectorComparisonBenchmark', $project)
+        '-cp', $classpath, 'ripr.SelectorComparisonBenchmark', $project)
     Invoke-LoggedJava 'stage5_locked_test_gates' @(
-        '-Xmx4g', '-cp', $classpath, 'logratio.LockedTestReport', $project)
+        '-Xmx4g', '-cp', $classpath, 'ripr.LockedTestReport', $project)
 }
 
 function Invoke-FinalComparison {
     Invoke-LoggedJava 'stage7_final_comparison' @(
-        '-Xmx8g', '-cp', $classpath, 'logratio.SelectorComparisonBenchmark', $project)
+        '-Xmx8g', '-cp', $classpath, 'ripr.SelectorComparisonBenchmark', $project)
 }
 
 function Invoke-Sensitivity {
     Invoke-LoggedJava 'sensitivity' @(
-        '-Xmx8g', '-cp', $classpath, 'logratio.SensitivityBenchmark', $project)
+        '-Xmx8g', '-cp', $classpath, 'ripr.SensitivityBenchmark', $project)
 }
 
 function Invoke-SweepProxy {
     # Registers nothing: rescores the saved transforms of every factorial run, so it needs stage 2
     # artifacts present but never rewrites them.
     Invoke-LoggedJava 'sweep_proxy' @(
-        '-Xmx8g', '-cp', $classpath, 'logratio.SweepProxyOracleBenchmark', $project)
+        '-Xmx8g', '-cp', $classpath, 'ripr.SweepProxyOracleBenchmark', $project)
 }
 
 function Invoke-ExternalSummary {
     # Joins our arms to the installed third-party engines. Reads saved shifts only; runs nothing.
     Invoke-LoggedJava 'external_summary_controlled' @(
-        '-Xmx4g', '-cp', $classpath, 'logratio.ExternalComparisonSummary', $project)
+        '-Xmx4g', '-cp', $classpath, 'ripr.ExternalComparisonSummary', $project)
     Invoke-LoggedJava 'external_summary_locked' @(
         '-Xmx4g', '-Dlogratio.comparisonRoot=library/benchmark/v2/benchmarks/locked_test',
-        '-cp', $classpath, 'logratio.ExternalComparisonSummary', $project)
+        '-cp', $classpath, 'ripr.ExternalComparisonSummary', $project)
 }
 
 function Invoke-Tests {
-    $maven = 'C:\Users\Owner\.m2\wrapper\dists\apache-maven-3.9.9\8e74001100ff70d6af083c5511fcc5ec49282d7017cde82c3698eee8fdf86698\bin\mvn.cmd'
+    $maven = (Get-Command mvn.cmd -ErrorAction Stop).Source
     # REGRESSION GUARD: PowerShell can reinterpret unquoted -D properties passed to a .cmd file.
     & $maven '-Dmaven.buildNumber.skip=true' test
     if ($LASTEXITCODE -ne 0) { throw 'full test suite failed' }
