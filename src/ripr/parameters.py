@@ -15,6 +15,7 @@ from .types import (
     PixelSupport,
     Preprocessing,
     Reference,
+    Recipe,
     RobustNorm,
     RotationMode,
     SelectionMode,
@@ -191,6 +192,11 @@ def recommendation(image_type: ImageType | str, motion_type: MotionType | str) -
 class LogRatioParameters:
     """Inputs shared by array, TIFF, command-line, and batch entry points.
 
+    Most callers do not need this class: :func:`ripr.register` and
+    :func:`ripr.register_file` expose recipe, channel and longitudinal mode directly. Use
+    :meth:`for_recipe` to build the same simple choices explicitly. The remaining fields are expert
+    controls.
+
     ``channel``, ``slice``, and ``reference_frame`` are one-based, matching ImageJ. A
     ``slice`` of zero means maximum-project Z before estimating movement.
     """
@@ -325,6 +331,50 @@ class LogRatioParameters:
     @classmethod
     def manual(cls, **values) -> "LogRatioParameters":
         return cls(selection_mode=SelectionMode.MANUAL, **values)
+
+    @classmethod
+    def for_recipe(
+        cls,
+        recipe: Recipe | str = Recipe.LANDMARKS,
+        *,
+        channel: int = 1,
+        longitudinal: bool = True,
+        **values,
+    ) -> "LogRatioParameters":
+        """Build the benchmark-backed recipe using only the three normal user choices.
+
+        Landmarks maps to phase contrast; Bright/dim maps to sparse/low-light fluorescence or
+        bioluminescence. Both use intermittent-jump protection and default to the whole-recording
+        longitudinal route. Moving cells is the separate biological-foreground Recommended recipe
+        and therefore requires ``longitudinal=False``.
+        """
+        chosen = Recipe.parse(recipe)
+        if chosen is Recipe.LANDMARKS:
+            image_type = ImageType.PHASE_CONTRAST
+            motion_type = MotionType.INTERMITTENT_JUMPS
+        elif chosen is Recipe.BRIGHT_DIM:
+            image_type = ImageType.SPARSE_LOW_LIGHT_FLUORESCENCE
+            motion_type = MotionType.INTERMITTENT_JUMPS
+        else:
+            if longitudinal:
+                raise ValueError(
+                    "the Moving cells recipe is not a longitudinal reference route; "
+                    "set longitudinal=False"
+                )
+            image_type = ImageType.DENSE_FLUORESCENCE
+            motion_type = MotionType.INTERMITTENT_JUMPS
+        selection_mode = (
+            SelectionMode.LONGITUDINAL_ACCURACY if longitudinal
+            else SelectionMode.RECOMMENDED if chosen is Recipe.MOVING_CELLS
+            else SelectionMode.AUTOMATIC
+        )
+        base = cls.recommended(
+            image_type=image_type,
+            motion_type=motion_type,
+            channel=channel,
+            **values,
+        )
+        return replace(base, selection_mode=selection_mode)
 
     @classmethod
     def recommended(

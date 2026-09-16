@@ -10,6 +10,7 @@ import tifffile
 
 from .parameters import LogRatioParameters
 from .registration import LogRatioResult, infer_axes, register
+from .types import Recipe
 
 
 def read_tiff(path: str | Path) -> tuple[np.ndarray, str]:
@@ -43,11 +44,19 @@ def register_file(
     input_path: str | Path,
     output_path: str | Path | None = None,
     parameters: LogRatioParameters | None = None,
+    *,
+    backend: str | None = None,
+    recipe: Recipe | str = Recipe.LANDMARKS,
+    channel: int = 1,
+    longitudinal: bool = True,
 ) -> LogRatioResult:
-    """Register one TIFF/OME-TIFF and optionally save ``*_registered.tif``."""
+    """Register one TIFF/OME-TIFF; only ``input_path`` is required."""
     input_path = Path(input_path)
     image, axes = read_tiff(input_path)
-    result = register(image, parameters, axes=axes)
+    result = register(
+        image, parameters, axes=axes, backend=backend, recipe=recipe,
+        channel=channel, longitudinal=longitudinal,
+    )
     if output_path is None:
         output_path = input_path.with_name(input_path.stem + "_registered.tif")
     transforms = [

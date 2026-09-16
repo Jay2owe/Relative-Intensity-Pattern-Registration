@@ -1,13 +1,9 @@
 # Relative-Intensity Pattern Registration (RIPR)
 
-This is a native Python package for the same registration operation as the Java Fiji/ImageJ plugin in
-this repository. It separates global intensity gain from movement, supports the log-ratio and area-
-correlation pair estimators, reconciles multiple frame gaps, repairs unsupported transforms, and applies
-one timepoint transform to every channel and Z plane.
-
-The numerical engine is Python/NumPy/SciPy. It does not launch ImageJ and does not require Java.
-On PyPI it is `Relative-Intensity-Pattern-Registration`; the import package and the terminal
-command are both `ripr`.
+This Python package runs the same registration operation as the Java Fiji/ImageJ plugin. Java is the
+default engine because it is much faster; a Python/NumPy/SciPy engine remains available as a fallback.
+It does not launch ImageJ. On PyPI it is `Relative-Intensity-Pattern-Registration`; the import package
+and terminal command are both `ripr`.
 
 ## Install
 
@@ -42,7 +38,41 @@ python -m pip install -e ".[test]"
 pytest
 ```
 
-## Register a NumPy array
+## Quick start
+
+For a TIFF, only the input filename is required. The output is written beside it as
+`recording_registered.tif`:
+
+```python
+import ripr
+
+ripr.register_file("recording.tif")
+```
+
+For a NumPy array, only the array is required when it is shaped `T, Y, X`:
+
+```python
+result = ripr.register(stack)
+corrected = result.corrected
+```
+
+The normal interface has three choices:
+
+```python
+result = ripr.register(
+    stack,
+    recipe="landmarks",  # or "bright_dim" / "moving_cells"
+    channel=1,           # one-based
+    longitudinal=True,
+)
+```
+
+They default to the benchmark-backed Landmarks recipe for phase contrast, channel 1, and
+whole-recording longitudinal processing. Bright/dim selects the accepted fluorescence or
+bioluminescence route. Moving cells is the separate biological-foreground recipe and is used with
+`longitudinal=False`. Java is preferred for execution.
+
+## Expert recording settings
 
 ```python
 import tifffile
@@ -53,7 +83,7 @@ parameters = LogRatioParameters.recommended(
     image_type="phase_contrast",
     motion_type="subpixel_random_walk",
 )
-result = register(stack, parameters, axes="TYX")
+result = register(stack, parameters, axes="TYX")  # axes is optional for a T,Y,X array
 
 tifffile.imwrite("recording_registered.tif", result.corrected)
 print([(t.dx, t.dy, t.theta) for t in result.transforms])  # theta is radians
@@ -77,10 +107,10 @@ on a preset recipe they produce the same transforms bit for bit. They do not tak
 time. Java aligns frame pairs across a thread pool, which is the one place this problem parallelises
 well, and the NumPy engine here runs them one after another.
 
-If a Java runtime and the plugin jar are both present, hand the estimation over:
+Java is used automatically when a Java runtime and the plugin jar are both present:
 
 ```python
-result = register(stack, parameters, axes="TYX", backend="java")
+result = register(stack, parameters, axes="TYX")
 ```
 
 Measured on one 40-frame 448x768 recording, 16 cores, identical settings and identical output:
@@ -90,15 +120,16 @@ Measured on one 40-frame 448x768 recording, 16 cores, identical settings and ide
 | `backend="java"` | 16.6 s |
 | `backend="python"` | over 900 s |
 
-`backend` takes:
+The optional `backend` override takes:
 
-- `"python"` — the NumPy engine, the default, never leaves the process
-- `"java"` — require the plugin engine, and raise if it cannot run
-- `"auto"` — use the plugin engine when it is available, fall back quietly when it is not
+- omitted — prefer Java; warn clearly before falling back to Python
+- `"java"` — require Java and raise if it cannot run
+- `"python"` — deliberately use NumPy and do not warn about Java
+- `"auto"` — prefer Java; warn clearly before falling back to Python
 
-The default stays `"python"` so that installing this package beside a JDK cannot change what an
-existing call returns. To turn the fast path on for a whole pipeline without editing its call sites,
-set `RIPR_BACKEND=auto` in the environment.
+Set `RIPR_BACKEND` to `java`, `auto`, or `python` to choose the policy for a whole process. An explicit
+`java` setting is strict. A fallback warning includes the reason Java could not be used and how to fix
+it; it is never silent.
 
 Only transforms cross the process boundary; warping happens here either way, so the choice changes
 how long a run takes and not what it gives back. Two consequences worth knowing:
@@ -110,8 +141,6 @@ how long a run takes and not what it gives back. Two consequences worth knowing:
   That is exact for a preset recipe and wrong for a customised one, so a recipe that differs from its
   preset in any other field stays on the Python engine. `ripr.registration.java_incompatibilities()`
   lists what is blocking it; `backend="java"` raises rather than silently running something else.
-- `SelectionMode.LONGITUDINAL_ACCURACY` is not covered by the fast path and always runs here.
-
 The backend finds its pieces from the environment: `RIPR_JAVA` or `JAVA_HOME` or `java` on `PATH`
 for the runtime, and `RIPR_JAR` or a `jars/` directory beside the package or `RIPR_FIJI` for the
 plugin. `ripr.java_backend.available()` reports whether it can run at all.
@@ -121,19 +150,21 @@ plugin. `ripr.java_backend.available()` reports whether it can run at all.
 ```python
 from ripr import register_file, register_batch
 
-register_file("recording.ome.tif", "recording_registered.tif", parameters)
-register_batch("input_folder", "output_folder", parameters, recursive=True)
+register_file("recording.ome.tif")
+register_batch("input_folder", "output_folder")
 ```
 
 Or from a shell:
 
 ```powershell
-ripr recording.tif recording_registered.tif `
-  --image-type phase_contrast --motion-type subpixel_random_walk `
-  --fit-rotation --max-rotation-degrees 10
+ripr recording.tif
+
+ripr fluorescence.tif --recipe bright_dim --channel 2
+
+ripr rotating_recording.tif --no-longitudinal --fit-rotation --max-rotation-degrees 10
 
 ripr remounted_recording.tif remounted_registered.tif `
-  --rotation-mode known_events --rotation-events 25,51 `
+  --no-longitudinal --rotation-mode known_events --rotation-events 25,51 `
   --rotation-event-window 3 --max-rotation-degrees 10
 
 ripr input_folder output_folder --recursive

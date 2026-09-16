@@ -1,6 +1,6 @@
 """Gain-invariant, robust registration of microscopy time series."""
 
-__version__ = "0.2.1"
+__version__ = "0.2.2"
 
 from .batch import BatchItem, BatchResult, register_batch
 from .diagnostics import ChannelQuality, WARN_BELOW, correlation, frame_correlation, localisability, rank_channels
@@ -22,7 +22,15 @@ from .core import (
 from .io import read_tiff, register_file, write_tiff
 from .longitudinal import LongitudinalDiagnostics
 from .parameters import LogRatioParameters, RegistrationRecipe, recommendation
-from .registration import AutomaticSelection, LogRatioResult, apply_transforms, estimate, infer_axes, register
+from .registration import (
+    AutomaticSelection,
+    BackendFallbackWarning,
+    LogRatioResult,
+    apply_transforms,
+    estimate,
+    infer_axes,
+    register,
+)
 from .types import (
     Estimator,
     ImageType,
@@ -32,6 +40,7 @@ from .types import (
     PixelSupport,
     Preprocessing,
     Reference,
+    Recipe,
     ReconciliationWeighting,
     RotationEventStatus,
     RotationMode,
@@ -45,6 +54,7 @@ from .types import (
 __all__ = [
     "AlignerOptions",
     "AutomaticSelection",
+    "BackendFallbackWarning",
     "BatchItem",
     "BatchResult",
     "ChannelQuality",
@@ -65,6 +75,7 @@ __all__ = [
     "PixelSupport",
     "Preprocessing",
     "Reference",
+    "Recipe",
     "ReconciliationWeighting",
     "RotationEventStatus",
     "RotationMode",

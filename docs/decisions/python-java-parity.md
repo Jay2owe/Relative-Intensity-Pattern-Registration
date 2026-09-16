@@ -119,10 +119,8 @@ sum -- a sequential recurrence that carries its own rounding along each row -- a
 have been a second implementation that is slower and must then be kept in step forever.
 
 So the second implementation is no longer the one that runs. `SelectionMode.LONGITUDINAL_ACCURACY`
-now resolves to the Java engine by default, not merely under `backend="auto"`, which is the one
-place this package lets the presence of a JDK change an answer. It is deliberate: everywhere else
-the two engines agree to the last bit and the choice is only about speed, so the default may safely
-stay in-process. Here they do not agree, so the default should be the one that is right.
+now resolves to the Java engine by default. It is deliberate: here the engines do not agree, so the
+default must be the reference implementation.
 
 The Python implementation is still there and still reachable with `backend="python"`, which warns
 that it is not the reference. It is also what a recipe the Java runner cannot rebuild falls back to,
@@ -158,12 +156,11 @@ Pixels cross as a headerless binary blob rather than a TIFF: a TIFF round-trip c
 registration, and ImageJ's reader has opinions about what a three-slice 8-bit stack means. Only
 transforms come back; warping stays in Python.
 
-The default backend is `"python"`, so installing the package beside a JDK cannot change what an
-existing call returns — notably `registration.pairs`, which the Java path does not carry back. Set
-`RIPR_BACKEND=auto` to switch a pipeline over without editing call sites.
+The default backend prefers Java. If Java or an exactly matching recipe is unavailable, the package
+emits `BackendFallbackWarning` with the reason before using Python. An explicit `backend="java"`
+request is strict and raises; `backend="python"` deliberately selects the in-process implementation.
 
 The runner rebuilds the recipe from the image type, motion type and selection mode it is given. That
 is exact for a preset and wrong for a customised recipe, so `java_incompatibilities()` refuses any
-recipe differing from its preset in any other field, and `LONGITUDINAL_ACCURACY` never takes this
-path. `backend="java"` raises rather than silently running something else; `backend="auto"` falls
-back to Python.
+recipe differing from its preset in any other field. `backend="java"` raises rather than silently
+running something else; `backend="auto"` warns before falling back to Python.

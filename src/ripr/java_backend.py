@@ -10,9 +10,9 @@ So: when a Java runtime and the plugin jar are both present, hand the estimation
 the cheap array work here. Only the transforms cross the process boundary — applying them is fast
 and there is no reason to pay to move a whole registered stack back.
 
-The backend is optional in every direction. :func:`available` reports whether it can run, and
-``backend="auto"`` falls back to the Python engine rather than failing, so a machine with no Java
-keeps working exactly as before.
+The backend is optional in every direction. :func:`available` reports whether it can run. The public
+API prefers Java by default and emits ``BackendFallbackWarning`` before using Python when Java is
+unavailable. An explicit ``backend="java"`` request fails instead of changing engines.
 
 Locating the pieces, in order:
 

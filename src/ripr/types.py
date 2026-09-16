@@ -88,6 +88,22 @@ class SelectionMode(NamedEnum):
         }[self]
 
 
+class Recipe(NamedEnum):
+    """Simple recording-level choices backed by the accepted benchmark routes."""
+
+    LANDMARKS = "landmarks"
+    BRIGHT_DIM = "bright_dim"
+    MOVING_CELLS = "moving_cells"
+
+    @property
+    def label(self) -> str:
+        return {
+            self.LANDMARKS: "Landmarks (phase contrast / brightfield)",
+            self.BRIGHT_DIM: "Bright/dim references (fluorescence / bioluminescence)",
+            self.MOVING_CELLS: "Moving cells (biological foreground)",
+        }[self]
+
+
 class RotationMode(NamedEnum):
     OFF = "off"
     CONTINUOUS = "continuous"

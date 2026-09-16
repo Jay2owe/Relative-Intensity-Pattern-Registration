@@ -24,7 +24,7 @@ from ripr.registration import (
     java_incompatibilities,
     resolve_backend,
 )
-from ripr.types import ImageType, MotionType
+from ripr.types import ImageType, MotionType, Recipe
 from ripr.parameters import LogRatioParameters
 
 
@@ -129,8 +129,15 @@ def test_preset_recipe_is_reproducible_by_the_java_runner():
     assert java_incompatibilities(parameters) == ()
 
 
+@pytest.mark.parametrize("recipe", [Recipe.LANDMARKS, Recipe.BRIGHT_DIM])
+def test_simple_longitudinal_recipes_preserve_java_preset_parity(recipe):
+    parameters = LogRatioParameters.for_recipe(recipe)
+    assert java_incompatibilities(parameters) == ()
+
+
 def test_customised_recipe_is_refused_by_the_java_runner():
     from dataclasses import replace
+    from ripr import BackendFallbackWarning
 
     parameters = LogRatioParameters.recommended(
         image_type=ImageType.BRIGHTFIELD_DIC, motion_type=MotionType.SUBPIXEL_RANDOM_WALK
@@ -139,7 +146,8 @@ def test_customised_recipe_is_refused_by_the_java_runner():
     differing = java_incompatibilities(tweaked)
     assert any("epsilon" in entry for entry in differing)
     # auto must never silently run a recipe the caller did not ask for.
-    assert resolve_backend("auto", tweaked) == "python"
+    with pytest.warns(BackendFallbackWarning, match="requested settings"):
+        assert resolve_backend("auto", tweaked) == "python"
 
 
 def test_backend_names_are_validated():
@@ -150,11 +158,44 @@ def test_backend_names_are_validated():
         resolve_backend("jvm", parameters)
 
 
-def test_default_backend_is_the_python_engine():
+def test_default_backend_prefers_java():
     from ripr.registration import DEFAULT_BACKEND
 
-    # Installing this package beside a JDK must not change what an existing call returns.
-    assert DEFAULT_BACKEND == "python"
+    assert DEFAULT_BACKEND == "java"
+
+
+@pytest.mark.parametrize("backend", [None, "auto"])
+def test_java_preference_warns_clearly_before_falling_back_to_python(monkeypatch, backend):
+    from ripr import BackendFallbackWarning, java_backend
+    from ripr.registration import resolve_backend
+
+    parameters = LogRatioParameters.recommended(
+        image_type=ImageType.BRIGHTFIELD_DIC,
+        motion_type=MotionType.SUBPIXEL_RANDOM_WALK,
+    )
+    monkeypatch.delenv("RIPR_BACKEND", raising=False)
+    monkeypatch.setattr(java_backend, "available", lambda: False)
+
+    with pytest.warns(BackendFallbackWarning, match="falling back to the Python backend") as raised:
+        assert resolve_backend(backend, parameters) == "python"
+    message = str(raised[0].message)
+    assert "no Java runtime and plugin jar" in message
+    assert "backend='java'" in message
+    assert "backend='python'" in message
+
+
+def test_explicit_java_failure_raises_instead_of_falling_back(monkeypatch):
+    from ripr import java_backend
+    from ripr.registration import resolve_backend
+
+    parameters = LogRatioParameters.recommended(
+        image_type=ImageType.BRIGHTFIELD_DIC,
+        motion_type=MotionType.SUBPIXEL_RANDOM_WALK,
+    )
+    monkeypatch.setattr(java_backend, "available", lambda: False)
+
+    with pytest.raises(java_backend.JavaBackendUnavailable, match="no Java runtime"):
+        resolve_backend("java", parameters)
 
 
 def java_two_axis_information(plane, radius: int = 2) -> np.ndarray:
@@ -245,8 +286,7 @@ def test_asking_for_python_longitudinal_explicitly_says_what_it_is():
     assert "reference" in str(raised[0].message)
 
 
-def test_ordinary_modes_still_default_to_the_python_engine():
-    """The longitudinal exception must not become a general change of default."""
+def test_python_can_still_be_selected_explicitly_for_ordinary_modes():
     parameters = LogRatioParameters.recommended(
         image_type=ImageType.BRIGHTFIELD_DIC, motion_type=MotionType.SUBPIXEL_RANDOM_WALK
     )

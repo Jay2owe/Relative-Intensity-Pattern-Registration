@@ -15,6 +15,7 @@ from ripr import (
     PixelSupport,
     Preprocessing,
     Reference,
+    Recipe,
     RotationMode,
     RobustNorm,
     SelectionMode,
@@ -48,6 +49,36 @@ def manual(**changes):
     )
     values.update(changes)
     return LogRatioParameters.manual(**values)
+
+
+def test_simple_defaults_match_the_accepted_phase_landmarks_recipe():
+    simple = LogRatioParameters.for_recipe()
+    explicit = replace(
+        LogRatioParameters.recommended(
+            image_type=ImageType.PHASE_CONTRAST,
+            motion_type=MotionType.INTERMITTENT_JUMPS,
+            channel=1,
+        ),
+        selection_mode=SelectionMode.LONGITUDINAL_ACCURACY,
+    )
+    assert simple == explicit
+
+
+def test_simple_bright_dim_recipe_keeps_the_benchmark_emission_mapping():
+    parameters = LogRatioParameters.for_recipe(Recipe.BRIGHT_DIM, channel=3)
+    assert parameters.image_type is ImageType.SPARSE_LOW_LIGHT_FLUORESCENCE
+    assert parameters.motion_type is MotionType.INTERMITTENT_JUMPS
+    assert parameters.selection_mode is SelectionMode.LONGITUDINAL_ACCURACY
+    assert parameters.channel == 3
+
+
+def test_simple_moving_cells_recipe_is_not_mislabeled_as_longitudinal():
+    with pytest.raises(ValueError, match="not a longitudinal reference route"):
+        LogRatioParameters.for_recipe(Recipe.MOVING_CELLS)
+    parameters = LogRatioParameters.for_recipe(
+        Recipe.MOVING_CELLS, longitudinal=False
+    )
+    assert parameters.selection_mode is SelectionMode.RECOMMENDED
 
 
 def test_registration_does_not_mutate_input():
@@ -261,6 +292,13 @@ def test_cli_parses_one_based_known_event_controls():
     assert parsed.rotation_mode == "known_events"
     assert parsed.rotation_events == "25,51"
     assert parsed.rotation_event_window == 4
+
+
+def test_cli_defaults_to_landmarks_channel_one_and_longitudinal():
+    parsed = _parser().parse_args(["input.tif"])
+    assert parsed.recipe == Recipe.LANDMARKS.value
+    assert parsed.channel == 1
+    assert parsed.longitudinal is True
 
 
 def test_tiff_round_trip_and_batch_failure_isolation(tmp_path):

@@ -34,6 +34,7 @@ from .types import (
     PixelSelectionStrategy,
     Preprocessing,
     Reference,
+    Recipe,
     RotationMode,
     SelectionMode,
     Transform,
@@ -536,19 +537,53 @@ def _java_registration_result(frames: np.ndarray,
     )
 
 
-#: Default engine when a caller does not name one. It is the Python engine, so installing this
-#: package next to a JDK cannot change what an existing call returns -- notably ``registration.pairs``,
-#: which the Java path does not carry back. Set ``RIPR_BACKEND=auto`` to make the fast path the
-#: default for a whole pipeline without editing its call sites.
-DEFAULT_BACKEND = "python"
+class BackendFallbackWarning(RuntimeWarning):
+    """Java could not run, so registration is using the slower Python engine."""
+
+
+#: Prefer the reference Java engine when a caller does not name one. A default request may fall
+#: back to Python, but only after emitting :class:`BackendFallbackWarning`. An explicit
+#: ``backend="java"`` remains strict and raises instead.
+DEFAULT_BACKEND = "java"
+
+
+def _warn_python_fallback(reason: str) -> None:
+    import warnings
+
+    warnings.warn(
+        "Java backend could not be used; falling back to the Python backend, which can be much "
+        f"slower. Reason: {reason}. Install/configure Java, use backend='java' to make this an "
+        "error, or use backend='python' to choose Python explicitly and silence this warning.",
+        BackendFallbackWarning,
+        stacklevel=4,
+    )
+
+
+def _parameters_from_simple_choices(
+    parameters: LogRatioParameters | None,
+    recipe: Recipe | str,
+    channel: int,
+    longitudinal: bool,
+) -> LogRatioParameters:
+    if parameters is not None:
+        if (Recipe.parse(recipe) is not Recipe.LANDMARKS
+                or channel != 1 or longitudinal is not True):
+            raise ValueError(
+                "parameters cannot be combined with recipe, channel, or longitudinal shortcuts"
+            )
+        return parameters
+    return LogRatioParameters.for_recipe(
+        recipe, channel=channel, longitudinal=longitudinal
+    )
 
 
 def resolve_backend(backend: str | None, parameters: LogRatioParameters) -> str:
     """Decide which engine runs, and say why when the fast one is declined.
 
-    ``"auto"`` prefers Java and silently falls back; ``"java"`` is a request to be told when the
-    fast path cannot be used rather than to quietly get the slow one; ``"python"`` never leaves
-    this process. ``None`` consults ``RIPR_BACKEND`` and then :data:`DEFAULT_BACKEND`.
+    Java is the default. If that implicit request cannot run, Python is used only after a visible
+    :class:`BackendFallbackWarning`. Explicit ``"java"`` is strict and raises instead; ``"auto"``
+    prefers Java and warns before falling back; ``"python"`` deliberately stays in this process.
+    ``None`` consults ``RIPR_BACKEND`` and then :data:`DEFAULT_BACKEND`.
 
     :data:`SelectionMode.LONGITUDINAL_ACCURACY` is the one exception to the default, and it is a
     deliberate one. Every other mode is the same algorithm in two languages, agreeing to the last
@@ -565,48 +600,41 @@ def resolve_backend(backend: str | None, parameters: LogRatioParameters) -> str:
 
     asked = backend if backend is not None else os.environ.get("RIPR_BACKEND")
     choice = (asked or DEFAULT_BACKEND).lower()
+    strict_java = asked is not None and choice == "java"
     if choice not in {"auto", "java", "python"}:
         raise ValueError(f"backend must be 'auto', 'java' or 'python', not {backend!r}")
 
     longitudinal = parameters.selection_mode is SelectionMode.LONGITUDINAL_ACCURACY
     if choice == "python":
-        if longitudinal and asked is None:
-            # Nobody asked for Python; the default did. For this mode the default is not the
-            # reference implementation, so prefer the one that is.
-            choice = "auto"
-        else:
-            if longitudinal:
-                warnings.warn(
-                    "SelectionMode.LONGITUDINAL_ACCURACY on the Python engine is a different "
-                    "implementation from ripr.core.LongitudinalRegistration, which is the "
-                    "reference; they differ by up to 0.43 px on real recordings. Use "
-                    "backend='java' for the reference result.",
-                    RuntimeWarning,
-                    stacklevel=3,
-                )
-            return "python"
+        if longitudinal:
+            warnings.warn(
+                "SelectionMode.LONGITUDINAL_ACCURACY on the Python engine is a different "
+                "implementation from ripr.core.LongitudinalRegistration, which is the "
+                "reference; they differ by up to 0.43 px on real recordings. Use "
+                "backend='java' for the reference result.",
+                RuntimeWarning,
+                stacklevel=3,
+            )
+        return "python"
 
     differing = java_incompatibilities(parameters)
     if differing:
-        if choice == "java":
+        reason = ("the requested settings are not supported exactly by the Java runner: "
+                  + "; ".join(differing))
+        if strict_java:
             raise java_backend.JavaBackendUnavailable(
                 "these settings differ from the preset the Java runner would rebuild, so it would "
                 "run a different recipe: " + "; ".join(differing)
             )
+        _warn_python_fallback(reason)
         return "python"
     if not java_backend.available():
-        if choice == "java":
+        reason = "no Java runtime and plugin jar were found; set RIPR_JAVA and RIPR_JAR"
+        if strict_java:
             raise java_backend.JavaBackendUnavailable(
-                "no Java runtime and plugin jar were found; set RIPR_JAVA and RIPR_JAR"
+                reason
             )
-        if longitudinal:
-            warnings.warn(
-                "SelectionMode.LONGITUDINAL_ACCURACY is defined by the Java engine, which was not "
-                "found, so a different implementation ran instead; they differ by up to 0.43 px on "
-                "real recordings. Set RIPR_JAVA and RIPR_JAR, or install a JDK beside Fiji.",
-                RuntimeWarning,
-                stacklevel=3,
-            )
+        _warn_python_fallback(reason)
         return "python"
     return "java"
 
@@ -618,17 +646,22 @@ def estimate(
     axes: str | None = None,
     progress: Callable[[int, int], None] | None = None,
     backend: str | None = None,
+    recipe: Recipe | str = Recipe.LANDMARKS,
+    channel: int = 1,
+    longitudinal: bool = True,
 ) -> RegistrationResult:
     """Estimate movement without allocating a corrected stack.
 
-    ``backend`` picks the engine: ``"python"`` (the default) for the NumPy one in this package,
-    ``"java"`` to require the plugin's engine and be told if it cannot run, ``"auto"`` to use it
-    when available and fall back quietly when not. Both produce the same transforms; the Java one
-    aligns frame pairs in parallel and is substantially faster. ``RIPR_BACKEND`` sets the default.
+    Only ``image`` is required. The default is the benchmark-backed Landmarks recipe on channel 1
+    with longitudinal processing enabled. Java is the default engine because it is substantially faster.
+    ``backend="java"`` requires it, ``backend="auto"`` warns before falling back to Python, and
+    ``backend="python"`` deliberately uses NumPy. ``RIPR_BACKEND`` can set this process-wide.
     """
     source = np.asarray(image)
     normalized_axes = infer_axes(source, axes)
-    requested = parameters or LogRatioParameters()
+    requested = _parameters_from_simple_choices(
+        parameters, recipe, channel, longitudinal
+    )
     if requested.selection_mode is SelectionMode.LONGITUDINAL_ACCURACY:
         if resolve_backend(backend, requested) == "java":
             return _java_registration_result(
@@ -651,8 +684,15 @@ def register(
     axes: str | None = None,
     progress: Callable[[int, int], None] | None = None,
     backend: str | None = None,
+    recipe: Recipe | str = Recipe.LANDMARKS,
+    channel: int = 1,
+    longitudinal: bool = True,
 ) -> LogRatioResult:
     """Register an array without modifying it and return corrected pixels plus diagnostics.
+
+    Only ``image`` is required. The normal controls are ``recipe``, ``channel`` and
+    ``longitudinal``; they default to Landmarks, channel 1 and whole-recording longitudinal
+    processing. Pass :class:`LogRatioParameters` only for expert settings.
 
     ``backend`` picks the estimation engine; see :func:`estimate`. Warping the result is array work
     and always happens here, so the choice affects how long the run takes and not what it returns.
@@ -665,7 +705,9 @@ def register(
     """
     source = np.asarray(image)
     normalized_axes = infer_axes(source, axes)
-    requested = parameters or LogRatioParameters()
+    requested = _parameters_from_simple_choices(
+        parameters, recipe, channel, longitudinal
+    )
     if requested.selection_mode is SelectionMode.LONGITUDINAL_ACCURACY:
         if resolve_backend(backend, requested) == "java":
             # The Java engine owns this mode. It reports per-frame movement but not the trajectory

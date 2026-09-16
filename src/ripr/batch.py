@@ -11,6 +11,7 @@ from typing import Callable
 
 from .io import register_file
 from .parameters import LogRatioParameters
+from .types import Recipe
 
 
 @dataclass(frozen=True)
@@ -65,6 +66,10 @@ def register_batch(
     recursive: bool = False,
     overwrite: bool = False,
     progress: Callable[[int, int, Path], None] | None = None,
+    backend: str | None = None,
+    recipe: Recipe | str = Recipe.LANDMARKS,
+    channel: int = 1,
+    longitudinal: bool = True,
 ) -> BatchResult:
     """Register each TIFF independently and continue after damaged/incompatible files."""
     input_root, output_root = Path(input_directory), Path(output_directory)
@@ -81,7 +86,10 @@ def register_batch(
             items.append(BatchItem(source, target, "skipped", 0.0))
             continue
         try:
-            result = register_file(source, target, parameters)
+            result = register_file(
+                source, target, parameters, backend=backend, recipe=recipe,
+                channel=channel, longitudinal=longitudinal,
+            )
             items.append(
                 BatchItem(
                     source,
