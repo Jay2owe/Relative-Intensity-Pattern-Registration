@@ -89,7 +89,7 @@ class SelectionMode(NamedEnum):
 
 
 class Recipe(NamedEnum):
-    """Simple recording-level choices backed by the accepted benchmark routes."""
+    """Simple recording-level category choices backed by the accepted benchmark routes."""
 
     LANDMARKS = "landmarks"
     BRIGHT_DIM = "bright_dim"

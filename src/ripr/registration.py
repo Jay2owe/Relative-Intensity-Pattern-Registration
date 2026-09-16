@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass, replace
+from dataclasses import dataclass, fields, replace
 import itertools
 import math
+from pathlib import Path
 from typing import Callable, Sequence
 
 import numpy as np
@@ -564,17 +565,32 @@ def _parameters_from_simple_choices(
     recipe: Recipe | str,
     channel: int,
     longitudinal: bool,
+    advanced: dict[str, object] | None = None,
 ) -> LogRatioParameters:
+    advanced = dict(advanced or {})
+    valid_fields = {field.name for field in fields(LogRatioParameters)}
+    unknown = sorted(set(advanced) - valid_fields)
+    if unknown:
+        names = ", ".join(unknown)
+        raise ValueError(f"unknown advanced setting(s): {names}")
     if parameters is not None:
         if (Recipe.parse(recipe) is not Recipe.LANDMARKS
                 or channel != 1 or longitudinal is not True):
             raise ValueError(
                 "parameters cannot be combined with recipe, channel, or longitudinal shortcuts"
             )
-        return parameters
-    return LogRatioParameters.for_recipe(
+        return replace(parameters, **advanced) if advanced else parameters
+    base = LogRatioParameters.for_recipe(
         recipe, channel=channel, longitudinal=longitudinal
     )
+    if not advanced:
+        return base
+    # A non-longitudinal custom call should use exactly the fields the caller supplied. The
+    # simple route otherwise starts in Automatic mode, which is allowed to replace estimator,
+    # filtering and pixel-support choices after it inspects the recording.
+    if not longitudinal and "selection_mode" not in advanced:
+        base = replace(base, selection_mode=SelectionMode.MANUAL)
+    return replace(base, **advanced)
 
 
 def resolve_backend(backend: str | None, parameters: LogRatioParameters) -> str:
@@ -649,6 +665,7 @@ def estimate(
     recipe: Recipe | str = Recipe.LANDMARKS,
     channel: int = 1,
     longitudinal: bool = True,
+    **advanced: object,
 ) -> RegistrationResult:
     """Estimate movement without allocating a corrected stack.
 
@@ -656,11 +673,14 @@ def estimate(
     with longitudinal processing enabled. Java is the default engine because it is substantially faster.
     ``backend="java"`` requires it, ``backend="auto"`` warns before falling back to Python, and
     ``backend="python"`` deliberately uses NumPy. ``RIPR_BACKEND`` can set this process-wide.
+    Any :class:`LogRatioParameters` field can also be supplied directly as a keyword (for example
+    ``max_shift=20`` or ``interpolation="bilinear"``); those values replace the recipe defaults.
+    Unknown advanced names raise a clear error.
     """
     source = np.asarray(image)
     normalized_axes = infer_axes(source, axes)
     requested = _parameters_from_simple_choices(
-        parameters, recipe, channel, longitudinal
+        parameters, recipe, channel, longitudinal, advanced
     )
     if requested.selection_mode is SelectionMode.LONGITUDINAL_ACCURACY:
         if resolve_backend(backend, requested) == "java":
@@ -678,8 +698,8 @@ def estimate(
 
 
 def register(
-    image: np.ndarray,
-    parameters: LogRatioParameters | None = None,
+    image: np.ndarray | str | Path,
+    parameters: LogRatioParameters | str | Path | None = None,
     *,
     axes: str | None = None,
     progress: Callable[[int, int], None] | None = None,
@@ -687,15 +707,26 @@ def register(
     recipe: Recipe | str = Recipe.LANDMARKS,
     channel: int = 1,
     longitudinal: bool = True,
+    output_path: str | Path | None = None,
+    **advanced: object,
 ) -> LogRatioResult:
-    """Register an array without modifying it and return corrected pixels plus diagnostics.
+    """Register an array or TIFF path and return corrected pixels plus diagnostics.
 
     Only ``image`` is required. The normal controls are ``recipe``, ``channel`` and
     ``longitudinal``; they default to Landmarks, channel 1 and whole-recording longitudinal
-    processing. Pass :class:`LogRatioParameters` only for expert settings.
+    processing. Pass :class:`LogRatioParameters` only when you want to reuse a bundle; expert
+    fields can also be given directly as keyword arguments.
 
     ``backend`` picks the estimation engine; see :func:`estimate`. Warping the result is array work
     and always happens here, so the choice affects how long the run takes and not what it returns.
+    For a custom non-longitudinal call, advanced fields are honoured as written and selection is
+    manual unless ``selection_mode`` is supplied explicitly.
+
+    ``image`` may also be a TIFF/OME-TIFF path. In that form ``output_path`` chooses where the
+    corrected TIFF is written (or defaults beside the input), so file and array calls share one
+    entry point. For path input, a second ``str``/ :class:`~pathlib.Path` positional argument is
+    accepted as ``output_path``; the keyword form is clearer. ``register_file`` remains available
+    as a compatibility alias for path callers.
 
     The exception is :data:`SelectionMode.LONGITUDINAL_ACCURACY`, which the Java engine defines and
     therefore runs by default when it can be found. It reports movement per frame but not the
@@ -703,10 +734,32 @@ def register(
     is ``None`` on that path. Pass ``backend="python"`` when those diagnostics are what you need,
     and note that the result is then the implementation that is not the reference.
     """
+    if isinstance(image, (str, Path)):
+        if isinstance(parameters, (str, Path)):
+            if output_path is not None:
+                raise TypeError("output_path was supplied both positionally and by keyword")
+            output_path = parameters
+            parameters = None
+        from .io import register_file
+
+        return register_file(
+            image,
+            output_path=output_path,
+            parameters=parameters,
+            backend=backend,
+            recipe=recipe,
+            channel=channel,
+            longitudinal=longitudinal,
+            **advanced,
+        )
+    if parameters is not None and not isinstance(parameters, LogRatioParameters):
+        raise TypeError("parameters must be a LogRatioParameters object for array input")
+    if output_path is not None:
+        raise ValueError("output_path is only supported when image is a TIFF path")
     source = np.asarray(image)
     normalized_axes = infer_axes(source, axes)
     requested = _parameters_from_simple_choices(
-        parameters, recipe, channel, longitudinal
+        parameters, recipe, channel, longitudinal, advanced
     )
     if requested.selection_mode is SelectionMode.LONGITUDINAL_ACCURACY:
         if resolve_backend(backend, requested) == "java":

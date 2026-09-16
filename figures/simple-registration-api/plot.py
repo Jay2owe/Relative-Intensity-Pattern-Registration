@@ -15,13 +15,13 @@ from src_code_figure import Panel, line_table, save  # noqa: E402
 SMALLEST = '''\
 import ripr
 
-result = ripr.register_file("recording.tif")
+result = ripr.register("recording.tif")
 '''
 
 SWAPS = '''\
-result = ripr.register_file(
+result = ripr.register(
     "recording.tif",
-    recipe="bright_dim",  # landmarks | bright_dim | moving_cells
+    recipe="bright_dim",  # phase | emission | moving_cells category
     channel=2,             # one-based channel number
     longitudinal=True,     # full-recording evidence; False = automatic
 )

@@ -192,10 +192,9 @@ def recommendation(image_type: ImageType | str, motion_type: MotionType | str) -
 class LogRatioParameters:
     """Inputs shared by array, TIFF, command-line, and batch entry points.
 
-    Most callers do not need this class: :func:`ripr.register` and
-    :func:`ripr.register_file` expose recipe, channel and longitudinal mode directly. Use
-    :meth:`for_recipe` to build the same simple choices explicitly. The remaining fields are expert
-    controls.
+    Most callers do not need this class: :func:`ripr.register` exposes recipe, channel and
+    longitudinal mode directly (and accepts TIFF paths as well as arrays). Use :meth:`for_recipe`
+    to build the same simple choices explicitly. The remaining fields are expert controls.
 
     ``channel``, ``slice``, and ``reference_frame`` are one-based, matching ImageJ. A
     ``slice`` of zero means maximum-project Z before estimating movement.
@@ -341,12 +340,13 @@ class LogRatioParameters:
         longitudinal: bool = True,
         **values,
     ) -> "LogRatioParameters":
-        """Build the benchmark-backed recipe using only the three normal user choices.
+        """Build the benchmark-backed starting category using the three normal user choices.
 
         Landmarks maps to phase contrast; Bright/dim maps to sparse/low-light fluorescence or
         bioluminescence. Both use intermittent-jump protection and default to the whole-recording
-        longitudinal route. Moving cells is the separate biological-foreground Recommended recipe
-        and therefore requires ``longitudinal=False``.
+        longitudinal route. Moving cells is the separate biological-foreground Recommended route
+        and therefore requires ``longitudinal=False``. In non-longitudinal automatic mode, the
+        selector resolves this category to a concrete recipe ID in the result provenance.
         """
         chosen = Recipe.parse(recipe)
         if chosen is Recipe.LANDMARKS:

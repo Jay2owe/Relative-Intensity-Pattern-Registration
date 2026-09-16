@@ -70,8 +70,9 @@ def register_batch(
     recipe: Recipe | str = Recipe.LANDMARKS,
     channel: int = 1,
     longitudinal: bool = True,
+    **advanced: object,
 ) -> BatchResult:
-    """Register each TIFF independently and continue after damaged/incompatible files."""
+    """Register each TIFF independently; expert parameter fields are accepted as keywords."""
     input_root, output_root = Path(input_directory), Path(output_directory)
     files = discover(input_root, recursive)
     items: list[BatchItem] = []
@@ -88,7 +89,7 @@ def register_batch(
         try:
             result = register_file(
                 source, target, parameters, backend=backend, recipe=recipe,
-                channel=channel, longitudinal=longitudinal,
+                channel=channel, longitudinal=longitudinal, **advanced,
             )
             items.append(
                 BatchItem(

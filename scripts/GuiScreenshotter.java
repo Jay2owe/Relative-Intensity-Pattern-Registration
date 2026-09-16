@@ -45,24 +45,20 @@ public final class GuiScreenshotter {
         JPanel body = new JPanel(new GridBagLayout());
         body.setBorder(new EmptyBorder(12, 14, 8, 14));
         row = 0;
-        message(body, "Choose the closest image and movement types. The plugin will load the");
-        message(body, "lowest-error log-ratio settings measured for that combination.");
-        message(body, "Automatic filtering can then choose safe add-ons from the pixels in this stack.");
-        choice(body, "Image type", "Phase contrast", "Brightfield / differential interference contrast",
-                "Dense fluorescence", "Sparse / low-light fluorescence", "Fiducial / nominally static reference");
-        choice(body, "Motion type", "Subpixel random walk", "Curved / oscillating drift",
-                "Steady directional drift", "Intermittent jumps");
-        check(body, "Use recommended parameters", true);
-        check(body, "Choose preprocessing and pixel removal automatically", true);
-        check(body, "Review and tune advanced parameters", false);
-        JPanel sweep = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
-        sweep.add(new JButton("Sweep parameters on this stack..."));
-        add(body, sweep, 0, 2);
-        section(body, "Input and output");
+        message(body, "Choose a recipe, the channel used to estimate movement, and whether to");
+        message(body, "use the whole recording. Fitting, rotation, and output controls are under");
+        message(body, "Advanced settings.");
+        choice(body, "Recipe", "Landmarks (phase contrast / brightfield)",
+                "Bright/dim references (fluorescence / bioluminescence)",
+                "Moving cells (biological foreground)");
         choice(body, "Channel used to estimate movement", "Channel 1", "Channel 2", "Channel 3");
-        field(body, "Z slice (0 = maximum projection)", "0");
-        choice(body, "Interpolation", "NONE", "BILINEAR", "BICUBIC");
-        check(body, "Crop to common valid field", true);
+        check(body, "Use longitudinal mode (whole recording)", true);
+        check(body, "Show advanced settings before running", false);
+        message(body, "Longitudinal mode uses the fixed whole-recording route. Moving cells uses");
+        message(body, "a benchmark-backed frame-to-frame recipe and therefore keeps longitudinal mode off.");
+        JPanel sweep = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        sweep.add(new JButton("Advanced parameter sweep..."));
+        add(body, sweep, 0, 2);
 
         JPanel buttons = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         buttons.add(new JButton("Cancel"));
@@ -148,18 +144,14 @@ public final class GuiScreenshotter {
         check(body, "Include subfolders", true);
         check(body, "Overwrite existing corrected stacks", false);
         section(body, "Shared registration setup");
-        choice(body, "Image type", "Phase contrast", "Brightfield / differential interference contrast",
-                "Dense fluorescence", "Sparse / low-light fluorescence", "Fiducial / nominally static reference");
-        choice(body, "Motion type", "Subpixel random walk", "Curved / oscillating drift",
-                "Steady directional drift", "Intermittent jumps");
-        check(body, "Use recommended parameters", true);
-        check(body, "Choose preprocessing and pixel removal separately for each stack", true);
-        check(body, "Review and tune advanced parameters", false);
+        choice(body, "Recipe", "Landmarks (phase contrast / brightfield)",
+                "Bright/dim references (fluorescence / bioluminescence)",
+                "Moving cells (biological foreground)");
         field(body, "Channel used to estimate movement", "1");
-        field(body, "Estimation scale (0-1; output stays full size)", "1.0");
-        field(body, "Z slice (0 = maximum projection)", "0");
-        choice(body, "Interpolation", "NONE", "BILINEAR", "BICUBIC");
-        check(body, "Crop to common valid field", true);
+        check(body, "Use longitudinal mode (whole recording)", true);
+        check(body, "Show advanced settings before starting", false);
+        message(body, "Longitudinal mode uses the fixed whole-recording route. Moving cells uses");
+        message(body, "a benchmark-backed frame-to-frame recipe and therefore keeps longitudinal mode off.");
         JPanel buttons = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         buttons.add(new JButton("Cancel"));
         JButton start = new JButton("Start batch");

@@ -37,7 +37,6 @@ import ripr.core.Warper;
 import java.awt.GraphicsEnvironment;
 import java.awt.Choice;
 import java.awt.Checkbox;
-import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Locale;
@@ -50,6 +49,63 @@ import javax.swing.Timer;
 /** Fiji menu, macro and headless entry point for the log-ratio engine. */
 public final class RelativeIntensityPatternRegistrationPlugin implements PlugIn {
     public static final String COMMAND = "Relative-Intensity Pattern Registration...";
+
+    /** The three choices exposed by the normal dialog; detailed fitting controls stay advanced. */
+    private enum SimpleRecipe {
+        LANDMARKS("Landmarks (phase contrast / brightfield)", ImageType.PHASE_CONTRAST,
+                MotionType.INTERMITTENT_JUMPS),
+        BRIGHT_DIM("Bright/dim references (fluorescence / bioluminescence)",
+                ImageType.SPARSE_LOW_LIGHT_FLUORESCENCE, MotionType.INTERMITTENT_JUMPS),
+        MOVING_CELLS("Moving cells (biological foreground)", ImageType.DENSE_FLUORESCENCE,
+                MotionType.INTERMITTENT_JUMPS);
+
+        final String label;
+        final ImageType imageType;
+        final MotionType motionType;
+
+        SimpleRecipe(String label, ImageType imageType, MotionType motionType) {
+            this.label = label;
+            this.imageType = imageType;
+            this.motionType = motionType;
+        }
+    }
+
+    static String[] simpleRecipeLabels() {
+        SimpleRecipe[] values = SimpleRecipe.values();
+        String[] labels = new String[values.length];
+        for (int i = 0; i < values.length; i++) labels[i] = values[i].label;
+        return labels;
+    }
+
+    /** Build the benchmark-backed parameters represented by the small dialog. */
+    static RelativeIntensityPatternParameters simpleParameters(int recipeIndex, int channel,
+                                                               boolean longitudinal) {
+        if (recipeIndex < 0 || recipeIndex >= SimpleRecipe.values().length) {
+            throw new IllegalArgumentException("unknown registration recipe");
+        }
+        SimpleRecipe recipe = SimpleRecipe.values()[recipeIndex];
+        if (recipe == SimpleRecipe.MOVING_CELLS && longitudinal) {
+            throw new IllegalArgumentException("Moving cells uses a benchmark-backed frame-to-frame recipe; "
+                    + "turn off longitudinal mode");
+        }
+        SelectionMode mode = longitudinal ? SelectionMode.LONGITUDINAL_ACCURACY
+                : recipe == SimpleRecipe.MOVING_CELLS ? SelectionMode.RECOMMENDED
+                : SelectionMode.AUTOMATIC;
+        return RelativeIntensityPatternParameters.builder()
+                .recommendation(recipe.imageType, recipe.motionType)
+                .selectionMode(mode).channel(channel).slice(0).build();
+    }
+
+    static int simpleRecipeIndex(RelativeIntensityPatternParameters parameters) {
+        if (parameters == null) return SimpleRecipe.LANDMARKS.ordinal();
+        if (parameters.imageType == ImageType.SPARSE_LOW_LIGHT_FLUORESCENCE) {
+            return SimpleRecipe.BRIGHT_DIM.ordinal();
+        }
+        if (parameters.imageType == ImageType.DENSE_FLUORESCENCE) {
+            return SimpleRecipe.MOVING_CELLS.ordinal();
+        }
+        return SimpleRecipe.LANDMARKS.ordinal();
+    }
 
     @Override
     public void run(String arg) {
@@ -160,23 +216,33 @@ public final class RelativeIntensityPatternRegistrationPlugin implements PlugIn 
     }
 
     private static RelativeIntensityPatternParameters dialog(ImagePlus image, RelativeIntensityPatternParameters loaded) {
-        ImageType defaultImage = loaded == null ? ImageType.PHASE_CONTRAST : loaded.imageType;
-        MotionType defaultMotion = loaded == null ? MotionType.SUBPIXEL_RANDOM_WALK : loaded.motionType;
-        SelectionMode defaultMode = loaded == null ? SelectionMode.AUTOMATIC : loaded.selectionMode;
         final RelativeIntensityPatternParameters[] swept = {loaded};
         GenericDialog dialog = new GenericDialog("Relative-Intensity Pattern Registration");
-        dialog.addMessage("Choose the closest image and movement types, then choose where the\n"
-                + "settings come from. Automatic uses the installed, validated fixed recipe for\n"
-                + "the chosen image type. It does not inspect the recording to replace that recipe.\n"
-                + "Longitudinal maximum accuracy then uses the complete selected channel to resist\n"
-                + "light pulses, near-dark frames and isolated stage jumps.\n"
-                + "Image-and-motion preset loads the older measured recipe for both chosen types.\n"
-                + "Manual uses exactly the values in the settings window.");
-        dialog.addChoice("Image type", labels(ImageType.values()), defaultImage.label());
-        dialog.addChoice("Motion type", labels(MotionType.values()), defaultMotion.label());
-        dialog.addChoice("Settings source", labels(SelectionMode.values()), defaultMode.label());
-        dialog.addCheckbox("Review and edit all settings before running", false);
-        dialog.addButton("Sweep parameters on this stack...", new ActionListener() {
+        int defaultRecipe = simpleRecipeIndex(loaded);
+        int defaultChannel = loaded == null ? Math.max(1, Math.min(image.getNChannels(), image.getC()))
+                : Math.min(image.getNChannels(), loaded.channel);
+        boolean defaultLongitudinal = loaded == null
+                ? true : loaded.selectionMode == SelectionMode.LONGITUDINAL_ACCURACY;
+        dialog.addMessage("Choose a recipe, the channel used to estimate movement, and whether to\n"
+                + "use the whole recording. Fitting, rotation, and output controls are under\n"
+                + "Advanced settings.");
+        String[] recipeLabels = simpleRecipeLabels();
+        dialog.addChoice("Recipe", recipeLabels, recipeLabels[defaultRecipe]);
+        String[] channelNames = channelLabels(image);
+        dialog.addChoice("Channel used to estimate movement", channelNames,
+                channelNames[defaultChannel - 1]);
+        dialog.addCheckbox("Use longitudinal mode (whole recording)", defaultLongitudinal);
+        Choice recipeChoice = (Choice) dialog.getChoices().get(0);
+        Checkbox longitudinalBox = (Checkbox) dialog.getCheckboxes().get(0);
+        recipeChoice.addItemListener(event -> {
+            if (recipeChoice.getSelectedIndex() == SimpleRecipe.MOVING_CELLS.ordinal()) {
+                longitudinalBox.setState(false);
+            }
+        });
+        dialog.addCheckbox("Show advanced settings before running", false);
+        dialog.addMessage("Longitudinal mode uses the fixed whole-recording route. Moving cells\n"
+                + "uses a benchmark-backed frame-to-frame recipe and therefore keeps longitudinal mode off.");
+        dialog.addButton("Advanced parameter sweep...", new ActionListener() {
             @Override public void actionPerformed(ActionEvent event) {
                 try {
                     RelativeIntensityPatternParameters current = readMainControls(dialog, swept[0]);
@@ -200,24 +266,6 @@ public final class RelativeIntensityPatternRegistrationPlugin implements PlugIn 
                 }
             }
         });
-        dialog.addMessage("Input and output");
-        // The channel the user is already looking at. Ranking every channel first cost a full
-        // read of every plane of every channel before the dialog could even appear.
-        int channel = loaded == null ? Math.max(1, Math.min(image.getNChannels(), image.getC()))
-                : Math.min(image.getNChannels(), loaded.channel);
-        String[] channelNames = channelLabels(image);
-        dialog.addChoice("Channel used to estimate movement", channelNames,
-                channelNames[channel - 1]);
-        dialog.addNumericField("Z slice (0 = maximum projection)", loaded == null ? 0 : loaded.slice, 0);
-        dialog.addChoice("Rotation handling", labels(RotationMode.values()),
-                loaded == null ? RotationMode.OFF.label() : loaded.rotationMode.label());
-        dialog.addStringField("First frames after remounting (1-based)",
-                loaded == null ? "" : join(loaded.rotationEventFrames()), 18);
-        dialog.addNumericField("Frames used on each side of an event",
-                loaded == null ? 3 : loaded.rotationEventWindow, 0);
-        dialog.addMessage("Known remount frames estimate one angle from nearby frames at each listed\n"
-                + "boundary, hold it until the next event, and fit translation throughout. The\n"
-                + "original image is resampled once after rotation and translation are composed.");
         dialog.setOKLabel("Register");
         dialog.showDialog();
         if (dialog.wasCanceled()) return null;
@@ -225,7 +273,7 @@ public final class RelativeIntensityPatternRegistrationPlugin implements PlugIn 
         RelativeIntensityPatternParameters initial = readMainControls(dialog, swept[0]);
         if (initial == null) return null;
         Vector checkboxes = dialog.getCheckboxes();
-        boolean review = ((Checkbox) checkboxes.get(0)).getState();
+        boolean review = ((Checkbox) checkboxes.get(1)).getState();
         String automaticNote = null;
         if (initial.selectionMode == SelectionMode.AUTOMATIC) {
             AutomaticRegistrationSelector.Result automatic = resolveAutomatic(image, initial);
@@ -250,47 +298,27 @@ public final class RelativeIntensityPatternRegistrationPlugin implements PlugIn 
     private static RelativeIntensityPatternParameters readMainControls(GenericDialog dialog,
                                                         RelativeIntensityPatternParameters swept) {
         Vector choices = dialog.getChoices();
-        Vector numbers = dialog.getNumericFields();
-        ImageType imageType = ImageType.values()[((Choice) choices.get(0)).getSelectedIndex()];
-        MotionType motionType = MotionType.values()[((Choice) choices.get(1)).getSelectedIndex()];
-        SelectionMode mode = SelectionMode.values()[((Choice) choices.get(2)).getSelectedIndex()];
-        int channel = ((Choice) choices.get(3)).getSelectedIndex() + 1;
-        int slice = parseInteger((TextField) numbers.get(0), "slice");
-        RotationMode rotationMode = RotationMode.values()[
-                ((Choice) choices.get(4)).getSelectedIndex()];
-        Vector strings = dialog.getStringFields();
-        int[] rotationEvents = parseIntegerList(
-                ((TextField) strings.get(0)).getText(), "rotation events");
-        int rotationEventWindow = parseInteger(
-                (TextField) numbers.get(1), "rotation event window");
-        RelativeIntensityPatternParameters.Builder builder;
-        if (mode == SelectionMode.MANUAL && swept != null) builder = swept.toBuilder();
-        else builder = RelativeIntensityPatternParameters.builder().recommendation(imageType, motionType);
-        builder.imageType(imageType).motionType(motionType).selectionMode(mode);
-        return builder.channel(channel).slice(slice).rotationMode(rotationMode)
-                .rotationEventFrames(rotationMode == RotationMode.KNOWN_EVENTS
-                        ? rotationEvents : new int[0])
-                .rotationEventWindow(rotationEventWindow).build();
+        Vector checkboxes = dialog.getCheckboxes();
+        int recipeIndex = ((Choice) choices.get(0)).getSelectedIndex();
+        int channel = ((Choice) choices.get(1)).getSelectedIndex() + 1;
+        boolean longitudinal = ((Checkbox) checkboxes.get(0)).getState();
+        SimpleRecipe recipe = SimpleRecipe.values()[recipeIndex];
+        // Keep a sweep's explicit values when the user leaves its recipe and mode unchanged.
+        if (!longitudinal && swept != null && swept.imageType == recipe.imageType
+                && swept.motionType == recipe.motionType
+                && swept.selectionMode != SelectionMode.LONGITUDINAL_ACCURACY) {
+            return swept.toBuilder().channel(channel).selectionMode(SelectionMode.MANUAL).build();
+        }
+        return simpleParameters(recipeIndex, channel, longitudinal);
     }
 
     private static void loadMainControls(GenericDialog dialog, RelativeIntensityPatternParameters parameters) {
         Vector choices = dialog.getChoices();
-        Vector numbers = dialog.getNumericFields();
-        ((Choice) choices.get(0)).select(parameters.imageType.ordinal());
-        ((Choice) choices.get(1)).select(parameters.motionType.ordinal());
-        // Loading concrete values makes this a manual run; the selector must not overwrite them.
-        ((Choice) choices.get(2)).select(SelectionMode.MANUAL.ordinal());
-        ((Choice) choices.get(3)).select(parameters.channel - 1);
-        ((TextField) numbers.get(0)).setText(Integer.toString(parameters.slice));
-        ((Choice) choices.get(4)).select(parameters.rotationMode.ordinal());
-        Vector strings = dialog.getStringFields();
-        ((TextField) strings.get(0)).setText(join(parameters.rotationEventFrames()));
-        ((TextField) numbers.get(1)).setText(Integer.toString(parameters.rotationEventWindow));
-    }
-
-    private static int parseInteger(TextField field, String name) {
-        try { return integer(Double.parseDouble(field.getText().trim()), name); }
-        catch (NumberFormatException error) { throw new IllegalArgumentException(name + " must be an integer"); }
+        ((Choice) choices.get(0)).select(simpleRecipeIndex(parameters));
+        ((Choice) choices.get(1)).select(Math.max(0, parameters.channel - 1));
+        Vector checkboxes = dialog.getCheckboxes();
+        ((Checkbox) checkboxes.get(0)).setState(
+                parameters.selectionMode == SelectionMode.LONGITUDINAL_ACCURACY);
     }
 
     static RelativeIntensityPatternParameters advancedDialog(RelativeIntensityPatternParameters p) {

@@ -1,0 +1,20 @@
+panel,panel_label,accent,line,x,y,characters,n_spans,classes,text
+1,SIMPLE FILE OUTPUT,#8A5E12,1,26.0,43.0,25,7,keyword|punctuation|plain,from ripr import register
+1,SIMPLE FILE OUTPUT,#8A5E12,3,26.0,76.0,18,4,plain|punctuation,result = register(
+1,SIMPLE FILE OUTPUT,#8A5E12,4,26.0,92.5,20,3,punctuation|literal,"    ""recording.tif"","
+1,SIMPLE FILE OUTPUT,#8A5E12,5,26.0,109.0,43,5,punctuation|plain|literal,"    output_path=""registered/recording.tif"","
+1,SIMPLE FILE OUTPUT,#8A5E12,6,26.0,125.5,1,1,punctuation,)
+2,TUNE THE SAME CALL,#2C6597,1,26.0,200.0,25,7,keyword|punctuation|plain,from ripr import register
+2,TUNE THE SAME CALL,#2C6597,3,26.0,233.0,18,4,plain|punctuation,result = register(
+2,TUNE THE SAME CALL,#2C6597,4,26.0,249.5,20,3,punctuation|literal,"    ""recording.tif"","
+2,TUNE THE SAME CALL,#2C6597,5,26.0,266.0,43,5,punctuation|plain|literal,"    output_path=""registered/recording.tif"","
+2,TUNE THE SAME CALL,#2C6597,6,26.0,282.5,23,5,punctuation|plain|literal,"    recipe=""landmarks"","
+2,TUNE THE SAME CALL,#2C6597,7,26.0,299.0,50,6,punctuation|plain|literal|comment,"    channel=1,                 # one-based channel"
+2,TUNE THE SAME CALL,#2C6597,8,26.0,315.5,23,5,punctuation|plain|keyword,"    longitudinal=False,"
+2,TUNE THE SAME CALL,#2C6597,9,26.0,332.0,32,5,punctuation|plain|literal,"    image_type=""phase_contrast"","
+2,TUNE THE SAME CALL,#2C6597,10,26.0,348.5,39,5,punctuation|plain|literal,"    motion_type=""subpixel_random_walk"","
+2,TUNE THE SAME CALL,#2C6597,11,26.0,365.0,54,6,punctuation|plain|literal|comment,"    max_shift=20,              # search bound (pixels)"
+2,TUNE THE SAME CALL,#2C6597,12,26.0,381.5,47,6,punctuation|plain|literal|comment,"    max_iterations=50,         # fitting budget"
+2,TUNE THE SAME CALL,#2C6597,13,26.0,398.0,50,6,punctuation|plain|literal|comment,"    interpolation=""bilinear"",  # output resampling"
+2,TUNE THE SAME CALL,#2C6597,14,26.0,414.5,21,5,punctuation|plain|literal,"    backend=""python"","
+2,TUNE THE SAME CALL,#2C6597,15,26.0,431.0,1,1,punctuation,)

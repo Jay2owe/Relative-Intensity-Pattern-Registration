@@ -81,6 +81,109 @@ def test_simple_moving_cells_recipe_is_not_mislabeled_as_longitudinal():
     assert parameters.selection_mode is SelectionMode.RECOMMENDED
 
 
+def test_landmarks_category_reports_the_concrete_automatic_recipe():
+    result = register(
+        translated_texture(), recipe=Recipe.LANDMARKS, longitudinal=False, backend="python"
+    )
+    assert result.parameters.image_type is ImageType.PHASE_CONTRAST
+    assert result.automatic_selection is not None
+    assert result.automatic_selection.recipe != Recipe.LANDMARKS.value
+    assert "selected_recipe=" in result.provenance
+
+
+def test_advanced_settings_can_be_passed_alongside_simple_choices():
+    stack = translated_texture()
+    result = register(
+        stack,
+        recipe=Recipe.LANDMARKS,
+        longitudinal=False,
+        image_type=ImageType.PHASE_CONTRAST,
+        motion_type=MotionType.INTERMITTENT_JUMPS,
+        reference=Reference.CONSECUTIVE,
+        auto_max_shift=False,
+        max_shift=6,
+        crop=False,
+        threads=1,
+        backend="python",
+    )
+    assert result.parameters.selection_mode is SelectionMode.MANUAL
+    assert result.parameters.reference is Reference.CONSECUTIVE
+    assert result.parameters.max_shift == 6
+    assert result.transforms[-1].dx == pytest.approx(4, abs=0.1)
+
+
+def test_unknown_direct_advanced_setting_is_named_clearly():
+    with pytest.raises(ValueError, match="unknown advanced setting.*not_a_setting"):
+        register(np.zeros((2, 16, 16), dtype=np.float32), not_a_setting=True)
+
+
+def test_file_api_accepts_direct_tuning_and_output_path(tmp_path):
+    source = tmp_path / "input.tif"
+    target = tmp_path / "nested" / "registered.tif"
+    tifffile.imwrite(source, translated_texture().astype(np.float32))
+    result = register_file(
+        source,
+        target,
+        recipe="landmarks",
+        longitudinal=False,
+        reference="consecutive",
+        auto_max_shift=False,
+        max_shift=6,
+        crop=False,
+        threads=1,
+        backend="python",
+    )
+    assert target.exists()
+    assert result.parameters.reference is Reference.CONSECUTIVE
+
+
+def test_register_accepts_tiff_path_channel_and_output_path(tmp_path):
+    source = tmp_path / "input.tif"
+    target = tmp_path / "nested" / "registered.tif"
+    tifffile.imwrite(source, translated_texture().astype(np.float32))
+    result = register(
+        source,
+        output_path=target,
+        recipe="landmarks",
+        channel=1,
+        longitudinal=False,
+        reference="consecutive",
+        auto_max_shift=False,
+        max_shift=6,
+        crop=False,
+        threads=1,
+        backend="python",
+    )
+    assert target.exists()
+    assert result.parameters.channel == 1
+    assert result.parameters.reference is Reference.CONSECUTIVE
+
+
+def test_register_rejects_output_path_for_array_input(tmp_path):
+    with pytest.raises(ValueError, match="output_path is only supported when image is a TIFF path"):
+        register(np.zeros((2, 16, 16), dtype=np.float32), output_path=tmp_path / "out.tif")
+
+
+def test_register_accepts_positional_tiff_output_for_path_call(tmp_path):
+    source = tmp_path / "input.tif"
+    target = tmp_path / "registered.tif"
+    tifffile.imwrite(source, translated_texture().astype(np.float32))
+    result = register(
+        source,
+        target,
+        recipe="landmarks",
+        longitudinal=False,
+        reference="consecutive",
+        auto_max_shift=False,
+        max_shift=6,
+        crop=False,
+        threads=1,
+        backend="python",
+    )
+    assert target.exists()
+    assert result.parameters.reference is Reference.CONSECUTIVE
+
+
 def test_registration_does_not_mutate_input():
     source = translated_texture()
     before = source.copy()

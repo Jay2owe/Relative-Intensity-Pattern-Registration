@@ -8,8 +8,8 @@ The repository also contains **Relative-Intensity Pattern Registration (RIPR)**,
 Python package with the same registration engine, recommendations, hyperstack behavior, TIFF support and folder batches. See
 [README_PYTHON.md](README_PYTHON.md) for installation and examples; it does not require ImageJ or Java.
 
-Image type and motion type load evidence-based parameter recommendations. Every recommended value can
-be replaced in the advanced controls.
+The three recipe categories load evidence-based parameter recommendations. Every recommended value can
+be replaced in **Advanced settings**.
 
 The plugin has three rotation choices: **Off**, **Search continuously**, and **Known remount frames**.
 Continuous mode estimates bounded in-plane rotation for every compared pair. Set **Maximum rotation**
@@ -54,10 +54,14 @@ see `docs/newton_refinement_stage4_third_set_findings.md`.
 
 Open a time series and choose **Plugins > Registration > Relative-Intensity Pattern Registration...**.
 
-1. Select the closest image type and motion type.
-2. Leave **Settings source** on **Automatic fixed recipe**, the default.
-3. Select **Review and edit all settings before running** when you want to inspect or change values
-   before any work starts, then press **Register**.
+1. Choose a **Recipe**: **Landmarks** (phase contrast/brightfield), **Bright/dim references**
+   (fluorescence/bioluminescence), or **Moving cells** (biological foreground).
+2. Choose the one-based **Channel used to estimate movement**.
+3. Leave **Use longitudinal mode (whole recording)** on for the fixed whole-recording route (the
+   default). Moving cells uses a benchmark-backed frame-to-frame recipe, so leave it off for that
+   recipe.
+4. Select **Show advanced settings before running** only when you need to change fitting, rotation,
+   interpolation, or other expert controls. Then press **Register**.
 
 ### Which estimator, and where each one wins
 
@@ -105,14 +109,14 @@ It also costs roughly twice the log-ratio fit for the same recipe. Full evidence
 comparison against TurboReg's own estimator inside our reconciler, is in
 `docs/pairwise_estimator_axis_findings.md`.
 
-**Settings source** is one exclusive choice, so nothing can be half-automatic:
+The simple dialog maps those choices to one exclusive settings mode:
 
 | Choice | What it does |
 |---|---|
-| Automatic fixed recipe (default) | Applies the installed validated fixed recipe for the chosen image and motion types. It does not inspect the recording. |
-| Longitudinal maximum accuracy | Adds whole-recording bright/dim or tissue-landmark references and protects isolated stage jumps and light pulses. |
-| Image-and-motion preset | Loads the older measured recipe for the chosen image and motion types. |
-| Manual | Uses exactly the values in the settings window. |
+| Automatic fixed recipe | Applies the installed validated fixed recipe for the Landmarks or Bright/dim category. It does not inspect the recording. |
+| Longitudinal maximum accuracy (simple-dialog default) | Adds whole-recording bright/dim or tissue-landmark references and protects isolated stage jumps and light pulses. |
+| Image-and-motion preset | Used by the Moving cells category, which keeps frame-to-frame fitting and does not use the longitudinal route. |
+| Manual | Used after editing values in Advanced settings. |
 
 Non-fluorescence keeps `recording_adaptive_selector_v1_user_approved_fixed_policy_v1`. Fluorescence
 uses `single_channel_emission_max_accuracy_r04_a208` for fluorescence and bioluminescence. Both choose the recipe without inspecting
@@ -142,7 +146,7 @@ and `docs/recording-adaptive-selector/10_user_approved_fixed_policy_override.md`
 
 ### Parameter sweep on one stack
 
-Choose **Sweep parameters on this stack...** in the main registration dialog to compare up to three
+Choose **Advanced parameter sweep...** in the registration dialog to compare up to three
 settings at once. Each setting accepts a comma-separated value list, and the product is capped at 24
 combinations. The available axes are:
 
@@ -163,8 +167,8 @@ is more internally consistent. Neither is ground-truth accuracy, and the residua
 poor guide to it — see the warning below.
 
 Select a completed tile and choose **Use selected settings**. The sweep closes, the main dialog remains
-open, **Settings source** switches to **Manual**, and every selected value is loaded. The settings can be
-reviewed under **Review and edit all settings before running** before registration. Starting a sweep first
+open, and every selected value is loaded as an explicit manual recipe. The settings can be reviewed under
+**Show advanced settings before running** before registration. Starting a sweep first
 resolves automatic selection, so each sweep arm changes the declared parameter rather than silently
 rerunning the selector.
 
@@ -207,11 +211,11 @@ count, Z count, time count, calibration and hyperstack layout are preserved.
 
 Choose **Plugins > Registration > Relative-Intensity Pattern Registration Batch...** to apply one setup to a folder of
 TIFF or OME-TIFF stacks. Select the input and output folders, whether to include subfolders, and the
-shared image type, movement type, channel, Z slice and registration settings.
+shared recipe, estimation channel and longitudinal mode. The remaining registration settings are under
+**Show advanced settings before starting**.
 
-**Settings source** defaults to **Automatic fixed recipe**, which applies the installed fixed recipe
-for the declared image and motion types and records it for every stack. Choose **Manual** to replay one explicit
-recipe, or **Image-and-motion preset** to use the older recipe for both declared types.
+Landmarks and Bright/dim references use the installed automatic fixed recipe when longitudinal mode is
+off. Moving cells uses the benchmark-backed image-and-motion preset and keeps longitudinal mode off.
 
 The batch holds one stack in memory at a time. A modeless progress window shows the current file,
 completed stacks, pair progress, elapsed time, estimated time remaining and estimated finish time. The

@@ -49,13 +49,20 @@ def register_file(
     recipe: Recipe | str = Recipe.LANDMARKS,
     channel: int = 1,
     longitudinal: bool = True,
+    **advanced: object,
 ) -> LogRatioResult:
-    """Register one TIFF/OME-TIFF; only ``input_path`` is required."""
+    """Register one TIFF/OME-TIFF; only ``input_path`` is required.
+
+    Prefer :func:`ripr.register` for new code; this name remains as a compatibility alias.
+    ``output_path`` chooses where the corrected TIFF is written; when omitted it is derived beside
+    the input. Expert :class:`LogRatioParameters` fields may be supplied directly as keyword
+    arguments.
+    """
     input_path = Path(input_path)
     image, axes = read_tiff(input_path)
     result = register(
         image, parameters, axes=axes, backend=backend, recipe=recipe,
-        channel=channel, longitudinal=longitudinal,
+        channel=channel, longitudinal=longitudinal, **advanced,
     )
     if output_path is None:
         output_path = input_path.with_name(input_path.stem + "_registered.tif")

@@ -46,8 +46,11 @@ For a TIFF, only the input filename is required. The output is written beside it
 ```python
 import ripr
 
-ripr.register_file("recording.tif")
+ripr.register("recording.tif")
 ```
+
+Choose a destination with `output_path="registered/recording.tif"`; for path input,
+`ripr.register("recording.tif", "registered/recording.tif")` is also accepted.
 
 For a NumPy array, only the array is required when it is shaped `T, Y, X`:
 
@@ -67,29 +70,40 @@ result = ripr.register(
 )
 ```
 
-They default to the benchmark-backed Landmarks recipe for phase contrast, channel 1, and
+They default to the benchmark-backed Landmarks category for phase contrast, channel 1, and
 whole-recording longitudinal processing. Bright/dim selects the accepted fluorescence or
-bioluminescence route. Moving cells is the separate biological-foreground recipe and is used with
-`longitudinal=False`. Java is preferred for execution.
+bioluminescence category. Moving cells is the separate biological-foreground route and is used with
+`longitudinal=False`. With `longitudinal=False`, the selected category is resolved to a concrete
+automatic recipe; inspect `result.automatic_selection.recipe` and `result.provenance` for its ID.
+Java is preferred for execution.
 
 ## Expert recording settings
 
 ```python
-import tifffile
-from ripr import LogRatioParameters, register
+from ripr import register
 
-stack = tifffile.imread("recording.tif")  # shape T, Y, X
-parameters = LogRatioParameters.recommended(
+result = register(
+    "recording.tif",
+    output_path="recording_registered.tif",
+    recipe="landmarks",
+    channel=1,
+    longitudinal=False,
     image_type="phase_contrast",
     motion_type="subpixel_random_walk",
+    max_shift=20,
+    max_iterations=50,
+    interpolation="bilinear",
+    backend="python",
 )
-result = register(stack, parameters, axes="TYX")  # axes is optional for a T,Y,X array
 
-tifffile.imwrite("recording_registered.tif", result.corrected)
 print([(t.dx, t.dy, t.theta) for t in result.transforms])  # theta is radians
 print(result.registration.log2_gain)       # bleaching/lamp-drift trace
 print(result.median_residual_before, result.median_residual_after)
 ```
+
+Every `LogRatioParameters` field can be passed directly. `image_type` and `motion_type` choose the
+starting recipe; the remaining fields override one expert setting at a time. Use a parameters
+object only when you want to reuse or inspect a complete bundle.
 
 Use `ripr.rank_channels(array, axes="TCZYX")` to rank estimation channels by localisability before
 a run. Values below `ripr.WARN_BELOW` carry the same poor-localisability warning threshold as the
@@ -148,11 +162,13 @@ plugin. `ripr.java_backend.available()` reports whether it can run at all.
 ## Register a TIFF or folder
 
 ```python
-from ripr import register_file, register_batch
+from ripr import register, register_batch
 
-register_file("recording.ome.tif")
+register("recording.ome.tif")
 register_batch("input_folder", "output_folder")
 ```
+
+`register_file` remains available as a compatibility alias for older code.
 
 Or from a shell:
 
@@ -184,7 +200,7 @@ resolved rotation mode, one-based event list, window and compact event diagnosti
 | `RelativeIntensityPatternRecommendations.forTypes(...)` | `ripr.recommendation(...)` |
 | `StackWarper.apply(...)` | `ripr.apply_transforms(...)` |
 | batch plugin | `ripr.register_batch(...)` |
-| TIFF input/output | `ripr.register_file(...)` |
+| TIFF input/output | `ripr.register(path, output_path=...)` (`register_file` is a compatibility alias) |
 
 Set `fit_rotation=True` and `max_rotation_degrees=<bound>` on `LogRatioParameters` to estimate bounded
 in-plane rotation as well as translation. The public bound is in degrees; returned `Transform.theta`

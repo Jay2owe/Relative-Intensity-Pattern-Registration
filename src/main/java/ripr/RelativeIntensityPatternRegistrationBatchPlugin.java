@@ -10,16 +10,12 @@ import ij.Prefs;
 import ij.gui.GenericDialog;
 import ij.plugin.PlugIn;
 import ij.plugin.frame.Recorder;
-import ripr.api.ImageType;
 import ripr.api.RelativeIntensityPatternBatch;
 import ripr.api.RelativeIntensityPatternBatchParameters;
 import ripr.api.RelativeIntensityPatternBatchResult;
 import ripr.api.RelativeIntensityPatternBatchStatus;
 import ripr.api.RelativeIntensityPatternParameters;
-import ripr.api.MotionType;
 import ripr.api.SelectionMode;
-import ripr.core.Warper;
-import ripr.core.RotationMode;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -30,6 +26,8 @@ import javax.swing.JProgressBar;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 import java.awt.BorderLayout;
+import java.awt.Choice;
+import java.awt.Checkbox;
 import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.GraphicsEnvironment;
@@ -91,23 +89,20 @@ public final class RelativeIntensityPatternRegistrationBatchPlugin implements Pl
         dialog.addCheckbox("Include subfolders", true);
         dialog.addCheckbox("Overwrite existing corrected stacks", false);
         dialog.addMessage("Shared registration setup");
-        dialog.addChoice("Image type", labels(ImageType.values()), ImageType.PHASE_CONTRAST.label());
-        dialog.addChoice("Motion type", labels(MotionType.values()), MotionType.SUBPIXEL_RANDOM_WALK.label());
-        dialog.addChoice("Settings source", labels(SelectionMode.values()),
-                SelectionMode.AUTOMATIC.label());
-        dialog.addMessage("Automatic applies the installed, validated fixed recipe for the chosen\n"
-                + "image type to each stack. Image-and-motion preset uses the older recipe for\n"
-                + "both chosen types. Longitudinal maximum accuracy adds whole-recording pulse and\n"
-                + "isolated-jump protection. Manual replays one explicit recipe over every stack.");
-        dialog.addCheckbox("Review and edit all settings before starting", false);
+        String[] recipeLabels = RelativeIntensityPatternRegistrationPlugin.simpleRecipeLabels();
+        dialog.addChoice("Recipe", recipeLabels, recipeLabels[0]);
         dialog.addNumericField("Channel used to estimate movement", 1, 0);
-        dialog.addNumericField("Estimation scale (0-1; output stays full size)", 1.0, 2);
-        dialog.addNumericField("Z slice (0 = maximum projection)", 0, 0);
-        dialog.addChoice("Rotation handling", labels(RotationMode.values()), RotationMode.OFF.label());
-        dialog.addStringField("First frames after remounting (1-based)", "", 18);
-        dialog.addNumericField("Frames used on each side of an event", 3, 0);
-        dialog.addChoice("Interpolation", names(Warper.Interpolation.values()), Warper.Interpolation.NONE.name());
-        dialog.addCheckbox("Crop to common valid field", true);
+        dialog.addCheckbox("Use longitudinal mode (whole recording)", true);
+        Choice recipeChoice = (Choice) dialog.getChoices().get(0);
+        Checkbox longitudinalBox = (Checkbox) dialog.getCheckboxes().get(2);
+        recipeChoice.addItemListener(event -> {
+            if (recipeChoice.getSelectedIndex() == recipeLabels.length - 1) {
+                longitudinalBox.setState(false);
+            }
+        });
+        dialog.addCheckbox("Show advanced settings before starting", false);
+        dialog.addMessage("Longitudinal mode uses the fixed whole-recording route. Moving cells\n"
+                + "uses a benchmark-backed frame-to-frame recipe and therefore keeps longitudinal mode off.");
         dialog.setOKLabel("Start batch");
         dialog.showDialog();
         if (dialog.wasCanceled()) return null;
@@ -116,29 +111,15 @@ public final class RelativeIntensityPatternRegistrationBatchPlugin implements Pl
         File output = new File(dialog.getNextString().trim());
         boolean recursive = dialog.getNextBoolean();
         boolean overwrite = dialog.getNextBoolean();
-        ImageType imageType = ImageType.values()[dialog.getNextChoiceIndex()];
-        MotionType motionType = MotionType.values()[dialog.getNextChoiceIndex()];
-        SelectionMode mode = SelectionMode.values()[dialog.getNextChoiceIndex()];
-        boolean advanced = dialog.getNextBoolean();
+        int recipeIndex = dialog.getNextChoiceIndex();
         int channel = integer(dialog.getNextNumber(), "channel");
-        double estimationScale = dialog.getNextNumber();
-        int slice = integer(dialog.getNextNumber(), "slice");
-        RotationMode rotationMode = RotationMode.values()[dialog.getNextChoiceIndex()];
-        int[] rotationEvents = integerList(dialog.getNextString(), "rotation events");
-        int rotationEventWindow = integer(dialog.getNextNumber(), "rotation event window");
-        Warper.Interpolation interpolation = Warper.Interpolation.valueOf(dialog.getNextChoice());
-        boolean crop = dialog.getNextBoolean();
+        boolean longitudinal = dialog.getNextBoolean();
+        boolean advanced = dialog.getNextBoolean();
 
-        RelativeIntensityPatternParameters registration = RelativeIntensityPatternParameters.builder()
-                .recommendation(imageType, motionType)
-                .selectionMode(mode)
-                .channel(channel).estimationScale(estimationScale).slice(slice)
-                .rotationMode(rotationMode)
-                .rotationEventFrames(rotationMode == RotationMode.KNOWN_EVENTS
-                        ? rotationEvents : new int[0])
-                .rotationEventWindow(rotationEventWindow)
-                .interpolation(interpolation).crop(crop).build();
-        if (advanced && mode == SelectionMode.LONGITUDINAL_ACCURACY) {
+        RelativeIntensityPatternParameters registration =
+                RelativeIntensityPatternRegistrationPlugin.simpleParameters(
+                        recipeIndex, channel, longitudinal);
+        if (advanced && registration.selectionMode == SelectionMode.LONGITUDINAL_ACCURACY) {
             IJ.log("Relative-Intensity Pattern Registration Batch: Longitudinal maximum accuracy "
                     + "is fixed, so ordinary pairwise settings were not opened.");
         } else if (advanced) {
@@ -198,49 +179,6 @@ public final class RelativeIntensityPatternRegistrationBatchPlugin implements Pl
             throw new IllegalArgumentException(name + " must be an integer");
         }
         return (int) value;
-    }
-
-    private static int[] integerList(String text, String name) {
-        String trimmed = text == null ? "" : text.trim();
-        if (trimmed.isEmpty()) return new int[0];
-        String[] parts = trimmed.split(",");
-        int[] out = new int[parts.length];
-        try {
-            for (int i = 0; i < parts.length; i++) out[i] = Integer.parseInt(parts[i].trim());
-        } catch (NumberFormatException error) {
-            throw new IllegalArgumentException(name + " must be comma-separated integers");
-        }
-        return out;
-    }
-
-    private static String[] labels(ImageType[] values) {
-        String[] out = new String[values.length];
-        for (int i = 0; i < out.length; i++) out[i] = values[i].label();
-        return out;
-    }
-
-    private static String[] labels(MotionType[] values) {
-        String[] out = new String[values.length];
-        for (int i = 0; i < out.length; i++) out[i] = values[i].label();
-        return out;
-    }
-
-    private static String[] labels(SelectionMode[] values) {
-        String[] out = new String[values.length];
-        for (int i = 0; i < out.length; i++) out[i] = values[i].label();
-        return out;
-    }
-
-    private static String[] labels(RotationMode[] values) {
-        String[] out = new String[values.length];
-        for (int i = 0; i < out.length; i++) out[i] = values[i].label();
-        return out;
-    }
-
-    private static String[] names(Enum<?>[] values) {
-        String[] out = new String[values.length];
-        for (int i = 0; i < out.length; i++) out[i] = values[i].name();
-        return out;
     }
 
     private static String rootMessage(Throwable error) {
