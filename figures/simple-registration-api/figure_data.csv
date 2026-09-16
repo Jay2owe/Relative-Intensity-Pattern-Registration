@@ -1,0 +1,9 @@
+panel,panel_label,accent,line,x,y,characters,n_spans,classes,text
+1,THE SMALLEST RUN,#8A5E12,1,26.0,43.0,11,3,keyword|punctuation|plain,import ripr
+1,THE SMALLEST RUN,#8A5E12,3,26.0,76.0,44,8,plain|punctuation|literal,"result = ripr.register_file(""recording.tif"")"
+2,SWAP ONLY WHAT YOU NEED,#2C6597,1,26.0,150.5,28,6,plain|punctuation,result = ripr.register_file(
+2,SWAP ONLY WHAT YOU NEED,#2C6597,2,26.0,167.0,20,3,punctuation|literal,"    ""recording.tif"","
+2,SWAP ONLY WHAT YOU NEED,#2C6597,3,26.0,183.5,65,6,punctuation|plain|literal|comment,"    recipe=""bright_dim"",  # landmarks | bright_dim | moving_cells"
+2,SWAP ONLY WHAT YOU NEED,#2C6597,4,26.0,200.0,52,6,punctuation|plain|literal|comment,"    channel=2,            # one-based channel number"
+2,SWAP ONLY WHAT YOU NEED,#2C6597,5,26.0,216.5,70,6,punctuation|plain|keyword|comment,"    longitudinal=True,    # full-recording evidence; False = automatic"
+2,SWAP ONLY WHAT YOU NEED,#2C6597,6,26.0,233.0,1,1,punctuation,)
