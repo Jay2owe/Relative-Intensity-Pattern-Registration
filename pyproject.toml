@@ -7,7 +7,7 @@ build-backend = "hatchling.build"
 # names case-insensitively but displays what is declared here. The import package stays "ripr":
 # that is what every call site, the CLI command and the Java bridge already say.
 name = "Relative-Intensity-Pattern-Registration"
-version = "0.2.2"
+version = "0.2.3"
 description = "Gain-invariant, robust registration of microscopy time series"
 readme = "README_PYTHON.md"
 requires-python = ">=3.10"

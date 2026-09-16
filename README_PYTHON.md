@@ -260,3 +260,15 @@ Cropping defaults to the field containing real pixels in every registered frame.
 This is a standalone Python package, separate from the Java plugin. It has no Swing dialogs or ImageJ
 macro recorder; its settings are exposed through the Python API and command-line interface. The Java
 plugin and Python package can continue to be used independently.
+
+## Agent control
+
+Automation clients can use the stable `ripr.actions` registry or its JSON-only
+one-shot runner at `.claude/skills/ripr/scripts/ripr_runner.py` (the Codex
+bridge is mirrored under `.codex/skills/ripr/`). The runner exposes TIFF
+inspection, channel ranking, recommendations, estimation, single-image
+registration, and folder batches. It returns diagnostics plus an equivalent
+Python script; it never returns full pixel arrays. Existing output files need
+explicit `confirm_overwrite=true` in runner requests. Concise public orientation
+is available through `ripr.context.read()` and `ripr.context.search(...)`, which
+return versioned structured envelopes for named topics and searches.
