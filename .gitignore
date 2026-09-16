@@ -10,6 +10,7 @@ __pycache__/
 
 # Scratch
 tmp/
+.tmp/
 
 # Agent context - never tracked
 .claude/
