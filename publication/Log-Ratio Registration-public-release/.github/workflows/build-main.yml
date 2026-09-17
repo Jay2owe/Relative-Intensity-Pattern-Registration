@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "11"
+          cache: maven
+
+      - name: Build and test
+        run: ./mvnw --batch-mode clean verify -Denforcer.skip=true
+
+      - name: Upload runtime JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: LogRatioRegistration
+          path: |
+            target/LogRatioRegistration-*.jar
+            !target/*-sources.jar
+            !target/*-tests.jar
+          if-no-files-found: error

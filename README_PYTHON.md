@@ -271,4 +271,7 @@ registration, and folder batches. It returns diagnostics plus an equivalent
 Python script; it never returns full pixel arrays. Existing output files need
 explicit `confirm_overwrite=true` in runner requests. Concise public orientation
 is available through `ripr.context.read()` and `ripr.context.search(...)`, which
-return versioned structured envelopes for named topics and searches.
+return versioned structured envelopes for named topics and searches. The same guidance
+is published for agents that cannot import Python as `README_AI.md` and
+`ripr_context.json`; both are generated from the public context and included in the
+source distribution and wheel.

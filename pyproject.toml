@@ -59,12 +59,19 @@ ripr = "ripr.cli:main"
 [tool.hatch.build.targets.wheel]
 packages = ["src/ripr"]
 
+[tool.hatch.build.targets.wheel.force-include]
+"README_AI.md" = "ripr/README_AI.md"
+"ripr_context.json" = "ripr/ripr_context.json"
+
 [tool.hatch.build.targets.sdist]
 include = [
   "/pyproject.toml",
   "/README_PYTHON.md",
+  "/README_AI.md",
+  "/ripr_context.json",
   "/LICENSE",
   "/src/ripr",
+  "/scripts/generate_agent_context.py",
   "/tests_python",
 ]
 

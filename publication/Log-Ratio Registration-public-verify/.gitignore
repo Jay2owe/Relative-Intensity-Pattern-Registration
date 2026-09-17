@@ -1,0 +1,76 @@
+# Build output
+target/
+dependency-reduced-pom.xml
+*.jar
+*.class
+
+# Scratch
+tmp/
+release-staging/
+local-scripts/
+
+# Agent context - never tracked
+.claude/
+.codex/
+AGENTS.md
+CLAUDE.md
+CLAUDE_CONTEXT*.md
+GEMINI.md
+EXECUTION_STATUS.md
+context_hook.py
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+nbproject/
+nb-configuration.xml
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Private planning and generated knowledge artefacts
+.planning/
+docs/plan/
+docs/to-do.md
+docs/HANDOFF_*.md
+docs/*plan*.md
+next_plan.md
+vision.md
+graphify-out/
+obsidian/
+mempalace*
+concept-art/
+*"conflicted copy"*
+
+# Generated benchmark corpus - exceeds the Windows path limit and is not source
+library/
+research/
+validation/
+
+# Raw microscopy data is never source. Tiny deliberate test fixtures may opt in.
+*.lif
+*.lifext
+*.czi
+*.nd2
+*.oib
+*.oif
+*.lsm
+*.zvi
+*.tif
+*.tiff
+!src/test/resources/**/*.tif
+!src/test/resources/**/*.tiff
+
+# Local credentials
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+secrets.yml

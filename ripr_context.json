@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "package": "ripr",
+  "distribution": "Relative-Intensity-Pattern-Registration",
+  "version": "0.2.3",
+  "reader": {
+    "purpose": "Read-only orientation for agents choosing a RIPR workflow.",
+    "python": "from ripr import context; context.read(format='json')",
+    "topic": "context.read(topic, format='json')",
+    "search": "context.search(query)"
+  },
+  "topics": [
+    {
+      "ok": true,
+      "version": "0.2.3",
+      "topic": "overview",
+      "title": "RIPR overview",
+      "content": "Relative-Intensity Pattern Registration (RIPR) registers microscopy time series while preserving intensity ratios. The normal workflow is choose a recipe, channel, and longitudinal mode, then call ripr.register. Java is the default backend; an unavailable Java backend emits a clear BackendFallbackWarning before Python is used.",
+      "prerequisites": [],
+      "related_topics": [
+        "simple_registration",
+        "backend_troubleshooting"
+      ]
+    },
+    {
+      "ok": true,
+      "version": "0.2.3",
+      "topic": "simple_registration",
+      "title": "Simple registration",
+      "content": "Choose recipe (landmarks, bright_dim, or moving_cells), one-based channel, and longitudinal mode. Defaults are landmarks, channel 1, and longitudinal=True. A minimal array example is:\n\nimport numpy as np\nfrom ripr import register\nstack = np.random.default_rng(4).random((3, 64, 64)).astype('float32')\nresult = register(stack, recipe='landmarks', channel=1, longitudinal=True)\ncorrected = result.corrected\n\nFor a TIFF, pass its path and output_path='registered.tif'. The result contains corrected pixels, transforms, residual diagnostics, the resolved recipe, and axes. Use longitudinal=False for the automatic fixed-recipe route; moving_cells requires that mode.",
+      "prerequisites": [
+        "overview"
+      ],
+      "related_topics": [
+        "advanced_settings",
+        "folder_batches"
+      ]
+    },
+    {
+      "ok": true,
+      "version": "0.2.3",
+      "topic": "advanced_settings",
+      "title": "Advanced settings",
+      "content": "Expert LogRatioParameters fields can be passed as keywords to register or estimate, such as max_shift (pixels), interpolation, reference, estimator, norm, preprocessing, crop, rotation_mode, and max_iterations. Unknown names raise ValueError. These settings can make the request differ from the Java preset and therefore produce a visible BackendFallbackWarning. Use backend='java' to require the reference engine, or backend='python' to choose Python explicitly.",
+      "prerequisites": [
+        "simple_registration"
+      ],
+      "related_topics": [
+        "backend_troubleshooting"
+      ]
+    },
+    {
+      "ok": true,
+      "version": "0.2.3",
+      "topic": "folder_batches",
+      "title": "Folder batches",
+      "content": "Call ripr.register_batch(input_directory, output_directory, recipe='landmarks', channel=1, longitudinal=True). TIFF files are isolated on failure; existing outputs are skipped unless overwrite=True. The action runner additionally requires explicit confirm_overwrite=true before overwriting. The returned BatchResult includes completed, skipped, and error counts plus log_ratio_batch_report.csv.",
+      "prerequisites": [
+        "simple_registration"
+      ],
+      "related_topics": [
+        "backend_troubleshooting"
+      ]
+    },
+    {
+      "ok": true,
+      "version": "0.2.3",
+      "topic": "backend_troubleshooting",
+      "title": "Backend and troubleshooting",
+      "content": "Java is preferred by default and explicit backend='java' is strict. If Java is missing or cannot represent an advanced setting, the default/auto route emits BackendFallbackWarning and uses Python. Install/configure RIPR_JAVA and RIPR_JAR, or select backend='python' deliberately. Longitudinal maximum accuracy is defined by Java; Python is available explicitly with a compatibility warning. If a run appears slow, inspect the structured warnings and backend field rather than assuming Java ran.",
+      "prerequisites": [
+        "simple_registration"
+      ],
+      "related_topics": [
+        "advanced_settings"
+      ]
+    }
+  ]
+}

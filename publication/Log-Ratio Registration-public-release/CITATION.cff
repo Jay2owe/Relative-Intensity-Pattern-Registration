@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Log-Ratio Registration"
+abstract: "A Fiji/ImageJ plugin for registering microscopy time-lapses with a gain-invariant robust log-ratio estimator."
+authors:
+  - family-names: Malcolm
+    given-names: Jamie
+    orcid: "https://orcid.org/0009-0008-3862-2776"
+    affiliation: "UK Dementia Research Institute at Imperial College London"
+    email: "jamiemalcolm12@gmail.com"
+repository-code: "https://github.com/Jay2owe/Log-Ratio-Registration"
+url: "https://github.com/Jay2owe/Log-Ratio-Registration"
+license: BSD-3-Clause
+version: "0.1.0"
+date-released: "2026-08-21"
+keywords:
+  - Fiji
+  - ImageJ
+  - microscopy
+  - image registration
+  - time-lapse imaging
+  - motion correction
