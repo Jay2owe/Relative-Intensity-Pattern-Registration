@@ -97,7 +97,11 @@ function Invoke-ExternalSummary {
 }
 
 function Invoke-Tests {
-    $maven = 'C:\Users\Owner\.m2\wrapper\dists\apache-maven-3.9.9\8e74001100ff70d6af083c5511fcc5ec49282d7017cde82c3698eee8fdf86698\bin\mvn.cmd'
+    $maven = if ($env:RIPR_MAVEN_CMD) {
+        $env:RIPR_MAVEN_CMD
+    } else {
+        (Get-Command mvn.cmd -ErrorAction Stop).Source
+    }
     # REGRESSION GUARD: PowerShell can reinterpret unquoted -D properties passed to a .cmd file.
     & $maven '-Dmaven.buildNumber.skip=true' test
     if ($LASTEXITCODE -ne 0) { throw 'full test suite failed' }

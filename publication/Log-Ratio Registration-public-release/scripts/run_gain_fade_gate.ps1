@@ -89,7 +89,11 @@ function Invoke-TurboReg {
     # leaves whatever an earlier JDK 21 compile put in target/, and only the classes that happened to
     # change get rewritten. The symptom is UnsupportedClassVersionError naming an unrelated class.
     # Run `mvn clean test-compile` before this stage, not `mvn test-compile`.
-    $fijiRoot = 'C:\Users\Owner\UK Dementia Research Institute Dropbox\Brancaccio Lab\Jamie\Fiji.app'
+    $fijiRoot = if ($env:RIPR_FIJI_ROOT) {
+        (Resolve-Path -LiteralPath $env:RIPR_FIJI_ROOT).Path
+    } else {
+        throw 'Set RIPR_FIJI_ROOT to the local Fiji.app directory.'
+    }
     $fijiJava = Join-Path $fijiRoot 'java\win64\zulu11.88.17-ca-fx-jdk11.0.31-win_x64\bin\java.exe'
     $launcherJar = Join-Path $fijiRoot 'jars\imagej-launcher-6.0.2.jar'
     if (!(Test-Path -LiteralPath $fijiJava)) { throw "missing Fiji Java: $fijiJava" }

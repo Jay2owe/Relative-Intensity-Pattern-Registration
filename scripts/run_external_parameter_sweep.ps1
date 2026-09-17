@@ -105,11 +105,11 @@ $nativeLibraries = @(
 $rewriteOption = if ($Rewrite) { '-Dripr.rewrite=true' } else { '-Dripr.rewrite=false' }
 $fullEngineOption = if ($FullEngineRows) { '-Dripr.fullEngineRows=true' } else { '-Dripr.fullEngineRows=false' }
 # Keep status bookkeeping beside each dataset's outputs. A single run-root log is
-# prone to Dropbox/file-lock contention when independent benchmark arms overlap.
+# prone to cloud file-lock contention when independent benchmark arms overlap.
 $status = Join-Path $outputRoot 'stage_status.log'
 
 function Write-StageStatus([string]$Message) {
-    # REGRESSION GUARD: a transient Dropbox lock on this bookkeeping file aborted valid benchmark runs.
+    # REGRESSION GUARD: a transient cloud lock on this bookkeeping file aborted valid benchmark runs.
     # The fix: retry status writes and warn after exhaustion; CSV/JVM failures remain hard errors.
     for ($attempt = 0; $attempt -lt 10; $attempt++) {
         try {

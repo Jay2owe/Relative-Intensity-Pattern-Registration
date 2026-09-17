@@ -50,7 +50,11 @@ function Invoke-InternalCore {
 }
 
 function Invoke-ExternalCore {
-    $fijiRoot = 'C:\Users\Owner\UK Dementia Research Institute Dropbox\Brancaccio Lab\Jamie\Fiji.app'
+    $fijiRoot = if ($env:RIPR_FIJI_ROOT) {
+        (Resolve-Path -LiteralPath $env:RIPR_FIJI_ROOT).Path
+    } else {
+        throw 'Set RIPR_FIJI_ROOT to the local Fiji.app directory.'
+    }
     $fijiJava = Join-Path $fijiRoot 'java\win64\zulu11.88.17-ca-fx-jdk11.0.31-win_x64\bin\java.exe'
     $launcherJar = Join-Path $fijiRoot 'jars\imagej-launcher-6.0.2.jar'
     if (!(Test-Path -LiteralPath $fijiJava)) { throw "missing Fiji Java: $fijiJava" }
@@ -139,7 +143,11 @@ function Invoke-Summaries {
 function Invoke-Audit {
     & python (Join-Path $project 'library\benchmark\audit_full_benchmark_2026_08_16.py') --final
     if ($LASTEXITCODE -ne 0) { throw 'full artifact audit failed' }
-    $maven = 'C:\Users\Owner\.m2\wrapper\dists\apache-maven-3.9.9\8e74001100ff70d6af083c5511fcc5ec49282d7017cde82c3698eee8fdf86698\bin\mvn.cmd'
+    $maven = if ($env:RIPR_MAVEN_CMD) {
+        $env:RIPR_MAVEN_CMD
+    } else {
+        (Get-Command mvn.cmd -ErrorAction Stop).Source
+    }
     # REGRESSION GUARD: PowerShell can reinterpret unquoted -D properties passed to a .cmd file.
     & $maven '-Dmaven.buildNumber.skip=true' test
     if ($LASTEXITCODE -ne 0) { throw 'full test suite failed' }

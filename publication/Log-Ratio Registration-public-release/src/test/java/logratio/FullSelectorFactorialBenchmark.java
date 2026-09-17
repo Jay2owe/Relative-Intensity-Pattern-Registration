@@ -578,7 +578,7 @@ public final class FullSelectorFactorialBenchmark {
         String[] candidates = {
                 System.getProperty("fiji.dir", ""),
                 System.getProperty("imagej.dir", ""),
-                "C:/Users/Owner/UK Dementia Research Institute Dropbox/Brancaccio Lab/Jamie/Fiji.app"};
+                Paths.get(System.getProperty("user.home", ""), "Fiji.app").toString()};
         for (String candidate : candidates) {
             if (candidate.isEmpty()) continue;
             Path path = Paths.get(candidate);
