@@ -403,7 +403,7 @@ class LogRatioParameters:
                     "Automatic selection requires recording pixels; use ripr.estimate() or ripr.register()"
                 )
             return select(self)[0]
-        if self.selection_mode is SelectionMode.LONGITUDINAL_ACCURACY:
+        if self.selection_mode in {SelectionMode.LONGITUDINAL_ACCURACY, SelectionMode.ACCEPTED_LONGITUDINAL, SelectionMode.ACCEPTED_MOVING_CELLS}:
             raise ValueError(
                 "Longitudinal maximum accuracy requires the complete recording; "
                 "use ripr.estimate() or ripr.register()"

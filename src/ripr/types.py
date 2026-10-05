@@ -76,6 +76,8 @@ class SelectionMode(NamedEnum):
     RECOMMENDED = "recommended"
     AUTOMATIC = "automatic"
     LONGITUDINAL_ACCURACY = "longitudinal_accuracy"
+    ACCEPTED_LONGITUDINAL = "accepted_longitudinal"
+    ACCEPTED_MOVING_CELLS = "accepted_moving_cells"
     MANUAL = "manual"
 
     @property
@@ -84,6 +86,8 @@ class SelectionMode(NamedEnum):
             self.RECOMMENDED: "Image-and-motion preset",
             self.AUTOMATIC: "Automatic fixed recipe",
             self.LONGITUDINAL_ACCURACY: "Longitudinal maximum accuracy",
+            self.ACCEPTED_LONGITUDINAL: "Accepted longitudinal Bright/dim or Landmarks",
+            self.ACCEPTED_MOVING_CELLS: "Accepted longitudinal Moving cells",
             self.MANUAL: "Manual",
         }[self]
 

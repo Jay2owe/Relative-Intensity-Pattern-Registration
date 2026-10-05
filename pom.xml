@@ -14,7 +14,7 @@
 
 	<groupId>io.github.jay2owe</groupId>
 	<artifactId>RelativeIntensityPatternRegistration</artifactId>
-	<version>0.2.0</version>
+	<version>0.3.0</version>
 
 	<name>Relative-Intensity Pattern Registration</name>
 	<description>Register time-lapse images by matching relative spatial intensity patterns, with robust translation and rotation correction and no segmentation</description>
@@ -95,11 +95,9 @@
 	</repositories>
 
 	<!--
-	  net.imagej:ij and nothing else. The estimator is hand-written float maths on
-	  primitive arrays: no ImgLib2, no Apache Commons, no FFT library. That is a
-	  deliberate constraint, not an omission â€” a registration plugin that a user
-	  installs by dropping one jar into plugins/ has to have no transitive
-	  dependencies to disagree with whatever else Fiji has loaded.
+	  The parent plugin links only ImageJ. Accepted longitudinal modes additionally
+	  launch checksum-pinned native libraries in an isolated Java 25 worker; they
+	  do not put OpenCV or JavaCPP on Fiji's shared classloader.
 	-->
 	<dependencies>
 		<dependency>
@@ -115,7 +113,22 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource><directory>src/main/resources</directory></resource>
+			<resource>
+				<directory>${project.basedir}</directory><targetPath>META-INF</targetPath>
+				<includes><include>LICENSE</include><include>NOTICE</include></includes>
+			</resource>
+		</resources>
 		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<configuration>
+					<!-- Immutable child-process engines are not adapter coverage targets. -->
+					<excludes><exclude>ripr/longitudinal/**</exclude></excludes>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>license-maven-plugin</artifactId>

@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+type: software
+message: "Please cite this software and the exact version used."
+title: "Relative-Intensity Pattern Registration"
+authors:
+  - family-names: Malcolm
+    given-names: Jamie
+    orcid: "https://orcid.org/0009-0008-3862-2776"
+    affiliation: "Brancaccio Lab, UK Dementia Research Institute at Imperial College London"
+repository-code: "https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration"
+url: "https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration"
+license: BSD-3-Clause
+version: 0.3.0
+date-released: 2026-10-05

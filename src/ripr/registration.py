@@ -535,6 +535,7 @@ def _java_registration_result(frames: np.ndarray,
         warnings=run.warnings,
         levels=0,
         workers=run.workers,
+        recipe_provenance=getattr(run, "recipe_provenance", ""),
     )
 
 
@@ -546,6 +547,10 @@ class BackendFallbackWarning(RuntimeWarning):
 #: back to Python, but only after emitting :class:`BackendFallbackWarning`. An explicit
 #: ``backend="java"`` remains strict and raises instead.
 DEFAULT_BACKEND = "java"
+
+_ACCEPTED_LONGITUDINAL_MODES = {
+    SelectionMode.ACCEPTED_LONGITUDINAL, SelectionMode.ACCEPTED_MOVING_CELLS,
+}
 
 
 def _warn_python_fallback(reason: str) -> None:
@@ -620,6 +625,18 @@ def resolve_backend(backend: str | None, parameters: LogRatioParameters) -> str:
     if choice not in {"auto", "java", "python"}:
         raise ValueError(f"backend must be 'auto', 'java' or 'python', not {backend!r}")
 
+    if parameters.selection_mode in _ACCEPTED_LONGITUDINAL_MODES:
+        if choice == "python":
+            raise ValueError("Accepted longitudinal recipes require the pinned Java engine; a Python substitute is not available")
+        if parameters.threads != 0 or parameters.motion_type.name != "INTERMITTENT_JUMPS":
+            raise ValueError("Accepted longitudinal recipes have fixed execution and intermittent-jump settings; leave threads=0")
+        differing = java_incompatibilities(parameters)
+        if differing:
+            raise ValueError("Accepted longitudinal fitting settings are frozen: " + "; ".join(differing))
+        if not java_backend.available():
+            raise java_backend.JavaBackendUnavailable("Accepted longitudinal recipes require the 0.3.0 Java plugin and Java 25; no different engine will be substituted")
+        return "java"
+
     longitudinal = parameters.selection_mode is SelectionMode.LONGITUDINAL_ACCURACY
     if choice == "python":
         if longitudinal:
@@ -682,6 +699,9 @@ def estimate(
     requested = _parameters_from_simple_choices(
         parameters, recipe, channel, longitudinal, advanced
     )
+    if requested.selection_mode in _ACCEPTED_LONGITUDINAL_MODES:
+        resolve_backend(backend, requested)
+        return _java_registration_result(_estimation_frames(source, normalized_axes, requested), requested)
     if requested.selection_mode is SelectionMode.LONGITUDINAL_ACCURACY:
         if resolve_backend(backend, requested) == "java":
             return _java_registration_result(
@@ -761,6 +781,11 @@ def register(
     requested = _parameters_from_simple_choices(
         parameters, recipe, channel, longitudinal, advanced
     )
+    if requested.selection_mode in _ACCEPTED_LONGITUDINAL_MODES:
+        resolve_backend(backend, requested)
+        registration = _java_registration_result(_estimation_frames(source, normalized_axes, requested), requested)
+        corrected = apply_transforms(source, registration.cumulative, normalized_axes, requested.interpolation, requested.crop)
+        return LogRatioResult(corrected, registration, replace(requested, recipe_provenance=registration.recipe_provenance), normalized_axes, source.shape)
     if requested.selection_mode is SelectionMode.LONGITUDINAL_ACCURACY:
         if resolve_backend(backend, requested) == "java":
             # The Java engine owns this mode. It reports per-frame movement but not the trajectory

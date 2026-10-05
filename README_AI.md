@@ -2,7 +2,7 @@
 
 This is the portable, read-only orientation guide for the Relative-Intensity Pattern Registration (RIPR) Python package.
 
-Package version: `0.2.3`
+Package version: `0.3.0`
 
 Use this file when the agent cannot import the package or run its local command-line interface (CLI). The structured companion is [`ripr_context.json`](ripr_context.json).
 

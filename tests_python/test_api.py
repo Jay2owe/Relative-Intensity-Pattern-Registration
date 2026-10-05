@@ -1,4 +1,4 @@
-from dataclasses import replace
+from dataclasses import replace, fields
 import csv
 
 import numpy as np
@@ -61,7 +61,13 @@ def test_simple_defaults_match_the_accepted_phase_landmarks_recipe():
         ),
         selection_mode=SelectionMode.LONGITUDINAL_ACCURACY,
     )
-    assert simple == explicit
+    # NaN is an unset setting, not a unequal recipe. Python versions differ in
+    # whether separate dataclass instances retain the same NaN object identity.
+    for field in fields(simple):
+        actual, expected = getattr(simple, field.name), getattr(explicit, field.name)
+        if isinstance(actual, float) and isinstance(expected, float) and np.isnan(actual) and np.isnan(expected):
+            continue
+        assert actual == expected, field.name
 
 
 def test_simple_bright_dim_recipe_keeps_the_benchmark_emission_mapping():

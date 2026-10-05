@@ -326,7 +326,9 @@ public final class Registration {
             /** Known-event pair angles disagree, but warning-only consensus was retained. */
             EVENT_ROTATION_DISAGREEMENT,
             /** The whole-recording accuracy route has a deliberately narrow motion contract. */
-            LONGITUDINAL_ACCURACY_SCOPE
+            LONGITUDINAL_ACCURACY_SCOPE,
+            LONGITUDINAL_WEAK_EVIDENCE,
+            LONGITUDINAL_RECOVERY_USED
         }
 
         public final Kind kind;

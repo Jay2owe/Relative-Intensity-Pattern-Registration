@@ -1,5 +1,43 @@
 # Relative-Intensity Pattern Registration (RIPR)
 
+## Accepted longitudinal recipes in 0.3.0
+
+```python
+import ripr
+result = ripr.register_accepted("recording.tif", recipe="bright_dim", channel=1)
+# recipe="landmarks" or "moving_cells" runs those explicit accepted routes.
+```
+
+For an array, use `ripr.register_accepted(stack, axes="TCYX", channel=2)`.
+Inspect `result.provenance` and `result.registration.warnings`. The selected channel
+alone drives estimation; every channel and Z plane receives the resulting transforms.
+There is no automatic longitudinal router or Python substitute.
+Output sampling defaults to nearest neighbour to preserve pixel counts. For the
+bilinear rendering used in benchmark review TIFFs, pass `interpolation="bilinear"`;
+this changes rendered pixels, not the fitted transforms.
+
+The accepted native routes require **64-bit Windows and Java 25 or newer**; set
+`RIPR_LONGITUDINAL_JAVA` to its `java.exe` if it is not discoverable. The wheel/sdist
+includes the Java plugin, ImageJ and the frozen native scientific runtime. A missing
+runtime fails visibly. Existing `register` calls and legacy modes remain unchanged.
+Microsoft's x64 Visual C++ 2015–2022 Redistributable must be installed on Windows;
+its proprietary runtime DLLs are not bundled. Obtain it from Microsoft's official
+[download page](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist), not an unofficial DLL download service.
+
+Bright/dim includes accepted phase-seed recovery and the hardware-capped speed
+policy; Moving cells includes accepted guarded Bright/dim fallback. Original accepted
+scientific bytecode is retained, rather than silently rebuilt from later experiments.
+Warnings identify weak evidence and actual recovery. Pair residuals/gain unavailable
+from the native protocol remain NaN (`support=-1` means unavailable); none is an
+accuracy score. This release does not guarantee unattended correctness or establish
+real-recording geometric ground truth. Review before analysis.
+
+Automation may use the existing `ripr.actions.dispatch("register", ...)` with
+`parameters.selection_mode="accepted_longitudinal"` (Bright/dim or Landmarks, chosen
+by the declared image type) or `"accepted_moving_cells"`. Use an explicit
+image-and-motion preset with `motion_type="intermittent_jumps"`; the fitting recipe
+and execution policy are frozen. Existing overwrite-confirmation rules still apply.
+
 This Python package runs the same registration operation as the Java Fiji/ImageJ plugin. Java is the
 default engine because it is much faster; a Python/NumPy/SciPy engine remains available as a fallback.
 It does not launch ImageJ. On PyPI it is `Relative-Intensity-Pattern-Registration`; the import package

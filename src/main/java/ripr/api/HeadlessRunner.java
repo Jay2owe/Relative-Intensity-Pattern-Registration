@@ -10,6 +10,7 @@ import ij.process.FloatProcessor;
 import ripr.core.PairScheduler;
 import ripr.core.Registration;
 import ripr.core.Transform;
+import ripr.core.AcceptedLongitudinalRegistration;
 
 import java.io.BufferedOutputStream;
 import java.io.DataInputStream;
@@ -85,13 +86,19 @@ public final class HeadlessRunner {
                 .build();
 
         long started = System.nanoTime();
-        Registration.Result result = RelativeIntensityPatternRegistration.estimate(
-                image, parameters, PairScheduler.Progress.NONE, PairScheduler.Cancellation.NEVER);
+        AcceptedLongitudinalRegistration.Outcome accepted = AcceptedLongitudinalRegistration.selected(selectionMode)
+                ? AcceptedLongitudinalRegistration.estimate(image, parameters, PairScheduler.Progress.NONE, PairScheduler.Cancellation.NEVER) : null;
+        Registration.Result result = accepted == null ? RelativeIntensityPatternRegistration.estimate(
+                image, parameters, PairScheduler.Progress.NONE, PairScheduler.Cancellation.NEVER) : accepted.registration;
         double elapsed = (System.nanoTime() - started) / 1e9;
 
         try (PrintStream out = new PrintStream(new BufferedOutputStream(
                 Files.newOutputStream(output)), false, StandardCharsets.UTF_8.name())) {
             out.printf(Locale.ROOT, "# elapsed_seconds,%.6f%n", elapsed);
+            if (accepted != null) {
+                out.println("# recipe_provenance," + accepted.provenance);
+                out.println("# executed_recipe_id," + accepted.recipeId);
+            }
             out.printf(Locale.ROOT, "# workers,%d%n", result.workers);
             out.printf(Locale.ROOT, "# levels,%d%n", result.levels);
             for (String warning : warnings(result)) {

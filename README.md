@@ -1,12 +1,63 @@
 # Relative-Intensity Pattern Registration
 
+## Accepted longitudinal recipes (0.3.0)
+
+Install `RelativeIntensityPatternRegistration-0.3.0.jar` from the
+[GitHub Release](https://github.com/Jay2owe/Relative-Intensity-Pattern-Registration/releases)
+in Fiji's `plugins` folder, removing older RIPR plugin JARs first, then restart Fiji.
+Choose **Plugins > Registration > RIPR Longitudinal (accepted recipes)...**.
+Select **Bright/dim**, **Landmarks**, or **Moving cells** and the estimation channel.
+The same transforms are applied to every channel and Z plane. No longitudinal
+automatic router is enabled. Existing commands/modes remain unchanged.
+This dialog retains count-preserving nearest-neighbour output sampling. It does
+not reproduce the bilinear rendering of benchmark review TIFFs; subpixel visual
+alignment can differ. The Python helper supports `interpolation="bilinear"` when
+that rendering is wanted. Fitted transforms are unchanged by output interpolation.
+
+These native recipes require **64-bit Windows and Java 25 or newer**. Fiji itself
+can keep its existing Java runtime: RIPR runs the accepted engine in a separate
+process. If necessary, set `RIPR_LONGITUDINAL_JAVA` to the Java 25 `java.exe` path.
+The accepted engine and native libraries are included; no external registration
+plugin is required. Install Microsoft's x64 Visual C++ 2015–2022 Redistributable
+from its [official download page](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) if its runtime is missing; proprietary Microsoft
+runtime DLLs are not redistributed by RIPR. An unsupported/missing runtime fails visibly and never selects
+a different registration algorithm.
+
+Bright/dim preserves the accepted A001 phase-seed rescue and A013 execution policy;
+Moving cells preserves A004 guarded Bright/dim recovery. Landmarks preserves its
+frozen baseline. The original scientific bytecode is checksum-pinned and isolated
+from both Fiji's classloader and later experiments. The execution-only speed policy
+retained exact transforms in its prior 140-case gate; this is not a claim of perfect
+registration. Actual recipe IDs, recovery use and weak-evidence warnings are reported.
+Pair residuals/gain not exported by this engine are unavailable, not estimated accuracy.
+Review results before analysis: independent geometric truth and fully unattended
+reliability on the real longitudinal recordings remain unestablished.
+
+Macro example:
+
+```java
+run("RIPR Longitudinal (accepted recipes)...", "recipe=bright_dim channel=1 crop=true");
+```
+
+Python: `pip install --upgrade Relative-Intensity-Pattern-Registration`, then
+`ripr.register_accepted("recording.tif", recipe="bright_dim", channel=1)`.
+See [CHANGELOG.md](CHANGELOG.md), [NOTICE](NOTICE), and [CITATION.cff](CITATION.cff).
+
+To build the Java plugin, use `mvn package -Denforcer.skip=true`. To bundle it for
+Python distribution, run `python scripts/package_java.py`, then `python -m build`.
+The frozen native resources are retained unchanged by this build; rebuilding the
+public adapter is not a scientific-kernel recompilation. If a local Command Prompt
+startup script stalls Git metadata lookup, add `-Dmaven.buildNumber.skip=true` and
+record the release commit separately.
+
 A Fiji/ImageJ time-series registration plugin that estimates movement by matching relative spatial
 intensity patterns between frames. Global brightness change is handled separately, so bleaching or
 illumination changes do not have to look like movement.
 
 The repository also contains **Relative-Intensity Pattern Registration (RIPR)**, a native, installable
-Python package with the same registration engine, recommendations, hyperstack behavior, TIFF support and folder batches. See
-[README_PYTHON.md](README_PYTHON.md) for installation and examples; it does not require ImageJ or Java.
+Python package with matching recommendations, hyperstack behavior, TIFF support and folder batches. See
+[README_PYTHON.md](README_PYTHON.md) for installation and examples. Legacy Python routes can run without
+Java; the accepted native longitudinal recipes require the runtime described above.
 
 The three recipe categories load evidence-based parameter recommendations. Every recommended value can
 be replaced in **Advanced settings**.

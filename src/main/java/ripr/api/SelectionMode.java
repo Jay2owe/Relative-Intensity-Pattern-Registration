@@ -18,6 +18,10 @@ public enum SelectionMode {
     AUTOMATIC("Automatic fixed recipe", "automatic"),
     /** Use the whole selected channel to protect long recordings from light pulses and remounts. */
     LONGITUDINAL_ACCURACY("Longitudinal maximum accuracy", "longitudinal_accuracy"),
+    /** Explicit checksum-pinned Bright/dim or Landmarks route; no longitudinal router. */
+    ACCEPTED_LONGITUDINAL("Accepted longitudinal Bright/dim or Landmarks", "accepted_longitudinal"),
+    /** Explicit Moving cells route with the accepted guarded Bright/dim recovery. */
+    ACCEPTED_MOVING_CELLS("Accepted longitudinal Moving cells", "accepted_moving_cells"),
     /** Use exactly the values shown in the settings dialog. */
     MANUAL("Manual", "manual");
 

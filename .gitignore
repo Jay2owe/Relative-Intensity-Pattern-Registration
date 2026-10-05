@@ -1,5 +1,6 @@
 # Build output
 target/
+src/ripr/jars/
 build/
 dist/
 *.egg-info/
@@ -13,6 +14,9 @@ tmp/
 .tmp/
 
 # Agent context - never tracked
+publication/
+PUBLISHING_AUDIT.md
+scripts/preview-cp.txt
 .claude/
 .codex/
 AGENTS.md

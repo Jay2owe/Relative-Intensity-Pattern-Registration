@@ -1,6 +1,6 @@
 """Gain-invariant, robust registration of microscopy time series."""
 
-__version__ = "0.2.3"
+__version__ = "0.3.0"
 
 from .batch import BatchItem, BatchResult, register_batch
 from .diagnostics import ChannelQuality, WARN_BELOW, correlation, frame_correlation, localisability, rank_channels
@@ -51,8 +51,10 @@ from .types import (
     Transform,
 )
 from . import context
+from .accepted_longitudinal import register_accepted
 
 __all__ = [
+    "register_accepted",
     "AlignerOptions",
     "AutomaticSelection",
     "BackendFallbackWarning",

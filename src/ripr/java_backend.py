@@ -155,6 +155,7 @@ class JavaRun:
     warnings: tuple[str, ...]
     engine_seconds: float
     workers: int
+    recipe_provenance: str = ""
 
 
 def estimate(
@@ -221,13 +222,16 @@ def estimate(
 
 
 def _parse(text: str) -> JavaRun:
+    recipe_provenance = ""
     engine_seconds = float("nan")
     workers = 0
     warnings: list[str] = []
     rows: list[list[str]] = []
     header: list[str] | None = None
     for line in text.splitlines():
-        if line.startswith("# elapsed_seconds,"):
+        if line.startswith("# recipe_provenance,"):
+            recipe_provenance = line.split(",", 1)[1]
+        elif line.startswith("# elapsed_seconds,"):
             engine_seconds = float(line.split(",", 1)[1])
         elif line.startswith("# workers,"):
             workers = int(line.split(",", 1)[1])
@@ -264,4 +268,5 @@ def _parse(text: str) -> JavaRun:
         warnings=tuple(warnings),
         engine_seconds=engine_seconds,
         workers=workers,
+        recipe_provenance=recipe_provenance,
     )

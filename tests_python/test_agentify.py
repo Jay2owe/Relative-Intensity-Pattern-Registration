@@ -4,6 +4,7 @@ import subprocess
 import sys
 
 import numpy as np
+import pytest
 import tifffile
 
 from ripr import context
@@ -76,6 +77,8 @@ def test_equivalent_script_compiles_with_parameter_objects():
 
 def test_codex_runner_bridge_emits_json_only():
     runner = Path(__file__).parents[1] / ".codex" / "skills" / "ripr" / "scripts" / "ripr_runner.py"
+    if not runner.is_file():
+        pytest.skip("Local agent bridge is intentionally excluded from public distributions")
     completed = subprocess.run(
         [sys.executable, str(runner), "discover"],
         check=True,
@@ -89,6 +92,8 @@ def test_codex_runner_bridge_emits_json_only():
 
 def test_runner_reports_bad_json_without_traceback():
     runner = Path(__file__).parents[1] / ".claude" / "skills" / "ripr" / "scripts" / "ripr_runner.py"
+    if not runner.is_file():
+        pytest.skip("Local agent bridge is intentionally excluded from public distributions")
     completed = subprocess.run(
         [sys.executable, str(runner), "run"],
         input="{not json",

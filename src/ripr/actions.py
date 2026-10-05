@@ -265,6 +265,8 @@ def _registration_summary(result: Any, *, output_path: Path | None = None) -> di
     }
     if output_path is not None:
         output["output_path"] = str(output_path)
+    if getattr(registration, "recipe_provenance", ""):
+        output["recipe"] = registration.recipe_provenance
     if hasattr(result, "parameters"):
         output["parameters"] = serialize(result.parameters)
         output["recipe"] = result.parameters.recipe_provenance

@@ -1,0 +1,33 @@
+Relative-Intensity Pattern Registration 0.3.0
+Copyright (c) 2026 Jamie Malcolm
+Developed at the Brancaccio Lab, UK Dementia Research Institute, Imperial College London.
+
+RIPR source and frozen RIPR scientific engines are provided under BSD-3-Clause.
+The frozen scientific resources preserve previously accepted bytecode, not later
+experimental recompilations. Their checksums are in
+src/main/resources/ripr/longitudinal/runtime.properties.
+
+The native longitudinal bundle also redistributes the following upstream
+components. Their upstream licence texts are distributed alongside the frozen
+JARs in META-INF/licenses in the plugin and ripr/licenses in the Python package:
+
+- ImageJ 1.54p: https://imagej.net/ij/
+- JavaCPP 1.5.11: https://github.com/bytedeco/javacpp
+- JavaCPP presets for OpenCV 4.10.0 and OpenBLAS 0.3.28:
+  https://github.com/bytedeco/javacpp-presets
+- OpenCV: https://github.com/opencv/opencv (Apache-2.0)
+- OpenBLAS: https://github.com/OpenMathLib/OpenBLAS (BSD-3-Clause)
+
+JavaCPP and its presets are used under their Apache-2.0 licensing option.
+ImageJ is public-domain United States Government work; its disclaimer is at
+https://imagej.net/ij/disclaimer.html.
+
+The Windows native JARs retain the registration-only native binaries used in the
+accepted benchmark. The JavaCPP native JAR has been repackaged to omit Microsoft
+runtime DLLs (and unused LLVM OpenMP); only its original jnijavacpp.dll is retained.
+Microsoft's runtime is a separately installed Windows prerequisite, not a component
+redistributed under RIPR's licence. The remaining JARs are not general-purpose
+OpenCV/OpenBLAS packages. OpenCV third-party licence texts accompany this bundle;
+their inclusion does not claim that every listed component is present in it.
+OpenCV's Enhanced Correlation Coefficient optimizer and phase correlation are
+upstream components, not methods invented by RIPR.

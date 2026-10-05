@@ -9,6 +9,8 @@
 package ripr;
 
 import org.junit.Test;
+import org.junit.Before;
+import org.junit.Assume;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -39,6 +41,13 @@ public class BenchmarkV2ManifestTest {
             "library", "benchmark", "benchmark_v2_native_series_manifest.csv");
     private static final Path CONTROLLED_MOTION = Paths.get(
             "library", "benchmark", "benchmark_v2_controlled_motion_manifest.csv");
+
+    /** These tests validate local research fixtures, which are not distributed. */
+    @Before
+    public void requireLocalBenchmarkFixtures() {
+        Assume.assumeTrue("Local benchmark library is not part of the public source distribution",
+                Files.isDirectory(Paths.get("library", "benchmark")));
+    }
 
     @Test
     public void policyHasFiveEqualClassesAndBalancedSplits() throws IOException {

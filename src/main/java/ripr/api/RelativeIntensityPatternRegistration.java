@@ -12,6 +12,7 @@ import ripr.PreprocessedFrameSource;
 import ripr.PixelSelectionEngine;
 import ripr.core.FrameSource;
 import ripr.core.LongitudinalRegistration;
+import ripr.core.AcceptedLongitudinalRegistration;
 import ripr.core.PairAligner;
 import ripr.core.PairScheduler;
 import ripr.core.Reconciler;
@@ -36,6 +37,13 @@ public final class RelativeIntensityPatternRegistration {
     public static RelativeIntensityPatternResult register(ImagePlus image, RelativeIntensityPatternParameters parameters,
                                           PairScheduler.Progress progress,
                                           PairScheduler.Cancellation cancellation) {
+        if (parameters != null && AcceptedLongitudinalRegistration.selected(parameters.selectionMode)) {
+            AcceptedLongitudinalRegistration.Outcome accepted = AcceptedLongitudinalRegistration.estimate(image, parameters, progress, cancellation);
+            RelativeIntensityPatternParameters resolved = parameters.toBuilder().recipeProvenance(accepted.provenance).build();
+            ImagePlus corrected = StackWarper.apply(image, accepted.registration.cumulative,
+                    resolved.interpolation, resolved.crop, progress, cancellation);
+            return new RelativeIntensityPatternResult(corrected, accepted.registration, resolved, null, null, accepted.diagnostics);
+        }
         if (parameters != null
                 && parameters.selectionMode == SelectionMode.LONGITUDINAL_ACCURACY) {
             LongitudinalResolved longitudinal = estimateLongitudinal(
@@ -67,6 +75,9 @@ public final class RelativeIntensityPatternRegistration {
     public static Registration.Result estimate(ImagePlus image, RelativeIntensityPatternParameters parameters,
                                                 PairScheduler.Progress progress,
                                                 PairScheduler.Cancellation cancellation) {
+        if (parameters != null && AcceptedLongitudinalRegistration.selected(parameters.selectionMode)) {
+            return AcceptedLongitudinalRegistration.estimate(image, parameters, progress, cancellation).registration;
+        }
         if (parameters != null
                 && parameters.selectionMode == SelectionMode.LONGITUDINAL_ACCURACY) {
             return estimateLongitudinal(image, parameters, progress, cancellation).registration;

@@ -1661,6 +1661,7 @@ class RegistrationResult:
     pyramids_built: int = 0
     pyramid_cache_hits: int = 0
     event_rotations: RotationEventResult | None = None
+    recipe_provenance: str = ""
 
     @property
     def median_residual_before(self) -> float:
